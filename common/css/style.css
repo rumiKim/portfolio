@@ -1,0 +1,18 @@
+html { font-size: 20px;}
+body { font-size: 1rem;}
+
+
+.wrap_com { margin:0 auto; width: 61.2rem;}
+
+footer { background: var(--color_000);}
+footer * {  color: var(--color_fff);}
+footer .sns li a { display: block; width: 2.5rem; height: 2.5rem ;border: 2px solid #313131; border-radius: 100%;}
+footer .sns li ~ li { margin-left: 0.5rem;}
+
+
+.sec_quick ul li { width: 23%; }
+.sec_quick ul li a {  display: block; height: 10.75rem; border: 1px solid red;}
+.sec_quick ul li a span { display: block;}
+
+.sec_guide ul li { width: 31.86%;}
+.sec_guide ul li a { display: block; height:8rem; box-sizing: border-box; border: 1px solid #eee;}
