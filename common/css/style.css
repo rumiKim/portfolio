@@ -1,8 +1,12 @@
+:root { 
+    --color_blue:#009bfa;
+}
+
 html { font-size: 20px;}
 body { font-size: 1rem;}
 
 
-.wrap_com { margin:0 auto; width: 61.2rem;}
+.wrap_com { margin:0 auto; width: 76rem;}
 
 footer { background: var(--color_000);}
 footer * {  color: var(--color_fff);}
@@ -16,3 +20,29 @@ footer .sns li ~ li { margin-left: 0.5rem;}
 
 .sec_guide ul li { width: 31.86%;}
 .sec_guide ul li a { display: block; height:8rem; box-sizing: border-box; border: 1px solid #eee;}
+
+
+header { background-color: var(--color_blue); font-family: 'Noto Sans KR', sans-serif;}
+header * { color: #fff; }
+header > .wrap_com { padding:3.25rem 0 1.5rem; position: relative; font-size: 0.7rem; background: url(/common/images/bg_header.png) no-repeat left bottom;}
+header .wrap_util { position: absolute; top: 0; right: 0;}
+header .wrap_util ul li { float: left;}
+header .wrap_util ul li ~ li a span:before { content: ""; display: inline-block; margin:0 0.65rem 0 0.6rem; width: 1px; height: 0.5rem; background-color: #fff; vertical-align: middle; opacity: 0.5;}
+/* header .wrap_util ul li:last-child a { padding-right: 0;} */
+header .wrap_util ul li a { display: block; line-height: 3.25rem; }
+header .wrap_gnb a { display: block; }
+header .logo { padding-right: 2.35rem;}
+header .logo > * { float: right;}
+header .logo .btn_menu { width: 3rem; height: 3.25rem; background: url(/common/images/btn_menu.png) no-repeat center;}
+header .gnb a { line-height: 3.25rem; font-size: 1rem;}
+header .gnb ul li { padding-right: 1.8rem;}
+header .gnb ul li, header .mypage ul li { float: left;}
+header .mypage ul li { text-align: center;}
+header .mypage ul li a { height:3.25rem; padding: 0.7rem 0 3px; box-sizing: border-box; overflow: hidden;}
+header .mypage ul li a:before { content: ""; display: block; height: 1.5rem; border: 1px solid red;}
+
+
+
+/* main */
+.wrap_main > .main { width: 75%;}
+.wrap_main > aside { width: 25%;}

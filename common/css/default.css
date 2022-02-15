@@ -53,7 +53,7 @@ layout
 .add_after:after, .add_before:before { content: ""; display: inline-block;}
 
 /* element */
-button { background-color:none;}
+button { background-color:none; cursor: pointer;}
 
 /* font */
 lh1 { line-height: 1;}
