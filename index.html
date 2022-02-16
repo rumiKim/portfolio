@@ -8,55 +8,14 @@
     <title>슈퍼로또코리아</title>
     <link rel="stylesheet" href="/common/css/default.css">
     <link rel="stylesheet" href="/common/css/style.css">
+    <link rel="stylesheet" href="/common/css/font.css">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <a href="#main" class="skip">본문 바로가기</a>
-    <header>
-        <div class="wrap_com">
-            <div class="wrap_gnb clear">
-                <div class="logo left">
-                    <h1><a href="/index.html">슈퍼로또코리아<span class="hide">슈퍼로또코리아</span></a></h1>
-                    <button class="btn_menu" aria-label="전체메뉴"></button>
-                </div>
-                <div class="gnb left">
-                    <nav>
-                        <ul class="clear">
-                            <li><a href="">슈퍼로또코리아</a></li>
-                            <li><a href="">메가밀리언 구매</a></li>
-                            <li><a href="">파워볼 구매</a></li>
-                            <li><a href="">당첨번호 확인</a></li>
-                            <li><a href="">고객센터</a></li>
-                            <li><a href="">캐쉬 충전소</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="mypage right">
-                    <nav>
-                        <ul class="clear">
-                            <li><a href="">로그인</a></li>
-                            <li><a href="">마이페이지</a></li>
-                            <li><a href="">구매내역</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="wrap_util">
-                <h2 class="hide">유틸리티 메뉴</h2>
-                <nav>
-                    <ul class="clear">
-                        <li><a href=""><span>회원가입</span></a></li>
-                        <li><a href=""><span>당첨번호 확인</span></a></li>
-                        <li><a href=""><span>고객센터</span></a></li>
-                        <li><a href=""><span>구매대행 이용가이드</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
     <main id="main">
         <div class="wrap_com">
             <a href="" class="banner">
@@ -65,42 +24,140 @@
             <div class="wrap_main clear" id="">
                 <div class="main left">
                     <section class="sec_lotto">
-                        <h2 class="hide">메가밀리언 파워볼 당첨 정보</h2>
-                        <ul class="">
-                            <li>
-                                <div class="top clear">
-                                    <div class="left">
-                                        <h3>메가밀리언</h3>
+                        <h2 class="hide">로또 구매 정보 안내</h2>
+                        <div>
+                            <ul class="list_lotto clear">
+                                <li class="mega left bx_type1">
+                                    <div class="">
+                                        <div class="flex column align_center">
+                                            <h3><img src="/common/images/logo_power.png" alt="파워볼"></h3>
+                                            <p class="time_draw">추첨 (한국시간) <span>02월 12일 토요일 13:00</span></p>
+                                            <div class="won">189,126,000,000</div>
+                                            <span class="us">158,000,000</span>
+                                            <div class="time_end">
+                                                <p>마감시간</p>
+                                                <ul class="list_time" id="list_time">
+                                                    <li class="items_day">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                    <li class="items_hours">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                    <li class="items_min">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                    <li class="items_sec">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="" class="btn_red">파워볼 주문하기</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="power right bx_type1">
+                                    <div class="">
+                                        <div class="flex column align_center">
+                                            <h3><img src="/common/images/logo_power.png" alt="파워볼"></h3>
+                                            <p class="time_draw">추첨 (한국시간) <span>02월 12일 토요일 13:00</span></p>
+                                            <div class="won">189,126,000,000</div>
+                                            <span class="us">158,000,000</span>
+                                            <div class="time_end">
+                                                <p>마감시간</p>
+                                                <ul class="list_time" id="list_time">
+                                                    <li class="items_day">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                    <li class="items_hours">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                    <li class="items_min">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                    <li class="items_sec">
+                                                        <span>0</span>
+                                                        <span>0</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="" class="btn_red">파워볼 주문하기</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sec_result">
+                        <h2 class="hide">당첨 결과 정보 안내</h2>
+                        <div>
+                            <ul>
+                                <li>
+                                    <div class="btm">
+                                        <h3>파워볼</h3>
                                         <span>[종료]</span>
-                                        <span>2022년 02월 05일 토요일</span>
+                                        <p>2022년 02월 05일 토요일</p>
                                     </div>
-                                    <div class="right">
-                                        <span>이월</span>
+                                    <div class="label">당첨<br>이월</div>
+                                    <div class="">
+                                        <strong class="h_type1">MEGA MILLIONS</strong>
+                                        <p>당첨금<span class="us">176,000,000</span> (1,760억원)</p>
+                                        <div>
+                                            <ul class="list_ball">
+                                                <li><span>7</span></li>
+                                                <li><span>16</span></li>
+                                                <li><span>34</span></li>
+                                                <li><span>44</span></li>
+                                                <li><span>61</span></li>
+                                                <li><span>24</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="">
+                                            <ul class="">
+                                                <li><a href="">방송보기</a></li>
+                                                <li><a href="">상세결과보기</a></li>
+                                                <li><a href="">공식사이트</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="btm">
-                                    <strong>MEGA MILLIONS</strong>
-                                    <p>당첨금 <span></span></p>
-                                    <div>
-                                        <ul class="list_ball">
-                                            <li><span>7</span></li>
-                                            <li><span>16</span></li>
-                                            <li><span>34</span></li>
-                                            <li><span>44</span></li>
-                                            <li><span>61</span></li>
-                                            <li><span>24</span></li>
-                                        </ul>
+                                </li>
+                                <li>
+                                    <div class="btm">
+                                        <h3>파워볼</h3>
+                                        <span>[종료]</span>
+                                        <p>2022년 02월 05일 토요일</p>
                                     </div>
-                                    <div class="clear">
-                                        <ul class="left">
-                                            <li><a href="">방송보기</a></li>
-                                            <li><a href="">상세결과보기</a></li>
-                                        </ul>
-                                        <a href="" class="right">공식사이트 바로가기</a>
+                                    <div class="label">당첨<br>이월</div>
+                                    <div class="">
+                                        <strong class="h_type1">MEGA MILLIONS</strong>
+                                        <p>당첨금<span class="us">176,000,000</span> (1,760억원)</p>
+                                        <div>
+                                            <ul class="list_ball">
+                                                <li><span>7</span></li>
+                                                <li><span>16</span></li>
+                                                <li><span>34</span></li>
+                                                <li><span>44</span></li>
+                                                <li><span>61</span></li>
+                                                <li><span>24</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="">
+                                            <ul class="">
+                                                <li><a href="">방송보기</a></li>
+                                                <li><a href="">상세결과보기</a></li>
+                                                <li><a href="">공식사이트</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </section>
                     <section class="sec_quick">
                         <h2 class="hide">빠른 메뉴</h2>
