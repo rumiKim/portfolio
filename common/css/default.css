@@ -21,7 +21,7 @@ a{color:#000;text-decoration:none;}
 input { -webkit-appearance: none; appearance: none; box-shadow: none; border-radius: 0;}
 
 /*****************
-layout 
+layout
 ******************/
 .wrap_iframe {position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
 .wrap_iframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
@@ -45,24 +45,24 @@ layout
 .flex.row { -webkit-box-orient: horizontal; -moz-flex-direction: row; -ms-flex-direction: row; flex-direction: row;}
 .flex.justify_center { -webkit-box-pack: center; -moz-box-justify-content: center; -ms-flex-pack: center; justify-content: center; justify-content: center;}
 .flex.space { -webkit-box-pack: justify; -moz-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between;}
-.flex.align_center { -webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center;} 
+.flex.align_center { -webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center;}
 .flex.wrap {-webkit-box-lines: multiple; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .flex.nowrap {-webkit-box-lines: single; -moz-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
 
 /* before, after */
-.add_after:after, .add_before:before { content: ""; display: inline-block;}
+.add_after:after, .add_before:before { content: ""; display: inline-block; vertical-align: middle;}
 
 /* element */
 button { background-color:none; cursor: pointer;}
 
 /* font */
-lh1 { line-height: 1;}
+.lh1 { line-height: 1;}
 
-:root { 
+:root {
     --color_000 : #000 ;
     --color_fff : #fff;
-    
-    
+
+
 
 }
 
