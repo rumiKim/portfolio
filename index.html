@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>슈퍼로또코리아</title>
-  <link rel="stylesheet" href="/common/css/default.css">
-  <link rel="stylesheet" href="/common/css/style.css">
-  <link rel="stylesheet" href="/common/css/font.css">
-  <!-- font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <!-- font-family: 'Montserrat', sans-serif; -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
 
 <body>
   <a href="#main" class="skip">본문 바로가기</a>
@@ -281,104 +267,107 @@
           </section>
           <section class="sec_quick ">
             <h2 class="hide">빠른 안내</h2>
-              <ul class="flex space wrap">
-                <li>
-                  <a href="">
-                      <span>메가밀리언 | 파워볼</span>
-                      <strong>구매티켓 보기</strong>
-                      <p>내가 구매한 구매티켓을 확인 하세요</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                      <span>슈퍼로또코리아</span>
-                      <strong>프로모션</strong>
-                      <p>이달의 프로모션을 놓치지 마세요</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                      <span>A TO Z</span>
-                      <strong>자주하는 질문</strong>
-                      <p>자주 묻는 질문을 모아 두었습니다.</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                      <span>무엇을 도와 드릴까요?</span>
-                      <strong>고객센터</strong>
-                      <p>빠른 안내 도와드리겠습니다.</p>
-                  </a>
-                </li>
-              </ul>
+            <ul class="flex space wrap">
+              <li>
+                <a href="">
+                  <span>메가밀리언 | 파워볼</span>
+                  <strong>구매티켓 보기</strong>
+                  <p>내가 구매한 구매티켓을 확인 하세요</p>
+                </a>
+              </li>
+              <li>
+                <a href="" style="background-image:url(/common/images/ico_promotion.png)">
+                  <span>슈퍼로또코리아</span>
+                  <strong>프로모션</strong>
+                  <p>이달의 프로모션을 놓치지 마세요</p>
+                </a>
+              </li>
+              <li>
+                <a href="" style="background-image:url(/common/images/ico_AtoZ.png)">
+                  <span>A TO Z</span>
+                  <strong>자주하는 질문</strong>
+                  <p>자주 묻는 질문을 모아 두었습니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="" style="background-image:url(/common/images/ico_heart.png)">
+                  <span>무엇을 도와 드릴까요?</span>
+                  <strong>고객센터</strong>
+                  <p>빠른 안내 도와드리겠습니다.</p>
+                </a>
+              </li>
+            </ul>
           </section>
         </div>
         <aside class="right">
-          <a href=""><strong>캐쉬충전</strong>바로가기</a>
-          <div>
+          <section class="sec_mymoney">
+            <h2 class="hide">마이 머니</h2>
+            <ul class="list_type1">
+              <li><a href="">
+                  <div>
+                    <strong>쿠폰사용 등록</strong>
+                    <p>보유하신 고객님의 쿠폰번호 등록</p>
+                  </div>
+                </a></li>
+              <li><a href="">
+                  <div>
+                    <strong>캐쉬 충전소</strong>
+                    <p>회원님만을 위한 특별한 혜택 충전</p>
+                  </div>
+                </a></li>
+            </ul>
+          </section>
+          <div class="bx_app ls25 br10 lh1">
             <h2>미국복권 구매대행<strong>슈퍼로또코리아</strong><span>앱다운로드</span></h2>
             <ul>
-              <li><a href="" aria-label="구글 앱스토어 다운로드 "></a></li>
-              <li><a href="" aria-label="구글 플레이 다운로드 "></a></li>
+              <li><a href=""><img src="/common/images/btn_appstore.png" alt=""></a></li>
+              <li><a href=""><img src="/common/images/btn_googleplay.png" alt=""></a></li>
             </ul>
           </div>
-          <div>
-            <h2>당첨자 확인</h2>
+          <section class="sec_winner">
+            <h2 class="h_type1">당첨자 확인</h2>
             <ul>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
+              <li class="mega"><a href="">
+                  <div>
+                    <strong>메가밀리언</strong>
+                    <p>당첨번호 및 추천번호</p>
+                    <span>2022.02.05</span>
+                  </div>
+                </a></li>
+              <li class="power"><a href="">
+                  <div>
+                    <strong>파워볼</strong>
+                    <p>당첨번호 및 추천번호</p>
+                    <span>2022.02.03</span>
+                  </div>
+                </a></li>
             </ul>
-          </div>
-          <div>
-            <h2>이벤트</h2>
-            <div class="con_slide">
-              <ul class="wrapper_slide">
-                <li class="item_slide"><a href=""></a></li>
+          </section>
+          <section class="sec_event">
+            <h2 class="h_type1">이벤트</h2>
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="">
+
+                  </a>
+                </li>
               </ul>
             </div>
-          </div>
-          <a href=""><b>미국복권 지난 추첨번호</b> 확인하기</a>
-          <a href="">
-            <strong>19세 이용 금지</strong>
-            <p>슈퍼로또코리아는 미국복권 구매대행 <br>업체입니다.<br>19세 미만은 본 서비스를 이용하실 수 없습니다.</p>
+          </section>
+          <a href="" class="view_past bx_type1 add_after">
+            <strong class="">미국복권 지난 추첨번호</strong>
+            <span class="add_after">확인하기</span>
           </a>
-
+          <div class="notice_age bx_type1 add_after">
+            <strong class="">19세 이용 금지</strong>
+            <p>슈퍼로또코리아는 미국복권 구매대행 <br>업체입니다. 19세 미만은 본 서비스를 <br>이용하실 수 없습니다.</p>
+          </div>
         </aside>
       </div>
     </div>
   </main>
-  <footer>
-    <div class="wrap_com">
-      <h2 class="hide">관련 사이트</h2>
-      <ul class="sns flex justify_center align_center">
-        <li><a href="" title=""><span class="hide">페이스북</span></a></li>
-        <li><a href="" title=""><span class="hide">인스타그램</span></a></li>
-        <li><a href="" title=""><span class="hide">유튜브</span></a></li>
-      </ul>
-      <div>
-        <h2 class="hide">회사 정보</h2>
-        <ul>
-          <li><a href="">개인정보취급방침</a></li>
-          <li><a href="">이용약관</a></li>
-          <li><a href="">회사소개</a></li>
-          <li><a href="">메가밀리언 구입</a></li>
-          <li><a href="">파워볼 구입</a></li>
-          <li><a href="">고객센터</a></li>
-          <li><a href="">1:1상담</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="hide">사업 정보</h2>
-        <ul>
-          <li><a href=""></a></li>
-        </ul>
-      </div>
-      <p>notice</p>
-      <span class="copy">&copy;</span>
-
-    </div>
-
-  </footer>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
 </body>
 
 </html>

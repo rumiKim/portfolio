@@ -1,0 +1,23 @@
+.sec_login { text-align: center; width: 35rem}
+.sec_login form * { font-family: 'Noto Sans KR',sans-serif;}
+.sec_login h2 { font-size: 2rem; }
+.sec_login > div { padding:0 6.5rem; }
+.sec_login > .login_super .logo_main { margin:0 0 2.6rem; padding: 1.2rem 0 0.25rem; border:2px solid #444; border-bottom: none; color:#444 ; font-size: 1.1rem}
+
+.sec_login > .login_super form ul li { position: relative; margin:0 0 0.5rem; border: 1px solid #e8e8e8}
+.sec_login > .login_super form ul li:after { position: absolute; left: 1rem; top: 0; width: 1rem; height: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
+.sec_login > .login_super form ul li.id:after { background-image: url(/common/images/ico_id.png)}
+.sec_login > .login_super form ul li.pw:after { background-image: url(/common/images/ico_pw.png)}
+.sec_login > .login_super form ul li input { padding:0 0 0 2.5rem; width: 100%; line-height: 2.4rem; box-sizing: border-box; color: #000}
+input:-webkit-input-placeholder,
+input::placeholder,
+input:-ms-input-placeholder { color: #999}
+.sec_login > .login_super form .btn_login { margin:1.5rem 0 1.65rem; width:100%; background:#444 }
+.sec_login .wrap_chk { text-align: left;}
+.sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: 0.75rem}
+.sec_login .btn_login { display: block; line-height: 3rem; border-radius: 3px; color: #fff; font-size: 0.7rem}
+.sec_login .list_find { font-size: 0}
+.sec_login .list_find li {  position: relative; display: inline-block; padding: 0 0.95rem }
+.sec_login .list_find li:after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
+.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: 0.65rem; color: #444;}
+.sec_login .login_sns ul li { margin: 0 0 0.5rem}
