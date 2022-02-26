@@ -12,7 +12,13 @@
 
 html { font-size: 20px;}
 body { font-size: 1rem; }
-
+input { font-family: 'Noto Sans KR',sans-serif;}
+input::-webkit-input-placeholder,
+input::placeholder,
+input::-ms-input-placeholder,
+input:-ms-input-placeholder { color: #000}
+input,select { outline: 0}
+select { background-color: transparent;}
 
 .wrap_com { margin:0 auto; width: 60rem;}
 
@@ -43,15 +49,20 @@ body { font-size: 1rem; }
 
 /* color */
 .color_blue { color: var(--color_blue)}
+.color_red { color: #de4f41 !important}
 
 /* text style */
 .h_type1 { font-size: 1rem; letter-spacing: -0.075em}
 .h_type2 { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.025em}
 .h_type2 sup { font-weight: 600}
+.h_type3 { font-size: 2rem; font-family: 'GmarketSans', sans-serif; letter-spacing: -0.075em; font-weight: bold;}
 
 
 /* list */
 .list_type1 > li > a { display: block; border: 1px solid #ddd;border-radius: 0.5rem; box-sizing: border-box;}
+.list_bul > li { line-height: 1.2;}
+.list_bul > li ~ li { padding: 10px 0 0}
+.list_bul > li:before { content: ""; display: inline-block; margin-right: 10px; width: 3px; height: 3px; background: #666; vertical-align: middle;}
 
 /* box */
 .bx_type1 { display: block; border: 1px solid #ddd; border-radius: 0.5rem; box-sizing: border-box;}
@@ -67,15 +78,29 @@ body { font-size: 1rem; }
 .logo_main.add_before:before { display: block; text-align: right; content: "슈퍼로또코리아"; font-size: 0.6rem; color: #434343; font-family: 'Noto Sans KR',sans-serif; font-weight: 400; transform: translateY(5px); }
 
 /* input */
-.chk_type1 + label:before { margin-right: 5px; width: 1rem; height: 1rem; box-sizing: border-box; border: 1px solid #666; vertical-align: -3px}
+.chk_type1 + label { cursor: pointer;}
+.chk_type1 + label span { vertical-align: middle;}
+.chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; width: 1rem; height: 1rem; box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
 .chk_type1:checked + label:before { background: #666}
 
 /* popup */
-.popup { position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100}
-.popup.type1 > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff; border-radius: 1rem;}
+.popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100}
+.popup.active { display: block !important;}
+.popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff;}
+.popup.type1 > .inner {   border-radius: 1rem;}
 .popup.type1 > .inner > .btn_close:after { content: "X"; display: block; position: absolute; right: 1.8rem; top: 2rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
+.popup.type2 .btn_close { position: absolute; right: 0; top: 0; }
+.popup.type2 > .inner { padding: 2.75rem 3rem 3rem}
+.popup.type2 .title { padding: 0 0 2rem; font-size: 1.9rem; font-weight: 400; letter-spacing: -0.05em; border-bottom:3px solid #444 }
+
+/* table */
+.tb_type1 { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; font-size: 0.75rem; line-height: 1.26rem; word-break: keep-all;}
+.tb_type1 th, .tb_type1 td { padding: 1rem 1.75rem }
+.tb_type1 thead { background: #f4f4f4}
+.tb_type1 tbody { color: #666}
 
 
+main { display: block; min-height: 100vh}
 footer { background: #222; text-align: center; line-height: 1; font-family: 'GmarketSans',sans-serif;}
 footer * {  color: #b3b3b3;}
 footer .top { border-bottom: 1px solid #3c3c3c;}
@@ -128,7 +153,7 @@ header .util .wrap_list > .my > li { padding-left: 1.1rem}
 header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1px; height: 13px; background-color: #d2d2d2; vertical-align: middle;}
 
 
-main > .wrap_com { padding: 1rem 0 0; font-family: 'GmarketSans', 'Noto Sans KR', sans-serif; font-weight: 500}
+.body_idx > main > .wrap_com { padding: 1rem 0 0; font-family: 'GmarketSans', 'Noto Sans KR', sans-serif; font-weight: 500}
 .wrap_main > .left { width: 70.83%}
 .wrap_main > .right { width: 27.5%}
 

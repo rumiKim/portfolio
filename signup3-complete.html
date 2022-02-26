@@ -1,0 +1,39 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+      <section class="sec_login sec_fin wrap_com f_NotoSansKR">
+        <h2 class="ls75 fw900 f_GmarketSans">슈퍼볼코리아<span>회원이 되신 것을 환영합니다.</span></h2>
+        <button class="btn_close"><span class="hide">닫기</span></button>
+        <div class="login_super">
+          <form action="">
+            <ul class="">
+              <li class="id add_after">
+                <input type="email" placeholder="아이디(이메일)를 입력해주세요.">
+              </li>
+              <li class="pw add_after">
+                <input type="pw" placeholder="비밀번호를 입력해주세요.">
+              </li>
+            </ul>
+            <div class="wrap_chk ls25">
+              <input type="checkbox" id="chk_login" class="chk_type1">
+              <label for="chk_login" class="add_before">아이디 기억하기</label>
+            </div>
+            <div class="wrap_btn">
+            <button class="btn_login">로그인</button>
+            </div>
+          </form>
+        </div>
+        <span class="or">또는</span>
+        <div class="wrap_btn btm">
+        <a href="/index.html" class="btn_w">메인으로 이동</a>
+        </div>
+      </section>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>

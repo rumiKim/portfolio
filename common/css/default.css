@@ -53,7 +53,7 @@ layout
 .add_after:after, .add_before:before { content: ""; display: inline-block; vertical-align: middle;}
 
 /* element */
-button { background-color:none; cursor: pointer;}
+button { background-color:transparent; cursor: pointer;}
 
 /* font */
 .lh1 { line-height: 1;}
