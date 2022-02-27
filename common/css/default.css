@@ -45,6 +45,8 @@ layout
 .flex.row { -webkit-box-orient: horizontal; -moz-flex-direction: row; -ms-flex-direction: row; flex-direction: row;}
 .flex.justify_center { -webkit-box-pack: center; -moz-box-justify-content: center; -ms-flex-pack: center; justify-content: center; justify-content: center;}
 .flex.space { -webkit-box-pack: justify; -moz-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between;}
+.flex.align_start { -webkit-box-align: start; -moz-align-items: start; -ms-flex-align: start; align-items:flex-start;}
+.flex.align_end { -webkit-box-align: end;-moz-align-items: end; -ms-flex-align: end; align-items: flex-end;}
 .flex.align_center { -webkit-box-align: center; -moz-align-items: center; -ms-flex-align: center; align-items: center;}
 .flex.wrap {-webkit-box-lines: multiple; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .flex.nowrap {-webkit-box-lines: single; -moz-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }

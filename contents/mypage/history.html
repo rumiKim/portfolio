@@ -1,0 +1,105 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <div class="wrap_mypage clear wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
+      <div class="right">
+        <section class="">
+          <div class="wrap_title">
+            <h3 class="heading">구매/당첨내역</h3>
+          </div>
+          <div class="">
+            <ul class="list_search list_bul2">
+              <li>
+                <p>복권유형</p>
+                <div>
+                  <ul class="list_sel">
+                    <li><button>전체</button></li>
+                    <li><button>메가밀리언</button></li>
+                    <li><button>파워볼</button></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p>당첨/낙첨여부</p>
+                <div>
+                  <ul class="list_sel">
+                    <li><button>전체</button></li>
+                    <li><button>메가밀리언</button></li>
+                    <li><button>파워볼</button></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p>조회결과순서</p>
+                <div>
+                  <ul class="list_sel">
+                    <li><button>최근순</button></li>
+                    <li><button>과거순</button></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+        <section class="sec_history">
+          <div class="wrap_title">
+            <h3 class="heading">구매내역</h3>
+          </div>
+          <div class="wrap_tb">
+          <table class="tb_type2">
+            <caption>
+              <div class="hide">
+                최근 구매내역에 대한 정보를 제공하는 표
+              </div>
+            </caption>
+            <colgroup>
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+              <col width="">
+            </colgroup>
+            <thead class="bg_navy">
+              <tr>
+                <th>상품(복권)명</th>
+                <th>추첨일시(현지시간)</th>
+                <th>게임수(구매번호확인)</th>
+                <th>진행결과</th>
+                <th>복권스캔본</th>
+                <th>당첨금</th>
+                <th>구입일시</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>메가밀리언 </td>
+                <td>2022년 02월 22일 (화)</td>
+                <td>2게임</td>
+                <td>미추첨</td>
+                <td class="view_scan"><a href="" class="btn_popup" id="btn_scan"></a></td>
+                <td>-</td>
+                <td>2022-02-12 03:00</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="nohistory">
+            <div class="wrap_img"><img src="/common/images/img_nohistory.jpg" alt=""></div>
+            <p>최근에 주문하신 제품이 없네요!</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>

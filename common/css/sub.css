@@ -115,3 +115,75 @@
 .sec_app .bx_sendurl input { height: 100%; background: none; font-size: 0.8rem}
 .sec_app .bx_sendurl button { padding: 0 1.2rem; height: 2rem; line-height: 2.2rem; background: #4e2bf4; color: #fff; border-radius: 0.3rem; font-size: 0.9rem; }
 .sec_app .list_bul { padding: 1.25rem 0 0; letter-spacing: -0.025em}
+
+
+/* mypage - common */
+.wrap_mypage { padding:2rem 0 0; font-family: 'Noto Sans KR',sans-serif;}
+.wrap_mypage .wrap_title { padding: 0 0 1.2rem}
+.wrap_mypage .wrap_title .heading { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.05em}
+.wrap_mypage .wrap_title .txt_gray { padding-left: 1rem; font-size: 0.75rem; color: #888}
+.wrap_mypage > .left { width: 16.5%;  }
+.wrap_mypage > .right { width: 80.83%;  }
+.wrap_mypage > .right section { padding-top: 0.75rem}
+.wrap_mypage > .right section ~ section { margin-top: 1.5rem}
+.bg_navy { background: #373b46 ;}
+.bg_navy * {  color: #fff}
+.bg_navy.type_radius { border-radius: 0.25rem 0.25rem 0 0}
+.wrap_mypage h2 { font-size: 0.9rem; text-align: center; line-height: 3rem}
+.wrap_mypage h2:after { margin-left: 0.5rem; width: 1.15rem; height: 1.15rem; background: url(/common/images/ico_alarm.png) no-repeat center / 100% auto;}
+.va_mid { vertical-align: middle;}
+.nav_mypage { padding:1.8rem 18% 3rem 8.7%; border: 1px solid #e8e8e8; border-top: none; letter-spacing: -0.05em; box-sizing: border-box; line-height: 1.87; font-size: 0.8rem}
+.nav_mypage nav > ul > li > ul { padding: 0.4rem 0 0 }
+.nav_mypage nav > ul > li > a { font-weight: 500}
+.nav_mypage .line:after { content: ""; display: block; margin:0.6rem 0 0.75rem;  height: 1px; background: #e8e8e8}
+.nav_mypage ul ul { line-height: 1.66; font-size: 0.75rem}
+.nav_mypage ul ul a { color:#888888 }
+.nav_mypage a:hover { display: block; color: var(--color_blue); transition: all .3s;}
+
+.sec_mypage { letter-spacing: -0.05em}
+.sec_mypage .top { padding: 0 3.3%;  height: 3rem; box-sizing: border-box;}
+.sec_mypage .top .left:before  { margin-right: 1.2rem; width: 1.1rem; height: 1.2rem; background: url(/common/images/ico_person.png) no-repeat center / 100% auto}
+.sec_mypage .top .right { font-size: 0.7rem; }
+.sec_mypage .top .right * { vertical-align: middle;}
+.sec_mypage .top .right span { opacity: 0.8}
+.sec_mypage .top .right a { display: inline-block; margin-left: 0.8rem; padding:0.4rem 0.8rem;  border: 1px solid #73767e; border-radius: 3px}
+/* .sec_mypage .btm { padding: 2rem 5.36% 0} */
+.sec_mypage .btm > div { padding-left: 5.15%; padding-top: 2rem ;  width: 50%; box-sizing: border-box; min-height: 12.75rem}
+.sec_mypage .btm > .right { border-left: 1px solid #e8e8e8}
+.sec_mypage .btm h4 { padding: 0 0 1rem}
+.sec_mypage .btm .list_bul2 > li { display: flex; font-size: 0.75rem; color: #252525}
+.sec_mypage .btm .list_bul2 > li ~ li { padding: 0.75rem 0 0}
+.sec_mypage .btm .list_bul2 > li > p { width: 34%}
+.sec_mypage .btm .list_bul2 > li .btn { padding: 0.2rem 0.7rem; font-size: 0.6rem; border-radius: 0.2rem}
+/* .sec_mypage .btm .right .list_bul2 > li > div > span { width: 6.7rem} */
+.sec_mypage .red { color: #f00}
+.list_bul2 > li > p:before { content: ""; display: inline-block; margin-right: 10px; width: 3px; height: 3px; background: #666; vertical-align: middle;}
+.btn_red { background: #f00 !important; color: #fff}
+
+.sec_mypage .btm .right .list_bul2 > li > div { flex: 1}
+.sec_mypage .btm .right .list_bul2 > li > div > span { display: inline-block; width: 6.75rem}
+
+
+.tb_type2 { font-size: 0.75rem; text-align: center; border-bottom: 1px solid #d2d2d2}
+.tb_type2 col ~ col { border-left:1px solid #e8e8e8}
+.tb_type2 thead th { padding: 0.75rem 0.5rem; box-sizing: border-box; font-weight: 500}
+.tb_type2 tbody td { padding: 1rem 0.5rem; min-height: 2.75rem; box-sizing: border-box;}
+
+/* 당첨내역 , 구매내역*/
+.list_search { border-top:1px solid #373b46; border-bottom:1px solid #373b46;}
+.list_search > li { display: flex; align-items: center; letter-spacing: -0.05em}
+.list_search > li > p { width: 7.4rem; font-size: 0.8rem; font-weight: 500; }
+.list_search .list_sel:after { display: block; clear: both;}
+.list_search .list_sel > li { float: left; padding: 0.8rem 0; }
+.list_search .list_sel > li ~ li { margin-left: -1px}
+.list_search .list_sel > li * { height: 2.6rem; width: 7rem; font-size: 0.7rem; border: 1px solid #e8e8e8; position: relative; color: #666; transition: all .3s;}
+.list_search .list_sel > li:hover * { border-color: var(--color_blue); z-index: 1; color: var(--color_blue)}
+.tb_type2 td.view_scan { padding: 0}
+.tb_type2 td.view_scan * { display: block; width: 100%; min-height:2.75rem; background: url(/common/images/ico_scan.png) no-repeat center}
+
+.nohistory { text-align: center;}
+.nohistory .wrap_img { margin:2.75rem 0 1.5rem;}
+.nohistory > p { font-size: 1.35rem}
+
+.popup.scan > .inner { min-width: 29.25rem; min-height: 29.8rem; text-align: center;}
+.popup.scan > .inner strong { display: block; padding: 3rem 0 1.15rem}
