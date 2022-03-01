@@ -48,8 +48,10 @@ select { background-color: transparent;}
 .btn_blue { background-color:var(--color_blue) !important; color: #fff !important; }
 
 /* color */
-.color_blue { color: var(--color_blue)}
+.color_blue { color: var(--color_blue) !important}
 .color_red { color: #de4f41 !important}
+.color_red2 { color: #e60012 !important}
+.color_000 { color: #000 !important}
 
 /* text style */
 .h_type1 { font-size: 1rem; letter-spacing: -0.075em}
@@ -60,13 +62,27 @@ select { background-color: transparent;}
 
 /* list */
 .list_type1 > li > a { display: block; border: 1px solid #ddd;border-radius: 0.5rem; box-sizing: border-box;}
+.list_bul.gray { color: #676767;
+    font-size: 0.8rem;}
 .list_bul > li { line-height: 1.2;}
 .list_bul > li ~ li { padding: 10px 0 0}
 .list_bul > li:before { content: ""; display: inline-block; margin-right: 10px; width: 3px; height: 3px; background: #666; vertical-align: middle;}
+.list_sel:after { display: block; clear: both;}
+.list_sel > li { float: left; }
+.list_sel > li ~ li { margin-left: -1px}
+.list_sel > li * { font-size: 0.7rem; border: 1px solid #e8e8e8; position: relative; color: #666; transition: all .3s;}
+.list_sel > li *:hover { z-index: 1}
 
 /* box */
 .bx_type1 { display: block; border: 1px solid #ddd; border-radius: 0.5rem; box-sizing: border-box;}
-
+.bx_search { padding:1.5rem 1.9rem }
+.bx_search * { font-family: 'Noto Sans KR',sans-serif;}
+.bx_search .left > p { margin-right: 0.75rem; font-size: 0.8rem; letter-spacing: -0.05em}
+.bx_search .right * { height: 2rem; box-sizing: border-box;}
+.bx_search .right input { padding:0 1rem; width: 8.75rem; border: 1px solid #ddd; border-radius: 0.2rem}
+.bx_search .right .btn_gray { padding: 0 1.9rem}
+.bx_search .list_sel > li > * { width: 4rem; height: 2rem; background: #fff; font-weight: 500}
+.bx_search .list_sel > li:hover * { border-color: #999; color: #444}
 /* font */
 .f_NotoSansKR { font-family: 'Noto Sans KR', sans-serif !important; }
 .f_GmarketSans { font-family: 'GmarketSans', sans-serif !important; }
@@ -86,7 +102,7 @@ select { background-color: transparent;}
 /* popup */
 .popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100}
 .popup.active { display: block !important;}
-.popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff;}
+.popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff; overflow: hidden;}
 .popup.type1 > .inner {   border-radius: 1rem;}
 .popup.type1 > .inner > .btn_close:after { content: "X"; display: block; position: absolute; right: 1.8rem; top: 2rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
 .popup.type2 .btn_close { position: absolute; right: 0; top: 0; }
@@ -137,9 +153,12 @@ header .btn_menu { width: 1.3rem; height: 0.8rem; background: url(/common/images
 header .nav_gnb { padding-left: 1.7rem}
 header .nav_gnb li ~ li { padding-left: 1.5rem}
 header .nav_gnb li, header .nav_guide li  { float: left; height: 3.5rem; line-height: 3.5rem}
-header .nav_gnb li a { display: block; font-size: 0.9rem; color: #252525}
-
+header .nav_gnb li a { position: relative; display: block; font-size: 0.9rem; color: #252525; transition: all .3s;}
+header .nav_gnb li a:after { content: ""; position: absolute; left: 0; width: 0; height: 1px; bottom: 0.8rem; background: var(--color_blue); transition: all .3s;}
+header .nav_gnb li a:hover { color: var(--color_blue); font-weight: 500}
 header .nav_guide { font-size: 0.75rem}
+header .nav_gnb li a:hover:after { width: 100%;}
+header .nav_guide li.rate .add_before:before { margin-right: 5px; width: 0.6rem; height: 0.6rem; background: url(/common/images/ico_rate.png) no-repeat center / 100%}
 header .nav_guide li a { display: inline-block; color: #434343}
 header .nav_guide li ~ li:before { content: ""; display: inline-block;
 margin:0 0.45rem 0 0.5rem; width: 1px; height: 0.65rem; background-color: #d2d2d2; vertical-align: middle;}
@@ -148,6 +167,7 @@ header .nav_guide .app .add_after:after { margin-left: 5px; width: 0.5rem; heigh
 header .util { position: absolute; right: 0; top: 0; left: 0}
 header .util ul li { float: left; }
 header .util ul li a { font-size: 0.7rem; line-height: 3.5rem}
+header .util ul li a img { height:1.1rem;}
 header .util .wrap_list > ul { float: left}
 header .util .wrap_list > .my > li { padding-left: 1.1rem}
 header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1px; height: 13px; background-color: #d2d2d2; vertical-align: middle;}
@@ -160,7 +180,8 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 /* visual */
 .sec_visual { padding: 0 0 0.9rem}
 .sec_visual .slide { height:15.15rem; border-radius: 0.5rem; overflow: hidden;}
-
+.sec_visual .slide .paging span { background: #fff; opacity: 1; width: 0.6rem; height: 0.6rem; border-radius: 0.6rem; transition: all .3s}
+.sec_visual .slide .paging .swiper-pagination-bullet-active { width: 3.8rem; }
 /* sec_lotto */
 .sec_lotto > ul > li { padding: 0 0 1.5rem; width: 48.83%; border: 2px solid #959595; border-radius: 0.5rem; box-sizing: border-box; color: #313131; letter-spacing: var(--ls25); text-align: center;}
 .sec_lotto h3 { height:5.2rem; line-height: 5.2rem;}
@@ -216,11 +237,11 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 /* sec_guide */
 .sec_guide { padding: 2.1rem 0 2.5rem}
 .sec_guide ul > li { width: 32%; font-size: 0.7rem; }
-.sec_guide ul > li > a { position: relative; display: block; padding: 1.9rem 0 1.8rem 1.2rem; border: 1px solid #ddd; background-repeat: no-repeat; background-size: auto 47.5%; background-position: right 0 bottom 0; border-radius: 0.5rem; box-sizing: border-box; letter-spacing: -0.075em}
+.sec_guide ul > li > a { position: relative; display: block; padding: 1.9rem 0 1.8rem 1.2rem; border: 1px solid #ddd; background-repeat: no-repeat;  background-position: right 0 bottom 0; border-radius: 0.5rem; box-sizing: border-box; letter-spacing: -0.075em}
 .sec_guide ul > .item_lucky a { background-image: url(/common/images/bg_quick_01.png); background-size: auto 42% ; background-position: right 9% bottom 13%;}
-.sec_guide ul > .item_result a { background-image: url(/common/images/bg_quick_02.png); background-image: url(/common/images/Untitled-1.png)}
+.sec_guide ul > .item_result a { background-image: url(/common/images/bg_quick_02.png);}
 .sec_guide ul > .item_guide a { background-image: url(/common/images/bg_quick_03.png);}
-.sec_guide ul > li > a:before { position: absolute; top:0.75rem; right:0.65rem; content: ""; width: 1.3rem; height: 1.3rem; border-radius: 100%; background: url(/common/images/sp/sp_ico.png) no-repeat right -20px top -10px #d7d7d7; }
+.sec_guide ul > li > a:before { position: absolute; top:0.75rem; right:0.65rem; content: ""; width: 1.3rem; height: 1.3rem; border-radius: 100%; background: url(/common/images/ico_arr_right_02.png) no-repeat center #c2c2c2 }
 .sec_guide ul > li > a:hover:before { background-color: var(--color_blue); transition: all .3s;}
 .sec_guide ul > li > a > strong { display: block; padding: 0.55rem 0; text-transform: uppercase; font-size: 0.85rem}
 .sec_guide ul > li > a > .add_after { position: relative; display: inline-block;}
@@ -250,9 +271,11 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 
 .sec_mymoney .list_type1 > li { margin-bottom: 0.5rem}
 .sec_mymoney .list_type1 > li > a { display: flex; align-items: center; justify-content: center; padding: 1.3rem 0 1.15rem; font-size: 0.65rem; color: #434343; box-sizing: border-box;}
-.sec_mymoney .list_type1 > li > a:before { content: ""; display: inline-block; margin-right: 1rem; width: 2.8rem; height: 2.8rem; border-radius: 100%; background: #eee;}
+.sec_mymoney .list_type1 > li > a:before { content: ""; display: inline-block; margin-right: 1rem; width: 2.8rem; height: 2.8rem; border-radius: 100%; background-color: #eee; background-repeat: no-repeat; background-position: center; background-size: 50% auto;}
 .sec_mymoney .list_type1 > li > a strong { font-size: 0.85rem; color: #313131}
 .sec_mymoney .list_type1 > li > a p { padding: 0.5rem 0 0}
+.sec_mymoney .list_type1 > li.coupon > a:before { background-image: url(../images/ico_coupon.png) }
+.sec_mymoney .list_type1 > li.charge > a:before { background-image: url(../images/ico_charge.png) }
 
 
 .bx_app { padding: 1.6rem 0 1.4rem 1.5rem; background-image:linear-gradient(to top, #00ade1, #008dca); color: #fff; box-sizing: border-box; position: relative; background:url(/common/images/img_phone.png) no-repeat top 1.6rem right 1.5rem / 28.78% auto, linear-gradient(to top, #00ade1, #008dca)}
@@ -271,7 +294,12 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 .sec_winner ul li a p { font-family: 'Noto sans KR',sans-serif;}
 .sec_winner ul li a span { font-size: 0.6rem}
 
+.sec_event { position: relative; padding: 0 0 3.35rem}
 .sec_event h2 { padding: 1.75rem 0 1.25rem}
+.sec_event .paging { text-align: center; padding: 0.5rem 0 0; left: 50%; transform: translateX(-50%);}
+.sec_event .paging span { border-radius: 8px}
+.sec_event .paging span ~ span { margin-left: 0.25rem; }
+.sec_event .paging .swiper-pagination-bullet-active { background-color: #373a3c; width: 1rem}
 
 .view_past,.notice_age { position: relative; padding: 1.1rem 0 0 36.36%; height: 5.15rem; font-size: 0.8rem; letter-spacing: -0.025em; box-sizing: border-box;}
 .view_past strong , .notice_age strong { display: block; padding: 0 0 4px}

@@ -1,0 +1,81 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <div class="wrap_mypage clear wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
+      <div class="right">
+        <section class="">
+          <div class="wrap_title">
+            <h3 class="heading">캐쉬내역 - <span class="color_blue">환급내역</span></h3>
+          </div>
+          <div class="bx_search bx_gray">
+            <div class="clear">
+              <div class="left flex align_center">
+                <p>조회기간</p>
+                <ul class="list_sel">
+                  <li><button>1주일</button></li>
+                  <li><button>1개월</button></li>
+                  <li><button>3개월</button></li>
+                  <li><button>6개월</button></li>
+                </ul>
+              </div>
+              <div class="right">
+                <span><input type="date"> ~ <input type="date"></span>
+                <button class="btn_gray">조회</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="">
+          <div class="wrap_title">
+            <h3 class="heading">환급내역</h3>
+          </div>
+          <div class="wrap_tb">
+            <table class="tb_type2">
+              <caption>
+                <div class="hide">
+                보너스 포인트
+                </div>
+              </caption>
+              <colgroup>
+                <col width="8.38%">
+                <col width="">
+                <col width="19%">
+                <col width="14.5%">
+                <col width="13.5%">
+                <col width="10%">
+              </colgroup>
+              <thead class="bg_navy">
+                <tr>
+                  <th>NO</th>
+                  <th>환급신청일시</th>
+                  <th>총 보유 캐쉬</th>
+                  <th>환급요청 캐쉬</th>
+                  <th>잔여캐쉬</th>
+                  <th>상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2022년 02월 22일 (화) 12:45</td>
+                  <td>500,000캐쉬</td>
+                  <td>500,000캐쉬</td>
+                  <td>500,000캐쉬</td>
+                  <td>승인</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>

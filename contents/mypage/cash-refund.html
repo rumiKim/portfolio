@@ -1,0 +1,166 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <div class="wrap_mypage clear wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
+      <div class="right">
+        <section class="sec_refund">
+          <div class="wrap_title">
+            <h3 class="heading">캐쉬 환급신청</h3>
+          </div>
+          <div class="bx_type2 top flex space align_center bg_navy type_radius">
+            <p class="left add_before fw300 ls50"><span class="va_mid"><strong>난대빵</strong> 회원님, 현재 보유캐쉬는</span><strong class="color_ylw">450,000 캐쉬</strong></p>
+          </div>
+          <div class="bx_notice">
+            <ul class="list_bul gray">
+              <li><span>환급신청하신 캐쉬는 본인명의의 계좌번호로 이체됩니다.</span></li>
+              <li><span>계좌번호가 정확해야 이체되므로 계좌번호 확인 후 신청해 주시기 바랍니다.</span></li>
+              <li>
+                <span>환급금 출금이체는 1일 1회 처리됩니다. (단, 주말과 공휴일은 제외)</span>
+                <span>당일 오전 10시까지 출금신청된 내역을 신청마감하고, 집계된 내역은 당일 16시경 신청하신 계좌로 이체 됩니다.</span>
+              </li>
+              <li><span>환급금 출금 신청 시 이체수수료500원은 (전용은행 상이시) 이용자 부담입니다. (환급 수수료는 없습니다.)</span></li>
+              <li><span>환급금은 50,000캐쉬 이상부터 환급이 가능합니다.</span></li>
+              <li><span>회원 본인의 명의의 계좌정보만 유효합니다.</span>
+                <ul>
+                  <li><span>- 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.</span></li>
+                  <li><span>- 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로 반환 처리 됩니다.</span></li>
+                  <li><span>- 반복적으로 이체오류가 발생하는 경우, 계좌정보를 변경 등록하시기 바랍니다.
+              ・ 이체불가</span></li>
+                  <li><span>- 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.</span></li>
+                  <li><span>- 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로 반환 처리 됩니다.</span></li>
+                </ul>
+              </li>
+              <li><span>이체불가</span>
+                <ul>
+                  <li><span>- 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.</span></li>
+                  <li><span>- 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로 반환 처리 됩니다.</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="sec_apply">
+          <div class="wrap_title">
+            <h3 class="heading">환급신청 접수하기</h3>
+          </div>
+          <form class="f_NotoSansKR">
+            <fieldset>
+              <legend class="hide">환급신청 접수 입력 폼</legend>
+              <ul class="list_reg">
+                <li>
+                  <label for="bank"><span>계좌 은행</span></label>
+                  <div class="bx_input">
+                    <select name="" id="bank">
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <label for="account"><span>계좌 번호</span></label>
+                  <div class="bx_input ">
+                    <input type="text" id="account" placeholder="">
+                  </div>
+                </li>
+                <li class="">
+                  <label for="account_name"><span>예금주명</span></label>
+                  <div class="bx_input ">
+                    <input type="text" id="account_name" placeholder="">
+                  </div>
+                </li>
+                <li>
+                  <label for=""><span>환급 신청액</span></label>
+                  <div>
+                    <div class="bx_input">
+                      <input type="text" id="" placeholder="8자리 이상 입력해주세요.">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <label for="reg_pw_re"><span>환급 수수료</span></label>
+                  <div class="bx_input">
+
+                  </div>
+                </li>
+                <li>
+                  <label for="reg_birth"><span>실제 환급액</span></label>
+                  <div class="bx_input gray">
+                    <input type="text" id="reg_birth" placeholder="19750917">
+                  </div>
+                </li>
+              </ul>
+              <div class="wrap_btn flex align_center space">
+                <button class="btn_prev">취소</button>
+                <a href="" class="btn_gray">신청하기</a>
+              </div>
+            </fieldset>
+          </form>
+          <section>
+            <div class="wrap_title">
+              <h3 class="heading">환급신청 내역 조회</h3>
+            </div>
+            <div class="bx_search bx_gray">
+              <div class="clear">
+                <div class="left flex align_center">
+                  <p>조회기간</p>
+                  <ul class="list_sel">
+                    <li><button>1주일</button></li>
+                    <li><button>1개월</button></li>
+                    <li><button>3개월</button></li>
+                    <li><button>6개월</button></li>
+                  </ul>
+                </div>
+                <div class="right">
+                  <span><input type="date"> ~ <input type="date"></span>
+                  <button class="btn_gray">조회</button>
+                </div>
+              </div>
+            </div>
+            </section>
+
+          <div class="wrap_tb">
+            <table class="tb_type2">
+              <caption>
+                <div class="hide">
+                보너스 포인트
+                </div>
+              </caption>
+              <colgroup>
+                <col width="8.38%">
+                <col width="16.35%">
+                <col width="27.4%">
+                <col width="9.6%">
+                <col width="">
+              </colgroup>
+              <thead class="bg_navy">
+                <tr>
+                  <th>번호</th>
+                  <th>구분</th>
+                  <th>쿠폰등록일</th>
+                  <th>수량</th>
+                  <th>사용내역</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>슈퍼 3,000쿠폰</td>
+                  <td>2022년 02월 22일 (화) 12:45</td>
+                  <td>1</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>
