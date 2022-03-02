@@ -1,0 +1,105 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <div class="wrap_mypage clear wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
+      <div class="right">
+        <section class="sec_mynumber">
+          <div class="wrap_title">
+            <h3 class="heading" style="font-size:1.25rem">나의 복권 번호</h3>
+          </div>
+          <div class="bx_gray ls50">
+            <div class="clear">
+            <ul class="list_bul gray left" style="color:#373b46">
+              <li>나의 복권 번호 등록은 메가밀리언 또는 파워볼 구매 페이지에서 등록 하실 수 있습니다.</li>
+            </ul>
+            <div class="right">
+            <ul class="btns_buy clear">
+              <li class="left"><a href="" class="btn_navy">메가밀리언 구매하기</a></li>
+              <li class="left"><a href="" class="btn_navy">파워볼 구매하기</a></li>
+            </ul>
+            </div>
+            </div>
+          </div>
+          <div class="wrap_title">
+            <h4 class="heading">복권 등록 내역</h4>
+          </div>
+          <div class="wrap_tb">
+            <table class="tb_type2">
+              <caption>
+                <div class="hide">
+                  보너스 포인트
+                </div>
+              </caption>
+              <colgroup>
+                <col width="8.38%">
+                <col width="15%">
+                <col width="">
+                <col width="23%">
+                <col width="10%">
+              </colgroup>
+              <thead class="bg_navy">
+                <tr>
+                  <th>NO</th>
+                  <th>복권명</th>
+                  <th>나의 복권 번호</th>
+                  <th>등록일</th>
+                  <th>삭제</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>메가밀리언</td>
+                  <td>
+                    <div>
+                      <ul class="list_ball clear">
+                        <li><span>7</span></li>
+                        <li><span>16</span></li>
+                        <li><span>34</span></li>
+                        <li><span>44</span></li>
+                        <li><span>61</span></li>
+                        <li class="mega "><span>24</span></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>2022-02-10 11:59 [PM]</td>
+                  <td class="delete"><a href=""><span class="hide">삭제하기</span></a></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>파워볼</td>
+                  <td>
+                    <div>
+                      <ul class="list_ball clear">
+                        <li><span>7</span></li>
+                        <li><span>16</span></li>
+                        <li><span>34</span></li>
+                        <li><span>44</span></li>
+                        <li><span>61</span></li>
+                        <li class="power "><span>24</span></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>2022-02-10 11:59 [PM]</td>
+                  <td class="delete"><a href=""><span class="hide">삭제하기</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="nohistory">
+            <div class="wrap_img"><img src="/common/images/img_nohistory.jpg" alt=""></div>
+            <p>최근에 주문하신 제품이 없네요!</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>

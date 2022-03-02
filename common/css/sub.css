@@ -21,12 +21,12 @@
 .sec_login .login_sns ul li { margin: 0 0 0.5rem}
 
 .list_reg { padding-left:5%; padding-right: 5%; text-align: left}
-.list_reg .bx_input { display: block; padding-left: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2.4rem; line-height: 1; overflow: hidden; box-sizing: border-box;}
+.list_reg .bx_input { display: block; padding-left: 1rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2.4rem; line-height: 1; overflow: hidden; box-sizing: border-box;}
 .list_reg .bx_input.type1 { }
 .list_reg .bx_input.type1 input { width: auto}
 .list_reg .bx_input.type1 > div { position: relative; flex:1}
 .list_reg .bx_input.gray { background: #f5f5f5}
-.list_reg .bx_input input { height: 100%; width: 100%; background: none; box-sizing: border-box;}
+.list_reg .bx_input input,.list_reg .bx_input select { height: 100%; width: 100%; background: none; box-sizing: border-box;}
 .list_reg > li { display: flex;}
 .list_reg > li ~ li { margin-top: 1rem}
 .list_reg > li > div { flex: 1}
@@ -48,6 +48,10 @@
 .btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
 .list_reg .btn_gray { margin-left: 0.3rem; width: 6rem; line-height: 2.5rem;}
 
+
+.btn_navy { color: #fff; background: #373b46}
+.wrap_btn.type2 { margin: 2rem auto 0; width:54.6%;}
+.wrap_btn.type2 > * { width: 13rem;}
 .wrap_btn > * { display: block; line-height: 3rem; height: 3rem;  border-radius: 0.2rem; font-size: 0.85rem; font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
 .wrap_btn.flex.space > * { width: 49%;}
 .wrap_btn .btn_prev,
@@ -122,7 +126,7 @@
 /* mypage - common */
 .wrap_mypage { padding:2rem 0 0; font-family: 'Noto Sans KR',sans-serif;}
 .wrap_mypage .wrap_title { padding: 0 0 1.2rem}
-.wrap_mypage .wrap_title .heading { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.05em}
+.wrap_mypage .wrap_title .heading { font-size: 1rem; font-weight: 500; letter-spacing: -0.05em}
 .wrap_mypage .wrap_title .txt_gray { padding-left: 1rem; font-size: 0.75rem; color: #888}
 .wrap_mypage > .left { width: 16.5%;  }
 .wrap_mypage > .right { width: 80.83%;  }
@@ -159,7 +163,7 @@
 .sec_mypage .btm .list_bul2 > li .btn { padding: 0.2rem 0.7rem; font-size: 0.6rem; border-radius: 0.2rem}
 /* .sec_mypage .btm .right .list_bul2 > li > div > span { width: 6.7rem} */
 .sec_mypage .red { color: #f00}
-.list_bul2 > li > p:before { content: ""; display: inline-block; margin-right: 10px; width: 3px; height: 3px; background: #666; vertical-align: middle;}
+.list_bul2 > li > p:before { content: ""; display: inline-block; margin-right: 6px; width: 2px; height: 2px; background: #bfbfbf; vertical-align: middle;}
 .btn_red { background: #f00 !important; color: #fff}
 
 .sec_mypage .btm .right .list_bul2 > li > div { flex: 1}
@@ -170,11 +174,12 @@
 .tb_type2 col ~ col { border-left:1px solid #e8e8e8}
 .tb_type2 thead th { padding: 0.75rem 0.5rem; box-sizing: border-box; font-weight: 500}
 .tb_type2 tbody td { padding: 1rem 0.5rem; min-height: 2.75rem; box-sizing: border-box; color: #676767}
+.tb_type2 tbody tr ~ tr { border-top : 1px solid #d2d2d2}
 
 /* 당첨내역 , 구매내역*/
 .list_search { border-top:1px solid #373b46; border-bottom:1px solid #373b46;}
 .list_search > li { display: flex; align-items: center; letter-spacing: -0.05em}
-.list_search > li > p { width: 7.4rem; font-size: 0.8rem; font-weight: 500; }
+.list_search > li > p { width: 7.4rem; font-size: 0.8rem; font-weight: 500; color:#666; }
 .list_search .list_sel > li { padding: 0.8rem 0;}
 .list_search .list_sel > li * { height: 2.6rem; width: 7rem; font-size: 0.7rem; position: relative; color: #666; transition: all .3s;}
 .list_search .list_sel > li:hover * { border-color: var(--color_blue); color: var(--color_blue)}
@@ -191,7 +196,7 @@
 .popup.scan > .inner { min-width: 29.25rem; min-height: 29.8rem; text-align: center;}
 .popup.scan > .inner strong { display: block; padding: 3rem 0 1.15rem}
 
-.bx_gray { background: #eee}
+.bx_gray { background: #eee;}
 
 .sec_coupon .bx_gray { padding:2.25rem 0 2rem ; border-bottom: 1px solid #000; border-top: 1px solid #000}
 .sec_coupon .bx_gray > p { font-size:1.2rem;  color: #373b46; text-align: center;}
@@ -210,10 +215,13 @@
 .bx_type2 { font-size: 0.9rem}
 .bx_type2 .color_ylw { padding-left: 0.8rem; color: #fffc00; vertical-align: middle;}
 .bx_notice { padding: 1rem 3.3%; border: 1px solid #e8e8e8; box-sizing: border-box;}
-.bx_notice .list_bul > li { letter-spacing: -0.05em; }
+.bx_notice .list_bul > li { position: relative; padding-left: 0.5rem; letter-spacing: -0.05em; line-height: 1.6}
+.bx_notice .list_bul > li:before { position: absolute; left: 0; top: 0.5rem;}
+.bx_notice .list_bul > li ~ li { margin-top: 0.3rem}
+.bx_notice .list_bul > li ul { margin-left: 0.6rem}
+.bx_notice .list_bul > li ul li { line-height: 1.4}
 
-
-
+.border_type1 { border-top:1px solid #000; border-bottom: 1px solid #000}
 .radius5 { border-radius: 0.25rem}
 .sec_charge .bx_notice { margin: 0 0 2.5rem}
 .list_charge > li { display: flex; margin-bottom: 0.3rem; border: 1px solid #d2d2d2; border-radius: 0.5rem; overflow: hidden; height: 4rem; }
@@ -253,3 +261,29 @@
 .mileage .list_reg:nth-of-type(1) > li label { padding: 0.8rem 0 0}
 .mileage .list_reg > li > label { width: 8rem; line-height: inherit;}
 .mileage .list_reg > li > .bx_input { width: 11.5rem; flex: none;}
+
+
+/* cash-refund.html  */
+.list_reg.type2 { padding:0.85rem 1.1rem ; border-top: 1px solid #000; border-bottom: 1px solid #000; box-sizing: border-box ; font-size: 0.75rem}
+.list_reg.type2 > li > label { width: 6.8rem; letter-spacing: -0.05em; font-weight: 500;}
+.list_reg.type2 .bx_input { width: 19.6rem; font-size: 0.8rem}
+.list_reg.type2 > li > div { flex:none; margin-right:0.5rem;  line-height: 2.4rem; }
+.sec_apply .item_fee > div { font-size: 0.75rem}
+.sec_apply .item_refund > div { font-size: 1.3rem}
+.chk_apply .bx_gray { margin:0.5rem 0 1.5rem; }
+
+.status { margin: 0 0 0.7rem; text-align: right; color: #676767; font-size: 0}
+.status > li { display: inline-block; font-size: 0.75rem}
+.status > li ~ li:before { content: "/"; display: inline-block; vertical-align: middle;}
+.status > li > span { vertical-align: middle;}
+.space_btm { margin-bottom: 30vh}
+
+/* mynumber.html */
+.sec_mynumber .bx_gray { padding: 1.5rem 1.9rem; }
+.sec_mynumber .bx_gray .list_bul > li { line-height: 1.8rem}
+.sec_mynumber .bx_gray .btns_buy a { display: block; margin-left: 0.5rem; font-size: 0.75rem; width: 7.5rem; text-align: center; border-radius: 0.25rem; line-height: 1.8rem}
+
+.sec_mynumber h4 { margin-top: 2.55rem}
+.sec_mynumber .list_ball  { display: table; margin: 0 auto}
+.sec_mynumber .tb_type2 td.delete { padding: 0}
+.sec_mynumber .tb_type2 td.delete a { display: inline-block; width: 2rem; height: 2rem; background:url(/common/images/ico_bin.png) no-repeat center #eee; border-radius: 100%}

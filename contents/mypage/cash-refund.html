@@ -19,17 +19,16 @@
               <li><span>환급신청하신 캐쉬는 본인명의의 계좌번호로 이체됩니다.</span></li>
               <li><span>계좌번호가 정확해야 이체되므로 계좌번호 확인 후 신청해 주시기 바랍니다.</span></li>
               <li>
-                <span>환급금 출금이체는 1일 1회 처리됩니다. (단, 주말과 공휴일은 제외)</span>
+                <span>환급금 출금이체는 1일 1회 처리됩니다. (단, 주말과 공휴일은 제외) <br></span>
                 <span>당일 오전 10시까지 출금신청된 내역을 신청마감하고, 집계된 내역은 당일 16시경 신청하신 계좌로 이체 됩니다.</span>
               </li>
               <li><span>환급금 출금 신청 시 이체수수료500원은 (전용은행 상이시) 이용자 부담입니다. (환급 수수료는 없습니다.)</span></li>
-              <li><span>환급금은 50,000캐쉬 이상부터 환급이 가능합니다.</span></li>
+              <li><span>환급금은 <span class="color_blue">50,000캐쉬 이상</span>부터 환급이 가능합니다.</span></li>
               <li><span>회원 본인의 명의의 계좌정보만 유효합니다.</span>
                 <ul>
                   <li><span>- 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.</span></li>
                   <li><span>- 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로 반환 처리 됩니다.</span></li>
-                  <li><span>- 반복적으로 이체오류가 발생하는 경우, 계좌정보를 변경 등록하시기 바랍니다.
-              ・ 이체불가</span></li>
+                  <li><span>- 반복적으로 이체오류가 발생하는 경우, 계좌정보를 변경 등록하시기 바랍니다.</span></li>
                   <li><span>- 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.</span></li>
                   <li><span>- 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로 반환 처리 됩니다.</span></li>
                 </ul>
@@ -47,113 +46,129 @@
           <div class="wrap_title">
             <h3 class="heading">환급신청 접수하기</h3>
           </div>
-          <form class="f_NotoSansKR">
+          <form class="f_NotoSansKR ">
             <fieldset>
               <legend class="hide">환급신청 접수 입력 폼</legend>
-              <ul class="list_reg">
+              <ul class="list_reg type2 ls50">
                 <li>
                   <label for="bank"><span>계좌 은행</span></label>
                   <div class="bx_input">
                     <select name="" id="bank">
-                      <option value=""></option>
+                      <option value="">은행을 선택해주세요.</option>
+                      <option value="">국민은행</option>
+                      <option value="">하나은행</option>
+                      <option value="">신한은행</option>
                     </select>
                   </div>
                 </li>
                 <li>
                   <label for="account"><span>계좌 번호</span></label>
                   <div class="bx_input ">
-                    <input type="text" id="account" placeholder="">
+                    <input type="text" id="account" placeholder="-없이 숫자만 입력해주세요.">
                   </div>
                 </li>
                 <li class="">
                   <label for="account_name"><span>예금주명</span></label>
                   <div class="bx_input ">
-                    <input type="text" id="account_name" placeholder="">
+                    <input type="text" id="account_name" placeholder="예금주명을 입력해주세요.">
                   </div>
                 </li>
-                <li>
-                  <label for=""><span>환급 신청액</span></label>
-                  <div>
+                <li class="flex align_center">
+                  <label for="refund"><span>환급 신청액</span></label>
+                  <div class=" ">
                     <div class="bx_input">
-                      <input type="text" id="" placeholder="8자리 이상 입력해주세요.">
+                      <input type="text" id="refund" placeholder="출금하실 금액을 입력해 주세요.">
                     </div>
                   </div>
+                  <span>현재 출금 신청 가능액은 <strong class="" style="color:#f00">450,000</strong>캐쉬 입니다.</span>
                 </li>
-                <li>
-                  <label for="reg_pw_re"><span>환급 수수료</span></label>
-                  <div class="bx_input">
-
+                <li class="item_fee">
+                  <label for=""><span>환급 수수료</span></label>
+                  <div class="">
+                    <span class="f_GmarketSans">1,000</span> 원
                   </div>
                 </li>
-                <li>
-                  <label for="reg_birth"><span>실제 환급액</span></label>
-                  <div class="bx_input gray">
-                    <input type="text" id="reg_birth" placeholder="19750917">
+                <li class="item_refund">
+                  <label for=""><span>실제 환급액</span></label>
+                  <div class=" ">
+                    <strong class=" f_GmarketSans" style="color:#f00">99,000</strong> 원
                   </div>
                 </li>
               </ul>
-              <div class="wrap_btn flex align_center space">
+              <div class="wrap_btn type2 flex align_center space">
                 <button class="btn_prev">취소</button>
-                <a href="" class="btn_gray">신청하기</a>
+                <a href="" class="btn_navy">신청하기</a>
               </div>
             </fieldset>
           </form>
-          <section>
-            <div class="wrap_title">
-              <h3 class="heading">환급신청 내역 조회</h3>
-            </div>
-            <div class="bx_search bx_gray">
-              <div class="clear">
-                <div class="left flex align_center">
-                  <p>조회기간</p>
-                  <ul class="list_sel">
-                    <li><button>1주일</button></li>
-                    <li><button>1개월</button></li>
-                    <li><button>3개월</button></li>
-                    <li><button>6개월</button></li>
-                  </ul>
-                </div>
-                <div class="right">
-                  <span><input type="date"> ~ <input type="date"></span>
-                  <button class="btn_gray">조회</button>
-                </div>
+        </section>
+        <section class="chk_apply space_btm">
+          <div class="wrap_title bb">
+            <h3 class="heading">환급신청 내역 조회</h3>
+          </div>
+          <div class="bx_search bx_gray">
+            <div class="clear">
+              <div class="left flex align_center">
+                <p>조회기간</p>
+                <ul class="list_sel">
+                  <li><button>1주일</button></li>
+                  <li><button>1개월</button></li>
+                  <li><button>3개월</button></li>
+                  <li><button>6개월</button></li>
+                </ul>
+              </div>
+              <div class="right">
+                <span><input type="date"> ~ <input type="date"></span>
+                <button class="btn_gray">조회</button>
               </div>
             </div>
-            </section>
-
+          </div>
           <div class="wrap_tb">
+            <ul class="status clear">
+              <li><strong>신청중</strong><span>(출금신청 완료)</span></li>
+              <li><strong>처리중</strong><span>(접수완료)</span></li>
+              <li><strong>캐쉬조정</strong><span>(출금신청액, 수수료 설정)</span></li>
+              <li><strong>출금완료</strong></li>
+            </ul>
             <table class="tb_type2">
               <caption>
                 <div class="hide">
-                보너스 포인트
+                  보너스 포인트
                 </div>
               </caption>
               <colgroup>
                 <col width="8.38%">
-                <col width="16.35%">
-                <col width="27.4%">
-                <col width="9.6%">
                 <col width="">
+                <col width="13%">
+                <col width="18%">
+                <col width="12%">
+                <col width="10%">
               </colgroup>
               <thead class="bg_navy">
                 <tr>
-                  <th>번호</th>
-                  <th>구분</th>
-                  <th>쿠폰등록일</th>
-                  <th>수량</th>
-                  <th>사용내역</th>
+                  <th>NO</th>
+                  <th>환급요청일시</th>
+                  <th>은행명</th>
+                  <th>계좌번호</th>
+                  <th>환급액</th>
+                  <th>상태</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>슈퍼 3,000쿠폰</td>
                   <td>2022년 02월 22일 (화) 12:45</td>
-                  <td>1</td>
-                  <td>-</td>
+                  <td>기업은행</td>
+                  <td>666-005688-01-045</td>
+                  <td>50,000원</td>
+                  <td>출금완료</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="nohistory">
+            <div class="wrap_img"><img src="/common/images/img_nohistory.jpg" alt=""></div>
+            <p>최근에 주문하신 제품이 없네요!</p>
           </div>
         </section>
       </div>

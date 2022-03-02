@@ -12,12 +12,12 @@
 
 html { font-size: 20px;}
 body { font-size: 1rem; }
-input { font-family: 'Noto Sans KR',sans-serif;}
+input,select,textarea { font-family: 'Noto Sans KR',sans-serif;}
 input::-webkit-input-placeholder,
 input::placeholder,
 input::-ms-input-placeholder,
 input:-ms-input-placeholder { color: #000}
-input,select { outline: 0}
+input,select { outline: 0; }
 select { background-color: transparent;}
 
 .wrap_com { margin:0 auto; width: 60rem;}
@@ -36,7 +36,8 @@ select { background-color: transparent;}
 .fwB { font-weight: bold;}
 /* border-radius */
 .br10 { border-radius: 0.5rem}
-
+.bt { border-top: 1px solid #000}
+.bb { border-bottom: 1px solid #000}
 /* bg */
 .bg_blue { background-color: var(--color_blue);}
 .bg_red { background-color:#f00 }
@@ -52,6 +53,7 @@ select { background-color: transparent;}
 .color_red { color: #de4f41 !important}
 .color_red2 { color: #e60012 !important}
 .color_000 { color: #000 !important}
+.color_fff { color: #fff !important}
 
 /* text style */
 .h_type1 { font-size: 1rem; letter-spacing: -0.075em}
@@ -64,8 +66,8 @@ select { background-color: transparent;}
 .list_type1 > li > a { display: block; border: 1px solid #ddd;border-radius: 0.5rem; box-sizing: border-box;}
 .list_bul.gray { color: #676767;
     font-size: 0.8rem;}
-.list_bul > li { line-height: 1.2;}
-.list_bul > li ~ li { padding: 10px 0 0}
+.list_bul > li { line-height: 1.2; position: relative; }
+.list_bul > li ~ li { margin-top: 10px}
 .list_bul > li:before { content: ""; display: inline-block; margin-right: 10px; width: 3px; height: 3px; background: #666; vertical-align: middle;}
 .list_sel:after { display: block; clear: both;}
 .list_sel > li { float: left; }
@@ -96,8 +98,8 @@ select { background-color: transparent;}
 /* input */
 .chk_type1 + label { cursor: pointer;}
 .chk_type1 + label span { vertical-align: middle;}
-.chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; width: 1rem; height: 1rem; box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
-.chk_type1:checked + label:before { background: #666}
+.chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; background-color: #fff; width: 1rem; height: 1rem; box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
+.chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 
 /* popup */
 .popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100}
@@ -118,6 +120,10 @@ select { background-color: transparent;}
 
 main { display: block; min-height: 100vh}
 footer { background: #222; text-align: center; line-height: 1; font-family: 'GmarketSans',sans-serif;}
+footer .mainlogo, footer .mainlogo a:before { color: #888 !important; }
+footer .mainlogo a:before { padding-bottom: 5px}
+footer .mainlogo a { height: auto}
+footer .copyright { padding-left: 1.5rem; font-size: 0.6rem}
 footer * {  color: #b3b3b3;}
 footer .top { border-bottom: 1px solid #3c3c3c;}
 footer .top ul { font-size: 0}
@@ -128,7 +134,7 @@ footer .mid { padding: 2.5rem 0 }
 footer .mid ul li { display:inline-block; font-weight: 300; font-size: 0.65rem; line-height: 1.7}
 footer .mid > p { padding: 1rem 0 0; font-size: 0.7rem; font-family: 'Noto Sans KR',sans-serif; color: #777777; line-height: 1.57}
 footer .btm {  background-color: #272727}
-footer .btm > div { height: 5.2rem;}
+footer .btm > div { padding: 1.4rem 0}
 footer .sns li a { display: block; width: 2.5rem; height: 2.5rem ; }
 footer .sns li ~ li { margin-left: 0.5rem;}
 footer .sns li.facebook { background: url(/common/images/img-share-facebook.png) no-repeat center / 100% 100% }
@@ -136,23 +142,33 @@ footer .sns li.insta { background: url(/common/images/img-share-instagram.png)  
 footer .sns li.youtube { background: url(/common/images/img-share-youtube.png)  no-repeat center / 100% 100%}
 footer .app h2 { padding-right:2.5rem; font-size: 0.8rem; line-height: 2.8rem}
 footer .app ul { border:1px solid #383838 }
-footer .app ul li { float: left; background-image: url(/common/images/sp/sp_footer.png); background-repeat: no-repeat; background-position: -10px -33px}
+footer .app ul li { float: left; background-repeat: no-repeat; background-position:center}
+footer .app ul li.googleplay { background-image: url(../images/ico_play.png)}
+footer .app ul li.appstore { background-image: url(../images/ico_apple.png)}
 footer .app ul li a { display: block; height: 2.7rem; width: 2.7rem;}
 footer .app ul li ~ li { border-left: 1px solid #383838}
 
 
-
-
-header { font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.05em }
+.banner { position: relative;}
+.banner img { width: 100%}
+.banner .wrap_com { position: absolute; left: 50%; top: 0; bottom: 0; transform: translateX(-50%); text-align: right;}
+.banner .bx_chk { position: absolute; top: 50%; transform: translateY(-50%); font-size: 0.65rem; right: 0}
+.banner .bx_chk .chk_type1 + label { padding: 0.5rem 0}
+.banner .bx_chk .chk_type1 + label span { padding: 0 1.5rem 0 0.5rem}
+.banner .btn_close { width: 0.7rem; height: 0.7rem; background: url(/common/images/ico_x_banner.png) no-repeat center / 100% 100% }
+header { position: relative; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.05em }
 header .wrap_com { position: relative;}
-header h1 { position: relative; z-index: 100; font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 1.3rem}
-header h1 a { display: block; height: 3.5rem; }
-header h1 a:before { display: block; text-align: right; content: "슈퍼로또코리아"; font-size: 0.6rem; color: #434343; font-family: 'Noto Sans KR',sans-serif; font-weight: 400; transform: translateY(5px);}
+.mainlogo { position: relative; z-index: 100; font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 1.3rem}
+.mainlogo a { display: flex;  height: 3.5rem; }
+.mainlogo a:before { display: block; text-align: right; content: "슈퍼로또코리아"; font-size: 0.6rem; color: #434343; font-family: 'Noto Sans KR',sans-serif; font-weight: 400; transform: translateY(5px);}
+
+
 header .gnb { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8}
 header .btn_menu { width: 1.3rem; height: 0.8rem; background: url(/common/images/btn_menu.png) no-repeat left center / 100% auto}
 header .nav_gnb { padding-left: 1.7rem}
 header .nav_gnb li ~ li { padding-left: 1.5rem}
 header .nav_gnb li, header .nav_guide li  { float: left; height: 3.5rem; line-height: 3.5rem}
+header .nav_guide li.rate { font-weight: bold;}
 header .nav_gnb li a { position: relative; display: block; font-size: 0.9rem; color: #252525; transition: all .3s;}
 header .nav_gnb li a:after { content: ""; position: absolute; left: 0; width: 0; height: 1px; bottom: 0.8rem; background: var(--color_blue); transition: all .3s;}
 header .nav_gnb li a:hover { color: var(--color_blue); font-weight: 500}
