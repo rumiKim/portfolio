@@ -1,0 +1,87 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <div class="wrap_mypage clear wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
+      <div class="right">
+        <section class="sec_delete">
+          <div class="wrap_title bb">
+            <h3 class="heading color_000">회원탈퇴</h3>
+          </div>
+          <div class="notice_type1 ls75">
+            <div class="wrap_img"><img src="/common/images/img_smile.png" alt=""></div>
+            <p>그 동안 슈퍼로또코리아를 이용해주셔서 감사합니다.</p>
+            <small>더욱더 개선하여 좋은 서비스와 품질로 보답하겠습니다.</small>
+          </div>
+          <div class="bx_gray bx_padding">
+            <p>탈퇴하시기 전에 아래에 내용을 확인해 주세요!</p>
+            <div>현재 신종운님의 잔여포인트는 <span class="color_red">0</span>점 사용가능쿠폰은 <span class="color_red">2개</span> 입니다.</div>
+            <p>사용하지 않은 쿠폰 또는 포인트가 있는 경우, 탈퇴 시 자동 소멸 됩니다.</p>
+            <ul class="list_bul gray">
+              <li><span>회원 탈퇴를 하실 경우 고객님의 개인정보와 구매이력이 삭제 되니 신중하게 결정하셔서 신청해 주세요.</span></li>
+              <li><span>[전자상거래등에서의 소비자보호에 관한 법률], [통신비밀보호법], [정보통신망 이용촉진 및 정보보호에관한법률] 등 법률에 근거하여 거래 관련 권리의무관계의 확인 등을 이유로 일정기간 그 정보를 보유하여야 할 필요가 있을 경우에는 일정기간 동안 그 정보를 보유합니다.</span></li>
+            </ul>
+          </div>
+          <p>회원 탈퇴를 신청하시면 해당 아이디는 즉시 탈퇴 처리되며, 이후 영구적으로 사용이 중지되므로 새로운 아이디로만 재가입이 가능 합니다.</p>
+          <div class="agree">
+            <div class="">
+              <input type="checkbox" class="chk_type1" id="chk_agree">
+              <label for="chk_agree">위의 내용을 확인했습니다.</label>
+            </div>
+          </div>
+        </section>
+        <section class="sec_delete">
+          <div class="wrap_title bb">
+            <h4 class="heading color_000">회원탈퇴를 위한 회원정보 인증</h4>
+          </div>
+          <form class="fm_delete f_NotoSansKR">
+            <fieldset>
+              <legend class="hide">회원정보 인증을 위한 입력 폼</legend>
+              <ul class="list_reg">
+                <li>
+                  <label for="name_del"><span>이름</span></label>
+                  <div class="bx_input" style="border-color: transparent">
+                    <input type="text" id="name_del" value="김길동" readonly>
+                  </div>
+                </li>
+                <li>
+                  <label for="id_del"><span>아이디(이메일)</span></label>
+                  <div class="bx_input" style="border-color: transparent">
+                    <input type="" id="id_del" value="ID@account.com" readonly>
+                  </div>
+                </li>
+                <li>
+                  <label for="pw_del"><span>비밀번호</span></label>
+                  <div>
+                    <div class="bx_input pw">
+                      <input type="password" id="pw_del" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+                  </div>
+                </li>
+                <li class="item_textarea flex column">
+                  <label for=""><span>기타 개선사항이나 의견이 있으시면 남겨주세요.</span></label>
+                  <div>
+                    <div class="bx_input">
+                      <textarea placeholder="내용을 입력해주세요.(10자 이상)"></textarea>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="wrap_btn flex align_center justify_center space_btm">
+                <a href="signup3-complete.html" class="btn_gray">회원 탈퇴</a>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>

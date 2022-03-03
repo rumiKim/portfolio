@@ -52,7 +52,7 @@
 .btn_navy { color: #fff; background: #373b46}
 .wrap_btn.type2 { margin: 2rem auto 0; width:54.6%;}
 .wrap_btn.type2 > * { width: 13rem;}
-.wrap_btn > * { display: block; line-height: 3rem; height: 3rem;  border-radius: 0.2rem; font-size: 0.85rem; font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
+.wrap_btn > * { display: block; line-height: 3rem; height: 3rem; min-width: 13rem; border-radius: 0.2rem; font-size: 0.85rem; font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
 .wrap_btn.flex.space > * { width: 49%;}
 .wrap_btn .btn_prev,
 .btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
@@ -84,7 +84,7 @@
 .sec_reg.write .list_reg .bx_num { position: relative; margin-top: 0.5rem; width: 12rem}
 .sec_reg.write .list_reg select { height: 100%}
 .sec_reg.write .wrap_btn { padding: 3.75rem 0 14.5rem}
-.sec_reg.write .bx_agree .bx_input { height: auto; padding-bottom: 1.5rem; font-size: 0.75rem; color: #666}
+.bx_agree .bx_input { height: auto; padding-bottom: 1.5rem; font-size: 0.75rem; color: #666}
 
 /* 아이디 찾기 */
 .sec_reg.find_id .wrap_btn,
@@ -189,9 +189,11 @@
 .tb_type2 td.view_scan { padding: 0}
 .tb_type2 td.view_scan * { display: block; width: 100%; min-height:2.75rem; background: url(/common/images/ico_scan.png) no-repeat center}
 
-.nohistory { text-align: center;}
-.nohistory .wrap_img { margin:2.75rem 0 1.5rem;}
-.nohistory > p { font-size: 1.35rem}
+.nohistory, .notice_type1 { text-align: center;}
+.nohistory .wrap_img, .notice_type1 .wrap_img { margin:2.75rem 0 1.5rem;}
+.nohistory > p, .notice_type1 > p { font-size: 1.35rem; line-height: 1.35}
+.notice_type1 { color: #585858}
+
 
 .popup.scan > .inner { min-width: 29.25rem; min-height: 29.8rem; text-align: center;}
 .popup.scan > .inner strong { display: block; padding: 3rem 0 1.15rem}
@@ -207,7 +209,8 @@
 .wrap_input { height: 2.5rem; font-size: 0}
 .wrap_input > * { height: 100%; box-sizing: border-box; border-radius: 0.2rem; font-size: 0.75rem}
 .wrap_input > input { padding-left: 1rem; width:20.5rem;  border: 1px solid #e8e8e8; }
-.wrap_input > button { margin-left: 0.4rem; width: 6rem}
+.wrap_input > button, .wrap_input > a { display:inline-block; margin-left: 0.4rem; width: 6rem; vertical-align: middle; text-align: center; line-height: 2.5rem}
+
 
 .sec_point .bx_gray { margin: 0 0 1rem}
 
@@ -287,3 +290,36 @@
 .sec_mynumber .list_ball  { display: table; margin: 0 auto}
 .sec_mynumber .tb_type2 td.delete { padding: 0}
 .sec_mynumber .tb_type2 td.delete a { display: inline-block; width: 2rem; height: 2rem; background:url(/common/images/ico_bin.png) no-repeat center #eee; border-radius: 100%}
+
+/*direct.html */
+.sec_direct .wrap_tb .btn_red2 { margin: 2.5rem 0 0.5rem; width: 5.5rem; height: 2rem; }
+.sec_direct .bx_answer { font-size: 0.75rem; color:#676767; line-height: 2}
+.sec_direct .bx_answer > div { position: relative;}
+.sec_direct .bx_answer .btn_navy { position: absolute; right: 0; bottom: 0; width: 2.8rem; height: 1.5rem; text-align: center;}
+.sec_direct .bx_answer .text { max-width: 60%}
+.sec_write .btn_red2 { margin:1.5rem 0 11rem; width: 13.5rem}
+
+/*my-info.html  */
+.sec_myinfo .wrap_input { display: table; margin: 1.3rem auto}
+.sec_myinfo .wrap_input > * {height: 2.5rem}
+.sec_myinfo .fm_info { padding: 2rem 0 3.5rem}
+.sec_myinfo .wrap_btn.type2 { margin: 2.25rem auto 0}
+.sec_myinfo .secession { font-size: 0.75rem}
+.sec_myinfo .secession .left strong { font-size: 0.85rem}
+.sec_myinfo .secession .left p { padding-top: 0.85rem; color: #666}
+.sec_myinfo .secession a { display: block; width: 5rem; line-height: 2rem; text-align: center;}
+
+/* delete.html */
+.sec_delete { font-size:  .7rem; }
+.sec_delete .bx_gray { margin: 2.25rem 0 1.65rem; font-size: 0.85rem; color: #666; }
+.sec_delete .bx_gray > div { padding: 1rem 0 0.75rem; font-size: 1.2rem; color: #222;}
+.sec_delete .bx_gray .list_bul { margin-top: 2.5rem; padding-top: 0.75rem;  color:#999; font-size: 0.65rem; }
+.sec_delete .bx_gray .list_bul li { margin: 0; line-height: 1.7}
+.sec_delete .agree { padding-top: 1.8rem; margin-top: 1.5rem; border-top: 1px solid #e0e0e0; text-align: center;}
+
+.sec_delete .fm_delete { padding: 1.75rem 0 2.5rem}
+.sec_delete .fm_delete .list_reg { padding-left: 15%; padding-right: 15%;}
+.sec_delete .fm_delete .list_reg .item_textarea > * { width: 100%}
+.sec_delete .fm_delete .list_reg .item_textarea .bx_input { min-height: 6.2rem;}
+.sec_delete .fm_delete .list_reg .item_textarea textarea { width: 100% ;height:  100%; }
+.sec_delete .fm_delete .wrap_btn { padding:2.5rem 0 0 }
