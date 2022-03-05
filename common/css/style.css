@@ -57,6 +57,7 @@ select { background-color: transparent;}
 .color_red2 { color: #e60012 !important}
 .color_000 { color: #000 !important}
 .color_fff { color: #fff !important}
+.color_ylw { color: #fffc00 !important}
 
 /* text style */
 .h_type1 { font-size: 1rem; letter-spacing: -0.075em}
