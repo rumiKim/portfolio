@@ -31,3 +31,19 @@ for(let i=0; i<popupBtn.length; i++){
     const popup = document.querySelector('.popup.'+param);
     popup.classList.add('active');
   }
+
+
+
+// tab_type1
+  // $(function(){
+  //   let tabBtn = $('.tab_type1 > li > *');
+  //   tabBtn.on('click',function(e){
+  //     e.preventDefault();
+  //     let idx = $(this).parent().index();
+  //     $(this).parent('li').addClass('on');
+  //     $(this).parent('li').siblings().removeClass('on');
+  //     $(this).parents('.wrap_tab').next('.wrap_tabbox').children('div').eq(idx).addClass('on')
+  //     $(this).parents('.wrap_tab').next('.wrap_tabbox').children().eq(idx).siblings().removeClass('on')
+  //   });
+  //
+  // });

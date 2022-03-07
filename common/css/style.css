@@ -27,6 +27,13 @@ select { background-color: transparent;}
 .ls50 { letter-spacing: -0.050em;}
 .ls20 { letter-spacing: -0.020em;}
 .ls25 { letter-spacing: -0.025em;}
+.lh1 { line-height: 1}
+.lh12 { line-height: 1.2}
+.lh13 { line-height: 1.3}
+.lh14 { line-height: 1.4}
+.lh15 { line-height: 1.5}
+.lh16 { line-height: 1.6}
+.lh17 { line-height: 1.7}
 .fw300 { font-weight: 300}
 .fw400 { font-weight: 400}
 .fw500 { font-weight: 500}
@@ -64,6 +71,7 @@ select { background-color: transparent;}
 .h_type2 { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.025em}
 .h_type2 sup { font-weight: 600}
 .h_type3 { font-size: 2rem; font-family: 'GmarketSans', sans-serif; letter-spacing: -0.075em; font-weight: bold;}
+.h_type4 { padding: 1rem 0 2.6rem; font-family: "Noto Sans KR",sans-serif; color:#222; font-size: 2.5rem; letter-spacing: -0.075em; font-weight: 400; text-align: center;}
 
 
 /* list */
@@ -79,6 +87,12 @@ select { background-color: transparent;}
 .list_sel > li * { font-size: 0.7rem; border: 1px solid #e8e8e8; position: relative; color: #666; transition: all .3s;}
 .list_sel > li *:hover { z-index: 1}
 
+.list_type4 > li { padding: 0 1.5rem; border-top: 1px solid #d2d2d2; font-size: 0.75rem}
+.list_type4 > li a { position: relative;}
+.list_type4 > li a:after { position: absolute; right: 0; top: 50%; transform: translateY(-50%); content:""; width: 1.1rem; height: 0.6rem; background: url(../images/ico_arr_btm_next.png) no-repeat center}
+.list_type4 > li a > p { display: inline-block; margin-left: 1rem}
+.list_type4 > li > a { display: block; padding: 0.85rem 0}
+
 /* box */
 .bx_type1 { display: block; border: 1px solid #ddd; border-radius: 0.5rem; box-sizing: border-box;}
 .bx_search { padding:1.5rem 1.9rem }
@@ -89,6 +103,7 @@ select { background-color: transparent;}
 .bx_search .right .btn_gray { padding: 0 1.9rem}
 .bx_search .list_sel > li > * { width: 4rem; height: 2rem; background: #fff; font-weight: 500}
 .bx_search .list_sel > li:hover * { border-color: #999; color: #444}
+
 /* font */
 .f_NotoSansKR { font-family: 'Noto Sans KR', sans-serif !important; }
 .f_GmarketSans { font-family: 'GmarketSans', sans-serif !important; }
@@ -106,7 +121,7 @@ select { background-color: transparent;}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 
 /* popup */
-.popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100}
+.popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100; line-height: 1}
 .popup.active { display: block !important;}
 .popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff; overflow: hidden;}
 .popup.type1 > .inner {   border-radius: 1rem;}
@@ -120,6 +135,19 @@ select { background-color: transparent;}
 .tb_type1 th, .tb_type1 td { padding: 1rem 1.75rem }
 .tb_type1 thead { background: #f4f4f4}
 .tb_type1 tbody { color: #666}
+
+.tb_type2 { font-size: 0.75rem; text-align: center; border-bottom: 1px solid #d2d2d2}
+.tb_type2 col ~ col { border-left:1px solid #e8e8e8}
+.tb_type2 thead th { padding: 0.75rem 0.5rem; box-sizing: border-box; font-weight: 500}
+.tb_type2 tbody td { padding: 1rem 0.5rem; min-height: 2.75rem; box-sizing: border-box; color: #676767}
+.tb_type2 tbody tr ~ tr { border-top : 1px solid #d2d2d2}
+.tb_type2 td.view_scan { padding: 0}
+.tb_type2 td.view_scan * { display: block; width: 100%; min-height:2.75rem; background: url(/common/images/ico_scan.png) no-repeat center}
+.tb_type3 { color: #252525; font-size: 0.75rem; text-align: center;}
+.tb_type3 thead { background: #eeeeee; font-size: 0.7rem}
+.tb_type3 thead th { padding: 0.85rem 0 0.85rem}
+.tb_type3 tbody td { padding: 0.5rem 0}
+.tb_type3 tbody tr ~ tr { border-top: 1px solid #e5e5e5}
 
 
 main { display: block; min-height: 100vh}
@@ -160,13 +188,13 @@ footer .app ul li ~ li { border-left: 1px solid #383838}
 .banner .bx_chk .chk_type1 + label { padding: 0.5rem 0}
 .banner .bx_chk .chk_type1 + label span { padding: 0 1.5rem 0 0.5rem}
 .banner .btn_close { width: 0.7rem; height: 0.7rem; background: url(/common/images/ico_x_banner.png) no-repeat center / 100% 100% }
-header { position: relative; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.05em }
-header .wrap_com { position: relative;}
+
 .mainlogo { position: relative; z-index: 100; font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 1.3rem}
 .mainlogo a { display: flex;  height: 3.5rem; }
 .mainlogo a:before { display: block; text-align: right; content: "슈퍼로또코리아"; font-size: 0.6rem; color: #434343; font-family: 'Noto Sans KR',sans-serif; font-weight: 400; transform: translateY(5px);}
 
-
+header { position: sticky; left: 0; right: 0; top: 0; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.05em ; background: #fff; z-index: 100}
+header .wrap_com { position: relative;}
 header .gnb { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8}
 header .btn_menu { width: 1.3rem; height: 0.8rem; background: url(/common/images/btn_menu.png) no-repeat left center / 100% auto}
 header .nav_gnb { padding-left: 1.7rem}
@@ -238,7 +266,7 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 .sec_result .h_type2:after { content: "메가밀리언 >"; margin-left: 0.4rem; padding:0 0.3rem; height: 1.1rem; line-height: 1.2rem; color: #fff; font-size: 0.6rem; background:#535353; font-family: 'GmarketSans'; font-weight: 500; text-align: center; border-radius: 3px}
 .sec_result .power .h_type2:after { content: "파워볼 >"}
 .sec_result .win { padding: 0.5rem 0; font-size: 0.65rem}
-.sec_result .label { width:2.2rem; height: 2.2rem; background-color: #434343; color: #fff; letter-spacing: -0.025em; font-size: 0.65rem; border-radius: 100%}
+.label { width:2.2rem; height: 2.2rem; background-color: #434343; color: #fff; letter-spacing: -0.025em; font-size: 0.65rem; border-radius: 100%}
 
 .sec_result .list_link { padding: 0.9rem 0 0 }
 .sec_result .list_link li { float: left; margin-right: 5px}
@@ -298,6 +326,16 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 .sec_mymoney .list_type1 > li.charge > a:before { background-image: url(../images/ico_charge.png) }
 
 
+.list_type2 > li > strong { display: block; padding: 3.5rem 0 1rem; letter-spacing: -0.075em; border-bottom: 1px solid #d2d2d2}
+.list_type2 > li > div { padding: 18px 0 0; letter-spacing: -0.05em; color: #666; font-size: 0.9rem; line-height: 1.8}
+
+.list_type3 > li { float: left ; width: 19%; margin-right: 1.25%;margin-bottom: 0.7rem}
+.list_type3 > li:nth-child(5n) { margin-right: 0}
+.list_type3 > li > a { display: block; border: 1px solid #d7d7d7; border-radius: 0.5rem; overflow: hidden; font-size: 0.8rem; letter-spacing: -0.05em}
+.list_type3 > li .wrap_img { background: #000; height: 12.15rem}
+.list_type3 > li .wrap_txt { padding: 1.35rem 0.85rem; line-height: 1.37}
+.list_type3 > li .wrap_txt > span { font-size: 0.65rem; color: #666; font-family: 'GmarketSans'}
+
 .bx_app { padding: 1.6rem 0 1.4rem 1.5rem; background-image:linear-gradient(to top, #00ade1, #008dca); color: #fff; box-sizing: border-box; position: relative; background:url(/common/images/img_phone.png) no-repeat top 1.6rem right 1.5rem / 28.78% auto, linear-gradient(to top, #00ade1, #008dca)}
 .bx_app h2 { padding: 0 0 1rem ; font-size: 0.8rem; font-weight: 500;}
 .bx_app h2 strong { display:block; padding: 0.5rem 0 0.25rem; font-size: 1.15rem; }
@@ -332,3 +370,14 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 
 
 .bx_padding { padding: 1.5rem 1.9rem}
+
+.tab_type1 { border-top: 2px solid #373b46; margin-bottom: 3.15rem}
+.tab_type1 > li { flex: 1; position: relative; border: 1px solid #ddd; text-align: center; transition: all .3s;}
+.tab_type1 > li:hover,.tab_type1 > li.on { border-color: #373b46; z-index: 1; background:#373b46 }
+.tab_type1 > li:hover *, .tab_type1 > li.on * { color: #fff}
+.tab_type1 > li ~ li {  margin-left: -1px;}
+.tab_type1 > li * { display: block; width:100%; line-height: 2.9rem; font-size:0.8rem; color: #222222; font-family: 'Noto sans KR',sans-serif; text-align: center;}
+.tab_type1.type2 { border-top:none }
+.tab_type1.type2 > li * { line-height: 2.2rem; font-size: 0.75rem}
+/* .wrap_tabbox > div { display: none}
+.wrap_tabbox > div.on { display: block;} */

@@ -44,3 +44,12 @@ for(let i = 0; i < link_menu.length; i++){
     bx_link[i].scrollIntoView({behavior:"smooth"});
   });
 }
+
+$(function(){
+  let tabBtn = $('.tab_type1 > li > *');
+  tabBtn.on('click',function(e){
+    e.preventDefault();
+    $(this).parent('li').addClass('on');
+  });
+
+});
