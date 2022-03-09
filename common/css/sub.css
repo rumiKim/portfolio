@@ -468,7 +468,7 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 
 .txt_type2 { font-size: 0.85rem; color: #666; letter-spacing: ; line-height: 1.75; letter-spacing: -0.05em}
 
-.sec_service .top.bb { margin-bottom: 2.1rem}
+.sec_service .top.bb { margin-bottom: 2.1rem; padding: 0 0 1.25rem}
 .guide_use .bx_gray { margin-top: 1rem}
 .guide_use .mainlogo { margin:1.1rem 0 1.4rem; font-size: 2rem}
 .guide_use .mainlogo > *:before { font-size: 1rem; line-height: 1.5}
@@ -488,3 +488,44 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 .list_level > li > .bx_level { width: 23%}
 .list_level > li > .bx_level + div { flex: 1}
 .list_level > li ~ li { border-top: 1px solid #dcdcdc}
+
+
+.list_process > li {margin-right: 5px; padding:0 2.1rem; min-width: 234px; border-radius: 0.25rem; background: #626262; box-sizing: border-box; color: #fff; line-height: 3rem; text-align: center; font-size: 0.8rem; font-weight: bold;}
+.list_process > li > span { font-family: 'Montserrat',sans-serif;}
+.list_process > li.add_after:after { width: 0.45rem; height: 0.85rem; background: url(../images/ico_arr_right_process.png) no-repeat center / 100% 100%; vertical-align: middle; margin-left: 10px}
+.sec_service.purchase .wrap_board > div ~ div { padding-top:3.75rem}
+.sec_service.purchase .tb_level { margin: 0}
+.sec_service.purchase .wrap_board > div .list > li > p { padding: 2.1rem 0 0.95rem}
+
+.sec_service.purchase .wrap_policy .list_process { padding: 2rem 0 0}
+.sec_service.receive .list > li h4 { padding-bottom: 0.6rem; line-height: 1; font-size: 0.9rem}
+.sec_service.receive .list > li h4 + p { padding: 0 0 1.6rem}
+.sec_service.receive .list > li ~ li h4 { padding-top: 2.8rem}
+.sec_service.receive .list > li .list_bul { padding: 0.8rem 0}
+.sec_service.receive .bx_gray { line-height: 1}
+
+.pb5 { padding-bottom: 0.25rem}
+.pb10 { padding-bottom: 0.5rem}
+.pb20 { padding-bottom: 1rem}
+.pb30 { padding-bottom: 1.5rem}
+
+.pt5 { padding-top: 0.25rem}
+.pt10 { padding-top: 0.5rem}
+.pt20 { padding-top: 1rem}
+.pt30 { padding-top: 1.5rem}
+
+.mb5 { margin-bottom: 0.25rem}
+.mb10 { margin-bottom: 0.5rem}
+.mb20 { margin-bottom: 1rem}
+.mb30 { margin-bottom: 1.5rem}
+
+.mt5 { margin-top: 0.25rem}
+.mt10 { margin-top: 0.5rem}
+.mt20 { margin-top: 1rem}
+.mt30 { margin-top: 1.5rem}
+
+.sec_policy > div { padding: 40px 35px}
+.sec_policy h2 { padding: 57px 0; font-size: 56px; text-align: center; border-bottom: 3px solid #222; color: #222}
+.sec_policy.txt_type2 { font-size: 15px}
+.sec_policy .list > li > p { padding: 30px 0 15px 0;     color: #222; font-size: 24px; font-weight: 500;}
+.sec_policy .list .color_navy { color: }

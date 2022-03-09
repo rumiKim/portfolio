@@ -1,5 +1,5 @@
 :root {
-    --color_blue:#008ecb;
+    --color_blue:#33a5d5;
     --color_red : #f00;
     --color_red2 : #de4f41;
     --color_gray : #434343;
@@ -12,7 +12,7 @@
 }
 
 html { font-size: 20px;}
-body { font-size: 1rem; }
+body { font-size: 1rem; word-break: keep-all;}
 input,select,textarea { font-family: 'Noto Sans KR',sans-serif;}
 input::-webkit-input-placeholder,
 input::placeholder,
@@ -47,10 +47,10 @@ select { background-color: transparent;}
 .bt { border-top: 1px solid #000}
 .bb { border-bottom: 1px solid #000}
 /* bg */
-.bg_blue { background-color: var(--color_blue);}
-.bg_red { background-color:#f00 }
-.bg_red2 { background-color:#de4f41 color: #fff;}
-.bg_gray { background-color: #434343; color: #fff;}
+.bg_blue { background-color: var(--color_blue) !important;}
+.bg_red { background-color:#f00 !important}
+.bg_red2 { background-color:#de4f41 !important; color: #fff !important;}
+.bg_gray { background-color: #434343 !important; color: #fff !important;}
 
 /* btn */
 .btn_type1 { border: 1px solid #bfbfbf; background-color: #fff; color: #333}
@@ -62,6 +62,7 @@ select { background-color: transparent;}
 .color_blue { color: var(--color_blue) !important}
 .color_red { color: #de4f41 !important}
 .color_red2 { color: #e60012 !important}
+.color_red3 { color: #ff0101 !important}
 .color_000 { color: #000 !important}
 .color_fff { color: #fff !important}
 .color_ylw { color: #fffc00 !important}
