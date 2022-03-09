@@ -42,6 +42,26 @@ select { background-color: transparent;}
 .fw800 { font-weight: 800}
 .fw900 { font-weight: 900}
 .fwB { font-weight: bold;}
+
+.pb5 { padding-bottom: 0.25rem}
+.pb10 { padding-bottom: 0.5rem}
+.pb20 { padding-bottom: 1rem}
+.pb30 { padding-bottom: 1.5rem}
+
+.pt5 { padding-top: 0.25rem}
+.pt10 { padding-top: 0.5rem}
+.pt20 { padding-top: 1rem}
+.pt30 { padding-top: 1.5rem}
+
+.mb5 { margin-bottom: 0.25rem}
+.mb10 { margin-bottom: 0.5rem}
+.mb20 { margin-bottom: 1rem}
+.mb30 { margin-bottom: 1.5rem}
+
+.mt5 { margin-top: 0.25rem}
+.mt10 { margin-top: 0.5rem}
+.mt20 { margin-top: 1rem}
+.mt30 { margin-top: 1.5rem}
 /* border-radius */
 .br10 { border-radius: 0.5rem}
 .bt { border-top: 1px solid #000}
@@ -220,6 +240,16 @@ header .util ul li a img { height:1.1rem;}
 header .util .wrap_list > ul { float: left}
 header .util .wrap_list > .my > li { padding-left: 1.1rem}
 header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1px; height: 13px; background-color: #d2d2d2; vertical-align: middle;}
+
+.sitemap { position: relative; left: 0; right: 0; top: 0; background: #fff; z-index: 1000; }
+.sitemap nav { padding: 30px 0 100px}
+.sitemap nav > ul > li { flex:1}
+.sitemap nav > ul > li > a { font-weight: 500}
+.sitemap nav > ul > li > ul { padding: 30px 0 0}
+.sitemap nav > ul > li > ul > li > a { display: block; padding: 10px 0;  color: #666; font-size: 0.8rem; }
+.sitemap nav > ul > li > ul > li > a:hover { color: var(--color_blue); text-decoration: underline;}
+.sitemap + .bg_sitemap { position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5);}
+.zindex100 { z-index: 100}
 
 
 .body_idx > main > .wrap_com { padding: 1rem 0 0; font-family: 'GmarketSans', 'Noto Sans KR', sans-serif; font-weight: 500}

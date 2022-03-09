@@ -1,0 +1,151 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <div class="wrap_mypage clear wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
+      <div class="right">
+        <section class="sec_nonwin">
+          <div class="wrap_title">
+            <h3 class="heading">낙첨 복권 받기</h3>
+          </div>
+          <div class="bx_gray bx_padding mb30">
+            <ul class="list_bul gray">
+              <li>낙첨티켓배송은 미국에서 월 정산 완료 후 익월 통합적으로 국내 등기우편으로 보내드리는 서비스입니다.
+                <p class="color_blue">* 당첨된 티켓은 복권국에 제출하게되므로 배송이 불가합니다.</p>
+              </li>
+              <li>본 서비스는 배송비부분 (11,000 캐쉬)의 서비스 비용이 발생되게 되며, 보유 캐쉬에서만 결제가 가능합니다.</li>
+            </ul>
+          </div>
+          <div class="bx_search bx_gray mb30">
+            <div class="clear">
+              <div class="left flex align_center">
+                <p>조회기간</p>
+                <ul class="list_sel">
+                  <li><button>1주일</button></li>
+                  <li><button>1개월</button></li>
+                  <li><button>3개월</button></li>
+                  <li><button>6개월</button></li>
+                </ul>
+              </div>
+              <div class="right">
+                <span><input type="date"> ~ <input type="date"></span>
+                <button class="btn_gray">조회</button>
+              </div>
+            </div>
+          </div>
+          <div class="wrap_tb">
+            <ul class="status clear">
+              <li><strong>신청중</strong><span>(출금신청 완료)</span></li>
+              <li><strong>처리중</strong><span>(접수완료)</span></li>
+              <li><strong>캐쉬조정</strong><span>(출금신청액, 수수료 설정)</span></li>
+              <li><strong>출금완료</strong></li>
+            </ul>
+            <table class="tb_type2">
+              <caption>
+                <div class="hide">
+                  보너스 포인트
+                </div>
+              </caption>
+              <colgroup>
+                <col width="8.38%">
+                <col width="">
+                <col width="13%">
+                <col width="18%">
+                <col width="12%">
+                <col width="10%">
+              </colgroup>
+              <thead class="bg_navy">
+                <tr>
+                  <th>NO</th>
+                  <th>환급요청일시</th>
+                  <th>은행명</th>
+                  <th>계좌번호</th>
+                  <th>환급액</th>
+                  <th>상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2022년 02월 22일 (화) 12:45</td>
+                  <td>기업은행</td>
+                  <td>666-005688-01-045</td>
+                  <td>50,000원</td>
+                  <td>출금완료</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="wrap_btn mt20 flex ">
+              <button class="btn_navy">낙척복권 신청하기</button>
+            </div>
+          </div>
+        </section>
+        <section class="sec_apply space_btm">
+          <div class="wrap_title">
+            <h3 class="heading">낙첨복권 배송 신청</h3>
+          </div>
+          <form class="f_NotoSansKR ">
+            <fieldset>
+              <legend class="hide">낙첨복권 배송 신청 입력 폼</legend>
+              <ul class="list_reg type2 ls50">
+                <li>
+                  <label for="to"><span>받으시는 분</span></label>
+                  <div class="bx_input">
+                    <input type="" id="to">
+                  </div>
+                </li>
+                <li>
+                  <label for="tel"><span>연락처</span></label>
+                  <div class="bx_input ">
+                    <input type="tel" id="tel" placeholder="-없이 숫자만 입력해주세요.">
+                  </div>
+                </li>
+                <li class="">
+                  <label for="addr"><span>배송주소</span></label>
+                  <div>
+                    <div class="flex">
+                    <div class="bx_input ">
+                      <input type="text" id="addr">
+                    </div>
+                    <button class="btn_gray">우편번호</button>
+                    </div>
+                    <div class="flex">
+                    <div class="bx_input flex">
+                      <input type="text" id="">
+                    </div>
+                    <div class="bx_input flex">
+                      <input type="text" id="">
+                    </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="">
+                  <label for=""><span>안내사항</span></label>
+                  <div class=" ">
+                    <div>신청 후 최소 7일 이상 소요 됩니다.  배송은 등기우편으로 발송됩니다. (제주/도서사간지역은 배송이 더 지연될 수 있습니다.)</div>
+                  </div>
+                </li>
+                <li class="item_refund">
+                  <label for=""><span>배송비</span></label>
+                  <div class=" ">
+                    <strong class=" f_GmarketSans" style="color:#f00">11,000</strong> 캐쉬
+                    <small style="color:#f00">(회원님의 현재 보유캐쉬 500 캐쉬)</small>
+                  </div>
+                </li>
+              </ul>
+              <div class="wrap_btn type2 flex align_center space ">
+                <button class="btn_navy">낙척복권 신청 접수</button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+    </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>

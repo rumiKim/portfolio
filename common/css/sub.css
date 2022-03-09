@@ -504,25 +504,7 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 .sec_service.receive .list > li .list_bul { padding: 0.8rem 0}
 .sec_service.receive .bx_gray { line-height: 1}
 
-.pb5 { padding-bottom: 0.25rem}
-.pb10 { padding-bottom: 0.5rem}
-.pb20 { padding-bottom: 1rem}
-.pb30 { padding-bottom: 1.5rem}
 
-.pt5 { padding-top: 0.25rem}
-.pt10 { padding-top: 0.5rem}
-.pt20 { padding-top: 1rem}
-.pt30 { padding-top: 1.5rem}
-
-.mb5 { margin-bottom: 0.25rem}
-.mb10 { margin-bottom: 0.5rem}
-.mb20 { margin-bottom: 1rem}
-.mb30 { margin-bottom: 1.5rem}
-
-.mt5 { margin-top: 0.25rem}
-.mt10 { margin-top: 0.5rem}
-.mt20 { margin-top: 1rem}
-.mt30 { margin-top: 1.5rem}
 
 .sec_policy > div { padding: 40px 35px}
 .sec_policy h2 { padding: 57px 0; font-size: 56px; text-align: center; border-bottom: 3px solid #222; color: #222}
