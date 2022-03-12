@@ -29,11 +29,10 @@
 
 .list_reg { padding-left:5%; padding-right: 5%; text-align: left}
 .list_reg .bx_input { display: block; padding-left: 1rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2.4rem; line-height: 1; overflow: hidden; box-sizing: border-box;}
-.list_reg .bx_input.type1 { }
 .list_reg .bx_input.type1 input { width: auto}
 .list_reg .bx_input.type1 > div { position: relative; flex:1}
 .list_reg .bx_input.gray { background: #f5f5f5}
-.list_reg .bx_input input,.list_reg .bx_input select { height: 100%; width: 100%; background: none; box-sizing: border-box;}
+.list_reg .bx_input > * { height: 100%; width: 100%; background: none; box-sizing: border-box;}
 .list_reg > li { display: flex;}
 .list_reg > li ~ li { margin-top: 1rem}
 .list_reg > li > div { flex: 1; }
@@ -306,6 +305,10 @@
 .sec_direct .bx_answer .btn_navy { position: absolute; right: 0; bottom: 0; width: 2.8rem; height: 1.5rem; text-align: center;}
 .sec_direct .bx_answer .text { max-width: 60%}
 .sec_write .btn_red2 { margin:1.5rem 0 11rem; width: 13.5rem}
+.sec_write .list_reg.type2 .bx_input { width: 240px}
+.sec_write .list_file > li { margin: 0 0 10px}
+.sec_write .list_file > li .btn_file { display: inline-block; padding: 7px; background: #000; color: #fff; border-radius: 0.25rem; font-size: 0.7rem}
+.sec_write .list_file > li .fileName { color: #666}
 
 /*my-info.html  */
 .sec_myinfo .wrap_input { display: table; margin: 1.3rem auto}

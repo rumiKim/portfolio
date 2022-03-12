@@ -30,36 +30,43 @@
                   </div>
                 </li>
                 <li>
-                  <label for=""><span>휴대폰 번호</span></label>
+                  <label for="tel"><span>휴대폰 번호</span></label>
                   <div>
-                    <div class="bx_input">
-                      <input type="tel" id="" placeholder="010-1234-5678">
+                    <div class="bx_input mb5" >
+                      <input type="tel" id="tel" placeholder="010-1234-5678">
                     </div>
-                    <input type="checkbox" class="chk_type1"><label for="">답변 알림 받기(알림톡, 이메일)</label>
+                    <input type="checkbox" class="chk_type1" id="chk_agree"><label for="chk_agree" class="txt_type2"><span class="va_mid fs15">답변 알림 받기(알림톡, 이메일)</span></label>
                   </div>
                 </li>
                 <li class="">
                   <label for=""><span>제목</span></label>
-                  <div class="bx_input gray">
+                  <div class="bx_input gray" style="flex:1">
                     <input type="text" id="">
                   </div>
                 </li>
                 <li class="">
                   <label for="refund"><span>내용</span></label>
-                  <div class="bx_input">
+                  <div class="bx_input pt20 pb20" style="flex:1; height:8.9rem; border-color:#f00">
                     <textarea name="" placeholder="내용을 입력해주세요."></textarea>
                   </div>
                 </li>
                 <li class="">
-                  <label for=""><span>파일첨부</span></label>
+                  <label for="" class="nocursor"><span>파일첨부</span></label>
                   <div class="">
                     <div>
-                      <ul>
-                        <li><input type="file"></li>
-                        <li><input type="file"></li>
-                        <li><input type="file"></li>
+                      <ul class="list_file">
+                        <li>
+                           <label for="file1" class="btn_file">파일찾기</label>
+                           <input type="file" id="file1">
+                           <input class="fileName" value="" placeholder="" readonly>
+                        </li>
+                        <li>
+                           <label for="file2" class="btn_file">파일찾기</label>
+                           <input type="file" id="file2">
+                           <input class="fileName" value="" placeholder="" readonly>
+                        </li>
                       </ul>
-                      <p>전체 최대용량 5MB이하, 이미지 파일(JPG, JPEG, PNG, GIF) 최대 3개까지 첨부 가능합니다.</p>
+                      <p class="txt_type2 fs15">전체 최대용량 5MB이하, 이미지 파일(JPG, JPEG, PNG, GIF) 최대 3개까지 첨부 가능합니다.</p>
                     </div>
                   </div>
                 </li>
