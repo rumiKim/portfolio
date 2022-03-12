@@ -1,5 +1,6 @@
 :root {
-    --color_blue:#33a5d5;
+    --color_blue:#008ecb;
+    --color_blue2:#008ecb;
     --color_red : #f00;
     --color_red2 : #de4f41;
     --color_gray : #434343;
@@ -34,6 +35,21 @@ select { background-color: transparent;}
 .lh15 { line-height: 1.5}
 .lh16 { line-height: 1.6}
 .lh17 { line-height: 1.7}
+.fs15 { font-size: 0.75rem !important}
+.fs16 { font-size: 0.8rem !important}
+.fs17 { font-size: 0.85rem !important}
+.fs18 { font-size: 0.9rem !important}
+.fs19 { font-size: 0.95rem !important}
+.fs20 { font-size: 1rem !important}
+.fs21 { font-size: 1.05rem !important}
+.fs22 { font-size: 1.1rem !important}
+.fs23 { font-size: 1.15rem !important}
+.fs24 { font-size: 1.2rem !important}
+.fs25 { font-size: 1.25rem !important}
+.fs26 { font-size: 1.3rem !important}
+.fs27 { font-size: 1.35rem !important}
+.fs28 { font-size: 1.4rem !important}
+
 .fw300 { font-weight: 300}
 .fw400 { font-weight: 400}
 .fw500 { font-weight: 500}
@@ -80,6 +96,7 @@ select { background-color: transparent;}
 
 /* color */
 .color_blue { color: var(--color_blue) !important}
+.color_blue2 { color: var(--color_blue2) !important}
 .color_red { color: #de4f41 !important}
 .color_red2 { color: #e60012 !important}
 .color_red3 { color: #ff0101 !important}
@@ -100,6 +117,7 @@ select { background-color: transparent;}
 .list_bul.gray { color: #676767;
     font-size: 0.8rem;}
 .list_bul > li { line-height: 1.2; position: relative; }
+.list_bul > li.nonebul:before { display: none}
 .list_bul > li ~ li { margin-top: 10px}
 .list_bul > li:before { content: ""; display: inline-block; margin-right: 10px; width: 3px; height: 3px; background: #666; vertical-align: middle;}
 .list_sel:after { display: block; clear: both;}
@@ -142,7 +160,7 @@ select { background-color: transparent;}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 
 /* popup */
-.popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 100; line-height: 1}
+.popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; line-height: 1}
 .popup.active { display: block !important;}
 .popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff; overflow: hidden;}
 .popup.type1 > .inner {   border-radius: 1rem;}
@@ -210,13 +228,15 @@ footer .app ul li ~ li { border-left: 1px solid #383838}
 .banner .bx_chk .chk_type1 + label span { padding: 0 1.5rem 0 0.5rem}
 .banner .btn_close { width: 0.7rem; height: 0.7rem; background: url(/common/images/ico_x_banner.png) no-repeat center / 100% 100% }
 
-.mainlogo { position: relative; z-index: 100; font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 1.3rem}
+.mainlogo { position: relative; font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 1.3rem}
 .mainlogo > * { display: flex;  height: 3.5rem; }
 .mainlogo > *:before { display: block; text-align: right; content: "슈퍼로또코리아"; font-size: 0.6rem; color: #434343; font-family: 'Noto Sans KR',sans-serif; font-weight: 400; transform: translateY(5px);}
 
-header { position: sticky; left: 0; right: 0; top: 0; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.05em ; background: #fff; z-index: 100}
+header { position: sticky; left: 0; right: 0; top: 0; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.05em ; background: #fff; z-index: 1000}
 header .wrap_com { position: relative;}
-header .gnb { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8}
+header .mainlogo { z-index: 2000}
+header h1 a { color: #008ecb;}
+header .gnb { position: relative; z-index: 1000; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; background: #fff}
 header .btn_menu { width: 1.3rem; height: 0.8rem; background: url(/common/images/btn_menu.png) no-repeat left center / 100% auto}
 header .nav_gnb { padding-left: 1.7rem}
 header .nav_gnb li ~ li { padding-left: 1.5rem}
@@ -233,7 +253,7 @@ header .nav_guide li ~ li:before { content: ""; display: inline-block;
 margin:0 0.45rem 0 0.5rem; width: 1px; height: 0.65rem; background-color: #d2d2d2; vertical-align: middle;}
 header .nav_guide .app .add_after:after { margin-left: 5px; width: 0.5rem; height: 0.5rem; background: url(/common/images/ic_download1.png) no-repeat center / 100% auto;}
 
-header .util { position: absolute; right: 0; top: 0; left: 0}
+header .util { position: absolute; right: 0; top: 0; left: 0; z-index: 1000; background: #fff}
 header .util ul li { float: left; }
 header .util ul li a { font-size: 0.7rem; line-height: 3.5rem}
 header .util ul li a img { height:1.1rem;}
@@ -241,14 +261,16 @@ header .util .wrap_list > ul { float: left}
 header .util .wrap_list > .my > li { padding-left: 1.1rem}
 header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1px; height: 13px; background-color: #d2d2d2; vertical-align: middle;}
 
-.sitemap { position: relative; left: 0; right: 0; top: 0; background: #fff; z-index: 1000; }
+.sitemap { position: absolute; left: 0; right: 0; top: 7rem; overflow: hidden; margin-top: 1px; height:0px;  background: #fff; z-index: 1000; border-top:1px solid #e8e8e8; transition: height 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)}
+.sitemap.open { height: 450px}
+.sitemap + .bg_sitemap { position: fixed; left: 100%; right: 0; top: 0; bottom: 0; background: #000; transition: left 0s 0, opacity 1s 2s ease; opacity: 0}
+.sitemap.open + .bg_sitemap { left: 0; opacity: 0.6; transition: left 0s 0, opacity 1s 2s ease;}
 .sitemap nav { padding: 30px 0 100px}
 .sitemap nav > ul > li { flex:1}
 .sitemap nav > ul > li > a { font-weight: 500}
 .sitemap nav > ul > li > ul { padding: 30px 0 0}
 .sitemap nav > ul > li > ul > li > a { display: block; padding: 10px 0;  color: #666; font-size: 0.8rem; }
 .sitemap nav > ul > li > ul > li > a:hover { color: var(--color_blue); text-decoration: underline;}
-.sitemap + .bg_sitemap { position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5);}
 .zindex100 { z-index: 100}
 
 
@@ -288,7 +310,7 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 .sec_lotto .btn_buy { display: block; width: 12.5rem; height:1.85rem; line-height: 2rem; border-radius: 1.85rem; font-size: 0.9rem; font-weight: 500; letter-spacing:-0.075em}
 
 .sec_result .wrap_heading { align-items: flex-end; margin: 2.25rem 0 1.2rem}
-.sec_result .wrap_heading > a { font-size: 0.6rem; }
+.sec_result .wrap_heading > a { font-size: 0.65rem; }
 .list_result > li { width: 48.8%; border: 1px solid #e5e5e5; background: #eee; box-sizing: border-box;  border-radius: 0.5rem; overflow: hidden; line-height: 1}
 .list_result > li > div { padding-left: 1.6rem; padding-right: 1.6rem}
 .list_result > li > .top { padding-top: 1.35rem; padding-bottom: 1.1rem; box-sizing: border-box;}
@@ -305,7 +327,7 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 
 
 .list_ball > li { float: left; margin-right: 5px; }
-.list_ball > li span { display: inline-block; width: 1.7rem; height: 1.7rem; line-height: 1.8rem; box-sizing: border-box; border: 1px solid #bfbfbf;  font-weight: bold; font-size: 0.7rem; color: #313131; text-align: center; border-radius: 100%; background: #fff}
+.list_ball > li span { display: inline-block; width: 1.7rem; height: 1.7rem; line-height: 1.8rem; box-sizing: border-box; border: 1px solid #bfbfbf; font-family: 'GmarketSans'; font-weight: bold; font-size: 0.7rem; color: #313131; text-align: center; border-radius: 100%; background: #fff; }
 .list_ball > li:last-child span { margin: 0 5px}
 .list_ball > li:last-child:before { content: "+"; font-weight: bold; font-family: 'Montserrat',sans-serif; vertical-align: middle;}
 .list_ball > li.mega span { background: #ebc704; border-color: #ebc704; font-weight: 500}
@@ -328,9 +350,12 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 
 .sec_board > ul > li { width: 48.47%}
 .sec_board > ul > li > a { display: block;}
-.sec_board > ul > li > a span { font-size: 0.7rem; color: #6b6e73; font-family: 'Noto sans KR',sans-serif;}
-.sec_board > ul ul { margin: 1rem 0 1.75rem; padding: 1rem 0 0; border-top: 2px solid #000; font-size: 0.8rem; font-family: 'Noto sans KR',sans-serif; letter-spacing: -0.05em; font-weight: 400}
+.sec_board > ul > li > a > p { position: relative; font-size: 0.7rem; color: #6b6e73; font-family: 'Noto sans KR',sans-serif;}
+.sec_board > ul > li > a > p:after {  display: block; width: 100%; height: 1px; background:#6b6e73; position: absolute; bottom: -3px; left: 0}
+.sec_board > ul ul { margin: 1rem 0 1.75rem; padding: 1rem 0 0; border-top: 2px solid #000; font-size: 0.8rem; font-family: 'Noto sans KR',sans-serif; letter-spacing: -0.05em; font-weight: 400;}
 .sec_board > ul ul > li > a { display: flex; justify-content: space-between; align-items: center; line-height: 1.75}
+.sec_board > ul ul > li > a > span { color: #6d6d6d}
+.sec_board > ul ul > li > a:hover { text-decoration: underline;}
 .sec_board .bx_notice { padding: 0 0.85rem; border-top: 1px solid #e9e9e9; border-bottom: 1px solid #e9e9e9; background: #f4f4f4;}
 .sec_board .bx_notice .h_type1 { font-size: 0.7rem}
 .sec_board .bx_notice a { padding: 1.25rem 0; width: 85%; font-size: 0.8rem;}
@@ -380,7 +405,7 @@ header .util .wrap_list > .login > .add_after:after { margin:0 0.5rem; width: 1p
 .sec_winner ul li a:before { content: ""; display: block; margin-right: 1rem; width: 6.25rem; height: 3.8rem; border-radius: 0.25rem; background: url(/common/images/logo_mega_ca.png) no-repeat center / 70% auto #535353;}
 .sec_winner ul li.power a:before { background-image: url(/common/images/logo_power.png); background-size: 80% auto}
 .sec_winner ul li a strong { letter-spacing: -0.025em}
-.sec_winner ul li a p { font-family: 'Noto sans KR',sans-serif;}
+.sec_winner ul li a p { padding: 0.1rem 0 0.5rem; font-family: 'Noto sans KR',sans-serif;}
 .sec_winner ul li a span { font-size: 0.6rem}
 
 .sec_event { position: relative; padding: 0 0 3.35rem}

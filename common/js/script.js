@@ -1,5 +1,19 @@
 'use strict';
 
+const noLink = document.querySelectorAll('.nolink');
+for(let i=0; i<noLink.length; i++){
+  noLink[i].addEventListener('click',function(e){
+    e.preventDefault()
+  });
+}
+
+const btn_menu = document.querySelector('.btn_menu'),
+      sitemap = document.querySelector('.sitemap');
+btn_menu.addEventListener('click',function(){
+  sitemap.classList.toggle('open');
+});
+
+
 // popup common
 
 const closePopBtn = document.querySelectorAll('.popup .btn_close');

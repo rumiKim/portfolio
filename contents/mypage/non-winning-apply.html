@@ -1,0 +1,75 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <div class="wrap_mypage clear wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
+      <div class="right">
+        <section class="sec_apply space_btm">
+          <div class="wrap_title">
+            <h3 class="heading fs23">낙첨복권 배송 신청</h3>
+          </div>
+          <form class="f_NotoSansKR ">
+            <fieldset>
+              <legend class="hide">낙첨복권 배송 신청 입력 폼</legend>
+              <ul class="list_reg type2 ls50">
+                <li>
+                  <label for="to"><span>받으시는 분</span></label>
+                  <div class="bx_input">
+                    <input type="" id="to">
+                  </div>
+                </li>
+                <li>
+                  <label for="tel"><span>연락처</span></label>
+                  <div class="bx_input ">
+                    <input type="tel" id="tel" placeholder="-없이 숫자만 입력해주세요.">
+                  </div>
+                </li>
+                <li class="item_addr">
+                  <label for="addr"><span>배송주소</span></label>
+                  <div>
+                    <div class="flex">
+                      <div class="bx_input ">
+                        <input type="text" id="addr">
+                      </div>
+                      <button class="btn_gray">우편번호</button>
+                    </div>
+                    <div class="flex">
+                      <div class="bx_input flex">
+                        <input type="text" id="">
+                      </div>
+                      <div class="bx_input flex" style="margin-left:0.3rem">
+                        <input type="text" id="">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="">
+                  <label for=""><span>안내사항</span></label>
+                  <div class="" style="line-height:2.4rem;">
+                    <div>신청 후 최소 7일 이상 소요 됩니다. 배송은 등기우편으로 발송됩니다. (제주/도서사간지역은 배송이 더 지연될 수 있습니다.)</div>
+                  </div>
+                </li>
+                <li class="item_refund">
+                  <label for=""><span>배송비</span></label>
+                  <div class=" ">
+                    <strong class=" f_GmarketSans" style="color:#f00">11,000</strong> 캐쉬
+                    <small style="color:#f00" class="fs18">(회원님의 현재 보유캐쉬 500 캐쉬)</small>
+                  </div>
+                </li>
+              </ul>
+              <div class="wrap_btn flex mt30 justify_center">
+                <button class="btn_navy">낙첨복권 신청 접수</button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>
