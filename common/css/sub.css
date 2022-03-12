@@ -211,7 +211,7 @@
 
 .wrap_input { height: 2.5rem; font-size: 0}
 .wrap_input > * { height: 100%; box-sizing: border-box; border-radius: 0.2rem; font-size: 0.75rem; font-family: 'Noto Sans KR',sans-serif;}
-.wrap_input > input { padding-left: 1rem; width:20.5rem;  border: 1px solid #e8e8e8; }
+.wrap_input > input { padding-left: 1rem; width:20.5rem;  border: 1px solid #e8e8e8; background: #fff}
 .wrap_input > button, .wrap_input > a { display:inline-block; margin-left: 0.4rem; width: 6rem; vertical-align: middle; text-align: center; line-height: 2.5rem}
 
 

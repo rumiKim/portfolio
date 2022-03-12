@@ -138,7 +138,7 @@ input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overfl
 .bx_search * { font-family: 'Noto Sans KR',sans-serif;}
 .bx_search .left > p { margin-right: 0.75rem; font-size: 0.8rem; letter-spacing: -0.05em}
 .bx_search .right * { height: 2rem; box-sizing: border-box;}
-.bx_search .right input { padding:0 1rem; width: 8.75rem; border: 1px solid #ddd; border-radius: 0.2rem}
+.bx_search .right input { padding:0 1rem; width: 8.75rem; border: 1px solid #ddd; border-radius: 0.2rem; background: #fff}
 .bx_search .right .btn_gray { padding: 0 1.9rem}
 .bx_search .list_sel > li > * { width: 4rem; height: 2rem; background: #fff; font-weight: 500}
 .bx_search .list_sel > li:hover * { border-color: #999; color: #444}
