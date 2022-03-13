@@ -1,7 +1,8 @@
 .location { margin-bottom: 1.8rem; background: #f8f8fa; font-size: 0.7rem; font-family: 'Noto Sans KR',sans-serif;}
-.location a { display: block; line-height: 2rem; color: #666666;  }
+.location a { display: inline-block;line-height: 2rem; color: #666666;  vertical-align: middle;}
 .location ol li { float: left}
-.location ol li:first-child a:before { margin-right: 10px; width: 30px; height: 2rem; background: url(/common/images/ico_home_loca.png) no-repeat center }
+.location ol li ~ li:before { content: ""; display: inline-block; margin-right: 5px; margin-left: 10px;  width: 5px; height: 9px; background: url(../images/ico_arr_right_loca.png) no-repeat center /100% 100%; vertical-align: middle;}
+.location ol li:first-child a:before { width: 0.8rem; height: 2rem; background: url(/common/images/ico_home_loca.png) no-repeat left 0 center }
 
 
 
@@ -53,7 +54,7 @@
 .sec_reg .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
 .list_reg .txt_type1 { display:block; padding: 0.5rem 0 0 ;font-size: 0.65rem; color: #999; line-height: 1.3}
 .btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
-.list_reg .btn_gray { margin-left: 0.3rem; width: 6rem; font-family: 'Noto Sans KR',sans-serif}
+.list_reg .btn_gray { margin-left: 0.3rem; width: 6rem; height:2.4rem;  font-family: 'Noto Sans KR',sans-serif}
 
 
 .btn_navy { color: #fff; background: #373b46}
@@ -89,7 +90,8 @@
 .popup.mileage .list_reg > li > label > span:after
  { content: "*"; display: inline-block; color: #f00;}
 .sec_reg.write .list_reg .bx_num { position: relative; margin-top: 0.5rem; width: 12rem}
-.sec_reg.write .list_reg select { height: 100%}
+.sec_reg.write .list_reg .bx_tel select { height: 100%; width: 30%; }
+.sec_reg.write .list_reg .bx_tel input { width: 60%}
 .sec_reg.write .wrap_btn { padding: 3.75rem 0 14.5rem}
 .bx_agree .bx_input { height: auto; padding-bottom: 1.5rem; font-size: 0.75rem; color: #666}
 
@@ -193,12 +195,15 @@
 
 
 .nohistory, .notice_type1 { text-align: center;}
+.nohistory .wrap_img img { width: 3.5rem}
 .nohistory .wrap_img, .notice_type1 .wrap_img { margin:2.75rem 0 1.5rem;}
 .nohistory > p, .notice_type1 > p { font-size: 1.35rem; line-height: 1.35}
 .notice_type1 { color: #585858}
+.notice_type1  .wrap_img { display: inline-block; width: 3.5rem}
 
 
 .popup.scan > .inner { min-width: 29.25rem; min-height: 29.8rem; text-align: center;}
+.popup.scan .wrap_img { margin: 0 auto; max-width:13.5rem; }
 .popup.scan > .inner strong { display: block; padding: 3rem 0 1.15rem}
 
 .bx_gray { background: #eee;}
@@ -299,15 +304,27 @@
 .sec_mynumber .tb_type2 td.delete a { display: inline-block; width: 2rem; height: 2rem; background:url(/common/images/ico_bin.png) no-repeat center #eee; border-radius: 100%}
 
 /*direct.html */
-.sec_direct .wrap_tb .btn_red2 { margin: 2.5rem 0 0.5rem; width: 5.5rem; height: 2rem; display: block; line-height: 2rem; font-size: 0.7rem; text-align: center;}
+.sec_direct .wrap_list .btn_red2 { margin: 2.5rem 0 0.5rem; width: 5.5rem; height: 2rem; display: block; line-height: 2rem; font-size: 0.7rem; text-align: center;}
+.sec_direct .wrap_list .table { display: table; width:100%; }
+.sec_direct .wrap_list .thead .tr > div { padding: 0.75rem 0.5rem; box-sizing: border-box; font-weight: 500; }
+.sec_direct .wrap_list .tbody .tr > div {  color: #676767; padding: 1rem 0.5rem; min-height: 2.75rem; box-sizing: border-box;}
+.sec_direct .wrap_list .tr { display: table-row;}
+.sec_direct .wrap_list .tr > div  { display: table-cell; text-align: center; font-size:0.75rem }
+.sec_direct .wrap_list .tr > .td_click { padding: 0 !important}
+.sec_direct .wrap_list .tr > .td_click a { display: block; padding: 0.5rem 1rem; text-align: left;  color: #676767}
+.sec_direct .wrap_list .tr > div ~ div { border-left: 1px solid #e8e8e8}
+.sec_direct .wrap_list .tr > div:nth-child(1) { width:9%; }
+.sec_direct .wrap_list .tr > div:nth-child(2) { width:13%; }
+.sec_direct .wrap_list .tr > div:nth-child(4) { width:18%; }
+.sec_direct .wrap_list .tr > div:nth-child(5) { width:11%; }
 .sec_direct .bx_answer { font-size: 0.75rem; color:#676767; line-height: 2}
 .sec_direct .bx_answer > div { position: relative;}
-.sec_direct .bx_answer .btn_navy { position: absolute; right: 0; bottom: 0; width: 2.8rem; height: 1.5rem; text-align: center;}
+.sec_direct .bx_answer .btn_navy { position: absolute; right: 0; bottom: 0; width: 2.8rem; height: 1.5rem; text-align: center; cursor: pointer;}
 .sec_direct .bx_answer .text { max-width: 60%}
 .sec_write .btn_red2 { margin:1.5rem 0 11rem; width: 13.5rem}
 .sec_write .list_reg.type2 .bx_input { width: 240px}
 .sec_write .list_file > li { margin: 0 0 10px}
-.sec_write .list_file > li .btn_file { display: inline-block; padding: 7px; background: #000; color: #fff; border-radius: 0.25rem; font-size: 0.7rem}
+.sec_write .list_file > li .btn_file { display: inline-block; padding:  0.38rem 0.5rem; background: #000; color: #fff; border-radius: 0.25rem; font-size: 0.7rem}
 .sec_write .list_file > li .fileName { color: #666}
 
 /*my-info.html  */
@@ -346,9 +363,9 @@
 .sec_info > .bx_gray > ul > li .title { padding: 0 0 1.1rem; color: #000}
 .sec_info > .bx_gray .ico_date:after { margin-left: 0.6rem; width:1.4rem; height:1.45rem; background: url(/common/images/ico_date.png) no-repeat center / 100% 100%}
 .sec_info > .bx_gray .ico_time_ko:after { margin-left: 0.6rem; width:3.6rem; height:1.8rem; background: url(/common/images/ico_time_ko.png) no-repeat center / auto 100%}
-.sec_info .nation .add_before:before { margin-right: 0.6rem; width:1.5rem; height:1rem; border: 1px solid #ddd; }
-.sec_info > .bx_gray .ico_us:before { background: url(/common/images/ico_us.png) no-repeat center / 100% 100%}
-.sec_info > .bx_gray .ico_ko:before { background: url(/common/images/ico_ko.png) no-repeat center / 100% 100%}
+.nation .add_before:before { margin-right: 0.6rem; width:1.5rem; height:1rem; border: 1px solid #ddd; }
+.ico_us:before { background: url(/common/images/ico_us.png) no-repeat center / 100% 100%}
+.ico_ko:before { background: url(/common/images/ico_ko.png) no-repeat center / 100% 100%}
 
 .sec_game { padding: 3.5rem 0 3.4rem; background: #1b1b1b; color: #fff ; font-family: 'GmarketSans';}
 .sec_game * { color: #fff}
@@ -481,6 +498,19 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 .guide_use .bx_gray { margin-top: 1rem}
 .guide_use .mainlogo { margin:1.1rem 0 1.4rem; font-size: 2rem}
 .guide_use .mainlogo > *:before { font-size: 1rem; line-height: 1.5}
+.intro .bx_descript > .left { width: 58%; background:#1b1b1b }
+.intro .bx_descript > .left img { width: 95%}
+.intro .bx_descript > .right { padding: 1.7rem 1.5rem 1.15rem; width: 42%; box-sizing: border-box; color: #222 ; line-height: 1}
+.intro .bx_descript .title { font-size: 0.9rem; font-size: 500}
+.intro .bx_descript .point { padding: 0 0 0.85rem}
+.intro .bx_descript .point > p { padding: 1.4rem 0 0.5rem}
+.intro .bx_descript ol { padding: 0.9rem 0 1.4rem; line-height: 1.5}
+.intro .bx_descript .nation { padding: 0.85rem 0 1.5rem }
+.intro .bx_descript .nation > li ~ li { margin-top: 5px}
+.intro .bx_descript .nation .add_before:before { border: 1px solid #000; border-radius: 3px}
+.intro .bx_descript .btn_red { display: block; margin: 0 auto; width:62.5%;  line-height: 2.5rem; font-size: 0.8rem; text-align: center; border-radius: 2.5rem}
+.wrap_img > img { width: 100%}
+
 
 .tb_level { margin: 0.85rem 0 1.9rem; border: 1px solid #dcdcdc; }
 /* .tb_level .txt_type2 { } */

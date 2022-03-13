@@ -8,9 +8,119 @@
       <?php include $_SERVER['DOCUMENT_ROOT']."/inc/nav-mypage.html";?>
       <div class="right">
         <section class="sec_myinfo">
-          <div class="wrap_title bb">
+          <div class="wrap_title bb ">
             <h3 class="heading">회원정보수정</h3>
           </div>
+          <form class="f_NotoSansKR fm_info">
+            <fieldset>
+              <legend class="hide">회원정보수정 입력 폼</legend>
+              <ul class="list_reg">
+                <li>
+                  <label for="re_id"><span>아이디(이메일)</span></label>
+                  <div class="bx_input">
+                    <input type="email" id="re_id" placeholder="ID@email_account.com">
+                  </div>
+                </li>
+                <li>
+                  <label for="re_name"><span>이름</span></label>
+                  <div class="bx_input gray">
+                    <input type="text" id="re_name" placeholder="이름을 입력해주세요.">
+                  </div>
+                </li>
+                <li class="">
+                  <label for="re_tel"><span>휴대폰 번호</span></label>
+                  <div class="">
+                    <div class="wrap_type1 flex align_center">
+                      <div class="bx_tel type1 bx_input gray">
+                        <input type="text" id="re_tel" placeholder="">
+                      </div>
+                      <div class="bx_num bx_input gray">
+                        <input type="text">
+                        <p><span class="hide">남은시간</span><span class="time">03:00</span></p>
+                      </div>
+                      <button class="btn_gray">인증번호요청</button>
+                    </div>
+                    <p class="txt_type1">서비스이용, 아이디 또는 비밀번호 찾기에서 사용되므로 인증이 필요합니다.</p>
+                  </div>
+                </li>
+                <li>
+                  <label for="re_pw"><span>비밀번호</span></label>
+                  <div>
+                    <div class="bx_input">
+                      <input type="text" id="re_pw" placeholder="현재 비밀번호를 입력해주세요.">
+                    </div>
+                    <p class="txt_type1">영문,숫자,특수문자 3가지를 조합한 8자리 이상으로 입력해주세요.<br>휴대폰번호, 생년월일, 아이디, 연속된 숫자/문자 등은 사용할 수 없습니다.</p>
+                  </div>
+                </li>
+                <li>
+                  <label for="re_pw_re"><span>비밀번호 확인</span></label>
+                  <div class="wrap_type1 flex">
+                  <div class="bx_input">
+                    <input type="text" id="re_pw_re" placeholder="동일한 비밀번호를 입력해주세요.">
+                    <p>비밀번호가 동일하지 않습니다. 다시 입력해주세요.</p>
+                  </div>
+                  <button class="btn_gray">비밀번호 변경</button>
+                  </div>
+                </li>
+                <li>
+                  <label for="re_birth"><span>생년월일</span></label>
+                  <div class="bx_input gray">
+                    <input type="text" id="re_birth" placeholder="19750917">
+                  </div>
+                </li>
+                <li class="">
+                  <label><span class="hide">약관동의</span></label>
+                  <div class="bx_agree">
+                    <div class="bx_input flex align_center justify_center">
+                      <input type="checkbox" class="chk_type1" id="chk_agree">
+                      <label class="add_before" for="chk_agree"><span class="color_blue">[선택]</span> 마케팅 활용을 위한 개인정보 수집/이용 동의</label>
+                      <a href="" class="view">내용보기</a>
+                    </div>
+                    <p class="txt_type1">거래정보와 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.</p>
+                  </div>
+                </li>
+                <li>
+                  <label for="re_id"><span>출금 계좌 은행</span></label>
+                  <div class="bx_input">
+                    <select name="" id="" class="">
+                      <option value="">은행을 선택해주세요.</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <label for="re_name"><span>출금 계좌 예금주</span></label>
+                  <div class="bx_input">
+                    <input type="" id="re_name" placeholder="예금주명을 입력해주세요.">
+                  </div>
+                </li>
+                <li>
+                  <label for=""><span>출금 계좌 번호</span></label>
+                  <div>
+                  <div class="bx_input">
+                    <input type="" id="" placeholder="-없이 숫자만 입력해주세요.">
+                  </div>
+                  <p class="txt_type1">출금 정보는 변경 이후 거래건부터 적용됩니다.</p>
+                  </div>
+                </li>
+                <li class="">
+                  <label><span class="hide">약관동의</span></label>
+                  <div class="bx_agree">
+                    <div class="bx_input flex align_center justify_center">
+                      <input type="checkbox" class="chk_type1" id="chk_agree">
+                      <label class="add_before" for="chk_agree"><span class="color_blue">[선택]</span> 마케팅 활용을 위한 개인정보 수집/이용 동의</label>
+                      <a href="" class="view">내용보기</a>
+                    </div>
+                    <p class="txt_type1">거래정보와 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="wrap_btn type2 flex align_center space ">
+                <button class="btn_prev">취소</button>
+                <a href="signup3-complete.html" class="btn_gray">저장</a>
+              </div>
+            </fieldset>
+          </form>
+
           <div class="secession bx_gray bx_padding space_btm flex align_center space">
             <div class="left">
               <strong class="color_000">회원탈퇴를 원하시나요?</strong>
@@ -20,6 +130,7 @@
           </div>
 
         </section>
+
 
       </div>
     </div>
