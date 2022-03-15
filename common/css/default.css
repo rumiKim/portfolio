@@ -59,18 +59,5 @@ layout
 /* element */
 button { background-color:transparent; cursor: pointer;}
 
-/* font */
-.lh1 { line-height: 1;}
-
-:root {
-    --color_000 : #000 ;
-    --color_fff : #fff;
-
-
-
-}
-
-
-
 
 /*  */

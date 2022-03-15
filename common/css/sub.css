@@ -12,7 +12,7 @@
 .sec_login h2 { padding:0 0 2.35rem; font-size: 2rem; }
 .sec_login h2 span { display: block; font-weight: 400}
 .sec_login > .login_super .logo_main { margin:0 0 2.6rem; padding: 1.2rem 0 0.25rem; border:2px solid #444; border-bottom: none; color:#444 ; font-size: 1.1rem}
-.sec_login > .login_super form ul li { position: relative; margin:0 0 0.5rem; border: 1px solid #e8e8e8}
+.sec_login > .login_super form ul li { position: relative; margin:0 0 0.5rem; border: 1px solid #ddd}
 .sec_login > .login_super form ul li:after { position: absolute; left: 1rem; top: 0; width: 1rem; height: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
 .sec_login > .login_super form ul li.id:after { background-image: url(/common/images/ico_id.png)}
 .sec_login > .login_super form ul li.pw:after { background-image: url(/common/images/ico_pw.png)}
@@ -21,11 +21,11 @@
 .sec_login > .login_super form .btn_login { margin:1.5rem 0 1.65rem; width:100%; background:#444 }
 .sec_login .wrap_chk { text-align: left;}
 .sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: 0.75rem}
-.sec_login .btn_login { display: block; line-height: 3rem; border-radius: 3px; color: #fff; font-size: 0.7rem}
+.sec_login .btn_login { display: block; line-height: 3rem; border-radius: 3px; color: #fff; font-size: 0.75rem}
 .sec_login .list_find { font-size: 0}
 .sec_login .list_find li {  position: relative; display: inline-block; padding: 0 0.95rem }
 .sec_login .list_find li:after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
-.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: 0.7rem; color: #444; font-weight: 500; }
+.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: 0.75rem; color: #444; font-weight: 500; }
 .sec_login .login_sns ul li { margin: 0 0 0.5rem}
 
 .list_reg { padding-left:5%; padding-right: 5%; text-align: left}
@@ -51,7 +51,7 @@
 .sec_reg .wrap_title { margin-bottom: 1.5rem; border-bottom: 2px solid #000; padding: 4.2rem 0 1.5rem; letter-spacing: -0.075em; text-align: center;}
 .sec_reg .wrap_title > p { padding-top:1rem; font-size: 1.1rem; color: #757575; font-family: 'Noto Sans KR',sans-serif; }
 .sec_reg form legend { font-size: 1.1rem; text-align: center;}
-.sec_reg .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
+.list_reg .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
 .list_reg .txt_type1 { display:block; padding: 0.5rem 0 0 ;font-size: 0.65rem; color: #999; line-height: 1.3}
 .btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
 .list_reg .btn_gray { margin-left: 0.3rem; width: 6rem; height:2.4rem;  font-family: 'Noto Sans KR',sans-serif}
@@ -87,7 +87,8 @@
 .sec_reg .list_step li:nth-child(3):before { background-image: url(/common/images/ico_fin.png); }
 .sec_reg.write .list_reg { padding-top: 2.5rem}
 .sec_reg.write .list_reg > li > label > span:after,
-.popup.mileage .list_reg > li > label > span:after
+.popup.mileage .list_reg > li > label > span:after,
+.list_reg > li.required > label > span:after
  { content: "*"; display: inline-block; color: #f00;}
 .sec_reg.write .list_reg .bx_num { position: relative; margin-top: 0.5rem; width: 12rem}
 .sec_reg.write .list_reg .bx_tel select { height: 100%; width: 30%; }
@@ -197,7 +198,7 @@
 .nohistory, .notice_type1 { text-align: center;}
 .nohistory .wrap_img img { width: 3.5rem}
 .nohistory .wrap_img, .notice_type1 .wrap_img { margin:2.75rem 0 1.5rem;}
-.nohistory > p, .notice_type1 > p { font-size: 1.35rem; line-height: 1.35}
+.nohistory > p, .notice_type1 > p { font-size: 1.35rem; line-height: 1.35; color: #000}
 .notice_type1 { color: #585858}
 .notice_type1  .wrap_img { display: inline-block; width: 3.5rem}
 
@@ -206,7 +207,6 @@
 .popup.scan .wrap_img { margin: 0 auto; max-width:13.5rem; }
 .popup.scan > .inner strong { display: block; padding: 3rem 0 1.15rem}
 
-.bx_gray { background: #eee;}
 
 .sec_coupon .bx_gray { padding:2.25rem 0 2rem ; border-bottom: 1px solid #000; border-top: 1px solid #000}
 .sec_coupon .bx_gray > p { font-size:1.2rem;  color: #373b46; text-align: center;}
@@ -329,9 +329,10 @@
 
 /*my-info.html  */
 .sec_myinfo .wrap_input { display: table; margin: 1.3rem auto}
+.sec_myinfo .list_reg{ padding: 0}
 .sec_myinfo .wrap_input > * {height: 2.5rem}
-.sec_myinfo .fm_info { padding: 2rem 0 3.5rem}
-.sec_myinfo .wrap_btn.type2 { margin: 2.25rem auto 0}
+.sec_myinfo .fm_info { padding: 2rem 27% 3.5rem 2% }
+.sec_myinfo .wrap_btn.type2 { margin: 2.25rem auto 0; width:auto;}
 .sec_myinfo .secession { font-size: 0.75rem}
 .sec_myinfo .secession .left strong { font-size: 0.85rem}
 .sec_myinfo .secession .left p { padding-top: 0.85rem; color: #666}
@@ -339,9 +340,9 @@
 
 /* delete.html */
 .sec_delete { font-size:  .7rem; }
-.sec_delete .bx_gray { margin: 2.25rem 0 1.65rem; font-size: 0.85rem; color: #666; }
+.sec_delete .bx_gray { padding: 2.25rem 3rem ; margin: 2.25rem 0 1.65rem; font-size: 0.85rem; color: #666; }
 .sec_delete .bx_gray > div { padding: 1rem 0 0.75rem; font-size: 1.2rem; color: #222;}
-.sec_delete .bx_gray .list_bul { margin-top: 2.5rem; padding-top: 0.75rem;  color:#999; font-size: 0.65rem; }
+.sec_delete .bx_gray .list_bul { border-top:1px solid #ddd; margin-top: 2.5rem; padding-top: 0.75rem;  color:#999; font-size: 0.7rem; }
 .sec_delete .bx_gray .list_bul li { margin: 0; line-height: 1.7}
 .sec_delete .agree { padding-top: 1.8rem; margin-top: 1.5rem; border-top: 1px solid #e0e0e0; text-align: center;}
 
@@ -349,8 +350,8 @@
 .sec_delete .fm_delete .list_reg { padding-left: 15%; padding-right: 15%;}
 .sec_delete .fm_delete .list_reg .item_textarea > * { width: 100%}
 .sec_delete .fm_delete .list_reg .item_textarea .bx_input { min-height: 6.2rem;}
-.sec_delete .fm_delete .list_reg .item_textarea textarea { width: 100% ;height:  100%; }
-.sec_delete .fm_delete .wrap_btn { padding:2.5rem 0 0 }
+.sec_delete .fm_delete .list_reg .item_textarea textarea { padding: 1rem 0; width: 100% ;height:  100%; }
+.sec_delete .fm_delete .wrap_btn { border-top:1px solid #ddd; padding:2.5rem 0 0 }
 
 
 /* 메가밀리언 구매 */
@@ -495,9 +496,11 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 .txt_type2 { font-size: 0.85rem; color: #666; letter-spacing: ; line-height: 1.75; letter-spacing: -0.05em}
 
 .sec_service .top.bb { margin-bottom: 2.1rem; padding: 0 0 1.25rem}
+.sec_service h3 { font-size: 1.1rem}
 .guide_use .bx_gray { margin-top: 1rem}
 .guide_use .mainlogo { margin:1.1rem 0 1.4rem; font-size: 2rem}
 .guide_use .mainlogo > *:before { font-size: 1rem; line-height: 1.5}
+.intro .bx_descript { margin-bottom: 2.2rem}
 .intro .bx_descript > .left { width: 58%; background:#1b1b1b }
 .intro .bx_descript > .left img { width: 95%}
 .intro .bx_descript > .right { padding: 1.7rem 1.5rem 1.15rem; width: 42%; box-sizing: border-box; color: #222 ; line-height: 1}
@@ -510,6 +513,10 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 .intro .bx_descript .nation .add_before:before { border: 1px solid #000; border-radius: 3px}
 .intro .bx_descript .btn_red { display: block; margin: 0 auto; width:62.5%;  line-height: 2.5rem; font-size: 0.8rem; text-align: center; border-radius: 2.5rem}
 .wrap_img > img { width: 100%}
+.sec_service .list_bul > li ~ li { margin-top: 3px}
+
+.sec_service.intro .wrap_logo { margin: 0 0 2.5rem; }
+.sec_service.intro h4 { padding:0 0 0.65rem; color: #252525; font-size: 0.9rem; font-weight: 500}
 
 
 .tb_level { margin: 0.85rem 0 1.9rem; border: 1px solid #dcdcdc; }
@@ -524,7 +531,7 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 .bx_level > p strong { color: #000;}
 
 .list_level > li { padding: 2rem 0  }
-.list_level > li > .bx_level { width: 23%}
+.list_level > li > .bx_level { width: 19.66%}
 .list_level > li > .bx_level + div { flex: 1}
 .list_level > li ~ li { border-top: 1px solid #dcdcdc}
 

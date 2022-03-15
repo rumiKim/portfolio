@@ -1,40 +1,17 @@
-:root {
-    --color_blue:#008ecb;
-    --color_blue2:#008ecb;
-    --color_red : #f00;
-    --color_red2 : #de4f41;
-    --color_gray : #434343;
-    --color_313131 : #313131;
-    --ls75 : -0.075em;
-    --ls50 : -0.050em;
-    --ls25 : -0.025em;
-    --ls20 : -0.020em;
 
-}
 
 html { font-size: 20px;}
 body { font-size: 1rem; word-break: keep-all;}
-input,select,textarea { font-family: 'Noto Sans KR',sans-serif;  outline: 0; background-color: transparent;}
 input::-webkit-input-placeholder,
 input::placeholder,
 input::-ms-input-placeholder,
 input:-ms-input-placeholder { color: #000}
-
 input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0; }
+i { font-style: normal;}
 
 .wrap_com { margin:0 auto; width: 60rem;}
 
-.ls75 { letter-spacing: -0.075em;}
-.ls50 { letter-spacing: -0.050em;}
-.ls20 { letter-spacing: -0.020em;}
-.ls25 { letter-spacing: -0.025em;}
-.lh1 { line-height: 1}
-.lh12 { line-height: 1.2}
-.lh13 { line-height: 1.3}
-.lh14 { line-height: 1.4}
-.lh15 { line-height: 1.5}
-.lh16 { line-height: 1.6}
-.lh17 { line-height: 1.7}
+
 .fs15 { font-size: 0.75rem !important}
 .fs16 { font-size: 0.8rem !important}
 .fs17 { font-size: 0.85rem !important}
@@ -49,15 +26,6 @@ input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overfl
 .fs26 { font-size: 1.3rem !important}
 .fs27 { font-size: 1.35rem !important}
 .fs28 { font-size: 1.4rem !important}
-
-.fw300 { font-weight: 300}
-.fw400 { font-weight: 400}
-.fw500 { font-weight: 500}
-.fw600 { font-weight: 600}
-.fw700 { font-weight: 700}
-.fw800 { font-weight: 800}
-.fw900 { font-weight: 900}
-.fwB { font-weight: bold;}
 
 .pb5 { padding-bottom: 0.25rem}
 .pb10 { padding-bottom: 0.5rem}
@@ -80,29 +48,9 @@ input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overfl
 .mt30 { margin-top: 1.5rem}
 /* border-radius */
 .br10 { border-radius: 0.5rem}
-.bt { border-top: 1px solid #000}
-.bb { border-bottom: 1px solid #000}
-/* bg */
-.bg_blue { background-color: var(--color_blue) !important;}
-.bg_red { background-color:#f00 !important}
-.bg_red2 { background-color:#de4f41 !important; color: #fff !important;}
-.bg_gray { background-color: #434343 !important; color: #fff !important;}
 
-/* btn */
-.btn_type1 { border: 1px solid #bfbfbf; background-color: #fff; color: #333}
-.btn_red { background-color:var(--color_red) !important; color: #fff !important; }
-.btn_red2 { background-color:var(--color_red2) !important; color: #fff !important; }
-.btn_blue { background-color:var(--color_blue) !important; color: #fff !important; }
 
-/* color */
-.color_blue { color: var(--color_blue) !important}
-.color_blue2 { color: var(--color_blue2) !important}
-.color_red { color: #de4f41 !important}
-.color_red2 { color: #e60012 !important}
-.color_red3 { color: #ff0101 !important}
-.color_000 { color: #000 !important}
-.color_fff { color: #fff !important}
-.color_ylw { color: #fffc00 !important}
+
 
 /* text style */
 .h_type1 { font-size: 1rem; letter-spacing: -0.075em}
@@ -114,12 +62,10 @@ input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overfl
 
 /* list */
 .list_type1 > li > a { display: block; border: 1px solid #ddd;border-radius: 0.5rem; box-sizing: border-box;}
-.list_bul.gray { color: #676767;
-    font-size: 0.8rem;}
-.list_bul > li { line-height: 1.2; position: relative; }
+.list_bul.gray { color: #676767; font-size: 0.8rem;}
+.list_bul > li { padding-left: 0.6rem; position: relative; }
 .list_bul > li.nonebul:before { display: none}
-.list_bul > li ~ li { margin-top: 10px}
-.list_bul > li:before { content: ""; display: inline-block; margin-right: 10px; width: 3px; height: 3px; background: #666; vertical-align: middle;}
+.list_bul > li:before { position: absolute; left: 0; top: 0.75em; content: ""; display: inline-block; width: 0.25em; height: 0.25em; background: #666; vertical-align: middle; border-radius: 100%}
 .list_sel:after { display: block; clear: both;}
 .list_sel > li { float: left; }
 .list_sel > li ~ li { margin-left: -1px}
@@ -142,11 +88,6 @@ input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overfl
 .bx_search .right .btn_gray { padding: 0 1.9rem}
 .bx_search .list_sel > li > * { width: 4rem; height: 2rem; background: #fff; font-weight: 500}
 .bx_search .list_sel > li:hover * { border-color: #999; color: #444}
-
-/* font */
-.f_NotoSansKR { font-family: 'Noto Sans KR', sans-serif !important; }
-.f_GmarketSans { font-family: 'GmarketSans', sans-serif !important; }
-.f_Montserrat { font-family: 'Montserrat', sans-serif !important; }
 
 
 /* logo_main */
@@ -175,7 +116,7 @@ input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overfl
 .tb_type1 thead { background: #f4f4f4}
 .tb_type1 tbody { color: #666}
 
-.tb_type2 { font-size: 0.75rem; text-align: center; border-bottom: 1px solid #d2d2d2}
+.tb_type2 { font-size: 0.75rem; text-align: center; border-bottom: 1px solid #d2d2d2; line-height: 1.3}
 .tb_type2 col ~ col { border-left:1px solid #e8e8e8}
 .tb_type2 thead th { padding: 0.75rem 0.5rem; box-sizing: border-box; font-weight: 500}
 .tb_type2 tbody td { padding: 1rem 0.5rem; min-height: 2.75rem; box-sizing: border-box; color: #676767}

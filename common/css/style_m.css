@@ -1,130 +1,18 @@
+html {font-size: 20px; }
+body { font-size: 1rem}
 
-/* .qualified .bx_notice:before { display: none !important} */
-/* .wrap_char { display: none !important} */
-/* .sec_benefit .list_type3:before { display: none !important} */
-/* common */
-.pc { display: none}
-.mob { display: block;}
-.wrap_comm { width: 94vw; }
+.wrap_com { padding-left: 0.825rem !important; padding-right: 0.825rem !important; box-sizing: border-box;}
+header .top { height: 3rem}
+header .top a, header .util a  {  display: block; line-height: 3rem; }
+header h1 a {font-size: 0.875rem}
+header .gnb { background: #f7f7f7}
+header .gnb a { display:block; line-height: 2.2rem; font-size: 0.625rem}
+header .gnb nav { width: 100%; overflow: hidden;}
+header .gnb nav ul { overflow: scroll; white-space: nowrap;}
+header .gnb nav ul li { padding-right: 0.9rem}
+header .util { position: absolute; right: 0; top: 0; font-size: 0.55rem}
 
-/* bx */
-/*.bx_link { height: 15vw}*/
-.bx_link { height: 11vw}
-.bx_notice { padding-left: 3.5vw; padding-top: 2.5vw; padding-bottom: 2.5vw; padding-right: 1.5vw ; font-size: 3vw; border-radius: 3.5vw;}
-
-.bg_star {
-background:
-url(/common/images/bg_star_01.gif) no-repeat left 10% top 5% / auto 11%,
-url(/common/images/bg_star_02.gif) no-repeat right 13% top 8% / auto 11%,
-url(/common/images/bg_star_03.gif) no-repeat left 7% bottom 38% / auto 11%,
-url(/common/images/bg_star_04.gif) no-repeat right 5% bottom 50% / auto 11%,
-url(/common/images/bg_star_05.png) no-repeat left 12.7% bottom -3% / auto 11%,
-url(/common/images/bg_star_06.png) no-repeat right 16% bottom 19% / auto 11%;
-}
-
-/* list */
-.list_bul > li { padding-left: 3.5vw;}
-.list_type2 > li {
-    display: flex;
-    align-items: center;
-    padding: 0 0 14px;
-}
-
-
-
-/* txt */
-.wrap_h_type1 > .h_sub { padding-left: 3vw; font-size: 3.5vw;}
-.wrap_h_type1 > .h_sub small { font-size: 3vw}
-.h_type1 { padding: 7vw 0 0; padding-left: 3vw; font-size: 4.5vw;}
-.txt_type1 { font-size: 3.1vw}
-.txt_type1 .p { padding: 0 0 3vw}
-.txt_after:after{ margin: 0 3vw; height: 5vw;}
-.txt_after.fs32:after { vertical-align: -1vw; width: 1px}
-
-/* padding */
-.pl20 { padding-left: 3vw !important}
-.pr20 { padding-right: 3vw !important}
-/*.pb60 { padding-bottom: 15vw !important}*/
-.pb60 { padding-bottom: 11vw !important}
-.radius20 { border-radius: 3vw !important}
-
-
-#wrap_gnb { float: none}
-.btn_menu { width: 15vw; height: 15vw; background: url(/common/images/btn_menu.png) no-repeat center right / 35% auto;}
-.wrap_gnb { position: fixed; z-index: 1000; width: 80vw; right: -100%; top: 0; bottom: 0; background: #1c1a3e; padding-top: 15vw; float: none; transition: all .3s ease-out;}
-.wrap_gnb.on { right:0}
-.wrap_gnb .btn_close { position: absolute; right: 0; top: 0; width: 15vw; height: 15vw; background: url(/common/images/ico_close.png) no-repeat center / 40% auto; background-color: transparent}
-
-
-/* px=======================================================*/
-/* .fs15 { font-size: 15px !important } */
-.fs16 { font-size: 3.5vw !important }
-.fs32 { font-size: 4vw !important}
-
-header a { height: 15vw; line-height: 15vw}
-header h1 { width: 25vw; padding: 0;}
-header nav ul { height: 65vh; overflow-y: scroll;}
-header nav ul li { float: none; padding-right:0;}
-header nav ul li a { padding-left: 3vw; font-size: 16px}
-.link_qna.mob { width: 70px; }
-
-/* sec_main*/
-.sec_main { height: 70vw; background: url(/common/images/bg_main_m.gif) no-repeat center / cover}
-.sec_main h2 { font-size: 3vw}
-.sec_main h2 span { font-size: 6.8vw;}
-.sec_main .wrap_txt { padding:18vw 0 0; }
-.sec_main .wrap_txt .time { font-size: 2vw; padding-top: 4.5vh; }
-.sec_main .wrap_img {top: 5vw; width: 30vw; }
-
-/* sec_corp */
-#snow_canvas { width:auto;}
-.sec_corp .bx_blue { padding: 0 4vw; line-height: 7vw;}
-.sec_corp h2 { margin-bottom: 24px; padding-bottom: 20px; border-bottom:1px solid #fff }
-.sec_corp .wrap_txt:after { content: ""; position: absolute; right: 0; top: 50%;  width: 16vw;
-    height: 21vw;}
-.area .wrap_list { padding: 0 0 8vw; }
-.area .wrap_list .wrap_char { width: 12vw; bottom: -3vw;}
-.area .wrap_list ul li { margin: 2.5vw 0 0; font-size: 3.2vw; }
-.area .wrap_list ul li > div >  p { font-size: 3vw;}
-.area .wrap_list ul li > .bx_blue { margin-right: 3.5vw; width: 30vw; padding: 2vw 0; border-radius: 2vw; min-height: 15vw;}
-.area .wrap_list ul li:last-child > .bx_blue { height: 17vw}
-.qualified h3 { padding: 10vw 0 2vw}
-.qualified .bx_notice:before  {left: 25vw; width: 21vw; height: 16vw;}
-
-/*  */
-.txt_after.fs32:after { vertical-align: -5px; width: 1px}
-
-/* sec_program */
-.sec_program .list_type2 li { font-size: 3.2vw}
-.sec_program h2 { padding-bottom: 6vw}
-.sec_program .i_process ol { padding-top: 6vw}
-.sec_program .i_process ol li { margin-bottom: 3vw; padding-left: 4vw; padding-right: 5vw; border-radius: 3vw;  line-height: 7vw}
-.sec_program .i_process ol li span { width: 7vw}
-
-/* sec_process */
-.sec_process h2 { padding-bottom: 2vw}
-.sec_process .wrap_list { padding-bottom: 2vw}
-.sec_process .wrap_list:after { width: 100%; height: 20vw;  background: url(/common/images/char_green.png) no-repeat center right / auto 100%;}
-.sec_process .list li > div { padding: 1vw 0;  }
-.sec_process .list li > div:first-child { width: 50%}
-
-/* .sec_benefit */
-.sec_benefit .wrap_list { padding: 2vw 0 0}
-.sec_benefit .deco_char { right: 0; width: 20vw; }
-.sec_benefit .list_type3 { display: flex; justify-content: space-between; flex-wrap: wrap;}
-.sec_benefit .list_type3 > li { margin-right:0; margin-bottom: 2vw; width: 49%; line-height: 1.37; border-radius: 1.5vw; padding:4vw 3vw; height: 25vw; font-size: 4vw}
-.sec_benefit .list_type3 > li p:after { width: 12vw; background-size: auto 40%}
-.sec_benefit .list_type3:before { left: 25vw;
-    width: 21vw;
-    height: 40vw;
-}
-/* sec_intro */
-.sec_intro .wrap_apply { flex-direction: column; align-items: flex-start;}
-.sec_intro .wrap_apply .bx_blue { margin-left:7vw; width: 24vw; height: 7.5vw; line-height: 7.5vw;}
-.sec_intro .wrap_apply .wrap_img { margin: 4vw auto 0; width: 65%; }
-
-footer { padding: 6vw 0;}
-footer .flex { display: block;}
-footer .bx_logo { width: 40vw}
-footer .wrap_comm .left .copyright { padding: 4vw 0 6vw}
-footer .sns li a { width: 12vw; height: 12vw;}
+.chk_type1 + label { cursor: pointer;}
+.chk_type1 + label span { vertical-align: middle;}
+.chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; background-color: #fff; width: 1rem; height: 1rem; box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
+.chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
