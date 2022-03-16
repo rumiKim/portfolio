@@ -1,6 +1,33 @@
 html {font-size: 20px; }
 body { font-size: 1rem}
 
+:root {
+
+  --px10 :0.25rem;
+  --px11 :0.275rem;
+  --px12 :0.3rem;
+  --px13 :0.325rem;
+  --px14 :0.35rem;
+  --px15 :0.375rem;
+  --px16 :0.4rem;
+  --px17 :0.425rem;
+  --px18 :0.45rem;
+  --px19 :0.475rem;
+  --px20 :0.5rem;
+  --px21 :0.525rem;
+  --px22 :0.55rem;
+  --px23 :0.575rem;
+  --px24 :0.6rem;
+  --px25 :0.625rem;
+  --px26 :0.65rem;
+  --px27 :0.675rem;
+  --px28 :0.7rem;
+  --px29 :0.725rem;
+  --px30 :0.75rem;
+
+}
+.h_type1 { font-size: 0.875rem; letter-spacing: -0.075em; font-weight: 500;}
+
 .wrap_com { padding-left: 0.825rem !important; padding-right: 0.825rem !important; box-sizing: border-box;}
 header .top { height: 3rem}
 header .top a, header .util a  {  display: block; line-height: 3rem; }
@@ -16,3 +43,59 @@ header .util { position: absolute; right: 0; top: 0; font-size: 0.55rem}
 .chk_type1 + label span { vertical-align: middle;}
 .chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; background-color: #fff; width: 1rem; height: 1rem; box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
+
+.wrap_com.main { padding-top: var(--px30); background: #f5f5f5}
+.bx_type1 { background: #fff; border: 1px solid #e2e2e2; border-radius: var(--px10)}
+
+/* sec_lotto */
+.sec_lotto > ul > li { margin-bottom: var(--px18); padding: 0 0 1.5rem; color: #313131; letter-spacing: var(--ls25); text-align: center; box-sizing: border-box; line-height: 1}
+.sec_lotto h3 { margin:1.25rem 0 var(--px30); height: 1.25rem}
+.sec_lotto h3 > img { height: 100%; width: auto}
+.sec_lotto .time_draw { color: #434343; font-size: 0.7rem; font-weight: 500; letter-spacing: -0.05em}
+.sec_lotto .won { padding:var(--px18) 0 var(--px15); font-size: 0.925rem;  font-weight: bold;}
+.sec_lotto .won .real { color: #f00}
+.sec_lotto .us { font-size: var(--px25); width: 100%; padding:0 0 1rem; text-align: center;}
+
+.sec_lotto  .time_end { display: flex; align-items: center; margin:0 0 1.625rem; }
+.sec_lotto .time_end > p { font-size: 0.5rem; color: #313131; font-weight: 600;}
+.list_time { display: flex; margin-left: 0.4rem; font-size: 0}
+.list_time > li { position: relative; text-align: center; line-height: 1; color: #fff; }
+.list_time > li ~ li { margin-left: 0.5rem}
+.list_time > li:after { content:""; position: absolute; left: 50%; transform: translateX(-50%); top:calc(100% + 5px); font-size: var(--px18); color: #313131}
+.list_time > li span { display: inline-block; width: 0.875rem; height: 1rem; background:#313131; font-size: 0.55rem; line-height: 1.2rem; border-radius: 3px; box-sizing: border-box; font-weight: 500; }
+.list_time > li span:nth-child(2) { margin-left: 2px}
+.bx_drawtime > span { font-size: 2.03vw;}
+
+/*  list after */
+.list_time > .items_day:after  { content:"Days"; }
+.list_time > .items_hours:after  { content:"Hours"; }
+.list_time > .items_min:after  { content:"Minutes"; }
+.list_time > .items_sec:after  { content:"Seconds"; }
+.list_time > .items_sec span { background-color: #696969}
+.sec_lotto .btn_buy { display: block; width: 8.5rem; height:1.5rem; line-height: 1.7rem; border-radius: 1.5rem; font-size: var(--px30); font-weight: 500; letter-spacing:-0.075em}
+
+.sec_result .h_type1 + a { font-size: var(--px20)}
+.sec_result .wrap_heading { padding: 1.375rem 0 var(--px21); }
+.list_result > li { border: 1px solid #e5e5e5; background: #eee; box-sizing: border-box;  border-radius: 0.5rem; overflow: hidden; line-height: 1}
+.list_result > li > div { padding-left: 1.6rem; padding-right: 1.6rem}
+.list_result > li > .top { padding-top: 1.35rem; padding-bottom: 1.1rem; box-sizing: border-box;}
+.list_result > li > .btm { padding-top: 0.6rem; padding-bottom:0.5rem; background: #535353; color: #fff; font-size: 0.65rem; font-weight: 300}
+.list_result > li > .btm strong { font-weight: 500}
+.sec_result .h_type2:after { content: "메가밀리언 >"; margin-left: 0.4rem; padding:0 0.3rem; height: 1.1rem; line-height: 1.2rem; color: #fff; font-size: 0.6rem; background:#535353; font-family: 'GmarketSans'; font-weight: 500; text-align: center; border-radius: 3px}
+.sec_result .power .h_type2:after { content: "파워볼 >"}
+.sec_result .win { padding: 0.5rem 0; font-size: 0.65rem}
+.label { width:2.2rem; height: 2.2rem; background-color: #434343; color: #fff; letter-spacing: -0.025em; font-size: 0.65rem; border-radius: 100%}
+
+.sec_result .list_link { padding: 0.9rem 0 0 }
+.sec_result .list_link li { float: left; margin-right: 5px}
+.sec_result .list_link li a { display: block; width: 5.5rem; height: 1.35rem; border-radius: 1.35rem; line-height: 1.4rem; font-size: 0.62rem; text-align: center;}
+
+
+.list_ball > li { float: left; margin-right: 5px; }
+.list_ball > li span { display: inline-block; width: 1.7rem; height: 1.7rem; line-height: 1.8rem; box-sizing: border-box; border: 1px solid #bfbfbf; font-family: 'GmarketSans'; font-weight: bold; font-size: 0.7rem; color: #313131; text-align: center; border-radius: 100%; background: #fff; }
+.list_ball > li:last-child span { margin: 0 5px}
+.list_ball > li:last-child:before { content: "+"; font-weight: bold; font-family: 'Montserrat',sans-serif; vertical-align: middle;}
+.list_ball > li.mega span { background: #ebc704; border-color: #ebc704; font-weight: 500}
+.list_ball > li.power span { background: #e40d0b; border-color: #e40d0b; font-weight: 500; color: #fff}
+.list_ball > li.add_after:after { content:"(메가볼)"; color: #009bfa; font-size: 0.65rem; vertical-align: 1px;}
+.list_ball > li.power.add_after:after {  content:"(파워볼)"; color: #e40d0b;}
