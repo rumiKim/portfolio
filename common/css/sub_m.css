@@ -1,0 +1,27 @@
+main { display: block; min-height: 100vh}
+.title_sub { position: relative; }
+.title_sub .title { text-align:center; font-family: 'Noto Sans KR',sans-serif; font-size: var(--px28); letter-spacing: -0.075em; line-height: 2.25rem}
+.title_sub .btn_back { position: absolute; left: 0; top: 0; bottom: 0; width: 3.1rem; background: red}
+
+
+.sec_login { text-align: center; box-sizing: border-box;}
+.sec_login > div { width: 71%; margin: 0 auto}
+.sec_login .mainlogo { padding: 1.675rem 0 1.125rem; font-size: 1rem}
+.sec_login form * { font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.075em}
+.sec_login > .login_super form ul li { position: relative; margin:0 0 var(--px11); border: 1px solid #ddd; }
+.sec_login > .login_super form ul li:after { position: absolute; left: 1rem; top: 0; width: var(--px23); height: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
+.sec_login > .login_super form ul li.id:after { background-image: url(/common/images/ico_id.png)}
+.sec_login > .login_super form ul li.pw:after { background-image: url(/common/images/ico_pw.png)}
+.sec_login > .login_super form ul li input { padding:0 0 0 2.5rem; width: 100%; line-height: 1.75rem; box-sizing: border-box; color: #000; }
+
+.sec_login > .login_super form .btn_login { margin:1rem 0 0.9rem; width:100%; background:#444 ; font-weight: 500}
+.sec_login .wrap_chk { text-align: left;}
+.sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: var(--px18)}
+.sec_login .btn_login { display: block; line-height: 1.85rem; border-radius: 3px; color: #fff; font-size:var(--px25)}
+.sec_login .list_find { font-size: 0}
+.sec_login .list_find li {  position: relative; display: inline-block; padding: 5px var(--px25) }
+.sec_login .list_find li:after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
+.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: var(--px20); color: #444; font-weight: 500; }
+.login_sns h3 { padding: 1.6rem 0; color:#7c7c7c; font-size: var(--px20)}
+.sec_login .login_sns ul li {  position: relative; margin: 0 0 var(--px11)}
+.sec_login .login_sns .naver:before { position: absolute; left: 0; top: 0; bottom: 0 ; width: 1.7rem; background: url(/common/images/ico_naver.png ) no-repeat center / 36% auto; border-right: 1px solid #2aa104}

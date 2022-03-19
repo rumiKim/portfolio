@@ -65,6 +65,9 @@ input,select,textarea,button,a { font-family: 'Noto Sans KR',sans-serif;  outlin
 
 .bt { border-top: 1px solid #000}
 .bb { border-bottom: 1px solid #000}
+.border_dcdcdc { border-color: #dcdcdc !important}
+.border_e6e6e6 { border-color: #e6e6e6 !important}
+.va_mid { vertical-align: middle;}
 
 /* color */
 .color_blue { color: var(--color_blue) !important}

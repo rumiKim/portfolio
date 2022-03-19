@@ -147,7 +147,6 @@
 .bg_navy.type_radius { border-radius: 0.25rem 0.25rem 0 0}
 .wrap_mypage h2 { font-size: 0.9rem; text-align: center; line-height: 3rem}
 .wrap_mypage h2:after { margin-left: 0.5rem; width: 1.15rem; height: 1.15rem; background: url(/common/images/ico_alarm.png) no-repeat center / 100% auto;}
-.va_mid { vertical-align: middle;}
 .nav_mypage { padding:1.8rem 18% 3rem 8.7%; border: 1px solid #e8e8e8; border-top: none; letter-spacing: -0.05em; box-sizing: border-box; line-height: 1.87; font-size: 0.8rem}
 .nav_mypage nav > ul > li > ul { padding: 0.4rem 0 0 }
 .nav_mypage nav > ul > li > a { font-weight: 500}
