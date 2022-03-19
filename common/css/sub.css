@@ -493,7 +493,6 @@ background-position: left 1rem center; background-size: auto 1rem; background-re
 .sec_faq .list_type4 > li a:after { right: 1rem; background-image: url(../images/ico_arr_btm_black.png)}
 .sec_faq .list_type4 > li a.open:after { background-image: url(../images/ico_arr_top_red.png)}
 
-.txt_type2 { font-size: 0.85rem; color: #666; letter-spacing: ; line-height: 1.75; letter-spacing: -0.05em}
 
 .sec_service .top.bb { margin-bottom: 2.1rem; padding: 0 0 1.25rem}
 .sec_service h3 { font-size: 1.1rem}
