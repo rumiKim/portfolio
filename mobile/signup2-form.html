@@ -1,0 +1,102 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/meta.html";?>
+
+<body class="body_idx">
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/header.html";?>
+  <main id="main">
+    <div class="contents">
+      <div class="title_sub bb border_dcdcdc">
+        <h2 class="title">회원정보 입력</h2>
+        <a href="" class="btn_back"><span class="hide">뒤로가기</span></a>
+      </div>
+      <section class="sec_reg write wrap_com2">
+        <div>
+          <h3 class="hide">회원가입 프로세스</h3>
+          <ol class="list_step flex justify_center f_GmarketSans ls75">
+            <li>
+              <p>약관동의</p>
+            </li>
+            <li class="active">
+              <p>회원정보 입력</p>
+            </li>
+            <li>
+              <p>회원가입 완료</p>
+            </li>
+          </ol>
+        </div>
+        <form class="f_NotoSansKR">
+          <fieldset>
+            <legend class="h_type3">본인인증 및 회원 기본정보 입력</legend>
+            <ul class="list_form list_reg">
+              <li>
+                <label for="reg_id"><span>아이디(이메일)</span></label>
+                <div class="bx_input">
+                  <input type="email" id="reg_id" placeholder="ID@email_account.com">
+                </div>
+              </li>
+              <li>
+                <label for="reg_name"><span>이름</span></label>
+                <div class="bx_input gray">
+                  <input type="text" id="reg_name" placeholder="이름을 입력해주세요.">
+                </div>
+              </li>
+              <li class="">
+                <label for="reg_tel"><span>휴대폰 번호</span></label>
+                <div class="">
+                  <div class="wrap_type1 flex align_center">
+                    <div class="bx_tel type1 bx_input gray">
+                      <select name="" id="" class="">
+                        <option value="">SKT</option>
+                        <option value="">KT</option>
+                        <option value="">LG U+</option>
+                      </select>
+                      <input type="text" id="reg_tel" placeholder="">
+                    </div>
+                    <button class="btn_gray">인증번호요청</button>
+                  </div>
+                  <p class="txt_type1">서비스이용, 아이디 또는 비밀번호 찾기에서 사용되므로 <br>인증이 필요합니다.</p>
+                  <div class="bx_num bx_input gray">
+                    <input type="text">
+                    <p><span class="hide">남은시간</span><span class="time">03:00</span></p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="reg_pw"><span>비밀번호</span></label>
+                <div>
+                  <div class="bx_input">
+                    <input type="password" id="reg_pw" placeholder="8자리 이상 입력해주세요.">
+                  </div>
+                  <p class="txt_type1">영문,숫자,특수문자 3가지를 조합한 8자리 이상으로 입력해주세요.<br>휴대폰번호, 생년월일, 아이디, 연속된 숫자/문자 등은 사용할 수 없습니다.</p>
+                </div>
+              </li>
+              <li>
+                <label for="reg_pw_re"><span>비밀번호 확인</span></label>
+                <div class="bx_input">
+                  <input type="password" id="reg_pw_re" placeholder="동일한 비밀번호를 입력해주세요.">
+                  <p>비밀번호가 동일하지 않습니다. 다시 입력해주세요.</p>
+                </div>
+              </li>
+              <li>
+                <label for="reg_birth"><span>생년월일</span></label>
+                <div class="bx_input gray">
+                  <input type="text" id="reg_birth" placeholder="19750917">
+                </div>
+              </li>
+
+            </ul>
+            <div class="wrap_btn flex align_center space">
+              <button class="btn_prev">이전</button>
+              <a href="signup3-complete.html" class="btn_gray">다음</a>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+    </div>
+
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/footer.html";?>
+</body>
+
+</html>

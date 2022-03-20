@@ -1,0 +1,92 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/meta.html";?>
+
+<body class="">
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/header.html";?>
+  <main id="main">
+    <div class="title_sub bb border_dcdcdc">
+      <h2 class="title">메가밀리언 구매</h2>
+      <a href="" class="btn_back"><span class="hide">뒤로가기</span></a>
+    </div>
+    <div class="contents bg_contents">
+      <section class="sec_info wrap_com f_GmarketSans">
+        <h3 class="hide">메가밀리언 정보</h3>
+        <div class="bx_info">
+          <ul class="">
+            <li>
+              <div>
+                <p class="title">메가밀리언 <strong>1등 당첨금</strong></p>
+                <strong class="txt_type1 ls25 color_000">￦ 37,107,000,000 <span class="color_red">(500억원)</span></strong>
+                <p class=""> <span>$ <span>31,000,000</span></span> </p>
+              </div>
+            </li>
+            <li class="" style="float:left">
+              <div>
+                <p class="title add_after ico_date"><span class="va_mid">추첨일시</span></p>
+                <ul class="nation">
+                  <li class="ko add_before ico_ko"><span class="va_mid">02월 26일 토요일 00:00</span></li>
+                  <li class="us add_before ico_us"><span class="va_mid">02월 25일 금요일 20:00</span></li>
+                </ul>
+              </div>
+            </li>
+            <li class="" style="float:right">
+              <div>
+                <p class="title add_after ico_time_ko"><span class="va_mid">주문마감일시</span></p>
+                <span>02월 26일 토요일 00:00</span>
+                <p><strong class="color_blue " style="letter-spacing:0">1일 20:15:45</strong></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="wrap_com">
+        <h3 class="hide">게임 옵션 선택</h3>
+        <section class="sec_game">
+          <div class="wrap_com">
+            <div class="choice left ls75">
+              <div class="step step1">
+                <p class="title">01. 게임수량 선택 <span>(구매하실 게임수량 선택)</span></p>
+                <ul class="list_btn clear">
+                  <li><button>1게임</button></li>
+                  <li><button>2게임</button></li>
+                  <li><button>3게임</button></li>
+                  <li><button>4게임</button></li>
+                  <li><button>5게임</button></li>
+                </ul>
+              </div>
+              <div class="step step2">
+                <p class="title">02. 게임방법 선택 <span>(원하시는 게임 방법 선택)</span></p>
+                <ul class="list_btn flex align_center space">
+                  <li><button>수동선택</button></li>
+                  <li><button>전체 자동선택</button></li>
+                  <li><button>내 번호 불러오기</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn_next btn_red">번호선택하기</a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/footer.html";?>
+  <script>
+    'use strict';
+
+    function makeBall(el, num) {
+      let ballBox = document.querySelector(el);
+
+      for (let i = 0; i < num; i++) {
+        let newBall = document.createElement('li');
+        ballBox.appendChild(newBall);
+        newBall.innerHTML = "<a href=''>" + (i + 1) + "</a>";
+      }
+    }
+
+    makeBall('.step3 .list_num', 70);
+    makeBall('.step4 .list_num', 25);
+  </script>
+</body>
+
+
+</html>

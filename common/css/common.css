@@ -1,4 +1,4 @@
-input,select,textarea,button,a { font-family: 'Noto Sans KR',sans-serif;  outline: 0; background-color: transparent;}
+input,select,textarea,button { font-family: 'Noto Sans KR',sans-serif;  outline: 0; background-color: transparent;}
 
 /* font */
 .lh1 { line-height: 1;}

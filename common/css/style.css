@@ -172,13 +172,13 @@ footer .app ul li ~ li { border-left: 1px solid #383838}
 .banner .bx_chk .chk_type1 + label span { padding: 0 1.5rem 0 0.5rem}
 .banner .btn_close { width: 0.7rem; height: 0.7rem; background: url(/common/images/ico_x_banner.png) no-repeat center / 100% 100% }
 
-.mainlogo { position: relative; font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 1.3rem}
+.mainlogo { position: relative; font-family: 'Montserrat',sans-serif !important; font-weight: 700; font-size: 1.3rem }
 .mainlogo > * { display: flex;  height: 3.5rem; }
 .mainlogo > *:before { display: block; text-align: right; content: "슈퍼로또코리아"; font-size: 0.6rem; color: #434343; font-family: 'Noto Sans KR',sans-serif; font-weight: 400; transform: translateY(5px);}
 
 header { position: sticky; left: 0; right: 0; top: 0; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.05em ; background: #fff; z-index: 1000}
 header .wrap_com { position: relative;}
-header .mainlogo { z-index: 2000}
+header .mainlogo { z-index: 2000; }
 header h1 a { color: #008ecb;}
 header .gnb { position: relative; z-index: 1000; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; background: #fff}
 header .btn_menu { width: 1.3rem; height: 0.8rem; background: url(/common/images/btn_menu.png) no-repeat left center / 100% auto}
