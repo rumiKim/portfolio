@@ -1,5 +1,5 @@
 main { display: block; min-height: 100vh}
-.title_sub { position: relative; }
+.title_sub { position: relative; margin-bottom: var(--px23);}
 .title_sub .title { text-align:center; font-family: 'Noto Sans KR',sans-serif; font-size: var(--px28); letter-spacing: -0.075em; line-height: 2.25rem}
 .title_sub .btn_back { position: absolute; left: 0; top: 0; bottom: 0; width: 3.1rem; background: red}
 
@@ -94,7 +94,7 @@ main { display: block; min-height: 100vh}
 /* 메가밀리언 구매 */
 .sec_info > .bx_info { margin-bottom: var(--px27);  overflow: hidden; letter-spacing: -0.075em}
 .sec_info > .bx_info .txt_type1 { font-size: 0.78rem}
-.sec_info > .bx_info > ul { padding:1.5rem 0;  color: #313131}
+.sec_info > .bx_info > ul { color: #313131}
 .sec_info > .bx_info > ul > li:nth-child(1) { margin-bottom: var(--px15); text-align:center; background:#f6f2e7 !important}
 .sec_info > .bx_info > ul > li { padding: 0.825rem 0 var(--px23); border:1px solid #ddd; box-sizing: border-box; line-height: 1.38; font-size: var(--px22); background: #fff}
 .sec_info > .bx_info > ul > li > div { display: table; margin: 0 auto}
@@ -107,57 +107,59 @@ main { display: block; min-height: 100vh}
 .ico_ko:before { background: url(/common/images/ico_ko.png) no-repeat center / 100% 100%}
 
 
-
-.sec_game { padding-bottom: 1.1rem ; background: #1b1b1b; color: #fff ; font-family: 'GmarketSans'; border-radius: 0.5rem}
+.sec_game { padding-bottom: 1.1rem ; color: #fff ; font-family: 'GmarketSans'; border-radius: 0.5rem}
 .sec_game .btn_red.btn_next { display:block; margin: 1rem auto 0; width: 7.5rem;font-size: var(--px28); line-height: 1.55rem; border-radius: 1.55rem; text-align: center;}
 .sec_game * { color: #fff}
-.sec_game .pay.right { padding: 1.1rem 1rem 0; height: 35.5rem; background: #333; border-radius: 1rem; box-sizing: border-box; letter-spacing: -0.075em}
-.sec_game .choice .title { padding: 1.25rem 0 var(--px30); font-size: var(--px25)}
+.sec_game .pay.right { padding: 1.1rem 0.75rem 0.95rem; background: #333; border-radius: 1rem; box-sizing: border-box; letter-spacing: -0.075em}
+.sec_game .choice .title { padding: 1.4rem 0 var(--px30); font-size: var(--px25)}
 .sec_game .choice .title span { color: #c5c5c5; font-weight: 300}
 .sec_game .choice .list_btn > li { float: left; margin-right: 2%; margin-bottom: var(--px14); width: 32%; border: 1px solid #535353; border-radius: 0.25rem; overflow: hidden; box-sizing: border-box;}
 .sec_game .choice .list_btn > li:nth-child(3n) { margin-right: 0}
 .sec_game .choice .list_btn > li > * { display: block; width: 100%; height: 1.62rem; line-height: 1.62rem; background: #333; font-size: var(--px27); font-weight: bold; letter-spacing: -0.075em; transition: all .3s; font-family: 'GmarketSans'}
 .sec_game .choice .list_btn > li > *:hover { background: #f00;}
 .sec_game .choice .step2 .list_btn > li { width: 32%}
-.bx_balls { box-sizing: border-box; border: 1px solid; border: 1px solid #535353; border-radius: 0.5rem; overflow: hidden; height: 20.4rem;box-sizing: border-box}
-.bx_balls > div { padding: 1.4rem}
+.bx_balls { box-sizing: border-box; overflow: hidden; }
 .sec_game .choice ol:after { content: ""; display: block; clear: both}
 .list_num > li { float: left; border-radius: 100%; box-sizing: border-box; border: 1px solid #5c5c5c; text-align: center; overflow: hidden;}
-.list_num > li > a { display: block; width: 100%; height: 100%; font-size: 0.75rem}
-.sec_game .list_num > li { margin-right: 5px;  margin-bottom: 6px; width: 2rem; height: 2rem;  line-height: 2rem;}
-.sec_game .step3 .list_num > li:nth-child(9n){ margin-right: 0;}
-.sec_game .step4 .list_num > li:nth-child(5n){ margin-right: 0;}
+.list_num > li > a { display: block; width: 100%; height: 100%; font-size: 3.2vw}
+.sec_game .list_num > li { margin-right: 1.1vw; margin-bottom: 6px; width: 8.5vw; height: 8.5vw;  line-height: 8.5vw;}
+.sec_game .step .list_num > li:nth-child(9n){ margin-right: 0;}
 .sec_game .choice .step3 .list_num > li > *:hover,
 .sec_game .choice .step3 .list_num > li.on > *{ background: #fff; color: #000}
+.sec_game .bg_black { padding-left: 3.5vw; padding-right: 3.5vw; padding-bottom: 1.05rem; background: #1b1b1b; border-radius: var(--px20)}
 .sec_game .choice .step4 .list_num > li > *:hover { background: #f00;}
 .sec_game .pay .top { padding: 0 0 0.7rem; border-bottom: 1px solid #434343}
-.sec_game .pay .top > strong { font-size: 1.25rem; line-height: 1.7rem}
+.sec_game .pay .top > strong { font-size: 0.95rem;  line-height: 1.25rem; }
 .sec_game .pay .top > strong:before { margin-right: 0.5rem; margin-left: 1.5rem; width: 1.65rem; height: 1.15rem; background: url(../images/ico_list.png) no-repeat center / 100% 100%}
-.sec_game .pay .top > button { width: 4rem; height: 1.6rem; font-size: 0.75rem; color: #666; font-weight: 500}
+.sec_game .pay .top > button { width: 3.1rem; height: 1.25rem; font-size: 0.75rem; color: #666; font-weight: 500}
 .sec_game .pay .bx_border { border: 1px solid #5c5c5c; border-radius: 0.25rem}
-.sec_game .pay .btn_save {margin:0.5rem 0 0;  width: 100%; height:2.3rem;  background: #1b1b1b;}
+.sec_game .pay .btn_save {margin:0.5rem 0 0; width: 100%; height:2rem;  background: #1b1b1b; line-height: 1.8rem; font-size: var(--px21)}
 .sec_game .pay .btn_save:after { margin-left: 1rem; width: 0.75rem; height: 0.85rem; background: url(../images/ico_save.png) no-repeat center / 100% 100% }
-.sec_game .pay .btn_save + p { margin: 0 0 0.5rem; padding: 1.2rem 0; font-size: 0.9rem; text-align: center; border-bottom: 1px solid #5c5c5c;}
-.sec_game .wrap_game { padding: 1rem 0.8rem 0.5rem; border: 1px solid #5c5c5c; }
-.sec_game .list_game { font-size: 0.75rem; letter-spacing: }
-.sec_game .list_game .list_num > li { margin-bottom: 0.25rem; width: 1.7rem; height: 1.7rem; line-height: 1.8rem}
+.sec_game .pay .btn_save + p { margin: 0 0 0.5rem; padding: 0.9rem 0; font-size: var(--px27); text-align: center; border-bottom: 1px solid #5c5c5c;}
+.sec_game .wrap_game { padding: 0.875rem var(--px25) 0.5rem; border: 1px solid #5c5c5c; }
+.sec_game .list_game { font-size: var(--px23); letter-spacing: }
+.sec_game .list_game .list_num > li { margin-right: var(--px6); margin-bottom: 0.25rem; width: 1.4rem; height: 1.4rem; line-height: 1.45rem; }
 .sec_game .list_game .list_num > li ~ li { margin-left: 0.2rem}
 .sec_game .list_game .active .list_num > li:not(:last-child) a { background: #fff; }
 .sec_game .list_game .active .list_num > li:last-child a { background:#e60012; color: #fff}
-.sec_game .pay .list_game .list_num a { color:#000}
-.sec_game .pay .list_game .btns > * { width: 1.9rem; height: 1.65rem; border-radius: 0.25rem; font-family: 'GmarketSans'; line-height: 1.8rem; font-size: 0.65rem}
+.sec_game .pay .list_game .list_num a { color:#000; font-size: var(--px23) !important}
+.sec_game .pay .list_game .btns > * { width: 1.4rem; height: 1.3rem; border-radius: 0.25rem; font-family: 'GmarketSans'; line-height: 1.3rem; font-size: var(--px19)}
 .sec_game .pay .list_game .btn_re, .sec_game .bx_result { background: #1b1b1b; }
 .sec_game .pay .list_game .btn_del { margin-left: 0.2rem; background: #e60012; }
-.sec_game .bx_result { margin: 0.85rem 0 0.4rem; padding: 1.1rem 0.8rem; font-size: 0.9rem}
-.sec_game .bx_result .top button { margin-left: 0.8rem; font-size:0.75rem ; height: 1.65rem; width: 3.9rem;}
+.sec_game .bx_result { margin: var(--px26) 0 var(--px12); padding: 1.3rem var(--px30); font-size: var(--px27); line-height: 1}
+.sec_game .bx_result .top button { margin-left: 0.8rem; font-size:var(--px23) ; height: 1.25rem; width: 3rem;}
 .sec_game .bx_result .top .left { line-height: 1.65rem}
-.sec_game .bx_result .top .right > p { padding: 0.6rem 0 0; font-size: 0.7rem; color: #bababa;text-align: right;}
-.sec_game .bx_result .btm { padding: 1rem 0 0}
+.sec_game .bx_result .top .right > p { padding: var(--px18) 0 0; font-size: var(--px25); color: #bababa;text-align: right;}
+.sec_game .bx_result .btm { padding: var(--px30) 0 0; font-size: var(--px30)}
 .sec_game .bx_result .btm .left { font-size: 1rem}
-.sec_game .bx_result .btm > p strong { font-size: 1.5rem}
-.sec_game .btn_pay { width: 100%; height: 3.2rem; line-height: 3.5rem; font-size: 1.25rem; }
-.sec_game .step4 .bx_red { display: block; width:100%; height:130px; background: #ff0000; color: #fff; font-size: 1rem; line-height: 1.25}
-.sec_game .step4 .bx_red .add_before:before { margin-right: 1.5rem; content: ""; display: inline-block; width: 3.3rem; height: 2.3rem; background: url(/common/images/ico_list.png) no-repeat center /100% 100%; }
+.sec_game .bx_result .btm > p strong { font-size: 1.15rem}
+.sec_game .btn_pay { width: 100%; height: 2.5rem; line-height: 2.5rem; font-size: 1rem; }
+
+.btn_get { display: flex; margin-bottom: 1rem; overflow: hidden;}
+.btn_get > * { color: #fff; font-size:0.7rem; font-family: 'GmarketSans'; font-weight: 700; line-height: 2.5rem; height:2.25rem; }
+.btn_get .btn_cancel { width: 30%; background:#333; }
+.btn_get .btn_red { flex: 1; background: #ff0000;  }
+.btn_get .btn_red .add_before:before { margin-right: var(--px22); content: ""; display: inline-block; width: 1rem; height: 0.8rem; background: url(/common/images/ico_list.png) no-repeat center /100% 100%; }
 
 .sec_find { padding: 2rem 0 0; text-align: center;}
 .sec_find .bx_result { background:#f4f4f4; padding:1rem }
