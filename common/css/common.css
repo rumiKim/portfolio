@@ -52,11 +52,16 @@ input,select,textarea,button { font-family: 'Noto Sans KR',sans-serif;  outline:
 .bg_red { background-color:#f00 !important}
 .bg_red2 { background-color:#de4f41 !important; color: #fff !important;}
 .bg_gray { background-color: #434343 !important; color: #fff !important;}
+.bg_navy { background-color: #373b46 !important;}
+.bg_navy * {  color: #fff}
 
 /* btn */
 .btn_red { background-color:var(--color_red) !important; color: #fff !important; }
 .btn_red2 { background-color:var(--color_red2) !important; color: #fff !important; }
 .btn_blue { background-color:var(--color_blue) !important; color: #fff !important; }
+.btn_center { display: table; margin: 0 auto; text-align: center;}
+.btn_red { background: #f00 !important; color: #fff}
+
 
 /* font */
 .f_NotoSansKR { font-family: 'Noto Sans KR', sans-serif !important; }
@@ -86,4 +91,7 @@ input,select,textarea,button { font-family: 'Noto Sans KR',sans-serif;  outline:
 .list_bul > li { padding-left: 0.6rem; position: relative; }
 .list_bul > li.nonebul:before { display: none}
 .list_bul > li:before { position: absolute; left: 0; top: 0.75em; content: ""; display: inline-block; width: 0.25em; height: 0.25em; background: #666; vertical-align: middle; border-radius: 100%}
+.list_bul2 > li > p:before { content: ""; display: inline-block; margin-right: 6px; width: 2px; height: 2px; background: #bfbfbf; vertical-align: middle;}
+
+
 .bx_gray { background: #eee;}

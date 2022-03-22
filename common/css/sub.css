@@ -142,8 +142,7 @@
 .wrap_mypage > .right { width: 80.83%;  }
 .wrap_mypage > .right section { padding-top: 0.75rem}
 .wrap_mypage > .right section ~ section { margin-top: 1.5rem}
-.bg_navy { background: #373b46 ;}
-.bg_navy * {  color: #fff}
+
 .bg_navy.type_radius { border-radius: 0.25rem 0.25rem 0 0}
 .wrap_mypage h2 { font-size: 0.9rem; text-align: center; line-height: 3rem}
 .wrap_mypage h2:after { margin-left: 0.5rem; width: 1.15rem; height: 1.15rem; background: url(/common/images/ico_alarm.png) no-repeat center / 100% auto;}
@@ -173,9 +172,6 @@
 .sec_mypage .btm .list_bul2 > li .btn { padding: 0.15rem 0.7rem 0.25rem; font-size: 0.6rem; border-radius: 0.2rem}
 /* .sec_mypage .btm .right .list_bul2 > li > div > span { width: 6.7rem} */
 .sec_mypage .red { color: #f00}
-.list_bul2 > li > p:before { content: ""; display: inline-block; margin-right: 6px; width: 2px; height: 2px; background: #bfbfbf; vertical-align: middle;}
-.btn_red { background: #f00 !important; color: #fff}
-
 .sec_mypage .btm .right .list_bul2 > li > div { flex: 1;}
 .sec_mypage .btm .right .list_bul2 > li > div > span { display: inline-block; width: 6.75rem;  font-weight: 500}
 

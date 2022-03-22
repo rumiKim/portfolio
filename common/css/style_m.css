@@ -61,6 +61,7 @@ body { font-size: 1rem}
 .h_type1 { font-size: 0.875rem; letter-spacing: -0.075em; font-weight: 500;}
 .h_type2 { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.025em;}
 .h_type3 { font-family: 'GmarketSans', sans-serif; letter-spacing: -0.075em; font-weight: bold; }
+.h_type4 { font-family: 'Noto Sans KR',sans-serif; font-size: var(--px30); letter-spacing: -0.075em;}
 .txt_type1 { color: #666; letter-spacing: -0.075em}
 
 
@@ -72,13 +73,17 @@ body { font-size: 1rem}
 
 /* popup */
 .popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; line-height: 1}
-.popup.active { display: block !important;}
-.popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff; overflow: hidden; padding: 1rem; box-sizing: border-box;}
 .popup .scroll { overflow-y: auto;}
-.popup.type1 > .inner {   border-radius: 1rem;}
-.popup.type1 > .inner > .btn_close:after { content: "X"; display: block; position: absolute; right: 1.8rem; top: 2rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
+.popup.active { display: block !important;}
+.popup .inner { padding-top: 1.5rem;  position: absolute; left: 50%; top: 50%; width: 100vw; max-height: 90vh;  transform: translate(-50%,-50%); background: #fff; overflow: hidden; box-sizing: border-box;}
+.popup .bx_white { font-size: var(--px26)}
+.popup.type1 .inner { overflow: auto; border-radius: 1rem;}
+.popup.type1 .bx_padding { padding-left: 1rem; padding-right: 1rem; }
+.popup.type1 .bx_gray { padding-top: 0.85rem; padding-bottom: 0.85rem; font-size: var(--px19); line-height: 1.3}
+.popup.type1 .btn_close:after { content: "X"; display: block; position: absolute; right: 1rem; top: 1rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
+.popup.type1 .title { display: block; padding: 0 0 0.85rem; font-size: 0.875rem; font-family: 'GmarketSans'}
 .popup.type2 .btn_close { position: absolute; right: 0; top: 0; }
-.popup.type2 > .inner { width: 90vw; max-height: 90vh}
+.popup.type2 .inner { width: 90vw; max-height: 90vh}
 .popup.type2 .title { padding: 1.5rem 0 1rem; font-size: 1em; font-weight: 400; letter-spacing: -0.05em; border-bottom:3px solid #444 ;text-align: center;}
 /* 개인정보 수집 팝업 */
 .popup.policy .txt { padding: 1.6rem 0 ; font-size: 0.8rem; color: #666; line-height: 1.3}
@@ -253,6 +258,6 @@ footer .familysite select option { width: 100%}
   body { font-size: 1rem}
 }
 @media (min-width:768px) and (max-width:1024px) {
-  html {font-size: 30px; }
+  html {font-size: 35px; }
   body { font-size: 1rem}
 }

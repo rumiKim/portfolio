@@ -108,8 +108,12 @@ main { display: block; min-height: 100vh}
 
 
 .sec_game { padding-bottom: 1.1rem ; color: #fff ; font-family: 'GmarketSans'; border-radius: 0.5rem}
-.sec_game .btn_red.btn_next { display:block; margin: 1rem auto 0; width: 7.5rem;font-size: var(--px28); line-height: 1.55rem; border-radius: 1.55rem; text-align: center;}
+.sec_game .btn_next { display:block; margin: 1rem auto 0; width: 7.5rem;font-size: var(--px28); line-height: 1.55rem; border-radius: 1.55rem; text-align: center;}
+.sec_game .btn_next:after { margin-left: var(--px10); width: var(--px14); height: var(--px26); background: url(/common/images/mobile/ico_arr_right_w_m.png) no-repeat center / 100% auto}
 .sec_game * { color: #fff}
+.sec_game .step1,
+.sec_game .step2,
+.sec_game .step4 { padding-left: 0.75rem; padding-right: 0.75rem}
 .sec_game .pay.right { padding: 1.1rem 0.75rem 0.95rem; background: #333; border-radius: 1rem; box-sizing: border-box; letter-spacing: -0.075em}
 .sec_game .choice .title { padding: 1.4rem 0 var(--px30); font-size: var(--px25)}
 .sec_game .choice .title span { color: #c5c5c5; font-weight: 300}
@@ -126,7 +130,10 @@ main { display: block; min-height: 100vh}
 .sec_game .step .list_num > li:nth-child(9n){ margin-right: 0;}
 .sec_game .choice .step3 .list_num > li > *:hover,
 .sec_game .choice .step3 .list_num > li.on > *{ background: #fff; color: #000}
-.sec_game .bg_black { padding-left: 3.5vw; padding-right: 3.5vw; padding-bottom: 1.05rem; background: #1b1b1b; border-radius: var(--px20)}
+
+
+.sec_game .step3,
+.sec_game .step4 { padding-left: 3.5vw; padding-right: 3.5vw; padding-bottom: 1.05rem; background: #1b1b1b; border-radius: var(--px20)}
 .sec_game .choice .step4 .list_num > li > *:hover { background: #f00;}
 .sec_game .pay .top { padding: 0 0 0.7rem; border-bottom: 1px solid #434343}
 .sec_game .pay .top > strong { font-size: 0.95rem;  line-height: 1.25rem; }
@@ -161,11 +168,52 @@ main { display: block; min-height: 100vh}
 .btn_get .btn_red { flex: 1; background: #ff0000;  }
 .btn_get .btn_red .add_before:before { margin-right: var(--px22); content: ""; display: inline-block; width: 1rem; height: 0.8rem; background: url(/common/images/ico_list.png) no-repeat center /100% 100%; }
 
+.popup.pay .wrap_option > div { padding: var(--px15) 0 ; }
+.popup.pay .wrap_option > div ~ div { border-bottom: 1px solid #ececec}
+.popup.pay .wrap_option > div > *:nth-child(1) { width: 32%}
+.popup.pay .wrap_option > div > *:nth-child(2) { width: 45%}
+.popup.pay .wrap_option > div > *:nth-child(3) { width: 23%}
+.popup.pay .wrap_option input { border: 1px solid #dcdcdc; background: #f8f8f8; box-sizing: border-box; width: 90%}
+.popup.pay .wrap_option small { display: inline-block; padding-top: var(--px10); font-size: var(--px18)}
+.popup.pay .wrap_option button,
+.popup.pay .wrap_option input { padding:0 var(--px12); height:1.5rem; border-radius: 0.2rem; font-size: var(--px20); }
+.popup.pay .wrap_option + .total { padding: var(--px26) 0; font-size: var(--px30); text-align: center;}
+.popup.pay .btn_pay { margin-top: var(--px23); margin-bottom: 0.95rem; font-size: var(--px28); width: 6.675rem; height: 1.9rem; line-height: 1.9rem}
+
+
 .sec_find { padding: 2rem 0 0; text-align: center;}
 .sec_find .bx_result { background:#f4f4f4; padding:1rem }
 .sec_find .bx_result > p { font-size: 0.7rem; line-height: 1.3}
 .sec_find .bx_result > span { display: block; padding: 0.7rem 0 1rem; font-size: 0.6rem; color: #666}
 .sec_find .wrap_title .h_type3 { padding-bottom: 3.5rem}
 .sec_find .wrap_title > p { padding: 0 0 1rem; font-size: var(--px30); line-height: 1.3}
-
 .sec_reg.find .wrap_btn { margin-top: 1rem}
+
+/* mypage */
+main.mypage .bx_padding { padding-top:1.625rem;  padding-bottom:1.625rem;  }
+main.mypage .wrap_title .left { font-size: var(--px30)}
+main.mypage .wrap_title .right { font-size: var(--px22)}
+
+.sec_mycash .list_bul2 { padding-top:1.625rem; font-size: var(--px28); font-weight: 300}
+.sec_mycash .list_bul2 > li { display: flex; align-items: center; }
+.sec_mycash .list_bul2 > li ~ li { padding: var(--px15) 0 0}
+.sec_mycash .list_bul2 > li > p { width: 34%}
+.sec_mycash .list_bul2 > li .btn { padding: 0.08rem 0.5rem 0.1rem; font-size: var(--px22); border-radius: 0.1rem; font-weight: 500}
+.sec_mycash .list_bul2 > li > div { flex: 1;}
+.sec_mycash .list_bul2 > li > div > span { display: inline-block; width: 6.75rem; }
+
+.sec_recent .wrap_title + p { padding: var(--px30) 0 0; font-size: var(--px28)}
+.sec_recent ol { padding: 1.57rem 0 0}
+.sec_recent ol li { position: relative; text-align:center;}
+.sec_recent ol li ~ li { margin-left: 2.125rem}
+/* .sec_recent ol li ~ li:before { top:50%; transform: translateY(-50%); content: ""; display: block; border: 2px dotted #000; width: 2.125rem;} */
+.sec_recent ol li > p { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 100%; background: #383a46; color: #fff; font-weight: bold; font-family: 'GmarketSans'; font-size: var(--px26)}
+.sec_recent ol li:last-child > p { background: #d16a5b}
+.sec_recent ol li > span { font-size: var(--px22)}
+.sec_recent ol li .underline:after { background: #fff}
+
+.nav_mypage { padding: var(--px18) 0 4rem; background: #e8e8e8}
+.nav_mypage ul { padding: 0 0 1rem; margin-bottom: var(--px18); background: #fff; font-size: var(--px30)}
+.nav_mypage ul a { display: block;}
+.nav_mypage ul .link_main a {padding: 1.2rem 0 0.825rem; font-weight: 700; line-height: 1; }
+.nav_mypage ul li a { line-height: 1.375rem; font-weight: 300}
