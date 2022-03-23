@@ -33,6 +33,7 @@ body { font-size: 1rem}
 
 
 /* common */
+
 .space_btm { margin-bottom: 3rem}
 
 .mt10 { margin-top: var(--px10)}
@@ -41,6 +42,8 @@ body { font-size: 1rem}
 .mb10 { margin-bottom: var(--px10)}
 .mb20 { margin-bottom: var(--px20)}
 .mb30 { margin-bottom: var(--px30)}
+.mb40 { margin-bottom: 1rem}
+.mb50 { margin-bottom: 1.25rem}
 
 .pt10 { padding-top: var(--px10)}
 .pt20 { padding-top: var(--px20)}
@@ -49,6 +52,30 @@ body { font-size: 1rem}
 .pb20 { padding-bottom: var(--px20)}
 .pb30 { padding-bottom: var(--px30)}
 
+.fs10 { font-size: var(--px10) !important}
+.fs11 { font-size: var(--px11) !important}
+.fs12 { font-size: var(--px12) !important}
+.fs13 { font-size: var(--px13) !important}
+.fs14 { font-size: var(--px14) !important}
+.fs15 { font-size: var(--px15) !important}
+.fs16 { font-size: var(--px16) !important}
+.fs17 { font-size: var(--px17) !important}
+.fs18 { font-size: var(--px18) !important}
+.fs19 { font-size: var(--px19) !important}
+.fs20 { font-size: var(--px20) !important}
+.fs21 { font-size: var(--px21) !important}
+.fs22 { font-size: var(--px22) !important}
+.fs23 { font-size: var(--px23) !important}
+.fs24 { font-size: var(--px24) !important}
+.fs25 { font-size: var(--px25) !important}
+.fs26 { font-size: var(--px26) !important}
+.fs27 { font-size: var(--px27) !important}
+.fs28 { font-size: var(--px28) !important}
+.fs29 { font-size: var(--px29) !important}
+.fs30 { font-size: var(--px30) !important}
+.fs31 { font-size: var(--px31) !important}
+.fs32 { font-size: var(--px32) !important}
+.fs33 { font-size: var(--px33) !important}
 
 .br5 { border-radius: 0.125rem}
 .br10 { border-radius: 0.25rem}
@@ -63,13 +90,21 @@ body { font-size: 1rem}
 .h_type3 { font-family: 'GmarketSans', sans-serif; letter-spacing: -0.075em; font-weight: bold; }
 .h_type4 { font-family: 'Noto Sans KR',sans-serif; font-size: var(--px30); letter-spacing: -0.075em;}
 .txt_type1 { color: #666; letter-spacing: -0.075em}
+.txt_type2 { color: #cacaca !important; letter-spacing: -0.075em; font-size: var(--px24) !important}
 
+.bg_white { background-color: #fff !important}
 
 .chk_type1 + label { cursor: pointer;}
 .chk_type1 + label span { vertical-align: middle;}
 .chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; background-color: #fff; width: var(--px25); height: var(--px25); box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 .bx_type1 { background: #fff; border: 1px solid #e2e2e2; border-radius: var(--px10)}
+.bx_type2 { background: #fff; border: 1px solid #e1e1e1; border-radius: 2px}
+.bx_type3 { background:#1a1c21; padding: var(--px30) 0; border-radius: var(--px5)}
+
+
+.flex > .flex1 { flex:1}
+
 
 /* popup */
 .popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; line-height: 1}
@@ -90,17 +125,38 @@ body { font-size: 1rem}
 
 /* table */
 .tb_type1 { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; font-size: 0.75rem; line-height: 1.26rem; word-break: keep-all;}
-/* .tb_type1 th, .tb_type1 td { padding: 1rem 1.75rem } */
 .tb_type1 thead { background: #f4f4f4}
 .tb_type1 tbody { color: #666}
 
-/* button type  */
+.tb_type2 { font-size: var(--px25); color: #222}
+.tb_type2 th { background: #f4f4f4;}
+.tb_type2 th, .tb_type2 td { padding: var(--px24); text-align: left}
+.tb_type2 tr  { border-bottom: 1px solid #d2d2d2}
 
+
+/* button type  */
 .btn_type1 { font-size: var(--px25); min-height: 1.5rem; border-radius: 0.125rem; text-align: center; letter-spacing: -0.075em}
 .btn_black { background: #222; color: #fff; font-size: var(--px25)}
 .btn_gray { background:#e6e6e6; color: #000; }
 .btn_navy { color: #fff; background: #373b46}
 .btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
+.btn_more { margin-top: 1rem; width: 5.325rem; height: 1.875rem; font-size: var(--px28)}
+.btn_navy.type2 { font-size: var(--px28); padding: var(--px25) 0; border-radius: 0.125rem; text-align: center;}
+
+/* tab type */
+.tab_type1 { margin-bottom: 0.875rem}
+.tab_type1 > li { flex: 1; position: relative; border: 1px solid #ddd; text-align: center; transition: all .3s;}
+.tab_type1 > li:hover,.tab_type1 > li.on { border-color: #373b46; z-index: 1; background:#373b46 }
+.tab_type1 > li:hover *, .tab_type1 > li.on * { color: #fff}
+.tab_type1 > li ~ li {  margin-left: -1px;}
+.tab_type1 > li * { display: block; width:100%; line-height: 2rem; font-size:var(--px30); color: #222222; font-family: 'Noto sans KR',sans-serif; text-align: center;}
+/* .tab_type1.type2 { border-top:none } */
+/* .tab_type1.type2 > li * { line-height: 2.2rem; font-size: 0.75rem} */
+
+.input_type1 > input { padding-left: 0.5rem; width: 75%; background: #fff; font-size: var(--px22); box-sizing: border-box; color: #000}
+.input_type1 > * { height: 2rem; line-height: 2rem; border-radius: var(--px5)}
+.input_type1 > .btn { font-size: var(--px30); width: 22%}
+
 
 /* header */
 header { position: sticky; z-index: 10000; top: 0; left: 0; right: 0; background: #fff} header .top { height: 3rem}

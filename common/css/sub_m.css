@@ -212,8 +212,54 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .sec_recent ol li > span { font-size: var(--px22)}
 .sec_recent ol li .underline:after { background: #fff}
 
+
 .nav_mypage { padding: var(--px18) 0 4rem; background: #e8e8e8}
 .nav_mypage ul { padding: 0 0 1rem; margin-bottom: var(--px18); background: #fff; font-size: var(--px30)}
 .nav_mypage ul a { display: block;}
 .nav_mypage ul .link_main a {padding: 1.2rem 0 0.825rem; font-weight: 700; line-height: 1; }
 .nav_mypage ul li a { line-height: 1.375rem; font-weight: 300}
+
+.mypage.bg { background: #f5f5f5}
+.mypage .section { padding-top: 1.25rem; padding-bottom: 1.55rem}
+.mypage .section .h_type4 { padding-bottom: 1rem}
+.mypage .list_option > li { display: flex; align-items: center; font-size: var(--px28)}
+.mypage .list_option > li ~ li { margin-top: var(--px14)}
+.mypage .list_option > li .title { width: 31%}
+.mypage .list_option > li .bx_type2 { padding: 0 var(--px30); line-height: 1.875rem; height: 1.875rem; font-size: var(--px25)}
+
+.mypage .bx_gray.txt_type1 { font-size: var(--px24)}
+
+/* 구매내역 */
+.mypage .sec_history .h_type4 { padding-bottom: 1.25rem}
+
+.sec_nonwin .bx_gray .btn_navy { margin-top: 1rem}
+
+.list_sel > li { flex: 1}
+.list_sel > li > * { display: block; width: 100%; height: 2rem; background: #f4f4f4; font-weight: 500}
+.list_sel > li:hover * { border-color: #999; color: #444}
+.list_sel > li ~ li { margin-left: -1px}
+.list_sel > li * { font-size: 0.7rem; border: 1px solid #e8e8e8; position: relative; color: #666; transition: all .3s;}
+.list_sel > li *:hover { z-index: 1}
+.bx_search * { font-family: 'Noto Sans KR',sans-serif;}
+.bx_search .wrap_date { margin-top: var(--px24)}
+.bx_search .wrap_date > div { width: 70%}
+.bx_search .wrap_date input { border: 1px solid #e8e8e8; width: 40%}
+.bx_search .wrap_date * { height: 1.75rem; line-height: 1.75rem}
+
+.sec_coupon .bx_search { padding-bottom: 1.75rem}
+
+
+.list_charge > li { display: flex; margin-bottom: 0.3rem; border: 1px solid #d2d2d2; border-radius: var(--px5); overflow: hidden;}
+.list_charge > li > p { background: #eee; width: 23%; height:2.25rem; line-height: 2.25rem; text-align: center; color: #373b46; font-family: 'GmarketSans'; font-size: var(--px25)}
+.list_charge > li > p:after { content: "원"; display: inline-block; vertical-align: middle; font-weight: bold;}
+.list_charge > li > p * { vertical-align: middle;}
+.list_charge > li > div { padding: 0 0.75rem 0 1.6rem; display: flex; justify-content: space-between; align-items: center; width: 77%}
+.list_charge > li ul { font-size: var(--px24); color:#676767 }
+.list_charge > li ul li.benefit { padding: 0 0 var(--px7); color: #f00; font-size: var(--px22);}
+.list_charge > li ul li > * { padding-left: 0.25rem; vertical-align: middle;}
+.list_charge > li ul li:before,.list_charge > li ul li:after { content: ""; display: inline-block; vertical-align: middle;}
+.list_charge > li ul li.benefit:before { content: "적립혜택 :"; }
+.list_charge > li ul li.cash:before { content: "충전캐쉬 :"; }
+.list_charge > li ul li.cash:after { content: "원"; }
+.list_charge > li a,
+.list_charge .btn_pay { display:block; width:3.875rem; background-color: #e60012; height: 1.625rem; line-height: 1.625rem; color: #fff; font-size:var(--px24); border-radius: 0.25rem; text-align: center;}
