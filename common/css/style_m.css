@@ -251,6 +251,10 @@ footer .familysite select { padding: 1.1rem 1.25rem; width: 100%; background:#29
 footer .familysite select option { width: 100%}
 
 .popup { display: none !important}
+.popup.complete .inner { padding: 2rem 0 1.5rem; max-width: 70%}
+.popup.complete .txt { font-size:0.875rem;  var(--color_blue); text-align: center;}
+.popup.complete .txt .ico:before { display: block; margin: 0 auto var(--px30); width: 1.85rem; height: 1.85rem; background: url(/common/images/ico_complete.png) no-repeat center /100% 100% }
+.popup.complete .btn_red { display: table; margin-top: 0.9rem; width: 3.7rem; height: 2rem; line-height: 2rem; font-size: var(--px25)}
 
 
 @media screen and (max-width:767px) {
