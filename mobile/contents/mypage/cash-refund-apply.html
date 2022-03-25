@@ -1,0 +1,124 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/meta.html";?>
+
+<body class="body_idx">
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/header.html";?>
+  <main id="main" class="mypage bg">
+    <div class="contents f_NotoSansKR ">
+      <div class="title_sub bb border_dcdcdc" style="margin-bottom:0">
+        <h2 class="title">캐쉬 출금신청</h2>
+        <a href="" class="btn_back"><span class="hide">뒤로가기</span></a>
+      </div>
+      <section class="sec_refund">
+        <div class="section bg_navy wrap_com bx_padding lh16">
+          <h3 class="h_type4 fs33 fw300">김길동 <span class="color_red">[플래티넘]</span> 회원님의 현재 보유캐쉬</h3>
+          <div class="bx_type3 mb40">
+            <p class="f_GmarketSans fwB">₩<strong>100,000</strong> 캐쉬</p>
+          </div>
+        </div>
+        <div class="wrap_form section wrap_com bg_white">
+          <h3 class="h_type4 bb">출금신청 접수하기</h3>
+          <form class="f_NotoSansKR fs25">
+            <fieldset>
+              <legend class="hide">캐쉬 출금신청 입력 폼 </legend>
+              <ul class="list_form">
+                <li class="required">
+                  <label for="bank"><span>계좌은행</span></label>
+                  <div class="bx_input">
+                    <select name="" id="bank" class="">
+                      <option value="">은행을 선택해 주세요</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="required">
+                  <label for="bank_num"><span>계좌번호</span></label>
+                  <div class="bx_input">
+                    <input type="text" id="bank_num" placeholder="- 없이 숫자만 입력해 주세요">
+                  </div>
+                </li>
+                <li class="required">
+                  <label for="bank_name"><span>예금주명</span></label>
+                  <div class="bx_input">
+                    <input type="text" id="bank_name" placeholder="예금주명을 입력해 주세요">
+                  </div>
+                </li>
+                <li class="required">
+                  <label for="cash"><span>출금 신청액(캐쉬)</span></label>
+                  <div class="bx_input">
+                    <input type="" id="cash" placeholder="출금하실 캐쉬를 입력해 주세요">
+                  </div>
+                </li>
+                <li>
+                  <label for="fee"><span>출금 수수료</span></label>
+                  <div class="">
+                    <p><span class="color_red2 fw500">1,000</span>캐쉬</p>
+                  </div>
+                </li>
+                <li>
+                  <label for="fee"><span>실제 출금액</span></label>
+                  <div class="bx_gray br5">
+                    <p><strong class="color_red2 fw500">1,000</strong>캐쉬<span class="color_red2">(회원님의 잔여 보유캐쉬 89,000 캐쉬)</span></p>
+                  </div>
+                </li>
+              </ul>
+              <button class="btn_navy type2 dp_b mt30" style="width:100%">출금 신청하기</button>
+
+            </fieldset>
+          </form>
+        </div>
+        <div class="section wrap_com">
+          <h3 class="h_type4">캐쉬 출금시 참고해주세요!</h3>
+          <ul class="list_bul2 txt_type1 fs23 lh16">
+            <li>
+              <p>출금신청하신 캐쉬는 본인명의의 계좌번호로 이체됩니다.</p>
+            </li>
+            <li>
+              <p>계좌번호가 정확해야 이체되므로 계좌번호 확인 후 신청해 주시기 바랍니다.</p>
+            </li>
+            <li>
+              <p>출금이체는 1일 1회 처리됩니다. (단, 주말과 공휴일은 제외)</p>
+              <ul>
+                <li>
+                  당일 오전 10시까지 출금신청된 내역을 신청마감하고, 집계된 내역은
+                  당일 16시경 신청하신 계좌로 이체 됩니다.</li>
+              </ul>
+            </li>
+            <li>
+              <p>출금 신청 시 이체수수료 500원은 (전용은행 상이시) 이용자 부담입니다.</p>
+            </li>
+            <li>
+              <p>출금은 50,000캐쉬 이상부터 환급이 가능합니다.</p>
+            </li>
+            <li>
+              <p>회원 본인의 명의의 계좌정보만 유효합니다.</p>
+              <ul>
+                <li>- 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.</li>
+                <li>- 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로
+                  반환 처리 됩니다.</li>
+                <li>- 반복적으로 이체오류가 발생하는 경우, 계좌정보를 변경 등록하시기
+                  바랍니다.</li>
+                <li>- 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.</li>
+                <li>- 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로 반환
+                  처리 됩니다.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>이체불가</p>
+              - 출금계좌 등록은 회원명과 예금주명이 동일한 경우 등록됩니다.
+              - 은행 이체 시 이체오류가 발생한경우에는 당일 18시 이전에 캐쉬로 반환
+              처리 됩니다.
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/footer.html";?>
+</body>
+
+</html>

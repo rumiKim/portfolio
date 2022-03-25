@@ -1,0 +1,87 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/meta.html";?>
+
+<body class="body_idx">
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/header.html";?>
+  <main id="main" class="mypage">
+    <div class="contents f_NotoSansKR ">
+      <div class="title_sub bb border_dcdcdc" style="margin-bottom:0">
+        <h2 class="title">캐쉬내역</h2>
+        <a href="" class="btn_back"><span class="hide">뒤로가기</span></a>
+      </div>
+      <section class="sec_cash wrap_com section bg_white">
+        <div class="wrap_tab ">
+          <ul class="tab_type1 flex">
+            <li><a href="cash-history.html">충전내역</a></li>
+            <li><a href="cash-history-use.html">사용내역</a></li>
+            <li class="on"><a href="cash-history-refund.html">출금내역</a></li>
+          </ul>
+        </div>
+        <div class="bx_search">
+          <div class="wrap_sel">
+            <ul class="list_sel flex align_center">
+              <li><button>1주일</button></li>
+              <li><button>1개월</button></li>
+              <li><button>3개월</button></li>
+              <li><button>6개월</button></li>
+            </ul>
+          </div>
+          <div class="wrap_date flex align_center spacew ">
+            <div>
+              <input type="date"> ~ <input type="date">
+            </div>
+            <button class="btn_navy btn flex1">검색</button>
+          </div>
+        </div>
+        <div class="section">
+          <h3 class="h_type4">출금내역</h3>
+          <div class="wrap_tb bt ls50 lh1">
+            <table class="tb_type2">
+              <caption>
+                <div class="hide">
+                  캐쉬 출금내역에 대한 정보를 제공하는 표
+                </div>
+              </caption>
+              <colgroup>
+                <col width="">
+                <col width="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>번호</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>출금신청일시</th>
+                  <td>2022년 02월 22일 (화)</td>
+                </tr>
+                <tr>
+                  <th>보유캐쉬</th>
+                  <td>50,000캐쉬</td>
+                </tr>
+                <tr class="color_red">
+                  <th>출금요청 캐쉬</th>
+                  <td>-10,000캐쉬</td>
+                </tr>
+                <tr>
+                  <th>잔여캐쉬</th>
+                  <td>40,000캐쉬</td>
+                </tr>
+                <tr>
+                  <th>상태</th>
+                  <td>승인</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn_more btn_center bg_navy add_after br5"><span class="va_mid">더보기</span></button>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/footer.html";?>
+</body>
+
+</html>

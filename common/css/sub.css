@@ -61,7 +61,6 @@
 .wrap_btn.type2 { margin: 2rem auto 0; width:54.6%;}
 .wrap_btn.type2 > * { width: 13rem;}
 .wrap_btn > * { display: block; line-height: 3rem; height: 3rem; min-width: 13rem; border-radius: 0.2rem; font-size: 0.85rem; font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
-.wrap_btn.flex.space > * { width: 49%;}
 .wrap_btn .btn_prev,
 .btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
 

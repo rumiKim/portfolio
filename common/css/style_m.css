@@ -39,6 +39,8 @@ body { font-size: 1rem}
 .mt10 { margin-top: var(--px10)}
 .mt20 { margin-top: var(--px20)}
 .mt30 { margin-top: var(--px30)}
+.mt40 { margin-top: 1rem}
+.mt50 { margin-top: 1.25rem}
 .mb10 { margin-bottom: var(--px10)}
 .mb20 { margin-bottom: var(--px20)}
 .mb30 { margin-bottom: var(--px30)}
@@ -100,7 +102,7 @@ body { font-size: 1rem}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 .bx_type1 { background: #fff; border: 1px solid #e2e2e2; border-radius: var(--px10)}
 .bx_type2 { background: #fff; border: 1px solid #e1e1e1; border-radius: 2px}
-.bx_type3 { background:#1a1c21; padding: var(--px30) 0; border-radius: var(--px5)}
+.bx_type3 { background:#1a1c21; padding: var(--px30) 0; border-radius: var(--px5); text-align: center; font-size: 1.25rem}
 
 
 .flex > .flex1 { flex:1}
@@ -137,7 +139,6 @@ body { font-size: 1rem}
 /* button type  */
 .btn_type1 { font-size: var(--px25); min-height: 1.5rem; border-radius: 0.125rem; text-align: center; letter-spacing: -0.075em}
 .btn_black { background: #222; color: #fff; font-size: var(--px25)}
-.btn_gray { background:#e6e6e6; color: #000; }
 .btn_navy { color: #fff; background: #373b46}
 .btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
 .btn_more { margin-top: 1rem; width: 5.325rem; height: 1.875rem; font-size: var(--px28)}
@@ -311,6 +312,7 @@ footer .familysite select option { width: 100%}
 .popup.complete .txt { font-size:0.875rem;  var(--color_blue); text-align: center;}
 .popup.complete .txt .ico:before { display: block; margin: 0 auto var(--px30); width: 1.85rem; height: 1.85rem; background: url(/common/images/ico_complete.png) no-repeat center /100% 100% }
 .popup.complete .btn_red { display: table; margin-top: 0.9rem; width: 3.7rem; height: 2rem; line-height: 2rem; font-size: var(--px25)}
+
 
 
 @media screen and (max-width:767px) {
