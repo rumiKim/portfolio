@@ -25,6 +25,10 @@ input,textarea { color: #000 !important}
 .dp_none {display: none !important; }
 .dp_in {display: inline !important; }
 
+/* center align */
+.txt_center { text-align: center;}
+.dp_center { display:block; margin: 0 auto; }
+
 /* font-weight */
 .fw300 { font-weight: 300}
 .fw400 { font-weight: 400}

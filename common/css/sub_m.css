@@ -1,7 +1,8 @@
 main { display: block; min-height: 100vh}
+
 .title_sub { position: relative; margin-bottom: var(--px23);}
-.title_sub .title { text-align:center; font-family: 'Noto Sans KR',sans-serif; font-size: var(--px28); letter-spacing: -0.075em; line-height: 2.25rem}
-.title_sub .btn_back { position: absolute; left: 0; top: 0; bottom: 0; width: 3.1rem; background: red}
+.title_sub .title { text-align:center; font-family: 'Noto Sans KR',sans-serif; font-size: var(--px28); letter-spacing: -0.075em; line-height: 2.25rem; font-weight: 500}
+.title_sub .btn_back { position: absolute; left: 0; top: 0; bottom: 0; width: 3.1rem; background: url(/common/images/mobile/ico_arr_back.png) no-repeat center / auto 40%; }
 
 
 .sec_login { text-align: center; box-sizing: border-box;}
@@ -203,26 +204,27 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .sec_mycash .list_bul2 > li { display: flex; align-items: center; }
 .sec_mycash .list_bul2 > li ~ li { padding: var(--px15) 0 0}
 .sec_mycash .list_bul2 > li > p { width: 34%}
-.sec_mycash .list_bul2 > li .btn { padding: 0.08rem 0.5rem 0.1rem; font-size: var(--px22); border-radius: 0.1rem; font-weight: 500}
-.sec_mycash .list_bul2 > li > div { flex: 1;}
+.sec_mycash .list_bul2 > li .btn { display: inline-block; line-height: 0.9rem; height:1rem; padding:0 0.5rem ; font-size: var(--px22); border-radius: 0.1rem; font-weight: 500}
+.sec_mycash .list_bul2 > li > div { flex: 1; font-weight: 500; letter-spacing: -0.025em}
 .sec_mycash .list_bul2 > li > div > span { display: inline-block; width: 6.75rem; }
 
 .sec_recent .wrap_title + p { padding: var(--px30) 0 0; font-size: var(--px28)}
-.sec_recent ol { padding: 1.57rem 0 0}
+.sec_recent ol { display: table; margin: 1.57rem auto 0; font-size: 0}
 .sec_recent ol li { position: relative; text-align:center;}
-.sec_recent ol li ~ li { margin-left: 2.125rem}
-/* .sec_recent ol li ~ li:before { top:50%; transform: translateY(-50%); content: ""; display: block; border: 2px dotted #000; width: 2.125rem;} */
-.sec_recent ol li > p { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 100%; background: #383a46; color: #fff; font-weight: bold; font-family: 'GmarketSans'; font-size: var(--px26)}
-.sec_recent ol li:last-child > p { background: #d16a5b}
-.sec_recent ol li > span { font-size: var(--px22)}
+.sec_recent ol li ~ li:before { width: 2.125rem; margin:0 5px; background: url(/common/images/mobile/bg_dotted.png) no-repeat center / 90% auto; vertical-align: top;}
+.sec_recent ol li > div { display: inline-block; vertical-align: top;}
+.sec_recent ol li ~ li:before, .sec_recent ol li > div > p { height: 3rem;}
+.sec_recent ol li > div > p { display: flex; align-items: center; justify-content: center; margin-bottom: var(--px20); width: 3rem;  border-radius: 100%; background: #383a46; color: #fff; font-weight: bold; font-family: 'GmarketSans'; font-size: var(--px26)}
+.sec_recent ol li:last-child > div > p { background: #d16a5b}
+.sec_recent ol li > div > span { font-size: var(--px22)}
 .sec_recent ol li .underline:after { background: #fff}
 
 
 .nav_mypage { padding: var(--px18) 0 4rem; background: #e8e8e8}
 .nav_mypage ul { padding: 0 0 1rem; margin-bottom: var(--px18); background: #fff; font-size: var(--px30)}
 .nav_mypage ul a { display: block;}
-.nav_mypage ul .link_main a {padding: 1.2rem 0 0.825rem; font-weight: 700; line-height: 1; }
-.nav_mypage ul li a { line-height: 1.375rem; font-weight: 300}
+.nav_mypage ul .link_main a {padding: 1.2rem 0 0.825rem; font-weight: 700; line-height: 1; background: none}
+.nav_mypage ul li a { background: url(/common/images/mobile/ico_arr_right_gray.png) no-repeat right center / auto 50%; line-height: 1.375rem; font-weight: 300;}
 
 .mypage.bg { background: #f5f5f5}
 .mypage .section { padding-top: 1.25rem; padding-bottom: 1.55rem}
@@ -231,6 +233,9 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .mypage .list_option > li ~ li { margin-top: var(--px14)}
 .mypage .list_option > li .title { width: 31%}
 .mypage .list_option > li .bx_type2 { padding: 0 var(--px30); line-height: 1.875rem; height: 1.875rem; font-size: var(--px25)}
+.mypage .list_option .list_btn > li ~ li { margin-left: var(--px10)}
+.mypage .list_option .list_btn > li .bx_type2.on { border-color:#373b46 }
+
 
 .mypage .bx_gray.txt_type1 { font-size: var(--px24)}
 
