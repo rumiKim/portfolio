@@ -1,6 +1,6 @@
 input,select,textarea,button { font-family: 'Noto Sans KR',sans-serif;  outline: 0; background-color: transparent;}
 input,textarea { color: #000 !important}
-
+body { word-break: keep-all;}
 /* font */
 .lh1 { line-height: 1;}
 
@@ -57,8 +57,7 @@ input,textarea { color: #000 !important}
 .bg_red { background-color:#f00 !important}
 .bg_red2 { background-color:#de4f41 !important; color: #fff !important;}
 .bg_gray { background-color: #434343 !important; color: #fff !important;}
-.bg_navy { background-color: #373b46 !important;}
-.bg_navy * {  color: #fff}
+.bg_navy { background-color: #373b46 !important; color: #fff}
 
 /* btn */
 .btn_red { background-color:var(--color_red) !important; color: #fff !important; }

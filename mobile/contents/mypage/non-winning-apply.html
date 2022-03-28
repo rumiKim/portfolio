@@ -6,68 +6,59 @@
   <main id="main" class="mypage bg">
     <div class="contents f_NotoSansKR ">
       <div class="title_sub bb border_dcdcdc" style="margin-bottom:0">
-        <h2 class="title">캐쉬 출금신청</h2>
+        <h2 class="title">낙첨 (실물)복권 받기</h2>
         <a href="" class="btn_back"><span class="hide">뒤로가기</span></a>
       </div>
-      <section class="sec_refund">
-        <div class="section bg_navy wrap_com bx_padding ">
-          <h3 class="h_type4 fs33 fw300">김길동 <span class="color_red">[플래티넘]</span> 회원님의 현재 보유캐쉬</h3>
-          <div class="bx_type3 mb40">
-            <p class="f_GmarketSans fwB">₩<strong>100,000</strong> 캐쉬</p>
-          </div>
+      <section class="sec_apply">
+        <div class="section bx_gray wrap_com lh14 txt_type1">
+          <h3 class="h_type4 color_000">낙첨복권 배송 신청</h3>
+          <p>신청 후 최소 7일 이상 소요 됩니다. 배송은 등기우편으로 발송됩니다.
+          </p>
+          <p class="color_red">※ 제주/도서사간지역은 배송이 더 지연될 수 있습니다.</p>
         </div>
         <div class="wrap_form section wrap_com bg_white">
-          <h3 class="h_type4 bb">출금신청 접수하기</h3>
           <form class="f_NotoSansKR fs25">
             <fieldset>
               <legend class="hide">캐쉬 출금신청 입력 폼 </legend>
               <ul class="list_form">
                 <li class="required">
-                  <label for="bank"><span>계좌은행</span></label>
+                  <label for="to_name"><span>받으시는 분</span></label>
                   <div class="bx_input">
-                    <select name="" id="bank" class="">
-                      <option value="">은행을 선택해 주세요</option>
-                    </select>
+                    <input type="text" id="to_name" placeholder="받으시는 분의 성함을 입력해 주세요">
                   </div>
                 </li>
                 <li class="required">
-                  <label for="bank_num"><span>계좌번호</span></label>
+                  <label for="to_tel"><span>연락처</span></label>
                   <div class="bx_input">
-                    <input type="text" id="bank_num" placeholder="- 없이 숫자만 입력해 주세요">
+                    <input type="tel" id="to_tel" placeholder="- 없이 숫자만 입력해 주세요">
                   </div>
                 </li>
                 <li class="required">
-                  <label for="bank_name"><span>예금주명</span></label>
-                  <div class="bx_input">
-                    <input type="text" id="bank_name" placeholder="예금주명을 입력해 주세요">
+                  <label for="addr"><span>배송주소</span></label>
+                  <div class="wrap_type1 flex mb10">
+                    <div class="bx_input">
+                      <input type="text" id="addr">
+                    </div>
+                    <button class="btn btn_navy">우편번호 찾기</button>
                   </div>
-                </li>
-                <li class="required">
-                  <label for="cash"><span>출금 신청액(캐쉬)</span></label>
-                  <div class="bx_input">
-                    <input type="" id="cash" placeholder="출금하실 캐쉬를 입력해 주세요">
-                  </div>
+                  <div class="bx_input mb10"><input type="text"></div>
+                  <div class="bx_input"><input type="text" placeholder="상세주소를 입력해 주세요"></div>
                 </li>
                 <li>
-                  <label for="fee"><span>출금 수수료</span></label>
-                  <div class="">
-                    <p><span class="color_red2 fw500">1,000</span>캐쉬</p>
-                  </div>
-                </li>
-                <li>
-                  <label for="fee"><span class="fs28 fw700">실제 출금액</span></label>
-                  <div class="bx_gray br5 wrap_com pt30 pb30" style="background:#dee1e6">
-                    <p><strong class="color_red2 fw500">1,000</strong>캐쉬<span class="color_red2">(회원님의 잔여 보유캐쉬 89,000 캐쉬)</span></p>
+                  <label for="fee"><span class="fw700 fs28">배송비</span></label>
+                  <div class="bx_gray br5 wrap_com pt30 pb30">
+                    <p><strong class="color_red2 fw500">1,000</strong>캐쉬<span class="color_red2">(회원님의 현재 보유캐쉬 500 캐쉬)</span></p>
                   </div>
                 </li>
               </ul>
-              <button class="btn_navy type2 dp_b mt30" style="width:100%">출금 신청하기</button>
+              <button class="btn_navy type2 dp_b mt30" style="width:100%">낙첨복권 신청하기</button>
+
             </fieldset>
           </form>
         </div>
         <div class="section wrap_com">
           <h3 class="h_type4">캐쉬 출금시 참고해주세요!</h3>
-          <ul class="list_bul txt_type1 fs23 lh16">
+          <ul class="list_bul2 txt_type1 fs23 lh16">
             <li>
               <p>출금신청하신 캐쉬는 본인명의의 계좌번호로 이체됩니다.</p>
             </li>

@@ -32,10 +32,11 @@ main { display: block; min-height: 100vh}
 .list_form .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
 .list_form .txt_type1 { display:block; padding: 0.5rem 0 0 ;font-size: 0.65rem; color: #999; line-height: 1.3}
 .list_form .btn_gray { height:2rem; font-size: var(--px18)}
-.list_form { text-align: left}
-.bx_input { display: block; padding-left: 0.5rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2rem; line-height: 1; overflow: hidden; box-sizing: border-box;}
+.list_form { text-align: left; font-family: 'Noto Sans KR',sans-serif;}
+.bx_input { display: block; padding-left: 0.5rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2rem; line-height: 1; overflow: hidden; box-sizing: border-box; background: #fff}
 .bx_input + .btn { height: 2rem; line-height: 2rem}
 .bx_input > * { height: 100%; width: 100%; background: none; box-sizing: border-box;}
+.bx_input.textarea { height: 3rem; padding: 0.5rem}
 .bx_input.type1 input { width: auto}
 .bx_input.type1 > div { position: relative; flex:1}
 .bx_input.gray { background: #f5f5f5}
@@ -79,7 +80,6 @@ main { display: block; min-height: 100vh}
 /* 정보입력 - signup2-form.html */
 .sec_reg.write { text-align: center;}
 .sec_reg.write .list_form > li > label > span:after,
-.popup.mileage .list_form > li > label > span:after,
 .list_form > li.required > label > span:after
  { content: "*"; display: inline-block; color: #f00;}
 .sec_reg.write .list_form .bx_num { position: relative; margin-top: 0.5rem; }
@@ -228,19 +228,20 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 
 .mypage.bg { background: #f5f5f5}
 .mypage .section { padding-top: 1.25rem; padding-bottom: 1.55rem}
-.mypage .section .h_type4 { padding-bottom: 1rem}
+.mypage .section .h_type4 { padding-bottom: 1rem; }
 .mypage .list_option > li { display: flex; align-items: center; font-size: var(--px28)}
 .mypage .list_option > li ~ li { margin-top: var(--px14)}
 .mypage .list_option > li .title { width: 31%}
 .mypage .list_option > li .bx_type2 { padding: 0 var(--px30); line-height: 1.875rem; height: 1.875rem; font-size: var(--px25)}
 .mypage .list_option .list_btn > li ~ li { margin-left: var(--px10)}
 .mypage .list_option .list_btn > li .bx_type2.on { border-color:#373b46 }
-
+.bg_navy .h_type4 { color: #fff}
 
 .mypage .bx_gray.txt_type1 { font-size: var(--px24)}
 
 /* 구매내역 */
 .mypage .sec_history .h_type4 { padding-bottom: 1.25rem}
+.sel_type1 { padding: 0 var(--px28); height: 1.75rem; font-family: 'Noto Sans KR',sans-serif;}
 
 .sec_nonwin .bx_gray .btn_navy { margin-top: 1rem}
 
@@ -249,13 +250,21 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .list_sel > li:hover * { border-color: #999; color: #444}
 .list_sel > li ~ li { margin-left: -1px}
 .list_sel > li * { font-size: 0.7rem; border: 1px solid #e8e8e8; position: relative; color: #666; transition: all .3s;}
-.list_sel > li *:hover { z-index: 1}
-.bx_search * { font-family: 'Noto Sans KR',sans-serif;}
-.bx_search .wrap_date { margin-top: var(--px24)}
-.bx_search .wrap_date > div { width: 70%}
-.bx_search .wrap_date input { border: 1px solid #e8e8e8; width: 40%}
-.bx_search .wrap_date * { height: 1.75rem; line-height: 1.75rem}
+.list_sel > li.on * { border-color: #373b46; background: #fff; z-index: 1}
+.popup.charge .list_sel > li { float: left; width: 25%;margin-left: -1px;margin-top: -1px;}
+.popup.charge .list_sel > li a { display: flex; justify-content: center; align-items: center; height: 1.75rem; line-height: 1.2; box-sizing: border-box; border-color: #d5d5d5;  text-align: center; color: #000; background: #fff; font-size: var(--px20)}
+.popup.charge .list_sel > li a:hover { border-color: #000;}
+.popup .btn_pay { width: 5.8rem; margin: var(--px30) auto 1rem; height: 1.57rem; line-height: 1.57rem; background-color: #e60012 !important; color: #fff; border-radius: var(--px5)}
+.popup.charge .bx_white .list_bul { padding:var(--px30) 0 1.25rem; }
+.popup.mileage .list_form {  padding: 0 0 var(--px20); margin-bottom: var(--px30); border-bottom: 1px solid #e5e5e5; }
+.popup.mileage .list_form > li > label { font-size: var(--px27)}
 
+.bx_search * { font-family: 'Noto Sans KR',sans-serif; }
+.bx_search .wrap_date { margin-top: var(--px24)}
+.bx_search .wrap_date > div { flex: 1}
+.bx_search .wrap_date input { border: 1px solid #e8e8e8; width: 45%}
+.bx_search .wrap_date * { height: 1.75rem; line-height: 1.75rem}
+.bx_search .wrap_date .btn { margin-left: var(--px10); width: 23%; border-radius: 2px; font-size: var(--px28)}
 .sec_coupon .bx_search { padding-bottom: 1.75rem}
 
 
@@ -263,7 +272,7 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .list_charge > li > p { background: #eee; width: 23%; height:2.25rem; line-height: 2.25rem; text-align: center; color: #373b46; font-family: 'GmarketSans'; font-size: var(--px25)}
 .list_charge > li > p:after { content: "원"; display: inline-block; vertical-align: middle; font-weight: bold;}
 .list_charge > li > p * { vertical-align: middle;}
-.list_charge > li > div { padding: 0 0.75rem 0 1.6rem; display: flex; justify-content: space-between; align-items: center; width: 77%}
+.list_charge > li > div { padding: 0 0.75rem; display: flex; justify-content: space-between; align-items: center; width: 77%}
 .list_charge > li ul { font-size: var(--px24); color:#676767 }
 .list_charge > li ul li.benefit { padding: 0 0 var(--px7); color: #f00; font-size: var(--px22);}
 .list_charge > li ul li > * { padding-left: 0.25rem; vertical-align: middle;}
@@ -278,7 +287,51 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .bx_answer .title { font-size: var(--px23)}
 .bx_answer .wrap_q { padding: 0 0 1.25rem}
 .bx_answer .btn_navy { font-size: var(--px18); padding: var(--px15) 1.3rem; border-radius: var(--px5)}
-
-.notice_type1 { font-size: var(--px30); line-height: 1.33; text-align: center; letter-spacing: -0.0775em}
+.notice_type1 { padding-top:2.67rem; font-size: var(--px30); line-height: 1.33; text-align: center; letter-spacing: -0.0775em; font-weight: 500}
 .notice_type1 .wrap_img { width: 1.8rem}
+
 .sec_myinfo .bx_agree + .txt_type1 { margin-bottom: 2rem}
+.sec_myinfo .sec_mycash { padding: 1rem 0}
+
+/* direct.html */
+.sec_direct .wrap_tb { margin-bottom: var(--px30)}
+
+
+
+/* 서비스안내  */
+.sec_service .top.bb { margin-bottom:0.825rem; padding:  1.75rem 0  0.875rem}
+.sec_service h3 { font-size: var(--px30)}
+.sec_service .txt_type1 { font-size: var(--px24); line-height: 1.45}
+.guide_use .bx_gray { margin-top: 1rem}
+.guide_use .mainlogo { margin:1.1rem 0 1.4rem; font-size: 2rem}
+.guide_use .mainlogo > *:before { font-size: 1rem; line-height: 1.5}
+.intro .bx_descript { margin-bottom: 2.2rem}
+.intro .bx_descript > .left { width: 58%; background:#1b1b1b }
+.intro .bx_descript > .left img { width: 95%}
+.intro .bx_descript > .right { padding: 1.7rem 1.5rem 1.15rem; width: 42%; box-sizing: border-box; color: #222 ; line-height: 1}
+.intro .bx_descript .title { font-size: 0.9rem; font-size: 500}
+.intro .bx_descript .point { padding: 0 0 0.85rem}
+.intro .bx_descript .point > p { padding: 1.4rem 0 0.5rem}
+.intro .bx_descript ol { padding: 0.9rem 0 1.4rem; line-height: 1.5}
+.intro .bx_descript .nation { padding: 0.85rem 0 1.5rem }
+.intro .bx_descript .nation > li ~ li { margin-top: 5px}
+.intro .bx_descript .nation .add_before:before { border: 1px solid #000; border-radius: 3px}
+.intro .bx_descript .btn_red { display: block; margin: 0 auto; width:62.5%;  line-height: 2.5rem; font-size: 0.8rem; text-align: center; border-radius: 2.5rem}
+.wrap_img > img { width: 100%}
+
+
+/* .sec_service .list_bul > li ~ li { margin-top: 3px} */
+/* .sec_service.intro .wrap_logo { margin: 0 0 2.5rem; } */
+/* .sec_service.intro h4 { padding:0 0 0.65rem; color: #252525; font-size: 0.9rem; font-weight: 500} */
+
+.sec_service .list > li > p { margin: 1rem 0 0.875rem; font-size: var(--px27)}
+.list_process > li { margin-right: 5px;  height:3.85rem; width: 3.85rem; border-radius: 100%; box-sizing: border-box; color: #fff; line-height: 1.2; text-align: center; font-size: 0.8rem; font-weight: bold;}
+.list_process > li:nth-child(2n + 1) { background: #707070;}
+.list_process > li:nth-child(2n) { background: #e5e5e5; color: #666}
+.list_process > li > span { font-family: 'Montserrat',sans-serif;}
+.list_level > li { border: 1px solid #e5e5e5; margin-bottom: var(--px13) ; width: 48.5%; border-top: 1px solid #000; text-align: center; font-size: var(--px27); font-weight: 300; color: #222}
+.list_level > li > p { padding: var(--px25) 0; background: #f4f4f4; line-height: 1.32; font-size: var(--px25)}
+.bx_level { padding: 0.875rem 0 var(--px24)}
+.bx_level img { width: 22%}
+.bx_level > p { padding: var(--px13); font-family: 'Montserrat',sans-serif; font-weight: 600;font-size: var(--px28) }
+.bx_level > p strong { font-weight: 600}

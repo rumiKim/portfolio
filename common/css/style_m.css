@@ -31,6 +31,9 @@ body { font-size: 1rem}
 
 }
 
+/* default el */
+input { font-size: var(--px26)}
+
 
 /* common */
 
@@ -108,8 +111,9 @@ body { font-size: 1rem}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 .bx_type1 { background: #fff; border: 1px solid #e2e2e2; border-radius: var(--px10)}
 .bx_type2 { background: #fff; border: 1px solid #e1e1e1; border-radius: 2px}
-.bx_type3 { background:#1a1c21; padding: var(--px30) 0; border-radius: var(--px5); text-align: center; font-size: 1.25rem}
+.bx_type3 { background:#1a1c21; padding: var(--px30) 0; border-radius: var(--px5); text-align: center; font-size: 1.25rem; color: #fff}
 .bx_link { display: inline-block; margin-left: var(--px13); width: 1rem; height: 1rem; border-radius: 100%; background:url(/common/images/mobile/ico_link.png) no-repeat center / 55% auto  #e8e8e8; vertical-align: middle;}
+.bx_delete {display: inline-block; width: 1.2rem; height: 1.2rem; border-radius: 100%; background:url(/common/images/ico_bin.png) no-repeat center / auto 60%  #e8e8e8; vertical-align: middle;}
 
 .flex > .flex1 { flex:1}
 
@@ -118,13 +122,13 @@ body { font-size: 1rem}
 .popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; line-height: 1}
 .popup .scroll { overflow-y: auto;}
 .popup.active { display: block !important;}
-.popup .inner { padding-top: 1.5rem;  position: absolute; left: 50%; top: 50%; width: 90vw; max-height: 90vh;  transform: translate(-50%,-50%); background: #fff; overflow: hidden; box-sizing: border-box;}
+.popup .inner { padding-top: 1.5rem;padding-bottom: 1.5rem; position: absolute; left: 50%; top: 50%; width: 90vw; max-height: 90vh;  transform: translate(-50%,-50%); background: #fff; overflow: hidden; box-sizing: border-box;}
 .popup .bx_white { font-size: var(--px26)}
 .popup.type1 .inner { overflow: auto; border-radius: 1rem;}
 .popup.type1 .bx_padding { padding-left: 1rem; padding-right: 1rem; }
 .popup.type1 .bx_gray { padding-top: 0.85rem; padding-bottom: 0.85rem; font-size: var(--px19); line-height: 1.3}
 .popup.type1 .btn_close:after { content: "X"; display: block; position: absolute; right: 1rem; top: 1rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
-.popup.type1 .title { display: block; padding: 0 0 0.85rem; font-size: 0.875rem; font-family: 'GmarketSans'}
+.popup.type1 .title { display: block; padding: 0 0 0.85rem; font-size: 0.875rem; font-family: 'GmarketSans'; letter-spacing: -0.05em}
 .popup.type2 .btn_close { position: absolute; right: 0; top: 0; }
 .popup.type2 .inner { width: 90vw; max-height: 90vh}
 .popup.type2 .title { padding: 1.5rem 0 1rem; font-size: 1em; font-weight: 400; letter-spacing: -0.05em; border-bottom:3px solid #444 ;text-align: center;}
@@ -152,6 +156,10 @@ body { font-size: 1rem}
 .tb_type2 tbody { margin-bottom: 0.95rem}
 .tb_type2 tbody ~ tbody:before { content:""; display:block; height:0.95rem; }
 .tb_type2 tbody ~ tbody tr { border-top: 1px solid #000}
+.tb_type3 { color: #252525; font-size:var(--px22); text-align: center;}
+.tb_type3 thead { background: #eeeeee; font-size: var(--px25)}
+.tb_type3 thead th, .tb_type3 tbody td { padding:var(--px15) 0}
+.tb_type3 tbody tr ~ tr { border-top: 1px solid #e5e5e5}
 
 
 /* button type  */
@@ -160,7 +168,8 @@ body { font-size: 1rem}
 .btn_navy { color: #fff; background: #373b46}
 .btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
 .btn_w2 { border: 1px solid #fff; color: #fff}
-.btn_more { margin-top: 1rem; width: 5.325rem; height: 1.875rem; font-size: var(--px28)}
+.btn_more { margin-top: 1rem; width: 5.325rem; height: 1.875rem; font-size: var(--px30); color: #fff}
+.btn_more:after { margin-left: var(--px10); width: var(--px24); height:  var(--px13); background: url(/common/images/mobile/ico_arr_btm_more.png) no-repeat center / 100% 100%; vertical-align: middle;}
 .btn_navy.type2 { font-size: var(--px28); padding: var(--px25) 0; border-radius: 0.125rem; text-align: center;}
 
 /* tab type */
@@ -172,10 +181,14 @@ body { font-size: 1rem}
 .tab_type1 > li * { display: block; width:100%; line-height: 2rem; font-size:var(--px30); color: #222222; font-family: 'Noto sans KR',sans-serif; text-align: center; color: #666}
 /* .tab_type1.type2 { border-top:none } */
 /* .tab_type1.type2 > li * { line-height: 2.2rem; font-size: 0.75rem} */
+/* .tab_type2 { padding: 0.8rem 0 1.6rem} */
+.tab_type2 > .btn { display: block; width: 100%; text-align: left; font-size: var(--px28)}
+.tab_type2 > .btn span { padding: 0 0.9rem; }
+.tab_type2 > ul { display: none}
 
-.input_type1 > input { padding-left: 0.5rem; width: 75%; background: #fff; font-size: var(--px22); box-sizing: border-box; color: #000}
-.input_type1 > * { height: 2rem; line-height: 2rem; border-radius: var(--px5)}
-.input_type1 > .btn { font-size: var(--px30); width: 22%}
+.input_type1 { height: 2rem; line-height: 2rem; border-radius: var(--px5); }
+.input_type1 .bx_input { border:none}
+.input_type1 .btn { font-size: var(--px30); width: 3.7rem; min-width: 0}
 
 
 /* header */
@@ -269,10 +282,10 @@ header .btn_menu:after { height:1px; background: #515151}
 
 
 .list_ball > li { float: left; margin-right: 5px; }
-.list_ball > li span { display: inline-block; width: 1.3rem; height: 1.3rem; line-height: 1.25rem; box-sizing: border-box; border: 1px solid #bfbfbf; font-family: 'GmarketSans'; font-weight: bold; font-size: var(--px19); color: #313131; text-align: center; border-radius: 100%; background: #fff; }
+.list_ball > li span { display: inline-block; width: 1.3rem; height: 1.3rem; line-height: 1.3rem; box-sizing: border-box; border: 1px solid #bfbfbf; font-family: 'GmarketSans'; font-weight: bold; font-size: var(--px19); color: #313131; text-align: center; border-radius: 100%; background: #fff; }
 .list_ball > li:last-child span { margin: 0 5px}
 .list_ball > li:last-child:before { content: "+"; font-weight: bold; font-family: 'Montserrat',sans-serif; vertical-align: middle;}
-.list_ball > li.mega span { background: #ebc704; border-color: #ebc704; font-weight: 500}
+.list_ball > li.mega span { background: #ebc704; border-color: #ebc704; }
 .list_ball > li.power span { background: #e40d0b; border-color: #e40d0b; font-weight: 500; color: #fff}
 .list_ball > li.add_after:after { content:"(메가볼)"; color: #009bfa; font-size:var(--px18); vertical-align: 1px;}
 .list_ball > li.power.add_after:after {  content:"(파워볼)"; color: #e40d0b;}
