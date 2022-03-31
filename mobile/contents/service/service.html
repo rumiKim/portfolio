@@ -3,22 +3,20 @@
 <body class="body_idx">
   <a href="#main" class="skip">본문 바로가기</a>
   <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/header.html";?>
-  <main id="main" class="service">
+  <main id="main" class="service bg">
     <div class="contents f_NotoSansKR ">
       <div class="title_sub bb border_dcdcdc" style="margin-bottom:0">
         <h2 class="title">이용안내</h2>
         <a href="" class="btn_back"><span class="hide">뒤로가기</span></a>
       </div>
       <section class="sec_service wrap_com section bg_white">
-        <div class="wrap_tab">
-          <div class="tab_type2">
-            <button class="btn btn_navy type2"><span>이용안내</span></button>
-            <ul class="">
-              <li><a href="cash-history.html">충전내역</a></li>
-              <li><a href="cash-history-use.html">사용내역</a></li>
-              <li><a href="cash-history-refund.html">출금내역</a></li>
-            </ul>
-          </div>
+        <div class="wrap_sel">
+          <select class="sel_link sel_type2 bg_navy" name="" >
+            <option value="service.html">이용안내</option>
+            <option value="receive.html">당첨금 수령안내</option>
+            <option value="mega.html">메가밀리언 소개</option>
+            <!-- <option value="power.html">파워볼 소개</option> -->
+          </select>
         </div>
         <div class="f_NotoSansKR ls50">
           <div>
@@ -30,10 +28,10 @@
               <li>
                 <p>신청방법 <span class="color_red">(회원)</span></p>
                 <ol class="list_process flex align_center space">
-                  <li><span>01.</span> 회원가입</li>
-                  <li><span>02.</span> 캐쉬충전</li>
-                  <li><span>03.</span> 메가밀리언, 파워볼 번호 선택</li>
-                  <li><span>04.</span> 구매대행 신청</li>
+                  <li><span>01.</span> <p>회원가입</p></li>
+                  <li><span>02.</span> <p>캐쉬충전</p></li>
+                  <li><span>03.</span> <p>번호 선택</p><small>(메가밀리언, 파워볼)</small></li>
+                  <li><span>04.</span> <p>구매대행 신청</p></li>
                 </ol>
               </li>
               <li>
@@ -82,11 +80,11 @@
             <ul class="list">
               <li>
                 <p>신청방법 <span class="color_red">(비회원)</span></p>
-                <ol class="list_process flex align_center">
-                  <li><span>01.</span> 본인인증</li>
-                  <li><span>02.</span> 메가밀리언, 파워볼 번호 선택</li>
-                  <li><span>03.</span> 구매대행 신청</li>
-                  <li><span>04.</span> 결제</li>
+                <ol class="list_process flex align_center space">
+                  <li><span>01.</span> <p>본인인증</p></li>
+                  <li><span>02.</span> <p>번호 선택</p><small>(메가밀리언, 파워볼)</small></li>
+                  <li><span>03.</span> <p>구매대행 신청</p></li>
+                  <li><span>04.</span> <p>결제</p></li>
                 </ol>
               </li>
             </ul>
@@ -107,9 +105,11 @@
             </ul>
           </div>
         </div>
-
-
       </section>
+      <div class="wrap_com">
+      <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/quick.html";?>
+      </div>
+
 
     </div>
 

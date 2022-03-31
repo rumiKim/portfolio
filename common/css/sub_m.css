@@ -1,7 +1,7 @@
 main { display: block; min-height: 100vh}
 
 .title_sub { position: relative; margin-bottom: var(--px23);}
-.title_sub .title { text-align:center; font-family: 'Noto Sans KR',sans-serif; font-size: var(--px28); letter-spacing: -0.075em; line-height: 2.25rem; font-weight: 500}
+.title_sub .title { text-align:center; font-family: 'Noto Sans KR',sans-serif; font-size: var(--px28); letter-spacing: -0.075em; line-height: 2.25rem; font-weight: 500; background: #fff}
 .title_sub .btn_back { position: absolute; left: 0; top: 0; bottom: 0; width: 3.1rem; background: url(/common/images/mobile/ico_arr_back.png) no-repeat center / auto 40%; }
 
 
@@ -226,7 +226,7 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .nav_mypage ul .link_main a {padding: 1.2rem 0 0.825rem; font-weight: 700; line-height: 1; background: none}
 .nav_mypage ul li a { background: url(/common/images/mobile/ico_arr_right_gray.png) no-repeat right center / auto 50%; line-height: 1.375rem; font-weight: 300;}
 
-.mypage.bg { background: #f5f5f5}
+.mypage.bg, .service.bg { background: #ececec}
 .mypage .section { padding-top: 1.25rem; padding-bottom: 1.55rem}
 .mypage .section .h_type4 { padding-bottom: 1rem; }
 .mypage .list_option > li { display: flex; align-items: center; font-size: var(--px28)}
@@ -241,7 +241,6 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 
 /* 구매내역 */
 .mypage .sec_history .h_type4 { padding-bottom: 1.25rem}
-.sel_type1 { padding: 0 var(--px28); height: 1.75rem; font-family: 'Noto Sans KR',sans-serif;}
 
 .sec_nonwin .bx_gray .btn_navy { margin-top: 1rem}
 
@@ -299,33 +298,15 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 
 
 /* 서비스안내  */
-.sec_service .top.bb { margin-bottom:0.825rem; padding:  1.75rem 0  0.875rem}
-.sec_service h3 { font-size: var(--px30)}
+.sec_service .top.bb { margin-bottom:0.825rem; padding:  1.75rem 0  0.875rem; border-color: #dedede}
+.sec_service h3 { font-size: var(--px30); color: #000}
 .sec_service .txt_type1 { font-size: var(--px24); line-height: 1.45}
-.guide_use .bx_gray { margin-top: 1rem}
-.guide_use .mainlogo { margin:1.1rem 0 1.4rem; font-size: 2rem}
-.guide_use .mainlogo > *:before { font-size: 1rem; line-height: 1.5}
-.intro .bx_descript { margin-bottom: 2.2rem}
-.intro .bx_descript > .left { width: 58%; background:#1b1b1b }
-.intro .bx_descript > .left img { width: 95%}
-.intro .bx_descript > .right { padding: 1.7rem 1.5rem 1.15rem; width: 42%; box-sizing: border-box; color: #222 ; line-height: 1}
-.intro .bx_descript .title { font-size: 0.9rem; font-size: 500}
-.intro .bx_descript .point { padding: 0 0 0.85rem}
-.intro .bx_descript .point > p { padding: 1.4rem 0 0.5rem}
-.intro .bx_descript ol { padding: 0.9rem 0 1.4rem; line-height: 1.5}
-.intro .bx_descript .nation { padding: 0.85rem 0 1.5rem }
-.intro .bx_descript .nation > li ~ li { margin-top: 5px}
-.intro .bx_descript .nation .add_before:before { border: 1px solid #000; border-radius: 3px}
-.intro .bx_descript .btn_red { display: block; margin: 0 auto; width:62.5%;  line-height: 2.5rem; font-size: 0.8rem; text-align: center; border-radius: 2.5rem}
-.wrap_img > img { width: 100%}
-
-
-/* .sec_service .list_bul > li ~ li { margin-top: 3px} */
-/* .sec_service.intro .wrap_logo { margin: 0 0 2.5rem; } */
-/* .sec_service.intro h4 { padding:0 0 0.65rem; color: #252525; font-size: 0.9rem; font-weight: 500} */
-
+.sec_service .wrap_sel { padding-top: var(--px30)}
+.sec_service .wrap_sel + .wrap_tab { margin-top: var(--px30)}
 .sec_service .list > li > p { margin: 1rem 0 0.875rem; font-size: var(--px27)}
-.list_process > li { margin-right: 5px;  height:3.85rem; width: 3.85rem; border-radius: 100%; box-sizing: border-box; color: #fff; line-height: 1.2; text-align: center; font-size: 0.8rem; font-weight: bold;}
+
+/* 이용안내 */
+.list_process > li { display: flex; flex-direction: column; align-items: center; justify-content: center; height:3.85rem; width: 3.85rem; border-radius: 100%; box-sizing: border-box; color: #fff; line-height: 1.2; text-align: center; font-size: var(--px23); letter-spacing: -0.05em}
 .list_process > li:nth-child(2n + 1) { background: #707070;}
 .list_process > li:nth-child(2n) { background: #e5e5e5; color: #666}
 .list_process > li > span { font-family: 'Montserrat',sans-serif;}
@@ -335,3 +316,57 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .bx_level img { width: 22%}
 .bx_level > p { padding: var(--px13); font-family: 'Montserrat',sans-serif; font-weight: 600;font-size: var(--px28) }
 .bx_level > p strong { font-weight: 600}
+.sec_service .wrap_policy .txt_type1 li ~ li { padding-top: 1rem}
+
+/* 메가밀리언 소개 */
+.sec_service.intro h4 { font-size: var(--px27); font-weight: 500;}
+.sec_service.intro .wrap_logo { margin:1.1rem 0;  width: 11rem}
+.sec_service.intro .img_game { padding: var(--px30) var(--px15) var(--px20); overflow: hidden; background: #1b1b1b}
+.sec_service.intro .img_game + div { padding: 1.25rem 0 1.75rem; }
+
+/* 당첨금 수령 */
+.sec_service.receive h4 { padding: 1.4rem 0 0.5rem}
+.sec_service.receive .timeguide { padding-bottom: 1.25rem}
+.sec_service.receive .timeguide > p { padding: 1.25rem 0 0.875rem; font-weight: 500; color: #000; font-size: var(--px28)}
+.sec_service.receive .btn_gray { padding: var(--px20) ; margin: 1.125rem 0 0;}
+
+/* 고객센터 */
+.sec_cs .wrap_sel { padding: 0.8rem 0 var(--px22);}
+
+
+/* 게시판 공통 */
+.board_type1 { padding: var(--px10) 0 2.25rem}
+.board_type1 .filter *{ font-size: var(--px25)}
+.board_type1 .filter select{ line-height: 2.25rem; height: 2.25rem; }
+.list_board { border-top: 2px solid #000; border-bottom: 1px solid #000; font-size: var(--px30)}
+.list_board > li > a { display: block; padding: 1.1rem 0 1rem}
+.list_board > li ~ li { border-top: 1px solid #dedede}
+.board_type1 .btn_more { width: 100%; height: auto}
+.list_board ul { padding: var(--px15) 0 0; font-size: 0; font-weight: 300}
+.list_board ul > li > span:after { content: ":"; display: inline-block; margin:0 var(--px10); vertical-align:middle; }
+.list_board ul > li ~ li:before { content: ""; display: inline-block; margin:0 var(--px25); width: 1px; height: var(--px15); vertical-align:middle; background: #666}
+.list_board ul * { display: inline-block;font-size: var(--px24); color: #666 }
+
+/* 상세페이지 */
+.board_details > .title { padding: 1.25rem 0 1rem; font-size: var(--px30) ; border-bottom: 1px solid #dedede; }
+.board_details .list_info { padding: var(--px15) 0 0; font-size: 0; font-weight: 300}
+.board_details .list_info * { display: inline-block;font-size: var(--px24); color: #666 }
+.board_details .list_info > li ~ li > span:after {content: ":"; display: inline-block; margin:0 var(--px10); vertical-align:middle;  }
+.board_details .list_info > li ~ li:before { content: ""; display: inline-block; margin:0 var(--px25); width: 1px; height: var(--px15); vertical-align:middle; background: #666}
+.board_details > .content { padding: 0 0 1rem; font-size: var(--px25); font-weight: 300; line-height: 2; border-bottom: 1px solid #000}
+.board_details > .content .txt { padding: 0.875rem 0 var(--px16);}
+.board_details .btn_navy { margin:1rem 0 1.9rem; width: 100%}
+
+/* 자주묻는질문 */
+.sec_cs .wrap_tab.type2 { padding: 1rem 0 1.875rem}
+
+
+.sec_cs.faq .wrap_board h3 { padding: 0 0 0.85rem; font-size: 0.875rem}
+.list_faq { border-bottom: 1px solid #dedede;}
+.list_faq > li { line-height: 1.5; border-top: 1px solid #dedede;}
+.list_faq > li > * > div { position: relative ; padding-left: 0.9rem}
+.list_faq > li > * > div:before { content: "Q"; position: absolute; top:0; left: 0; font-size: var(--px24); font-weight: 900;}
+.list_faq > li > a { display: block; padding: 0.85rem 0; padding-right: 1.75rem; font-size: var(--px30); background: url(/common/images/mobile/ico_arr_btm_list.png) no-repeat right center / 0.9rem auto}
+.list_faq > li.active > a { background-image: url(/common/images/mobile/ico_arr_btm_list_on.png)}
+.list_faq > li > div { display: none; padding: 0 0 1rem; font-size: var(--px24); color: #666}
+.list_faq > li > div > div:before { content: "A"; color: var(--color_red2)}
