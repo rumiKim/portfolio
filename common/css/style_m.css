@@ -118,6 +118,10 @@ input { font-size: var(--px26)}
 .bx_type2 { background: #fff; border: 1px solid #e1e1e1; border-radius: 2px}
 .bx_type3 { background:#1a1c21; padding: var(--px30) 0; border-radius: var(--px5); text-align: center; font-size: 1.25rem; color: #fff}
 .bx_link { display: inline-block; margin-left: var(--px13); width: 1rem; height: 1rem; border-radius: 100%; background:url(/common/images/mobile/ico_link.png) no-repeat center / 55% auto  #e8e8e8; vertical-align: middle;}
+.bx_link.ico_video { background-image:url(/common/images/ico_video.png)}
+.bx_link.ico_detail { background-image:url(/common/images/mobile/ico_detail.png)}
+.board_type1 .bx_link { margin-right: var(--px17)}
+
 .bx_delete {display: inline-block; width: 1.2rem; height: 1.2rem; border-radius: 100%; background:url(/common/images/ico_bin.png) no-repeat center / auto 60%  #e8e8e8; vertical-align: middle;}
 .search_type1 > div { border: 1px solid #e5e5e5; background: #f6f6f6}
 .search_type1 > .select { width: 36%}

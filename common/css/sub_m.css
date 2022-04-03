@@ -98,16 +98,18 @@ main { display: block; min-height: 100vh}
 .bg_contents { background-color:#f7f7f7}
 
 /* 메가밀리언 구매 */
-.sec_info > .bx_info { margin-bottom: var(--px27);  overflow: hidden; letter-spacing: -0.075em}
-.sec_info > .bx_info .txt_type1 { font-size: 0.78rem}
-.sec_info > .bx_info > ul { color: #313131}
-.sec_info > .bx_info > ul > li:nth-child(1) { margin-bottom: var(--px15); text-align:center; background:#f6f2e7 !important}
-.sec_info > .bx_info > ul > li { padding: 0.825rem 0 var(--px23); border:1px solid #ddd; box-sizing: border-box; line-height: 1.38; font-size: var(--px22); background: #fff}
-.sec_info > .bx_info > ul > li > div { display: table; margin: 0 auto}
-.sec_info > .bx_info > ul > li ~ li { border-left: 1px solid #ddd; width:48.8% }
-.sec_info > .bx_info > ul > li .title { color: #000; font-size: var(--px25)}
-.sec_info > .bx_info .ico_date:after { margin-left: 0.2rem; width:var(--px30); height:var(--px30); background: url(/common/images/ico_date.png) no-repeat center / 100% 100%}
-.sec_info > .bx_info .ico_time_ko:after { margin-left: 0.2rem; width:1.75rem; height:var(--px30); background: url(/common/images/ico_time_ko.png) no-repeat center / auto 100%}
+.bx_info { margin-bottom: var(--px27);  overflow: hidden; letter-spacing: -0.075em; font-family: 'GmarketSans'}
+.bx_info .txt_type1 { font-size: 0.78rem}
+.bx_info > ul { color: #313131}
+.bx_info > ul > li:nth-child(1) { padding: 0.825rem 0 var(--px23); margin-bottom: var(--px15); text-align:center; background:#f6f2e7 !important}
+.bx_info > ul > li:nth-child(1) > div { display: table; margin: 0 auto}
+.bx_info > ul > li { position: relative; border:1px solid #ddd; box-sizing: border-box; line-height: 1.38; font-size: var(--px22); background: #fff}
+.bx_info > ul > li ~ li { padding-top: var(--px27);  border-left: 1px solid #ddd; width:49%; height: 4rem}
+.bx_info > ul > li ~ li > div { padding-left:var(--px27);}
+.bx_info > ul > li .title { padding: 0 0 var(--px10); color: #000; font-size: var(--px25)}
+.bx_info .ico_date:after { margin-left: 0.2rem; width:var(--px30); height:var(--px30); background: url(/common/images/ico_date.png) no-repeat center / 100% 100%}
+.bx_info .ico_time_ko:after { margin-left: 0.2rem; width:1.75rem; height:var(--px30); background: url(/common/images/ico_time_ko.png) no-repeat center / auto 100%}
+.nation { font-weight: 300}
 .nation .add_before:before { margin-right: 0.2rem; width:var(--px30); height:var(--px20); border: 1px solid #ddd; }
 .ico_us:before { background: url(/common/images/ico_us.png) no-repeat center / 100% 100%}
 .ico_ko:before { background: url(/common/images/ico_ko.png) no-repeat center / 100% 100%}
@@ -331,7 +333,7 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .sec_service.receive .btn_gray { padding: var(--px20) ; margin: 1.125rem 0 0;}
 
 /* 고객센터 */
-.sec_cs .wrap_sel { padding: 0.8rem 0 var(--px22);}
+.wrap_sel { padding: 0.8rem 0 var(--px22);}
 
 
 /* 게시판 공통 */
@@ -370,3 +372,13 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .list_faq > li.active > a { background-image: url(/common/images/mobile/ico_arr_btm_list_on.png)}
 .list_faq > li > div { display: none; padding: 0 0 1rem; font-size: var(--px24); color: #666}
 .list_faq > li > div > div:before { content: "A"; color: var(--color_red2)}
+
+/* 당첨결과 */
+.sec_draw .bx_info { margin-bottom:1.325rem }
+.bx_info .wrap_ball { position: absolute; padding:var(--px17) 0; bottom: 0 ; left: 0; right: 0; background:#ededed; border-top: 1px solid #ddd}
+.bx_info .list_ball { display: table; margin: 0 auto;}
+.bx_info .list_ball > li { margin-right: var(--px5)}
+.bx_info .list_ball > li span { width: 1rem; height: 1rem; line-height: 1rem}
+
+.sec_draw .wrap_title { padding: 0 0 var(--px25)}
+.sec_draw .wrap_title .btn_navy { padding: var(--px20) var(--px25); font-size: var(--px25); border-radius: var(--px5)}
