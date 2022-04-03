@@ -17,12 +17,12 @@ main { display: block; min-height: 100vh}
 
 .sec_login > .login_super form .btn_login { margin:1rem 0 0.9rem; width:100%; background:#444 ; font-weight: 500}
 .sec_login .wrap_chk { text-align: left;}
-.sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: var(--px18)}
+.sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: var(--px20)}
 .sec_login .btn_login { display: block; line-height: 1.85rem; border-radius: 3px; color: #fff; font-size:var(--px25)}
 .sec_login .list_find { font-size: 0}
 .sec_login .list_find li {  position: relative; display: inline-block; padding: 5px var(--px25) }
 .sec_login .list_find li:after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
-.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: var(--px20); color: #444; font-weight: 500; }
+.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: var(--px23); color: #444; font-weight: 500; }
 .login_sns h3 { padding: 1.6rem 0; color:#7c7c7c; font-size: var(--px20)}
 .sec_login .login_sns ul li {  position: relative; margin: 0 0 var(--px11)}
 .sec_login .login_sns .naver:before { position: absolute; left: 0; top: 0; bottom: 0 ; width: 1.7rem; background: url(/common/images/ico_naver.png ) no-repeat center / 36% auto; border-right: 1px solid #2aa104}
@@ -30,8 +30,8 @@ main { display: block; min-height: 100vh}
 
 /* 회원가입 */
 .list_form .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
-.list_form .txt_type1 { display:block; padding: 0.5rem 0 0 ;font-size: 0.65rem; color: #999; line-height: 1.3}
-.list_form .btn_gray { height:2rem; font-size: var(--px18)}
+.list_form .txt_type1 { display:block; padding: 0.2rem 0 0 ;font-size: 0.65rem; color: #999; line-height: 1.4}
+.list_form .btn_gray { height:2rem; font-size: var(--px22)}
 .list_form { text-align: left; font-family: 'Noto Sans KR',sans-serif;}
 .bx_input { display: block; padding-left: 0.5rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2rem; line-height: 1; overflow: hidden; box-sizing: border-box; background: #fff}
 .bx_input + .btn { height: 2rem; line-height: 2rem}
@@ -58,25 +58,29 @@ main { display: block; min-height: 100vh}
 .sec_reg form legend { padding: 2rem 0; font-size: var(--px27); text-align: center;}
 .btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
 .btn_gray2 { background: #e6e6e6; color: #000}
-.wrap_btn > * { display: block; line-height: 2rem; height: 2rem; border-radius: 0.2rem; font-size: var(--px25); font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
+.wrap_btn > * { display: block; line-height: 2rem; border-radius: 0.075rem; font-size: var(--px25); font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
 .wrap_btn.flex.space > * { width: 49%;}
 .wrap_btn .btn_prev,
 .btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
-.sec_reg .list_step li { width:4rem; text-align:center;}
-.sec_reg .list_step li:before { content: ""; display: inline-block; width: 2rem; height: 2rem; background-image: url(/common/images/ico_agree.png); background-repeat: no-repeat; background-position: center; background-size: auto 50%; background-color: #c7c7c7; border-radius: 100%; }
+.sec_reg .list_step { display: table; margin: 0 auto; position: relative;}
+.sec_reg .list_step:after { position: absolute; left: 2%; right: 2%; top: 1.4rem; border: 1px solid #c7c7c7}
+.sec_reg .list_step li { float: left; text-align:center; position: relative; z-index: 1}
+.sec_reg .list_step li ~ li { margin-left: 2.2rem}
+.sec_reg .list_step li:before { content: ""; display: inline-block; width: 2.8rem; height: 2.8rem; background-image: url(/common/images/ico_agree.png); background-repeat: no-repeat; background-position: center; background-size: auto 50%; background-color: #c7c7c7; border-radius: 100%; }
 .sec_reg .list_step li.active:before { background-color: #535353}
-.sec_reg .list_step li p { font-size: var(--px20); }
+.sec_reg .list_step li p { padding: var(--px10) 0 0; font-size: var(--px23); }
 .sec_reg .list_step li:nth-child(2):before { background-image: url(/common/images/ico_reg.png);}
 .sec_reg .list_step li:nth-child(3):before { background-image: url(/common/images/ico_fin.png); }
 
 /* 약관동의 - signup1-agree.html */
 .bx_agree { padding: var(--px30) var(--px25); border: 1px solid #cfcfcf; font-size: var(--px22); color: #666}
 .bx_agree > li { display: flex; justify-content: space-between; align-items: center;}
-.sec_reg.agree form { font-size: var(--px22);}
+.sec_reg.agree form { font-size: var(--px24);}
 .sec_reg.agree form ul li { color: #666}
 .sec_reg.agree form ul li ~ li { padding: var(--px10) 0 0; }
 .sec_reg.agree form .wrap_btn { padding:var(--px20) 0 0}
 .sec_reg .bx_agree { margin-top: var(--px23); }
+.sec_reg .bx_agree .view:after { margin-left: 1rem; width: var(--px18); height: var(--px15); background: url(/common/images/mobile/ico_arr_btm_b.png) no-repeat center / 100% auto ; transform: rotate(-90deg); }
 
 /* 정보입력 - signup2-form.html */
 .sec_reg.write { text-align: center;}
@@ -99,8 +103,9 @@ main { display: block; min-height: 100vh}
 .bg_contents { background-color:#f7f7f7}
 
 /* 메가밀리언 구매 */
-.bx_info { margin-bottom: var(--px27);  overflow: hidden; letter-spacing: -0.075em; font-family: 'GmarketSans'}
+.bx_info { margin-bottom: var(--px27);  overflow: hidden; letter-spacing: -0.025em; font-family: 'GmarketSans'}
 .bx_info .txt_type1 { font-size: 0.78rem}
+.bx_info .color_red { color: #de4f41 !important}
 .bx_info > ul { color: #313131}
 .bx_info > ul > li:nth-child(1) { padding: 0.825rem 0 var(--px23); margin-bottom: var(--px15); text-align:center; background:#f6f2e7 !important}
 .bx_info > ul > li:nth-child(1) > div { display: table; margin: 0 auto}
@@ -117,19 +122,19 @@ main { display: block; min-height: 100vh}
 
 
 .sec_game { padding-bottom: 1.1rem ; color: #fff ; font-family: 'GmarketSans'; border-radius: 0.5rem}
-.sec_game .btn_next { display:block; margin: 1rem auto 0; width: 7.5rem;font-size: var(--px28); line-height: 1.55rem; border-radius: 1.55rem; text-align: center;}
-.sec_game .btn_next:after { margin-left: var(--px10); width: var(--px14); height: var(--px26); background: url(/common/images/mobile/ico_arr_right_w_m.png) no-repeat center / 100% auto}
+.sec_game .btn_next { display:block; margin: 1rem auto 0; width: 7.5rem;font-size: var(--px28); line-height: 1.55rem; border-radius: 1.55rem; text-align: center; font-weight: bold}
+.sec_game .btn_next:after { margin-left: var(--px13); width: var(--px14); height: var(--px26); background: url(/common/images/mobile/ico_arr_right_w_m.png) no-repeat center / 100% auto}
 .sec_game * { color: #fff}
 .sec_game .step1,
-.sec_game .step2,
-.sec_game .step4 { padding-left: 0.75rem; padding-right: 0.75rem}
+.sec_game .step2 { padding-left: 0.75rem; padding-right: 0.75rem}
+.sec_game .choice .step2 .title { margin-top: var(--px15); padding-top: var(--px28); border-top: 1px solid #434343}
 .sec_game .pay.right { padding: 1.1rem 0.75rem 0.95rem; background: #333; border-radius: 1rem; box-sizing: border-box; letter-spacing: -0.075em}
 .sec_game .choice .title { padding: 1.4rem 0 var(--px30); font-size: var(--px25)}
 .sec_game .choice .title span { color: #c5c5c5; font-weight: 300}
 .sec_game .choice .list_btn > li { float: left; margin-right: 2%; margin-bottom: var(--px14); width: 32%; border: 1px solid #535353; border-radius: 0.25rem; overflow: hidden; box-sizing: border-box;}
 .sec_game .choice .list_btn > li:nth-child(3n) { margin-right: 0}
 .sec_game .choice .list_btn > li > * { display: block; width: 100%; height: 1.62rem; line-height: 1.62rem; background: #333; font-size: var(--px27); font-weight: bold; letter-spacing: -0.075em; transition: all .3s; font-family: 'GmarketSans'}
-.sec_game .choice .list_btn > li > *:hover { background: #f00;}
+.sec_game .choice .list_btn > li > *.on { background: #f00;}
 .sec_game .choice .step2 .list_btn > li { width: 32%}
 .bx_balls { box-sizing: border-box; overflow: hidden; }
 .sec_game .choice ol:after { content: ""; display: block; clear: both}
@@ -149,7 +154,7 @@ main { display: block; min-height: 100vh}
 .sec_game .pay .top > strong:before { margin-right: 0.5rem; margin-left: 1.5rem; width: 1.65rem; height: 1.15rem; background: url(../images/ico_list.png) no-repeat center / 100% 100%}
 .sec_game .pay .top > button { width: 3.1rem; height: 1.25rem; font-size: 0.75rem; color: #666; font-weight: 500}
 .sec_game .pay .bx_border { border: 1px solid #5c5c5c; border-radius: 0.25rem}
-.sec_game .pay .btn_save {margin:0.5rem 0 0; width: 100%; height:2rem;  background: #1b1b1b; line-height: 1.8rem; font-size: var(--px21)}
+.sec_game .pay .btn_save {margin:0.5rem 0 0; width: 100%; height:2rem;  background: #1b1b1b; line-height: 1; font-size: var(--px25)}
 .sec_game .pay .btn_save:after { margin-left: 1rem; width: 0.75rem; height: 0.85rem; background: url(../images/ico_save.png) no-repeat center / 100% 100% }
 .sec_game .pay .btn_save + p { margin: 0 0 0.5rem; padding: 0.9rem 0; font-size: var(--px27); text-align: center; border-bottom: 1px solid #5c5c5c;}
 .sec_game .wrap_game { padding: 0.875rem var(--px25) 0.5rem; border: 1px solid #5c5c5c; }
@@ -318,8 +323,14 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .bx_level { padding: 0.875rem 0 var(--px24)}
 .bx_level img { width: 22%}
 .bx_level > p { padding: var(--px13); font-family: 'Montserrat',sans-serif; font-weight: 600;font-size: var(--px28) }
-.bx_level > p strong { font-weight: 600}
+.bx_level > p strong { font-weight: 600; color: #000}
 .sec_service .wrap_policy .txt_type1 li ~ li { padding-top: 1rem}
+.list_level2 .bx_level { display: flex; align-items: center; padding: 1.15rem 0 var(--px17); border-bottom: 1px solid #dedede; margin: 0 0 1rem}
+.list_level2 .bx_level > p { font-family: 'Noto Sans KR',sans-serif; font-size: var(--px30)}
+.list_level2 .bx_level img { width: 1.75rem}
+.list_level2 > li { margin-top: var(--px20); padding: 0 0.825rem 1.75rem; box-sizing: border-box; background: #fff}
+
+
 
 /* 메가밀리언 소개 */
 .sec_service.intro h4 { font-size: var(--px27); font-weight: 500;}
@@ -340,7 +351,7 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 /* 게시판 공통 */
 .board_type1 { padding: var(--px10) 0 2.25rem}
 .board_type1 .filter *{ font-size: var(--px25)}
-.board_type1 .filter select{ line-height: 2.25rem; height: 2.25rem; }
+.board_type1 .filter select { padding-right: 0.7rem; line-height: 2.25rem; height: 2.25rem; background:url(/common/images/mobile/ico_arr_btm_b.png) no-repeat right 0 center / auto 0.25rem }
 .list_board { border-top: 2px solid #000; border-bottom: 1px solid #000; font-size: var(--px30)}
 .list_board > li > a { display: block; padding: 1.1rem 0 1rem}
 .list_board > li ~ li { border-top: 1px solid #dedede}
@@ -348,7 +359,7 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 .list_board ul { padding: var(--px15) 0 0; font-size: 0; font-weight: 300}
 .list_board ul > li > span:after { content: ":"; display: inline-block; margin:0 var(--px10); vertical-align:middle; }
 .list_board ul > li ~ li:before { content: ""; display: inline-block; margin:0 var(--px25); width: 1px; height: var(--px15); vertical-align:middle; background: #666}
-.list_board ul * { display: inline-block;font-size: var(--px24); color: #666 }
+.list_board ul * { display: inline-block;font-size: var(--px26); color: #666 }
 
 /* 상세페이지 */
 .board_details > .title { padding: 1.25rem 0 1rem; font-size: var(--px30) ; border-bottom: 1px solid #dedede; }

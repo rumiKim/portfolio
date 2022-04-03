@@ -49,6 +49,10 @@ i { font-style: normal;}
 /* border-radius */
 .br10 { border-radius: 0.5rem}
 
+/* color */
+.color_red { color: #de4f41 !important}
+.color_red2 { color: #e60012 !important}
+.color_red3 { color: #ff0101 !important}
 
 .btn_type1 { border: 1px solid #bfbfbf; background-color: #fff; color: #333}
 

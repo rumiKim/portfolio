@@ -1,5 +1,6 @@
 input,select,textarea,button { font-family: 'Noto Sans KR',sans-serif;  outline: 0; background-color: transparent;}
 input,textarea { color: #000 !important}
+input[type="checkbox"] { position: absolute; left: -3000px}
 body { word-break: keep-all;}
 /* font */
 .lh1 { line-height: 1;}
@@ -82,9 +83,6 @@ body { word-break: keep-all;}
 /* color */
 .color_blue { color: var(--color_blue) !important}
 .color_blue2 { color: var(--color_blue2) !important}
-.color_red { color: #de4f41 !important}
-.color_red2 { color: #e60012 !important}
-.color_red3 { color: #ff0101 !important}
 .color_000 { color: #000 !important}
 .color_fff { color: #fff !important}
 .color_ylw { color: #fffc00 !important}

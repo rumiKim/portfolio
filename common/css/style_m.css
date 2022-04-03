@@ -33,7 +33,7 @@ body { font-size: 1rem}
 
 /* default el */
 input { font-size: var(--px26)}
-
+select { -webkit-appearance:none; -moz-appearance:none; appearance:none; color: #000}
 
 /* common */
 
@@ -95,6 +95,7 @@ input { font-size: var(--px26)}
 
 /* color */
 .color_red { color: #cd6d5d !important}
+.color_red2 { color: #de4f41 !important}
 
 
 
@@ -112,7 +113,7 @@ input { font-size: var(--px26)}
 
 .chk_type1 + label { cursor: pointer;}
 .chk_type1 + label span { vertical-align: middle;}
-.chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; background-color: #fff; width: var(--px25); height: var(--px25); box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
+.chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; background-color: #fff; width: var(--px30); height: var(--px30); box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 .bx_type1 { background: #fff; border: 1px solid #e2e2e2; border-radius: var(--px10)}
 .bx_type2 { background: #fff; border: 1px solid #e1e1e1; border-radius: 2px}
@@ -124,8 +125,9 @@ input { font-size: var(--px26)}
 
 .bx_delete {display: inline-block; width: 1.2rem; height: 1.2rem; border-radius: 100%; background:url(/common/images/ico_bin.png) no-repeat center / auto 60%  #e8e8e8; vertical-align: middle;}
 .search_type1 > div { border: 1px solid #e5e5e5; background: #f6f6f6}
-.search_type1 > .select { width: 36%}
+.search_type1 > .select { width: 36%; }
 .search_type1 > .input { position: relative; padding-right: 2rem; margin-left: var(--px8)}
+.search_type1 > .select select { background: url(/common/images/mobile/ico_arr_select.png) no-repeat right 0.5rem center / auto 10%;}
 .search_type1 > .input > .btn { position: absolute; right: 0; top: 0; bottom: 0; width: 2rem; background: url(/common/images/mobile/ico_search.png) no-repeat center / 50% auto}
 .search_type1 input,
 .search_type1 select { padding: 0 0.5rem; width: 100%; box-sizing: border-box; font-size: var(--px25); line-height: 2rem; height:2rem;  }
@@ -143,17 +145,20 @@ input { font-size: var(--px26)}
 .popup.type1 .inner { overflow: auto; border-radius: 1rem;}
 .popup.type1 .bx_padding { padding-left: 1rem; padding-right: 1rem; }
 .popup.type1 .bx_gray { padding-top: 0.85rem; padding-bottom: 0.85rem; font-size: var(--px19); line-height: 1.3}
-.popup.type1 .btn_close:after { content: "X"; display: block; position: absolute; right: 1rem; top: 1rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
+
+.popup .btn_close {position:absolute; right: 1rem; top: 0.5rem;  }
+.popup .btn_close:after
+{ content: "X"; display: block;  padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600; color: #000}
 .popup.type1 .wrap_title { font-family: 'Noto Sans KR', sans-serif}
 .popup.type1 .wrap_title .title { padding: 0 0 var(--px10)}
 .popup.type1 .title { display: block; padding: 0 0 0.85rem; font-size: 0.875rem; font-family: 'GmarketSans'; letter-spacing: -0.05em}
-.popup.type2 .btn_close { position: absolute; right: 0; top: 0; }
 .popup.type2 .inner { width: 90vw; max-height: 90vh}
-.popup.type2 .title { padding: 1.5rem 0 1rem; font-size: 1em; font-weight: 400; letter-spacing: -0.05em; border-bottom:3px solid #444 ;text-align: center;}
+.popup.type2 .title { padding: 1rem 0 0.8rem; font-size: 1em; font-weight: 400; letter-spacing: -0.05em; border-bottom:1px solid #444 ;text-align: center;}
 
 
 /* 팝업 커스텀 */
-.popup.policy .txt { padding: 1.6rem 0 ; font-size: 0.8rem; color: #666; line-height: 1.3}
+.popup.policy { text-align: center;}
+.popup.policy .txt { padding: 1rem 0 ; font-size: var(--px24); color: #666; line-height: 1.3}
 .popup.complete .inner { padding: 2rem 0 1.5rem; max-width: 70%}
 .popup.complete .txt { font-size:0.875rem;  var(--color_blue); text-align: center;}
 .popup.complete .txt .ico:before { display: block; margin: 0 auto var(--px30); width: 1.85rem; height: 1.85rem; background: url(/common/images/ico_complete.png) no-repeat center /100% 100% }
@@ -168,8 +173,9 @@ input { font-size: var(--px26)}
 
 
 /* table */
-.tb_type1 { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; font-size: 0.75rem; line-height: 1.26rem; word-break: keep-all;}
+.tb_type1 { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; font-size: var(--px20); line-height: 1.2; word-break: keep-all;}
 .tb_type1 thead { background: #f4f4f4}
+.tb_type1 th, .tb_type1 td { padding: 0.4rem 0.2rem}
 .tb_type1 tbody { color: #666}
 
 .tb_type2 { font-size: var(--px25); color: #222}
@@ -206,7 +212,7 @@ input { font-size: var(--px26)}
 .tab_type2 { margin-right: -1px}
 .tab_type2 > li { margin-bottom: -1px ; width: 50%; border: 1px solid #ddd; box-sizing: border-box;}
 .tab_type2 > li:nth-child(2n) { margin-left: -1px}
-.tab_type2 > li a { display: block; padding-left: 1.35rem; height: 1.85rem; line-height: 1.85rem; background: #f6f6f6; color: #000; font-size: var(--px22)}
+.tab_type2 > li a { display: block; padding-left: 1.35rem; height: 1.85rem; line-height: 1.85rem; background: #f6f6f6; color: #000; font-size: var(--px25)}
 .tab_type2 > li a > strong { color: #d2353e}
 .tab_type2 > li.on a { background: #d2353e}
 .tab_type2 > li.on a > * { color: #fff}
@@ -222,7 +228,7 @@ input { font-size: var(--px26)}
 .tab_type2 > ul { display: none}
 
 .sel_type1 { padding: 0 var(--px28); height: 1.75rem; font-family: 'Noto Sans KR',sans-serif;}
-.sel_type2 {  display: block; padding: 0 1rem; width: 100%; font-size: var(--px28); line-height: 1; height:1.875rem}
+.sel_type2 {  display: block; padding: 0 1rem; width: 100%; font-size: var(--px28); line-height: 1; height:1.875rem; background: url(/common/images/mobile/ico_arr_btm_more.png) no-repeat right 1rem center / auto 25% ;}
 
 .input_type1 { height: 2rem; line-height: 2rem; border-radius: var(--px5); }
 .input_type1 .bx_input { border:none}
@@ -238,7 +244,7 @@ header .gnb a { display:block; line-height: 2.2rem; font-size: 0.625rem}
 header .gnb nav { width: 100%; overflow: hidden;}
 header .gnb nav ul { overflow: scroll; white-space: nowrap;}
 header .gnb nav ul li { padding-right: 0.9rem}
-header .util { position: absolute; right: 2.625rem; top: 0; font-size: 0.55rem}
+header .util { position: absolute; right: 2.625rem; top: 0; font-size: 0.65rem}
 header .util ul li { padding-left: var(--px18)}
 header .btn_menu { position: relative; width: 0.95rem; height: 100%; }
 header .btn_menu:before, header .btn_menu:after  { position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0}
@@ -292,7 +298,11 @@ header .btn_menu:after { height:1px; background: #515151}
 .nav_fixed ul li.download a:before { background-image: url(/common/images/mobile/ico_download.png)}
 
 
+/* main */
 
+.sec_visual .slide .paging { position: absolute; right: 1rem; bottom: var(--px30); padding: 0 var(--px26); width: auto ; height:1.2rem; line-height: 1.2rem; border-radius: 1.2rem; left: inherit; background: rgba(0,0,0,0.75); font-size: 0.6rem; font-weight:bold;  color:#aaaaaa; font-family: 'GmarketSans'}
+.sec_visual .slide .paging .swiper-pagination-current { color: #fff !important}
+.sec_visual .slide .paging:after { content: "+"; display: inline-block; margin-left: var(--px10); font-size: 0.7rem; vertical-align: middle;}
 .wrap_com.main { padding-top: var(--px30); background: #f5f5f5}
 /* sec_lotto */
 .sec_lotto > ul > li { margin-bottom: var(--px18); padding: 0 0 1.5rem; color: #313131; letter-spacing: var(--ls25); text-align: center; box-sizing: border-box; line-height: 1}
@@ -301,7 +311,7 @@ header .btn_menu:after { height:1px; background: #515151}
 .sec_lotto .time_draw { color: #434343; font-size: 0.7rem; font-weight: 500; letter-spacing: -0.05em}
 .sec_lotto .won { padding:var(--px18) 0 var(--px15); font-size: 0.925rem;  font-weight: bold;}
 .sec_lotto .won .real { color: #f00}
-.sec_lotto .us { font-size: var(--px25); width: 100%; padding:0 0 1rem; text-align: center;}
+.sec_lotto .us { font-size: var(--px28); width: 100%; padding:0 0 1rem; text-align: center;}
 
 .sec_lotto  .time_end { display: flex; align-items: center; margin:0 0 1.625rem; }
 .sec_lotto .time_end > p { font-size: 0.5rem; color: #313131; font-weight: 600;}
@@ -309,7 +319,7 @@ header .btn_menu:after { height:1px; background: #515151}
 .list_time > li { position: relative; text-align: center; line-height: 1; color: #fff; }
 .list_time > li ~ li { margin-left: 0.5rem}
 .list_time > li:after { content:""; position: absolute; left: 50%; transform: translateX(-50%); top:calc(100% + 5px); font-size: var(--px18); color: #313131}
-.list_time > li span { display: inline-block; width: 0.875rem; height: 1rem; background:#313131; font-size: 0.55rem; line-height: 1.2rem; border-radius: 3px; box-sizing: border-box; font-weight: 500; }
+.list_time > li span { display: inline-block; width: 0.875rem; height: 1.2rem; background:#313131; font-size: 0.55rem; line-height: 1.2rem; border-radius: 3px; box-sizing: border-box; font-weight: 500; }
 .list_time > li span:nth-child(2) { margin-left: 2px}
 .bx_drawtime > span { font-size: 2.03vw;}
 
@@ -326,9 +336,9 @@ header .btn_menu:after { height:1px; background: #515151}
 .list_result .h_type2 { font-size: var(--px30)}
 .list_result > li {  margin-bottom: var(--px17); background: #eee; box-sizing: border-box;  overflow: hidden; line-height: 1}
 .list_result > li > div { padding: var(--px30)}
-.list_result > li .end { font-size: var(--px19); color: #f00}
-.list_result > li .wrap_ball { padding: var(--px29) 0 var(--px22)}
-.sec_result .win { padding: var(--px19) 0 var(--px10); font-size:var(--px20); line-height: 1.3}
+.list_result > li .end { font-size: var(--px21); color: #f00}
+.list_result > li .wrap_ball { padding: var(--px30) 0 var(--px25)}
+.sec_result .win { padding: var(--px19) 0 var(--px10); font-size:var(--px24); line-height: 1.3}
 
 .label { width:1.6rem; height: 1.6rem; background-color: #434343; color: #fff; letter-spacing: -0.025em; font-size:var(--px19); border-radius: 100%}
 
@@ -337,13 +347,13 @@ header .btn_menu:after { height:1px; background: #515151}
 
 
 .list_ball > li { float: left; margin-right: 5px; }
-.list_ball > li span { display: inline-block; width: 1.3rem; height: 1.3rem; line-height: 1.3rem; box-sizing: border-box; border: 1px solid #bfbfbf; font-family: 'GmarketSans'; font-weight: bold; font-size: var(--px19); color: #313131; text-align: center; border-radius: 100%; background: #fff; }
+.list_ball > li span { display: inline-block; width: 1.5rem; height: 1.5rem; line-height: 1.5rem; box-sizing: border-box; border: 1px solid #bfbfbf; font-family: 'GmarketSans'; font-weight: bold; font-size: var(--px21); color: #313131; text-align: center; border-radius: 100%; background: #fff; }
 .list_ball > li:last-child span { margin: 0 5px}
 .list_ball > li:last-child:before { content: "+"; font-weight: bold; font-family: 'Montserrat',sans-serif; vertical-align: middle;}
 .list_ball > li.mega span { background: #ebc704; border-color: #ebc704; }
 .list_ball > li.power span { background: #e40d0b; border-color: #e40d0b; font-weight: 500; color: #fff}
-.list_ball > li.add_after:after { content:"(메가볼)"; color: #009bfa; font-size:var(--px18); vertical-align: 1px;}
-.list_ball > li.power.add_after:after {  content:"(파워볼)"; color: #e40d0b;}
+.list_ball > li.add_after:after { content:"(메가볼)";  font-size:var(--px18); vertical-align: 1px;}
+.list_ball > li.power.add_after:after {  content:"(파워볼)"; }
 
 
 .sec_guide ul > li a { display: block; padding: 1.1rem 1.1rem 0.95rem; font-size: var(--px24); color: #434343}
@@ -356,10 +366,10 @@ header .btn_menu:after { height:1px; background: #515151}
 
 .sec_quick > ul { margin-top: var(--px17);}
 .sec_quick > ul > li { margin:0 0 var(--px18); width: 48.8%; }
-.sec_quick > ul > li > a { display: block; padding: 0.5rem 0 0 0.825rem ; height:3.65rem;  border: 1px solid #e2e2e2; background-color: #fff;  background-repeat: no-repeat; background-size: 14.7% auto; background-position: right 9.2% center; border-radius: var(--px10); background-image: url(/common/images/ico_ticket.png);  box-sizing: border-box; letter-spacing: -0.075em; color: #434343; }
-.sec_quick > ul > li > a > span { font-weight: 300; font-size:var(--px20); }
-.sec_quick > ul > li > a > strong { display: block; padding: 1px 0 3px;  font-size:var(--px22); }
-.sec_quick > ul > li > a > p { font-size:var(--px16); }
+.sec_quick > ul > li > a { display: block; padding: 0.5rem 0 0 0.825rem ; height:3.65rem;  border: 1px solid #e2e2e2; background-color: #fff;  background-repeat: no-repeat; background-size: 14.7% auto; background-position: right 9.2% center; border-radius: var(--px10); background-image: url(/common/images/ico_ticket.png);  box-sizing: border-box; letter-spacing: -0.025em; color: #434343; }
+.sec_quick > ul > li > a > span { font-size:var(--px22); }
+.sec_quick > ul > li > a > strong { display: block; padding: 1px 0 3px;  font-size:var(--px24); }
+.sec_quick > ul > li > a > p { padding: var(--px7) 0 0; font-size:var(--px20); }
 
 
 .sec_notice { background:#000; }
@@ -381,20 +391,21 @@ footer .mid ul li { display: inline-block; line-height: 1.39}
 footer .mid .copyright { padding: 0.875rem 0 ; font-size: var(--px20)}
 
 footer .sns { padding: 0.925rem 0 0}
-footer .sns li a { display: block; width: 1.3rem; height: 1.3rem ; }
+footer .sns li a { display: block; width: 1.6rem; height: 1.6rem ; }
 footer .sns li ~ li { margin-left: var(--px10)}
 footer .sns li.facebook { background: url(/common/images/img-share-facebook.png) no-repeat center / 100% 100% }
 footer .sns li.insta { background: url(/common/images/img-share-instagram.png)  no-repeat center / 100% 100%}
 footer .sns li.youtube { background: url(/common/images/img-share-youtube.png)  no-repeat center / 100% 100%}
-footer .app h2 { padding-right:0.8rem; font-size: var(--px14); line-height: 1.4rem}
+footer .app h2 { padding-right:0.8rem; font-size: var(--px18); line-height: 1.7rem}
 footer .app ul { border:1px solid #383838 }
 footer .app ul li { float: left; background-repeat: no-repeat; background-position:center; background-size: auto 50%;}
 footer .app ul li.googleplay { background-image: url(../images/ico_play.png)}
 footer .app ul li.appstore { background-image: url(../images/ico_apple.png)}
-footer .app ul li a { display: block; height:1.4rem; width:1.4rem;}
+footer .app ul li a { display: block; height:1.7rem; width:1.7rem;}
 footer .app ul li ~ li { border-left: 1px solid #383838}
-footer .familysite { padding: 1rem 0 1.35rem}
-footer .familysite select { padding: 1.1rem 1.25rem; width: 100%; background:#292929; color: #b3b3b3; font-size:var(--px23); box-sizing: border-box; font-family: 'Montserrat',sans-serif;}
+footer .familysite { padding: 1rem 0 1.35rem; }
+/* footer .familysite:after { } */
+footer .familysite select { height:2.625rem; padding: 0 1rem; width: 100%; color: #b3b3b3; font-size:var(--px23); box-sizing: border-box; font-family: 'Montserrat',sans-serif; background: url(/common/images/mobile/ico_arr_top_select.png) no-repeat right 1rem center / auto 20% #292929;}
 footer .familysite select option { width: 100%}
 
 
