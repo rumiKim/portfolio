@@ -1,138 +1,175 @@
-<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/meta.html";?>
 
-<body>
+<body class="body_idx">
   <a href="#main" class="skip">본문 바로가기</a>
-  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
-  <main id="main">
-    <div class="location ls50">
-      <div class="wrap_com">
-        <ol class="clear">
-          <li><a href="" class="add_before"><span class="hide">홈</span></a></li>
-          <li><a href="">당첨번호 확인</a></li>
-          <li><a href="">추첨결과 안내</a></li>
-        </ol>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/header.html";?>
+  <main id="main" class="cs bg_contents">
+    <div class="contents f_NotoSansKR ">
+      <div class="title_sub bb border_dcdcdc" style="margin-bottom:0">
+        <h2 class="title">파워볼 당첨결과</h2>
+        <a href="" class="btn_back"><span class="hide">뒤로가기</span></a>
       </div>
-    </div>
-    <section class="sec_draw sec_tab wrap_com ">
-      <h2 class="h_type4">당첨번호 확인</h2>
-      <div class="wrap_tab">
-        <ul class="tab_type1 flex align_center ls75 ">
-          <li><a href="draw-guide.html">추첨 안내</a></li>
-          <li><a href="draw-mega.html">메가밀리언 당첨 결과</a></li>
-          <li class="on"><a href="draw-power.html">파워볼 당첨 결과</a></li>
-          <li><a href="draw-winners.html">당첨자 회원 리스트</a></li>
-        </ul>
-      </div>
-      <div class="wrap_tabbox">
-        <div class="tabbox on">
-          <div class="sec_info wrap_com f_NotoSansKR">
-            <h2 class="hide">파워볼 정보</h2>
-            <div class="bx_info bx_gray">
-              <ul class=" flex align_center">
-                <li class="" style="text-align:center">
-                  <div>
-                    <p class="title">파워볼 <strong>1등 당첨금</strong> <span class="label flex align_center justify_center">당첨<br>이월</span></p>
-                    <strong class="txt_type1 ls25 color_000">$ 64,000,000 <span class="color_red">(771억원)</span></strong>
-                  </div>
-                </li>
-                <li class="">
-                  <div>
-                    <p class="title add_after ico_date"><span class="va_mid">추첨일시</span></p>
-                    <ul class="nation">
-                      <li class="ko add_before ico_ko"><span class="va_mid">02월 26일 토요일 00:00</span></li>
-                      <li class="us add_before ico_us"><span class="va_mid">02월 25일 금요일 20:00</span></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="">
-                  <div>
-                    <p class="title"><span class="va_mid"><strong>1257회차</strong> 추첨번호</span></p>
-                    <ul class="list_ball clear">
-                      <li><span>7</span></li>
-                      <li><span>16</span></li>
-                      <li><span>34</span></li>
-                      <li><span>44</span></li>
-                      <li><span>61</span></li>
-                      <li class="power "><span>24</span></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
+      <section class="sec_draw wrap_com section bg_white">
+        <div class="wrap_sel">
+          <select class="sel_link sel_type2 bg_navy" name="">
+            <option value="draw-power.html">파워볼 당첨결과</option>
+            <option value="draw-mega.html">메가밀리언 당첨결과</option>
+            <option value="draw-winners.html">당첨자 회원 리스트</option>
+          </select>
+        </div>
+        <div class="bx_info">
+          <ul class="">
+            <li>
+              <div>
+                <p class="title">파워볼 <strong>1등 당첨금</strong></p>
+                <strong class="txt_type1 ls25 color_000">￦ 37,107,000,000 <span class="color_red">(500억원)</span></strong>
+                <p class=""> <span>$ <span>31,000,000</span></span> </p>
+              </div>
+            </li>
+            <li class="" style="float:left">
+              <div>
+                <p class="title add_after ico_date"><span class="va_mid">추첨일시</span></p>
+                <ul class="nation">
+                  <li class="ko add_before ico_ko"><span class="va_mid">02월 26일 토요일 00:00</span></li>
+                  <li class="us add_before ico_us"><span class="va_mid">02월 25일 금요일 20:00</span></li>
+                </ul>
+              </div>
+            </li>
+            <li class="" style="float:right">
+              <div>
+                <p class="title add_after"><strong class="color_red">1257</strong> 회차 추첨번호</p>
+              </div>
+              <div class="wrap_ball">
+                  <ul class="list_ball clear">
+                    <li><span>7</span></li>
+                    <li><span>16</span></li>
+                    <li><span>34</span></li>
+                    <li><span>44</span></li>
+                    <li><span>61</span></li>
+                    <li class="power"><span>24</span></li>
+                  </ul>
+                </div>
+            </li>
+          </ul>
+        </div>
+        <div class="board_type1 wrap_board ls50 ">
+          <div class="wrap_title flex space align_center">
+          <h3 class="h_type4">파워볼 추첨결과</h3>
+          <a href="" class="btn_navy add_after"><span class="va_mid">파워볼 공식사이트</span></a>
           </div>
-          <div class="wrap_tb wrap_board f_NotoSansKR space_btm">
-            <div class="top flex space align_center ">
-              <h3 class="left ls50 fw400">파워볼 추첨결과</h3>
-              <a href="" class=" btn_gray right ls75 "><span>파워볼 공식사이트</span></a>
-            </div>
+          <div class="wrap_tb bt ls50 lh1">
             <table class="tb_type2">
               <caption>
                 <div class="hide">
-                  최근 구매내역에 대한 정보를 제공하는 표
+                  추첨결과에 대한 정보를 제공하는 표
                 </div>
               </caption>
               <colgroup>
                 <col width="">
                 <col width="">
-                <col width="">
-                <col width="">
-                <col width="">
-                <col width="">
-                <col width="">
               </colgroup>
-              <thead class="bg_navy">
-                <tr>
-                  <th>NO </th>
-                  <th>추첨일(한국시간)</th>
-                  <th>추첨번호</th>
-                  <th>1등 당첨금</th>
-                  <th>추첨결과</th>
-                  <th>추첨방송</th>
-                  <th>상세보기</th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>1257</td>
-                  <td>02월 16일 수요일 13:00 </td>
+                  <th>회차</th>
+                  <td><strong>1257</strong></td>
+                </tr>
+                <tr>
+                  <th>추첨일(한국시간)</th>
+                  <td>02월 16일 수요일 13:00</td>
+                </tr>
+                <tr>
+                  <th><span class="color_red">추첨번호</span></th>
                   <td>
-                    <ul class="list_ball clear">
-                      <li><span>7</span></li>
-                      <li><span>16</span></li>
-                      <li><span>34</span></li>
-                      <li><span>44</span></li>
-                      <li><span>61</span></li>
-                      <li><span>24</span></li>
-                    </ul>
-                  </td>
-                  <td>
-                    <span>$ 53,000,000</span>
-                    <span>638억원</span>
-                  </td>
+                    <div class="wrap_ball">
+                        <ul class="list_ball clear">
+                          <li><span>7</span></li>
+                          <li><span>16</span></li>
+                          <li><span>34</span></li>
+                          <li><span>44</span></li>
+                          <li><span>61</span></li>
+                          <li class="power"><span>24</span></li>
+                        </ul>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <th>1등 당첨금</th>
+                  <td><p>$ <span>53,000,000,000</span>원  /
+                    <span class="color_red">532억원</span>
+                  </p></td>
+                </tr>
+                <tr>
+                  <th>추첨결과</th>
                   <td>이월</td>
-                  <td class="td_click"><a href="" class="btn_popup" id="btn_video"><span class="va_mid">방송보기</span></a></td>
-                  <td class="td_click"><a href=""><span class="va_mid">상세보기</span></a></td>
+                </tr>
+                <tr>
+                  <th>추첨방송</th>
+                  <td><a href=""><div class="bx_link ico_video"></div>방송보기</a></td>
+                </tr>
+                <tr>
+                  <th>상세보기</th>
+                  <td><a href=""><div class="bx_link ico_detail"></div>상세보기</a></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <th>회차</th>
+                  <td><strong>1257</strong></td>
+                </tr>
+                <tr>
+                  <th>추첨일(한국시간)</th>
+                  <td>02월 16일 수요일 13:00</td>
+                </tr>
+                <tr>
+                  <th><span class="color_red">추첨번호</span></th>
+                  <td>
+                    <div class="wrap_ball">
+                        <ul class="list_ball clear">
+                          <li><span>7</span></li>
+                          <li><span>16</span></li>
+                          <li><span>34</span></li>
+                          <li><span>44</span></li>
+                          <li><span>61</span></li>
+                          <li class="mega"><span>24</span></li>
+                        </ul>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <th>1등 당첨금</th>
+                  <td><p>$ <span>53,000,000,000</span>원  /
+                    <span class="color_red">532억원</span>
+                  </p></td>
+                </tr>
+                <tr>
+                  <th>추첨결과</th>
+                  <td>이월</td>
+                </tr>
+                <tr>
+                  <th>추첨방송</th>
+                  <td><a href=""><div class="bx_link ico_video"></div>방송보기</a></td>
+                </tr>
+                <tr>
+                  <th>상세보기</th>
+                  <td><a href=""><div class="bx_link ico_detail"></div>상세보기</a></td>
                 </tr>
               </tbody>
             </table>
-            <div class="wrap_paging ">
-              <a href="" class="next"><span class="hide">게시판다음페이지</span></a>
-              <a href="" class="prev"><span class="hide">게시판이전페이지</span></a>
-              <ol class="">
-                <li class="on"><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-              </ol>
-            </div>
           </div>
+          <button class="btn_more btn_navy type2">더보기 1 / 3</button>
         </div>
+
+
+      </section>
+      <div class="wrap_com">
+        <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/quick.html";?>
       </div>
-    </section>
-    <?php include $_SERVER['DOCUMENT_ROOT']."/inc/quick-sub.html";?>
+
+
+    </div>
 
   </main>
-  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/footer.html";?>
 </body>
-
 
 </html>

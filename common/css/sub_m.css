@@ -57,6 +57,7 @@ main { display: block; min-height: 100vh}
 .sec_reg { padding-top: 1.5rem; }
 .sec_reg form legend { padding: 2rem 0; font-size: var(--px27); text-align: center;}
 .btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
+.btn_gray2 { background: #e6e6e6; color: #000}
 .wrap_btn > * { display: block; line-height: 2rem; height: 2rem; border-radius: 0.2rem; font-size: var(--px25); font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
 .wrap_btn.flex.space > * { width: 49%;}
 .wrap_btn .btn_prev,
@@ -382,3 +383,13 @@ main.mypage .wrap_title .right { font-size: var(--px22)}
 
 .sec_draw .wrap_title { padding: 0 0 var(--px25)}
 .sec_draw .wrap_title .btn_navy { padding: var(--px20) var(--px25); font-size: var(--px25); border-radius: var(--px5)}
+.sec_draw .wrap_title .btn_navy:after { margin-left: var(--px15
+  ); width: var(--px12); height: var(--px21); background: url(/common/images/mobile/ico_arr_right_w.png) no-repeat center / 100% 100% }
+/*  당첨자 회원 리스트 */
+.sec_win .wrap_list { padding-top: var(--px27); margin-top: 0.95rem}
+.list_win > li {  margin-bottom: 1.125rem; width: 49%; box-sizing: border-box;}
+.list_win > li > a { display: block; font-size: var(--px28); line-height: 1.3}
+.list_win > li > a > div:nth-child(1) { padding-bottom: 100%; background: gray; }
+.list_win > li > a .title > p { font-weight: 500}
+.list_win > li > a .title > p > span { display: block;}
+.list_win > li > a .title > span { color: #666; font-size:var(--px24) ; font-family: 'GmarketSans'; font-weight: 300}
