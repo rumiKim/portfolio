@@ -107,6 +107,20 @@ i { font-style: normal;}
 .chk_type1 + label:before { content: ""; display: inline-block; margin-right: 5px; background-color: #fff; width: 1rem; height: 1rem; box-sizing: border-box; border: 1px solid #666; vertical-align: middle;}
 .chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
 
+/* floating menu  */
+.nav_float { position: fixed; right: 50%; top:50%;  transform: translate(50%, -50%); margin-right: -660px; width: 4.35rem; font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.075em; font-size: 0.75rem}
+.nav_float ul li { margin-bottom: 0.3rem}
+.nav_float ul li a { display: block;border: 1px solid #e5e5e5; border-radius: 0.25rem; text-align: center;  background: #fff}
+.nav_float .appdown a { padding: 0.95rem 0.6rem; }
+.nav_float .appdown .add_after:after { margin-left: 0.5rem; width: 0.5rem; height: 0.55rem; background: url(/common/images/ico_download_b.png) no-repeat center / 100% 100% ;}
+.nav_float ul li:not(.appdown) a { padding: 0.7rem 0 0.95rem}
+.nav_float ul li:not(.appdown) a > p:before { content: ""; display:inline-block; margin-bottom: 0.6rem; width: 2.5rem; height: 2.5rem; border-radius: 100%; background: url(/common/images/ico_cash_float.png) no-repeat center / 60% auto #eee}
+.btn_top { padding: 0.25rem 0; width: 100%; background: #fff; border-radius: 0.25rem}
+.btn_top:after { margin-left: 0.25rem; width: 0.5rem; height: 0.3rem; background: url(/common/images/ico_arr_top_prev.png) no-repeat center / 100% 100% }
+
+
+
+
 /* popup */
 .popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; line-height: 1}
 .popup.active { display: block !important;}
