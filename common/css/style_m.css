@@ -236,7 +236,7 @@ select { -webkit-appearance:none; -moz-appearance:none; appearance:none; color: 
 
 
 /* header */
-header { position: sticky; z-index: 10000; top: 0; left: 0; right: 0; background: #fff} header .top { height: 3rem}
+header { position: sticky; z-index: 10000; top: 0; left: 0; right: 0; background: #fff} header .top > *{ height: 3rem}
 header .top a, header .util a  {  display: block; line-height: 3rem; }
 header h1 a {font-size: 0.875rem; font-family: 'Montserrat',sans-serif;}
 header .gnb { background: #f7f7f7}
@@ -246,15 +246,18 @@ header .gnb nav ul { overflow: scroll; white-space: nowrap;}
 header .gnb nav ul li { padding-right: 0.9rem}
 header .util { position: absolute; right: 2.625rem; top: 0; font-size: 0.65rem}
 header .util ul li { padding-left: var(--px18)}
-header .btn_menu { position: relative; width: 0.95rem; height: 100%; }
-header .btn_menu:before, header .btn_menu:after  { position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0}
-header .btn_menu:before { height:var(--px30); border-top: 1px solid #515151; border-bottom: 1px solid #515151}
-header .btn_menu:after { height:1px; background: #515151}
+header > .top .btn_menu { position: relative; width: 0.95rem; }
+header > .top .btn_menu:before, header > .top .btn_menu:after  { position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0}
+header > .top .btn_menu:before { height:var(--px30); border-top: 1px solid #515151; border-bottom: 1px solid #515151}
+header > .top .btn_menu:after { height:1px; background: #515151}
 
 
-.sitemap { position: fixed; left: 100%; width: 100%; top: 3rem; bottom: 0; border-top: 1px solid #e6e6e6; z-index: 1000; font-family: 'Noto Sans KR',sans-serif; background: #fff; transition: all 0.3s ease-in-out ; }
+.sitemap { position: fixed; left: 100%; width: 100%; top: 0; bottom: 0; z-index: 1000; font-family: 'Noto Sans KR',sans-serif; background: #fff; transition: all 0.3s ease-in-out ; }
 .sitemap.active { left: 0}
-.sitemap .scroll { overflow: auto; height: calc(100vh - 3rem);}
+.sitemap > .top {border-bottom: 1px solid #e6e6e6;}
+.sitemap > .top .btn_home { display: block; height: 100%; width: 2rem; background: url(/common/images/mobile/ic_menu_home.png) no-repeat center / 50% auto}
+.sitemap > .top .btn_menu { width:1.2rem; height:100%; background: url(/common/images/ico_close.png) no-repeat right center / 85% auto }
+.sitemap > .scroll { overflow: scroll; height: calc(100vh - 3rem); box-sizing: border-box; }
 .sitemap .info_user .txt_type1 > .left { line-height: 1.5rem; font-size: 0.825rem}
 .sitemap .info_user .txt_type1 > .right > *{ padding: 0 var(--px28); line-height: 1.5rem; vertical-align: middle;}
 .sitemap .info_user .txt_type1 > .right .btn_black { margin-left: 7px}
@@ -281,12 +284,17 @@ header .btn_menu:after { height:1px; background: #515151}
 .gnb_total > ul ul > li a { display: block; line-height: 2.1rem; background: #fff; text-align: center; border: 1px solid #dcdcdc; border-radius: var(--px5); overflow: hidden;}
 .sitemap .sns { padding: 1.125rem 0 3rem}
 .sitemap .sns h2 { color: #222; font-size: var(--px30); letter-spacing: -0.075em}
-.sitemap .sns ul li { margin-left: var(--px5); float: left; background: #444; border-radius: var(--px6);}
-.sitemap .sns ul li a { display: block; width: 1.52rem; height: 1.52rem;  }
+.sitemap .sns ul li { margin-left: var(--px10); float: left; background: #444; border-radius: var(--px6);}
+.sitemap .sns ul li a { display: block; width: 1.7rem; height: 1.7rem; background-size:100% 100%; background-repeat: no-repeat; background-position: center;}
+.sitemap .sns ul li.facebook a { background-image:url(/common/images/mobile/btn_fb.png) }
+.sitemap .sns ul li.insta a { background-image:url(/common/images/mobile/btn_insta.png) }
+.sitemap .sns ul li.youtube a { background-image:url(/common/images/mobile/btn_youtube.png) }
+.sitemap .sns ul li.blog a {background-image:url(/common/images/mobile/btn_blog.png)  }
 
 
 /* 하단 픽스 메뉴 */
-.nav_fixed { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; font-size: var(--px22); z-index: 100; text-align: center;}
+.nav_fixed { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-radius: 0.5rem 0.5rem 0 0; font-size: var(--px22); z-index: 100; text-align: center; box-shadow: 0px -0.1rem 0.4rem 0.1rem rgba(0, 0, 0, 0.1);}
+/* .nav_fixed:after { content:""; position: absolute; left: 50%; bottom:100%; transform: translateX(-50%); width: 20%; height: 2rem; background: red; clip-path: polygon(50% 23%, 100% 50%, 51% 82%, 0% 50%);} */
 .nav_fixed ul { box-shadow: 0px -4px 8.46px 0.54px rgba(0, 0, 0, 0.04) }
 .nav_fixed ul li { flex: 1;}
 .nav_fixed ul li a { display: block; padding: 1.25rem 0 var(--px16); color: #656565}

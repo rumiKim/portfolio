@@ -114,7 +114,8 @@ i { font-style: normal;}
 .nav_float .appdown a { padding: 0.95rem 0.6rem; }
 .nav_float .appdown .add_after:after { margin-left: 0.5rem; width: 0.5rem; height: 0.55rem; background: url(/common/images/ico_download_b.png) no-repeat center / 100% 100% ;}
 .nav_float ul li:not(.appdown) a { padding: 0.7rem 0 0.95rem}
-.nav_float ul li:not(.appdown) a > p:before { content: ""; display:inline-block; margin-bottom: 0.6rem; width: 2.5rem; height: 2.5rem; border-radius: 100%; background: url(/common/images/ico_cash_float.png) no-repeat center / 60% auto #eee}
+.nav_float ul li:not(.appdown) a > p:before { content: ""; display:inline-block; margin-bottom: 0.6rem; width: 2.5rem; height: 2.5rem; border-radius: 100%; background: url(/common/images/ico_cash_float.png) no-repeat center / 50% auto #eee}
+.nav_float ul li.coupon a > p:before { background-image: url(/common/images/ico_coupon_float.png)}
 .btn_top { padding: 0.25rem 0; width: 100%; background: #fff; border-radius: 0.25rem}
 .btn_top:after { margin-left: 0.25rem; width: 0.5rem; height: 0.3rem; background: url(/common/images/ico_arr_top_prev.png) no-repeat center / 100% 100% }
 
@@ -124,7 +125,7 @@ i { font-style: normal;}
 /* popup */
 .popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; line-height: 1}
 .popup.active { display: block !important;}
-.popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff; overflow: hidden;}
+.popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); min-width: 700px; background: #fff; overflow: hidden;}
 .popup.type1 > .inner {   border-radius: 1rem;}
 .popup.type1 > .inner > .btn_close:after { content: "X"; display: block; position: absolute; right: 1.8rem; top: 2rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
 .popup.type2 .btn_close { position: absolute; right: 0; top: 0; }
@@ -199,7 +200,8 @@ header .wrap_com { position: relative;}
 header .mainlogo { z-index: 2000; }
 header h1 a { color: #008ecb;}
 header .gnb { position: relative; z-index: 1000; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; background: #fff}
-header .btn_menu { width: 1.3rem; height: 0.8rem; background: url(/common/images/btn_menu.png) no-repeat left center / 100% auto}
+header .btn_menu { width: 1.3rem; height: 1.3rem; background: url(/common/images/btn_menu.png) no-repeat left center / 100% auto}
+header .btn_menu.active { background: url(/common/images/ico_close.png) no-repeat center / 100% 100% }
 header .nav_gnb { padding-left: 1.7rem}
 header .nav_gnb li ~ li { padding-left: 1.5rem}
 header .nav_gnb li, header .nav_guide li  { float: left; height: 3.5rem; line-height: 3.5rem}

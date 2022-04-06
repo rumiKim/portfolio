@@ -10,6 +10,7 @@ for (let i = 0; i < noLink.length; i++) {
 const btn_menu = document.querySelector('.btn_menu'),
   sitemap = document.querySelector('.sitemap');
 btn_menu.addEventListener('click', function() {
+  this.classList.toggle('active')
   sitemap.classList.toggle('open');
 });
 
@@ -47,12 +48,24 @@ function showPopup(param) {
 }
 
 
+// scroll to top
+
+const scrollTopBtn = document.querySelector('.btn_top');
+scrollTopBtn.addEventListener('click',function(){
+  window.scrollTo(0, 0);
+});
+
+
+
 $(function() {
   $("input[type='file']").on('change', function() {
     var fileName = $(this).val();
     $(this).next('.fileName').val(fileName)
   });
 });
+
+
+
 
 
 // tab_type1
