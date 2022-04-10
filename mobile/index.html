@@ -51,7 +51,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="/contents/mega.html" class="btn_buy btn_blue">메가밀리언 주문하기</a>
+                  <a href="/mobile/contents/mega-step1.html" class="btn_buy btn_blue">메가밀리언 주문하기</a>
                 </div>
               </div>
             </li>
@@ -83,7 +83,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="/contents/power.html" class="btn_buy btn_red">파워볼 주문하기</a>
+                  <a href="/mobile/contents/power-step1.html" class="btn_buy btn_red">파워볼 주문하기</a>
                 </div>
               </div>
             </li>
@@ -128,7 +128,7 @@
                   </div>
                   <ul class="list_link clear">
                     <li><a href="" class="bx_type1">방송보기</a></li>
-                    <li><a href="/contents/draw/draw-mega.html" class="btn_blue">상세결과보기</a></li>
+                    <li><a href="/mobile/contents/draw/draw-mega.html" class="btn_blue">상세결과보기</a></li>
                   </ul>
                 </div>
               </li>
@@ -159,7 +159,7 @@
                   </div>
                   <ul class="list_link clear">
                     <li><a href="" class="bx_type1">방송보기</a></li>
-                    <li><a href="/contents/draw/draw-power.html" class="btn_red">상세결과보기</a></li>
+                    <li><a href="/mobile/contents/draw/draw-power.html" class="btn_red">상세결과보기</a></li>
                   </ul>
                 </div>
               </li>
@@ -186,46 +186,24 @@
             </li>
           </ul>
         </section>
-        <section class="sec_quick f_GmarketSans lh1">
-          <h2 class="hide">빠른 안내</h2>
-          <ul class="flex space wrap">
-            <li class="">
-              <a href="/contents/mypage/history.html">
-                <span>메가밀리언 | 파워볼</span>
-                <strong>구매티켓 보기</strong>
-                <p>내가 구매한 티켓 내역확인</p>
-              </a>
-            </li>
-            <li class="">
-              <a href="" style="background-image:url(/common/images/ico_promotion.png)">
-                <span>슈퍼로또코리아</span>
-                <strong>프로모션</strong>
-                <p>이달의 프로모션을 확인하세요</p>
-              </a>
-            </li>
-            <li class="">
-              <a href="/contents/cs/faq.html" style="background-image:url(/common/images/ico_AtoZ.png)">
-                <span>FAQ</span>
-                <strong>자주하는 질문</strong>
-                <p>회원님들이 자주 묻는 질문</p>
-              </a>
-            </li>
-            <li class="">
-              <a href="" style="background-image:url(/common/images/ico_heart.png)">
-                <span>무엇을 도와 드릴까요?</span>
-                <strong>고객센터</strong>
-                <p>빠른 안내 도와드리겠습니다.</p>
-              </a>
-            </li>
-          </ul>
-        </section>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/mobile/inc/quick.html";?>
       </div>
       <section class="sec_notice f_NotoSansKR">
-        <div class="wrap_com flex">
+        <div class="flex">
           <h2 class="add_before"><span>공지사항</span></h2>
-          <div class="swiper-container slide">
+          <div class="swiper-container slide ls75">
+            <div class="btn_slide">
+              <button class="btn_prev"><span class="hide">다음</span></button>
+              <button class="btn_next"><span class="hide">이전</span></button>
+            </div>
             <ul class="swiper-wrapper ">
-              <li><a href="">슈퍼로또코리아 오픈기념 이벤트 메가밀리언<br>
+              <li class="swiper-slide"><a href="">슈퍼로또코리아 오픈기념 이벤트 메가밀리언<br>
+                  파워코리아 구매 5% 할인쿠폰 선착순</a>
+              </li>
+              <li class="swiper-slide"><a href="">슈퍼로또코리아 오픈기념 이벤트 메가밀리언<br>
+                  파워코리아 구매 5% 할인쿠폰 선착순</a>
+              </li>
+              <li class="swiper-slide"><a href="">슈퍼로또코리아 오픈기념 이벤트 메가밀리언<br>
                   파워코리아 구매 5% 할인쿠폰 선착순</a>
               </li>
             </ul>
