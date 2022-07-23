@@ -1,0 +1,182 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+  <main id="main">
+    <section class="section_sub" style="background-image:url(/common/images/img_sub04.jpg)">
+      <div>
+        <div class="wrap">
+          <div class="bx_txt color_w">
+            <p class="wow fadeInDown">sejong<br>grenoble daegyo</p>
+            <span>존경 받는 삶에서 여유 있는 삶으로<br>
+              두번째 인생이 시작되는 곳! 세종 그르노블 대교</span>
+          </div>
+        </div>
+        <button class="btn_scrollDown">SCROLL DOWN</button>
+      </div>
+    </section>
+    <div class="wrap_tab">
+      <ul class="clear">
+        <li><a href="/contents/sale/sale.html">분양안내</a></li>
+        <li><a href="/contents/sale/reserve.html" class="on">방문예약</a></li>
+        <li><a href="/contents/sale/map.html">오시는길</a></li>
+      </ul>
+    </div>
+    <section class="sec_layout wrap type2 bg_type1" style="margin-bottom:100px;">
+      <div class="bx_heading2">
+        <h2 class="heading" style="padding-bottom:10px;">방문예약</h2>
+        <span>사랑하는 가족과 함께 그르노블을 찾아 주세요</span>
+      </div>
+      <ul style="margin-bottom:40px;">
+        <p style="line-height:26px;font-size:18px;">사전 방문예약을 해주시면 담당자를 배정하여 친절하게 안내를 드리고 있습니다.<br>
+        ※문의 사항은 1588-000로 문의 주셔도 됩니다.
+</p>
+      </ul>
+      <form name="contactForm" id='contactForm' method="post" action=''>
+        <h3 class="heading" style="margin-bottom:10px;">방문예약</h3>
+        <ul class="list_form">
+          <li>
+            <p><label for="name">이름</label></p>
+            <div>
+             <input type="text" name="name" id="name" placeholder="이름 *" class="big-input" value="<?=$_POST[name]?>">
+            </div>
+          </li>
+          <li>
+            <p><label for="tel">휴대전화</label></p>
+            <div><input type="text" name="hp" id="hp" placeholder="전화번호 *" class="big-input" value="<?=$_POST[hp]?>"></div>
+          </li>
+          <li>
+            <p><label for="date">방문희망일</label></p>
+            <div><input type="date" id="gubun" name="gubun" value="<?=$_POST[gubun]?>" class="bg-transparent no-margin-bottom"></div>
+          </li>
+        </ul>
+        <h3 class="heading" style="margin-bottom:10px;">개인정보수집 및 마케팅 활용동의</h3>
+        <ul class="list_form agree">
+          <li>
+            <p style="line-height:25px;">개인정보수집동의<br> [필수]</p>
+            <div>
+              <div class="bx_txt" style="padding:10px;line-height:25px;font-size:14px;color:#777"><strong>개인정보 수집 및 이용목적</strong><br><br>
+
+<strong>수집하는 개인정보 항목</strong><br>
+ 회사는 관심고객등록 등을 통하여 아래와 같은 개인정보를 수집하고 있습니다.<br>
+ - 수집항목 : 이름, 휴대전화번호, 이메일, 주소 등<br>
+ - 수집방법 : 홈페이지 관심고객등록<br><br>
+
+<strong>개인정보의 보유 및 이용기간</strong><br>
+회사는 개인정보 수집 및 이용목적이 달성된 후에는 지체 없이 파기합니다.<br>
+(단, 전자상거래 등에서 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 일정한 기간 동안 회원 정보를 보관합니다.)<br><br>
+
+<strong>거부할 권리</strong><br>
+- 귀하께서는 개인정보 수집 및 이용을 거부하실 수 있습니다.<br>
+(단, 이 경우 분양정보 안내 등의 서비스를 제공해 드릴 수 없습니다.)
+
+
+</div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio"  id="check01" checked="" class="chk_type1"><label for="agree_y">동의함</label></li>
+                  <li><input type="radio" id="agree_n" class="chk_type1"><label for="agree_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p style="line-height:25px;">개인정보 마케팅 동의<br> [선택]</p>
+            <div>
+              <div class="bx_txt" style="padding:10px;line-height:25px;font-size:14px;color:#777"><strong>회사는 상기 고객 서비스 제공을 위하여 필요 시 아래와 같은 외부 전문업체에 전산 업무를 위탁하여 운영하고 있습니다.</strong><br><br>
+
+<strong>개인정보처리의 위탁에 관한 사항</strong><br>
+ 수탁업체<br>
+ - ㈜세종지에이치개발,  ㈜코코아컴퍼니 <br><br>
+
+<strong>수집목적</strong><br>
+마케팅 및 광고활용 (분양 및 브랜드 정보 고지관련 일체)<br><br>
+
+<strong>항목</strong><br>
+전화번호, 성명, 방문희망일<br><br>
+
+<strong>보유기간</strong><br>
+분양 완료 시까지
+
+</div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree2_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio"  id="agree2_y" checked="" class="chk_type1"><label for="agree2_y">동의함</label></li>
+                  <li><input type="radio"  id="agree2_n" class="chk_type1"><label for="agree2_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <!-- <li>
+            <p>취급위탁동의</p>
+            <div>
+              <div class="bx_txt"></div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree3_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio" name="agree3" id="agree3_y" class="chk_type1"><label for="agree3_y">동의함</label></li>
+                  <li><input type="radio" name="agree3" id="agree3_n" class="chk_type1"><label for="agree3_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li> -->
+          <!-- <li>
+            <p>연령동의</p>
+            <div>
+              <div class="bx_txt"></div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree4_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio" name="agree4" id="agree4_y" class="chk_type1"><label for="agree4_y">동의함</label></li>
+                  <li><input type="radio" name="agree4" id="agree4_n" class="chk_type1"><label for="agree4_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+        <ul class="bx_btn clear">
+          <li><button class="btn_type1 black" id="" type="button" onclick="javascript: contactFunc()">등록하기</button></li>
+          <li><button class="btn_type1" id="" type="button" onclick="javascript: contactFunc()">취소</button></li>
+        </ul>
+
+     </form>
+
+
+	 <script>
+function contactFunc(){
+	if($("#name").val()==""){
+		alert("고객명을 입력해 주세요");
+		$("#name").focus();
+	}else if($("#hp").val()==""){
+		alert("전화번호를 입력해 주세요");
+		$("#hp").focus();
+	}else if($("#gubun").val()==""){
+		alert("방문예약일자를 선택해 주세요");
+		$("#gubun").focus();
+	}else if($("#check01").is(":checked")==false){
+		alert("개인정보 이용에 동의 하셔야 합니다.");
+		$("#check01").focus();
+	}else{
+		var contactForm = document.getElementById("contactForm");
+		contactForm.action="/contents/contact_action.php";
+		contactForm.submit();
+	}
+}
+</script>
+
+
+
+
+
+
+    </section>
+  </main>
+
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</body>
+
+</html>

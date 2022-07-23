@@ -1,0 +1,19 @@
+/* mobile css*/
+html { font-size: 20px;}
+body { font-size: 1rem;}
+
+
+
+.wrap { padding-left: .75rem; padding-right: .75rem; box-sizing: border-box;}
+
+
+
+
+
+header { padding-top:.85rem; height: 3.75rem; background: rgba(51,51,51,.8); box-sizing: border-box; line-height: 1; font-size: 0}
+header > div > h1 { float: left;}
+header > div > button { float: right;}
+header .btn_menu { position: relative; width: 2rem; height: 2rem; background: url(../images/ico_menu.png) no-repeat center;}
+/* header .btn_menu:after { content:""; display: block; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: #fff; transform: translateY(-50%);} */
+
+.bx_menu { display: none}

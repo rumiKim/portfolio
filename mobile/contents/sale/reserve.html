@@ -1,0 +1,126 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/mobile/include/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <? include $_SERVER['DOCUMENT_ROOT']."/mobile/include/header.html";?>
+  <main id="main">
+    <section class="section_sub">
+      <div>
+        <div class="wrap">
+          <div class="bx_txt color_w">
+            <p>sejong<br>grenoble goun</p>
+            <span>존경 받는 삶에서 여유 있는 삶으로<br>
+              두번째 인생이 시작되는 곳! 세종 그르노블 대교</span>
+          </div>
+        </div>
+        <button class="btn_scrollDown">SCROLL DOWN</button>
+      </div>
+    </section>
+    <div class="wrap_tab">
+      <ul class="clear">
+        <li><a href="/contents/sale/sale.html">분양안내</a></li>
+        <li><a href="/contents/sale/reserve.html" class="on">방문예약</a></li>
+        <li><a href="/contents/sale/map.html">오시는길</a></li>
+      </ul>
+    </div>
+    <section class="sec_layout wrap type2 bg_type1">
+      <div class="bx_heading2">
+        <h2 class="heading">방문예약</h2>
+        <span>사랑하는 가족과 함께 그르노블을 찾아 주세요</span>
+      </div>
+      <ul>
+        <li>사전 방문예약을 해주시면 담당자를 배정하여 친절하게 안내를 드리고 있습니다.</li>
+        <li>문의 사항은 1588-000로 문의 주셔도 됩니다.
+</li>
+      </ul>
+      <form class="form_type1">
+        <h3 class="heading">방문예약</h3>
+        <ul class="list_form">
+          <li>
+            <p><label for="name">이름</label></p>
+            <div>
+              <input type="text" id="name" placeholder="홍길동">
+            </div>
+          </li>
+          <li>
+            <p><label for="tel">휴대전화</label></p>
+            <div><input type="tel" id="tel"></div>
+          </li>
+          <li>
+            <p><label for="date">방문희망일</label></p>
+            <div><input type="date" id="date"></div>
+          </li>
+        </ul>
+        <h3 class="heading">개인정보수집동의</h3>
+        <ul class="list_form agree">
+          <li>
+            <p>개인정보수집동의</p>
+            <div>
+              <div class="bx_txt"></div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio" name="agree" id="agree_y" class="chk_type1"><label for="agree_y">동의함</label></li>
+                  <li><input type="radio" name="agree" id="agree_n" class="chk_type1"><label for="agree_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>개인정보 마케팅 동의</p>
+            <div>
+              <div class="bx_txt"></div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree2_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio" name="agree2" id="agree2_y" class="chk_type1"><label for="agree2_y">동의함</label></li>
+                  <li><input type="radio" name="agree2" id="agree2_n" class="chk_type1"><label for="agree2_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>취급위탁동의</p>
+            <div>
+              <div class="bx_txt"></div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree3_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio" name="agree3" id="agree3_y" class="chk_type1"><label for="agree3_y">동의함</label></li>
+                  <li><input type="radio" name="agree3" id="agree3_n" class="chk_type1"><label for="agree3_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>연령동의</p>
+            <div>
+              <div class="bx_txt"></div>
+              <div class="bx_agree clear">
+                <p class="left"><label for="agree4_y">위 내용을 확인하였고 동의합니다.</label></p>
+                <ul class="list_ra right">
+                  <li><input type="radio" name="agree4" id="agree4_y" class="chk_type1"><label for="agree4_y">동의함</label></li>
+                  <li><input type="radio" name="agree4" id="agree4_n" class="chk_type1"><label for="agree4_n">동의안함</label></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="bx_btn clear">
+          <li><button class="btn_type1 black">등록하기</button></li>
+          <li><button class="btn_type1">취소</button></li>
+        </ul>
+
+      </form>
+
+
+
+
+    </section>
+  </main>
+
+  <? include $_SERVER['DOCUMENT_ROOT']."/mobile/include/footer.html";?>
+
+</body>
+
+</html>

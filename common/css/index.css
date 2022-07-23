@@ -1,0 +1,50 @@
+
+h1 > a { position: relative; z-index: 30; display: inline-block; height: 100%; width: 50%; background: url(../images/logo_main_s.svg) no-repeat center / 7rem auto;}
+
+
+
+
+
+
+
+
+/* popup_main */
+.popup_main { transform: none; position: fixed; z-index: 100; width: 100vw; height: 100vh; left: 0; right: 0; top: 0; bottom: 0; background: rgba(242,242,242,0.8); box-sizing: border-box; font-size: .8rem;}
+.popup_main > div { position: relative; top: 50%; transform: translateY(-50%);}
+.popup_main > div .flexbox_space { font-family: 'scoreM'}
+.popup_main .btn_popupClose { width: 50px; height: 2rem; font-size: .8rem; font-family: 'scoreM'; background: none; }
+
+
+
+.chk_notOpen + label::after { content:""; display: inline-block; margin-left: .5rem; width: .65rem; height: .65rem; border: 2px solid #000; vertical-align: -2px;}
+.chk_notOpen:checked + label::after { background: url(../images/ico_chk_white_02.svg) no-repeat center / 100% auto #000;}
+
+
+
+
+/* section_poster */
+.section_poster img {width:100%; }
+.section_poster .swiper-slide { width: 100%;}
+.section_poster .swiper-slide a { display: block; width: 100%;}
+.btn_slide { position: absolute; top: 50%; z-index: 20; transform: translateY(-50%); width: 40px; height: 40px; background: red;}
+.btn_slide.next { right: 0; margin-right:-10px;}
+.btn_slide.prev { left: 0; margin-left: -10px;}
+
+
+/* indexx h2 */
+/* .body_idx main > section > .flexbox_space { padding: 1.5rem 0 .5rem; font-size: .8rem;} */
+/* .body_idx main > .section_poster > .flexbox { padding: 6px 0;} */
+h2 { text-align: left; font-weight: normal;}
+h2.deco { display: flex; align-items: center; vertical-align: middle; font-size: .8rem;}
+.deco::before,
+.deco::after { content: ""; margin-right: .5rem; display: inline-block; width: 1rem; height: 2rem;}
+.deco::after { width: 1rem; height: 12px; background: url(../images/ico_arr_right_black.svg) no-repeat center / auto 100%; }
+
+.contest_brand h2::before { background: url(../images/ico_deco_brand_02.svg) no-repeat center left 0 / 100%;}
+.contest_daily h2::before { background: url(../images/ico_deco_daily.svg) no-repeat center left 0 / 100%;}
+.contest_self h2::before { background: url(../images/ico_deco_diy.svg) no-repeat center left 0 / 100%;}
+.contest_pick h2::before { background: url(../images/ico_deco_pick.svg) no-repeat center left 0 / 100%;}
+
+
+/* 브랜드 아이디어 */
+.contest_brand.wrap { padding-bottom:2.5rem;}

@@ -1,0 +1,22 @@
+
+
+
+
+
+
+.swiper-slide-active .ani { animation: ani_up 1.5s 1 ease-out forwards; opacity: 0}
+
+.ani.ani02 { animation-delay: 0.8s; margin: 1rem 0}
+.ani.ani03 { animation-delay: 1.2s}
+  @keyframes ani_up {
+    0% { transform: translateY(100px); opacity: 0}
+    100% { transform: translateY(0); opacity: 1}
+  }
+
+
+
+  @keyframes ani_move {
+    0% { transform: translateY(0) translateX(-50%); ;}
+    50% { transform: translateY(10px) translateX(-50%); ;}
+    100% { transform: translateY(0) translateX(-50%); ;}
+  }
