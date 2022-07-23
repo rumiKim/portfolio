@@ -1,0 +1,95 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body>
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+
+
+	<main id="main" class="main_sub">
+
+		<section class="section_history wrap margin0">
+			<h3><a href="#" class="title_type2">히스토리</a></h3>
+			<div>
+				<ul class="list_imgbox flexbox_space">
+					<li>
+						<a href="pick_history_details.html">
+							<p class="txt_title">제 8회 산업안전보건 논문경진대회</p>
+							<span class="">기획&middot;아이디어</span>
+							<div class="wrap_img">
+								<img src="../../../common/images/img_poster_04.jpg" alt="">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="pick_history_details.html">
+							<p class="txt_title">강원도 여행 영상공모전 디스커버 강원도</p>
+							<span class="">광고&middot;마케팅</span>
+							<div class="wrap_img">
+								<img src="../../../common/images/img_poster_05.jpg" alt="">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="pick_history_details.html">
+							<p class="txt_title">제 9회 엔지니어링 산업 설계대전</p>
+							<span class="">과학&middot;공학</span>
+							<div class="wrap_img">
+								<img src="../../../common/images/img_poster_06.jpg" alt="">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="pick_history_details.html">
+							<p class="txt_title">2020 도로시쉐어하우스 운영 스터디카페 네이밍 공모전</p>
+							<span class="">네이밍&middot;슬로건</span>
+							<div class="wrap_img">
+								<img src="../../../common/images/img_poster_07.jpg" alt="">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="pick_history_details.html">
+							<p class="txt_title">2020 도로시쉐어하우스 운영 스터디카페 네이밍 공모전</p>
+							<span class="">네이밍&middot;슬로건</span>
+							<div class="wrap_img">
+								<img src="../../../common/images/img_poster_07.jpg" alt="">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="pick_history_details.html">
+							<p class="txt_title">2020 도로시쉐어하우스 운영 스터디카페 네이밍 공모전</p>
+							<span class="">네이밍&middot;슬로건</span>
+							<div class="wrap_img">
+								<img src="../../../common/images/img_poster_07.jpg" alt="">
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="wrap_paging">
+				<ol>
+					<li><a href="" class="on">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+				</ol>
+			</div>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+	<script>
+		$(function() {
+
+			var itemsDone = $('.list_common > li.items_done'),
+				itemsBest = $('.list_common > li.items_best');
+
+			itemsDone.find('.bx_title').append('<span class="circle_red display_flex">참여<br>완료</span>');
+			itemsBest.find('.bx_title').append('<span class="circle_blue display_flex">베스트 닉네임</span>');
+		});
+	</script>
+</body>
+
+</html>

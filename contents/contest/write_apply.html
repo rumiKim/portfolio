@@ -1,0 +1,64 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="noFixedMenu">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main id="main" class="yScroll">
+			<section class="section_make wrap margin0">
+				<form>
+					<fieldset>
+						<legend class="hide">아이디어 응모 내용 작성 양식</legend>
+					</fieldset>
+					<p class="txt_required">* 필수 입력 항목입니다.</p>
+					<ul class="list_rigist list_type1">
+						<li>
+							<p>
+								<label for="apply_title" class="deco_blue">
+									<span class="deco_required">응모 제목</span>
+								</label>
+							</p>
+								<input type="text" id="apply_title" placeholder="응모 제목을 입력해주세요">
+						</li>
+						<li>
+							<p>
+								<label for="apply_descript" class="deco_blue">
+									<span class="deco_required">응모 설명</span>
+								</label>
+							</p>
+							<input type="text" id="apply_descript" placeholder="응모 설명을 입력해주세요">
+						</li>
+						<li>
+							<p>
+								<label class="deco_blue">
+									<span>파일 첨부</span>
+								</label>
+							</p>
+							<div class="flexbox wrap_file">
+								<span class="bx_fileName">파일을 첨부해주세요</span>
+								<label for="apply_file" class="btn_file btn_list">첨부파일</label>
+								<input type="file" id="apply_file" class="input_ori">
+							</div>
+						</li>
+					</ul>
+					<button type="button" class="btn_apply btn_blue">
+						참여하기
+					</button>
+				</form>
+			</section>
+	</main>
+	<!-- footer -->
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+	<div class="bx_apply bx_popup">
+	  <div>
+	    <p>참여 완료!</p>
+	    <span>선정된 아이디어는<br>
+	      '알림'을 통해 확인 가능 합니다.</span>
+	    <a href="javascript:history.back();" class="btn_popupClose btn_blue">확인</a>
+	  </div>
+	</div>
+
+</body>
+
+</html>

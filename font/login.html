@@ -1,0 +1,57 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+<body class="noFixedMenu body_login">
+	<main class="main_login yScroll">
+		<section class="section_login margin0">
+			<h2 class="hide">로그인</h2>
+			<div class="bx_logo">
+				<img src="../../common/images/logo_main.svg" alt="아이디어 매일 보여주다, The Shower">
+			</div>
+			<form class="form_login form_type1">
+				<fieldset>
+					<legend class="hide">로그인 정보 입력 양식</legend>
+				<ul>
+					<li>
+						<input type="email" placeholder="이메일">
+					</li>
+					<li>
+						<input type="password" placeholder="비밀번호">
+					</li>
+					<li>
+						<input type="checkbox" id="chk_login" class="chk_type1">
+						<label for="chk_login">로그인 상태 유지</label>
+					</li>
+				</ul>
+				<a href="../../index.html" class="btn_blue">LOGIN</a>
+			</fieldset>
+				<fieldset>
+					<legend class="hide">아이디/비밀번호 찾기</legend>
+					<ul class="flexbox_space">
+						<li><a href="#">아이디·비밀번호 찾기</a></li>
+						<li><a href="register_step01.html">회원가입</a></li>
+					</ul>
+				</fieldset>
+			</form>
+		</section>
+
+		<section class="section_snslogin margin0">
+			<h2><span>다른계정으로 로그인하기</span></h2>
+			<nav>
+				<ul class="sns flexbox_space">
+					<li><a href=""><img src="../../common/images/ico_naver.svg" alt="네이버"></a></li>
+					<li><a href=""><img src="../../common/images/ico_facebook.svg" alt="페이스북"></a></li>
+					<li><a href=""><img src="../../common/images/ico_kakao.svg" alt="카카오"></a></li>
+					<li><a href=""><img src="../../common/images/ico_google.svg" alt="구글"></a></li>
+				</ul>
+			</nav>
+		</section>
+	</main>
+
+
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+
+
+</body>
+
+</html>

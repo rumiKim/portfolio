@@ -1,0 +1,78 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="noFixedMenu">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main id="main" class="yScroll">
+		<section class="section_secesstion wrap margin0">
+			<h3 class="title_type2">회원탈퇴안내</h3>
+			<div>
+				<ol class="list_num_bracket">
+					<li><p>회원탈퇴를 신청하시면 <span class="color_red">해당 아이디는 즉시 탈퇴처리</span>되며, 이후 <span class="color_red">해당 아이디는영구적으로 사용이 중지</span>되므로 해당 아이디로는 재가입이 불가능 합니다.</p></li>
+					<li><p><span class="color_red">회원 탈퇴 후, 1주일 동안은 회원가입이 불가능</span> 합니다.</p></li>
+					<li><p><span class="color_red">회원탈퇴 시, 남아있는 가상계좌 잔액은 더샤워 고객센터를 통해 요청하시면 출금신청이 가능</span>합니다.</p></li>
+					<li><p>활동중인 회원의 가상계좌로 지급된 상금의 소멸기한은 없습니다.</p>
+						<ol>
+							<li>① 단, <span class="color_red">최종 로그인 기록으로부터 3년 이상 더샤워의 어플리케이션에 로그인한 기록이 없을 경우, 더 이상 활동을 하지 않는 회원으로 간주하여 가상계좌 잔액이 소멸</span>됩니다.</li>
+							<li>② 위 ①항과 마찬가지로 가상계좌에 잔액이 남아있는 채로 탈퇴한 탈퇴회원의 디자이너상금도 소멸됩니다.</li>
+							<li>③ 소멸기준일은 매년 12월 31일입니다.</li>
+						</ol>
+					</li>
+				</ol>
+				</div>
+			<form>
+				<fieldset>
+					<legend class="hide">회원탈퇴 신청작성 양식</legend>
+				</fieldset>
+				<p class="txt_required">* 필수 입력 항목입니다.</p>
+				<ul class="list_rigist list_type1">
+					<li>
+						<p >
+							<label for="secede_em" class="deco_blue">
+								<span class="deco_required">아이디(이메일)</span>
+							</label>
+						</p>
+							<input type="email" id="secede_em" placeholder="이메일">
+					</li>
+					<li>
+						<p>
+							<label for="secede_pw" class="deco_blue">
+								<span class="deco_required">
+									비밀번호
+								</span>
+							</label>
+						</p>
+						<input type="password" id="secede_pw" placeholder="비밀번호 입력(6 ~ 12자리)">
+					</li>
+					<li>
+						<p>
+							<label for="secede_txt" class="deco_blue">
+								<span>
+									더샤워에 바라는 점
+								</span>
+							</label>
+						</p>
+						<textarea placeholder="더샤워에 바라는 점" id="secede_txt"></textarea>
+					</li>
+				</ul>
+				<div class="bx_btn">
+					<ul>
+						<li><button type="button" class="btn_end btn_blue">확인</button></li>
+						<li><button type="button" class="btn_cancel btn_blue" onclick="history.back()">취소</button></li>
+					</ul>
+				</div>
+			</form>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+	<div class="bx_end bx_popup">
+	  <div>
+	    <p>회원탈퇴가 완료되었습니다.</p>
+	    <span class="font12 color_gray">그동안 아이디어샤워를 이용해 주셔서 감사합니다.<br>보다 나은 모습으로 다시 찾아 뵙겠습니다.</span>
+	      <a href="/contents/my/login.html" class="btn_popupClose btn_blue">확인</a>
+	  </div>
+	</div>
+</body>
+
+</html>

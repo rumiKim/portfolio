@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<title>The Shower</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="common/css/default.css">
+	<link rel="stylesheet" href="common/css/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="common/css/style.css">
+	<link rel="stylesheet" media="screen and (max-width:1024px)" href="common/css/style_tablet.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="common/js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		var UserAgent = navigator.userAgent;
+		if (UserAgent.match(/iPhone|ipad|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+			location.href = "mobile.html";
+		}
+	</script>
+
+
+</head>
+
+<body>
+
+	<!-- 디자인 1 -->
+	<style>
+		#page01 {
+			padding: 0;
+			margin: 0;
+			background: url(common/images/microsite_bg.png);
+			height: 100vh;
+			display: flex;
+			box-sizing: border-box;
+			border-bottom: 1px solid #9dbed8;
+		}
+
+		#page01 .leftside {
+			width: 55vw;
+			display: flex;
+		}
+
+		#page01 .leftside div:first-child {
+			width: 55%;
+			height: 100vh;
+			background: url(common/images/phone_loading.png) no-repeat;
+			background-position: 0px 50px
+		}
+
+		#page01 .leftside div:last-child {
+			width: 45%;
+			height: 100vh;
+			background: url(common/images/phone_base.png) no-repeat;
+			background-position: -100px 50%;
+		}
+
+		#page01 .rightside {
+			width: 45vw;
+			text-align: center;
+			padding-right: 100px;
+		}
+
+		#page01 .rightside div:first-child {
+			padding-top: 200px;
+			height: 65vh;
+			box-sizing: border-box;
+		}
+
+		#page01 .rightside div:last-child {
+			padding: 0;
+			height: 35vh;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		#page01 .txt {
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		#page01 .txt div {
+			margin-top: 50px;
+		}
+
+		#appstore {
+			display: inline-block;
+			width: 234px;
+			height: 68px;
+			border: 2px solid rgba(0, 0, 0, 0.8);
+			border-radius: 100px;
+			text-align: center;
+			margin-right: 5px;
+		}
+
+		#appstore:hover {
+			display: inline-block;
+			width: 234px;
+			height: 68px;
+			border: 2px solid rgba(0, 0, 0, 0.8);
+			border-radius: 100px;
+			text-align: center;
+			background: rgba(0, 0, 0, 1)
+		}
+
+		#appstore img {
+			position: relative;
+			top: 0px;
+			height: 44px;
+			padding: 10px 20px;
+			margin: 0 auto;
+		}
+
+		#appstore img:hover {
+			filter: invert(100%)
+		}
+
+		#googleplay {
+			display: inline-block;
+			width: 234px;
+			height: 68px;
+			border: 2px solid rgba(0, 0, 0, 0.8);
+			border-radius: 100px;
+			text-align: center;
+			margin-left: 5px;
+		}
+
+		#googleplay:hover {
+			display: inline-block;
+			width: 234px;
+			height: 68px;
+			border: 2px solid rgba(0, 0, 0, 0.8);
+			border-radius: 100px;
+			text-align: center;
+			background: rgba(0, 0, 0, 1)
+		}
+
+		#googleplay img {
+			position: relative;
+			top: 0px;
+			height: 44px;
+			padding: 10px 20px;
+			margin: 0 auto;
+		}
+
+		#googleplay img:hover {
+			filter: invert(100%)
+		}
+
+		#page02 {
+			padding: 0;
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			background: url(common/images/microsite_bg.png);
+			box-sizing: border-box;
+			border-bottom: 1px solid #9dbed8;
+		}
+
+		#page02 .txt {
+			position: absolute;
+			top: 200px;
+			left: 300px;
+		}
+
+		#page02 .page2_phone {
+			background: url(common/images/phone_base2.png) no-repeat;
+			background-position: 100% 5%;
+			height: 100vh;
+		}
+
+		#page03 {
+			padding: 0;
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			background: url(common/images/microsite_bg.png);
+			box-sizing: border-box;
+			border-bottom: 1px solid #9dbed8;
+		}
+
+		#page03 .txt {
+			position: absolute;
+			top: 200px;
+			left: 60%;
+		}
+
+		#page03 .page2_phone {
+			background: url(common/images/phone_base2.png) no-repeat;
+			background-position: 0% 5%;
+			height: 100vh;
+		}
+
+		#page04 {
+			padding: 0;
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			background: url(common/images/microsite_bg.png);
+			text-align: center;
+			box-sizing: border-box;
+			border-bottom: 1px solid #9dbed8;
+		}
+
+		#page04 .txt {
+			position: absolute;
+			top: 100px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		#page04 ul {
+			display: flex;
+			margin: 270px auto 0;
+			width: 75vw;
+		}
+
+		#page04 ul li:first-child {
+			width: 50%;
+			text-align: left;
+			border-right: 2px dashed rgba(0, 0, 0, 0.8)
+		}
+
+		#page04 ul li:first-child img {
+			width: 80%;
+		}
+
+		#page04 ul li:last-child {
+			width: 50%;
+			text-align: right;
+		}
+
+		#page04 ul li:last-child img {
+			width: 80%;
+		}
+
+		#page05 {
+			padding: 0;
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			background: url(common/images/microsite_bg.png);
+			text-align: center;
+		}
+
+		#page05 ul {
+			display: flex;
+			position: absolute;
+			top: 53%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#page05 ul li {
+			width: 450px;
+			margin: 0 40px;
+		}
+
+		#page05 ul li img.poster {
+			width: 420px;
+			height: auto;
+			margin-bottom: 30px;
+		}
+
+		#page05 ul li img.txt {
+			width: auto;
+			height: 50px;
+		}
+	</style>
+
+	<a href="#main" class="skip" style="display:none;">본문 바로가기</a>
+
+	<header class="clear">
+		<h1><a href="#firstPage"><img src="common/images/logo_shower.svg" style="width:218px; margin-left:60px;"></a></h1>
+
+		<ul class="sns">
+			<li>
+				<a href="#" class="facebook"><span class="hide">페이스북</span></a>
+				<a href="#" class="insta"><span class="hide">인스타그램</span></a>
+				<a href="#" class="blog"><span class="hide">네이버 블로그</span></a>
+				<a href="#" class="youtube"><span class="hide">유튜브</span></a>
+			</li>
+		</ul>
+	</header>
+
+	<main id="fullpage">
+		<section class="section" id="section0">
+
+			<!--첫페이지-->
+			<div id="page01">
+				<div class="leftside">
+					<div>
+						<!--로딩화면-->
+					</div>
+					<div>
+						<!--메인화면-->
+					</div>
+				</div>
+				<div class="rightside">
+					<div><img src="common/images/page01_title.png"></div>
+					<div class="txt">
+						<img src="common/images/page01_txt.png">
+						<div>
+							<a href="#" id="appstore"><img src="common/images/icon_appstore.svg"></a>
+							<a href="#" id="googleplay"><img src="common/images/icon_googleplay.svg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--첫페이지 끝-->
+
+		</section>
+
+
+		<section class="section" id="section1">
+			<!--두번째 페이지-->
+			<div id="page02">
+				<img src="common/images/page02_txt.png" class="txt">
+				<div class="page2_phone"></div>
+			</div>
+			<!--두번째 페이지 끝-->
+		</section>
+
+
+		<section class="section" id="section2">
+			<!--세번째 페이지-->
+			<div id="page03">
+				<img src="common/images/page03_txt.png" class="txt">
+				<div class="page2_phone"></div>
+			</div>
+			<!--세번째 페이지 끝-->
+		</section>
+
+		<section class="section" id="section3">
+			<!--네번째 페이지-->
+			<div id="page04">
+				<img src="common/images/page04_txt.png" class="txt">
+				<ul>
+					<li><img src="common/images/page04_txt2.png"></li>
+					<li><img src="common/images/page04_txt3.png"></li>
+				</ul>
+			</div>
+			<!--네번째 페이지 끝-->
+		</section>
+
+		<section class="section" id="section4">
+			<!--다섯번째 페이지-->
+			<div id="page05">
+				<ul>
+					<li><img src="common/images/poster_sample01.jpg" class="poster"><img src="common/images/page05_title01.png" class="imgTXT"></li>
+					<li><img src="common/images/poster_sample02.jpg" class="poster"><img src="common/images/page05_title02.png" class="imgTXT"></li>
+					<li><img src="common/images/poster_sample03.jpg" class="poster"><img src="common/images/page05_title03.png" class="imgTXT"></li>
+				</ul>
+			</div>
+			<!--다섯번째 페이지 끝-->
+		</section>
+
+
+	</main>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', 'thirdPage','4thPage','5thPage'],
+				sectionsColor: ['#FFF', '#FFF', '#FFF'],
+				navigation: true,
+				navigationPosition: 'right',
+				loopTop: true,
+				loopBottom: true,
+				keyboardScrolling: true,
+				slidesNavigation: true,
+			});
+
+			// $('#section2').fullpage(){
+			// 	navigation:true
+			// }
+
+
+		});
+	</script>
+
+
+
+
+
+</body>
+
+</html>

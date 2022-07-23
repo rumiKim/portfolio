@@ -1,0 +1,99 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="">
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+
+	<main>
+
+		<section class="section_apply yScroll margin0 wrap">
+			<form>
+				<fieldset>
+					<legend class="hide">공모전 개설하기 입력 양식</legend>
+				</fieldset>
+				<ul class="list_type1">
+					<li>
+						<p>
+							<label for="apply_chk" class="deco_blue">
+								<span>안내사항</span>
+							</label>
+						</p>
+						<ul class="flexlist">
+							<li>
+								<input type="checkbox" id="apply_agree_01" class="chk_type1">
+								<label for="apply_agree_01">000 안내사항 확인</label>
+								<button type="button" class="btn_viewAll btn_list">전문보기</button>
+							</li>
+							<li>
+								<input type="checkbox" id="apply_agree_02" class="chk_type1">
+								<label for="apply_agree_02">000 안내사항 확인</label>
+								<button type="button" class="btn_viewAll btn_list">전문보기</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+							<label for="apply_title" class="deco_blue">
+								<span>아이디어 제목</span>
+							</label>
+						</p>
+						<input type="text" id="apply_title" placeholder="새롭게 런칭하는 브랜드의 이름을 지어주세요">
+					</li>
+					<li>
+						<p>
+							<label for="apply_contents" class="deco_blue">
+								<span>아이디어 설명</span>
+							</label>
+						</p>
+						<input type="text" id="apply_contents" placeholder="응모 설명을 입력해주세요">
+					</li>
+					<li>
+						<p>
+							<label for="apply_descript" class="deco_blue">
+								<span>참고 내용</span>
+							</label>
+						</p>
+						<input type="text" placeholder="참고내용을 입력해주세요">
+					</li>
+					<li>
+						<p>
+							<label for="apply_descript" class="deco_blue">
+								<span>파일 첨부</span>
+							</label>
+						</p>
+						<div class="flexbox">
+							<span class="bx_fileName"></span>
+							<label for="join_file" class="btn_file btn_list">첨부파일</label>
+							<input type="file" id="join_file">
+						</div>
+					</li>
+				</ul>
+				<button type="button" class="btn_apply btn_blue">
+					요청하기
+				</button>
+			</form>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+
+
+	<div class="bx_apply bx_popup show">
+		<div>
+			<p>아이디어 요청 완료!</p>
+			<span>요청된 아이디어는 심사 승인 후<br>
+				알림을 통해 확인 가능 합니다.</span>
+			<button class="btn_popupClose btn_blue">확인</button>
+		</div>
+	</div>
+
+	<div class="bx_viewAll bx_popup">
+		<button class="btn_type1 btn_popupClose">확인</button>
+		안내사항 전문
+	</div>
+
+
+
+</body>
+
+</html>

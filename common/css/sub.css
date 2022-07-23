@@ -1,0 +1,366 @@
+
+.main_sub { font-size: .8rem;}
+.main_sub .deco::before { display: none;}
+.wrap_sub { padding: 0 5vw}
+.bar_nav h2 a { position: relative; z-index: 30; display: inline-block; height: 100%; width: 50%; font-family: 'scoreM'}
+
+/* loading.html */
+.bx_logo { position: absolute; left: 13.76%; top: 50%; transform: translateY(-50%); width: 10rem;}
+.bx_logo img { width: 100%;}
+
+/* notice.html */
+.link_type1 { display: inline-block; margin-top: .5rem; padding: 0 1rem; height: 1.5rem; line-height: 1.5rem; border-radius: 1.5rem; background: var(--Blue); color: #fff;}
+.link_type1.btn_next::after { width: .7rem; height: .58rem; }
+
+/* ---- login.html ----*/
+.body_login { padding-top: 0;}
+.body_login footer { padding: 0;}
+.main_login { padding-left:20.53%; padding-right:20.53%;}
+.section_login {  text-align: center; box-sizing: border-box; font-size: .7rem;}
+.section_login .bx_logo { position: static; transform: none; margin: 0 auto; padding:3rem 0 2rem; width: 95%;}
+.bi_txt {font-size:30px; padding:0; margin:15px 0 0 0;}
+
+/* form */
+.form_type1 { text-align: left;}
+.form_type1 ul li { padding: 0 0 .5rem;  }
+.form_type1 ul li input { padding:2px 0 0; padding-left:15px; width: 100%; height: 1.85rem; line-height: 1.5rem; background-color: #FFF; border:1px solid #000; border-radius: 1.5rem; box-sizing:border-box;}
+.form_type1 ul li input::-webkit-input-placeholder { line-height: 1.85rem;}
+.section_login .btn_blue { margin: 1rem auto ;}
+.section_login .list_link li a { display: inline-block; height: 2rem; line-height: 2rem}
+
+/* section_snslogin */
+.body_login { padding-top: 0;}
+.section_snslogin h2 { margin: 1.5rem auto .8rem; text-align: center; font-size: .7rem; font-weight: normal; }
+.section_snslogin h2 span { padding: 0 .5rem;}
+.section_snslogin h2::before,
+.section_snslogin h2::after { content:""; display: inline-block; height: 1px; width: 5%; background: #000; vertical-align: middle;}
+.sns li a { display: block; width: 2.3rem; height: 2.3rem; line-height: 2.3rem; border-radius: 100%; background: var(--gray230); text-align: center; }
+
+
+/* register_step01.html */
+.section_rigist .btn_red,
+.section_rigist .btn_blue { margin-top: 1rem;}
+.bx_step { display: flex; align-items: center; justify-content: flex-end; }
+.bx_step h3 { padding: 0 .5rem 0 0; font-weight: normal; font-size: .8rem;}
+.bx_step ul::after { content:""; display: block; clear: both;}
+.bx_step ul li { float: left; margin-left: .5rem;  width: .5rem; height: .8rem; line-height: .75rem;}
+.bx_step ul li.on { background: url(../images/ico_bubble_blue.svg) no-repeat center / 100% auto;}
+.bx_step ul li span { display: inline-block; width: .4rem; height: .4rem; border-radius: 100%; background: #000; font-size: 0; vertical-align: 2px;}
+.bx_step ul li.on span { display: none;}
+.bx_step::after { content: ""; display: block; clear: both;}
+
+.list_type1 > li > p { font-size: .75rem; font-family: 'scoreM'}
+.list_type1 > li > p > label > span { display: inline-block; position: relative; z-index: 10; line-height: 2;}
+.list_type1 input { display: inline-block; margin:.5rem 0 1.5rem; height: 1.3rem; border-bottom: 1px solid #ccc; width: 100%; font-family: 'Noto Sans KR',sans-serif;}
+.list_type1 textarea { margin: .5rem 0 1.7rem}
+.list_type1 .flexbox { align-items: baseline;}
+.list_type1 .flexbox input { flex:1;}
+.btn_list { padding: 0 .7rem; height: 1.5rem; width: auto;  border-radius: 1.5rem; border:1px solid rgba(0,0,0,.6); background: none; font-size: .7rem; line-height: 1.5rem; text-align: center; font-family: 'scoreM'}
+.items_interest { border: 1px solid #ccc; padding: .5rem;}
+.items_interest ul { overflow-y: auto;  height: 5rem;  box-sizing: border-box;}
+.items_interest ul li a:after { content:">"; display: block; padding:0 0 0 .3rem; font-size: .65rem; vertical-align: middle;}
+
+
+
+
+
+
+/* register_step02.html*/
+.section_regist { font-size: .8rem;}
+.items_chk_all { padding: 0 0 1.65rem}
+.list_agree > li { line-height: 1;}
+.list_agree h4 { padding: 1rem 0 .5rem; font-family: 'scoreM'; font-size: .7rem}
+.list_agree label { display: block; padding: .5rem 0 1rem; text-align: right;}
+.list_agree .policy_service h3 { color: #000}
+
+/* register_step03.html*/
+.section_rigistDone { padding: 1rem 0 0; margin: 0; text-align: center; font-size: 1.1rem; line-height: 1.4;}
+.section_rigistDone > p { padding: 1.25rem 0 1rem;}
+.section_rigistDone > span { display: block; padding: 0 0 8vh; font-size: .8rem; }
+.section_rigistDone .circle_red { background-image: url(../images/ico_chk_white_l.svg); background-position: center; background-repeat: no-repeat;}
+
+/* contest_self.html */
+.section_awards .list_info li:nth-child(2n+1) { margin-right: 0.5rem; width: auto;}
+
+/* my/archive_fav.html */
+.section_fav .list_simple > li > a { width: 85%}
+/* my_bubble.html */
+.section_myBubble { padding-top: 1.5rem; padding-bottom: 2.5rem; font-size: .8rem;}
+.section_myBubble .bx_blue {  margin-bottom: 1.5rem ; height: 3.75rem; border-radius: .5rem; color: #fff; font-family: 'scoreB'; text-align: center; line-height: 1}
+.section_myBubble .bx_blue > p { display: block; position: relative; font-size: 1.5rem; font-weight: bold; text-align: center; line-height: 3.75rem; letter-spacing: 0; line-height: 3.75rem}
+.section_myBubble .bx_blue > p:after { position: absolute; right: 5vw; top: 50%; transform:  translateY(-50%); content:"Bubble"; font-size: .75rem; font-family: 'scoreR'; font-weight: 100;}
+.section_myBubble .bx_blue > button { height: 100%; width: 3rem; background: none; color: #fff; font-size: .8rem; font-family: 'scoreM'}
+
+.list_point_02 {height: 7.5rem; border: 1px solid #ccc; border-radius: .5rem; box-sizing: border-box;}
+.list_point_02 li a { display: inline-block; padding: 1.8rem 0 0; width: 100%; height: 100%; text-align:center; font-family: 'scoreR'; font-size: 0; box-sizing: border-box;}
+.list_point_02 li a p { display: inline-block;  height: 3.5rem; width: 2.5rem;}
+.list_point_02 li a > span { display: block; padding: .3rem 0 0; font-size: .7rem}
+.items_receipt p { background: url(../images/ico_receipt_02.svg) no-repeat center / 100% auto;}
+.items_exchange p { background: url(../images/ico_exchange_02.svg) no-repeat center / 100% auto;}
+.items_mall p { position: relative; background: url(../images/ico_mall.svg) no-repeat center / auto 100%;}
+
+
+
+
+
+
+
+/* bubbue_receipt.html */
+/* .section_receipt .wrap_select { margin: 1rem 0 0}  */
+.section_receipt .wrap_select { padding-right: .5rem; margin-bottom: .5rem; }
+.btn_setting { background: none; font-size: .9rem; color: var(--gray100)}
+.bx_receipt { padding: 1rem 7.4%;  border: 1px solid #ccc; border-radius: .5rem; box-sizing: border-box; line-height: 1; font-family: 'scoreM'}
+.bx_receipt .items_num { padding: .8rem 0 .5rem}
+.list_receipt > li { display: table; margin-bottom: 1rem; width: 100%; box-sizing: border-box; }
+.list_receipt > li > * { display: table-cell;}
+.list_receipt .list_details { width: 80%;}
+.list_receipt .list_details > li > a { display: table; table-layout: fixed; padding: .5rem 0; width: 100%;}
+.list_receipt .list_details > li > a > * { display: table-cell}
+.list_receipt .date { width: 20%; font-size: .7rem}
+.list_receipt .date span:after { content:""; display: inline-block; margin: 0 5px; vertical-align: -1px;}
+.list_details .details { width: 50%;}
+.list_details .details p { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; line-height: 1.5;}
+.list_details .points { width: 30%; text-align: right; letter-spacing: 0}
+.points.minus { color: var(--Red);}
+.points.minus::before { content:"-"; display: inline-block;}
+.points.plus { color: var(--Blue);}
+.points.plus::before { content:"+"; display: inline-block;}
+.list_details small { font-size: .7rem; color: var(--gray150)}
+
+.wrap_select { position: relative;}
+.wrap_select:after { position: absolute; right: 5px; top: 50%; transform: translateY(-50%); content: ""; display: inline-block; width: .5rem; height: .5rem;  vertical-align: middle; background: url(../images/ico_arr_btm_04.svg) no-repeat center / 100% auto;}
+
+
+
+/* bubble_exchange.html */
+.section_exchange .title_type1,
+.section_exchange .title_type2 { font-family: 'scoreB'}
+.list_type1 .list_type1 > li { width: 45%;}
+.list_type1 .list_type1 > li input { padding: 0 0 0 .5rem; margin:.5rem 0 0; width: 100%; height: 2rem; line-height: 2rem; border:2px solid #ccc; padding-right: 0; background: #fff; box-sizing: border-box;}
+.list_type1 .list_type1 > li input::-webkit-input-placeholder {  font-size: .7rem;}
+.bx_exchange { position: relative; margin: 0 0 1.5rem; font-size: .75rem; font-family: 'scoreM'}
+.bx_exchange:after { content:""; position: absolute; left: 50%; transform: translateX(-50%); bottom: .7rem; width: .9rem; height: .7rem; background: url(../images/ico_arr_right_02.svg) no-repeat center / auto 100%}
+#txt_ps { transform: translateY(-1rem); font-size: 13px; color: var(--gray150)}
+.bx_bank { position: fixed; bottom: 0; top: 0; left: 0; right: 0;  z-index: 1000; background: rgba(242,242,242,.8)}
+/* 은행선택박스 */
+.bx_bank > div { position: absolute; padding-top: 3rem;  bottom: 0; left: 0; right: 0; height: 90%; background: #fff; border-radius: 1rem 1rem 0 0; box-sizing: border-box;}
+.bx_bank > div .btn_cancel { position: absolute; right: 0; top: 0; padding: 0 1.5rem; height: 2.5rem; background: none; font-size: .75rem; font-family: 'scoreM'}
+.bx_bank .search_bank { margin: 0 0 1rem; height: 2.25rem; background: var(--gray242); border-radius: .5rem;}
+.bx_bank .search_bank input { margin: 0 0 1rem; padding: 0 0 0 2rem; width: 100%; line-height: 2.25rem;  background: url(../images/ico_search.svg) no-repeat left .7rem center; box-sizing: border-box;}
+.bx_bank ul { overflow:scroll; height: 100%; box-sizing: border-box;}
+.bx_bank ul li { float: left; padding: 0 0 .9rem; width: 50%; font-size: .7rem;}
+.bx_bank ul li a { display: block; font-family: 'scoreM';}
+.bx_bank ul li a > * { vertical-align: middle;}
+.bx_bank ul li a span { padding-left:.5rem}
+
+
+
+
+
+
+/* my/secession.html */
+.section_secesstion > div { padding: .75rem; margin: 0 0 1.7rem; border: 1px solid #ccc;}
+.section_secesstion .list_num_bracket {  height: 200px;  overflow:auto; font-size: .7rem; line-height: 1.5}
+.section_secesstion .list_num_bracket > li { padding: .5rem 0 0;}
+.section_secesstion .list_num_bracket > li li { padding: .3rem 0 0 .3rem}
+.section_secesstion textarea { height: 7.5rem;}
+.section_secesstion .bx_btn { text-align: center;}
+.section_secesstion .bx_btn li { display: inline-block; width: 40%}
+.section_secesstion .bx_btn li button { box-sizing: border-box; width: 100%}
+.section_secesstion .bx_btn li .btn_cancel { margin-left: .5rem; background: #ccc}
+textarea { width: 100%; border: 1px solid #ccc; box-sizing: border-box;}
+
+
+/* my/find.html */
+.section_find { line-height: 1}
+.section_find > div { padding: 2.5rem 0 0; text-align: center;}
+.section_find > div h3 { padding: 0 0 .85rem; font-family: 'scoreM'; font-size: .9rem;}
+.section_find > div span { font-size: .7rem; line-height: 1.3;}
+.section_find .list_find li { display: inline-block; width: 45%}
+.section_find .list_find li a { display: inline-block; padding: .5rem 0; line-height: 2}
+.section_find .list_find li a:before { content:""; display:inline-block; margin-right: 10px; width:.95rem; height:.95rem; border-radius: 100%; background: url(../images/ico_chk.svg) no-repeat center / 52% auto #ccc; vertical-align: -3px; box-sizing: border-box;}
+.section_find .list_find li a.checked::before { background-color: var(--Blue)}
+.section_find .list_type1 input { margin: 0; height: 1.8rem; line-height: 1.8rem}
+.section_find .list_type1 > li > p { padding: 1.25rem 0 .2rem}
+.section_find .btn_blue { margin-top: 2rem; margin-bottom: 2rem}
+.section_find .wrap_select { margin-left: 5px; background: #eee; height: 36px; line-height: 36px; border-radius: 5px}
+.items_select .flexbox_space { margin: 1rem 0}
+.items_select .flexbox_space input { flex: 1}
+.items_select .flexbox_space span { padding: 0 .2rem}
+.items_select .flexbox_space select { padding: 0 .8rem 0 5px; background: none; font-size: .6rem; line-height: 36px}
+.bx_send > div { display: none}
+.bx_send > div.on { display: block;}
+.link_findPw { display: block; height: 2rem; }
+.link_findPw span { padding: 0 0 0 5px; text-decoration: underline;}
+
+/* contest/ */
+.main_list section { padding-bottom: 1rem}
+
+/* contest_self */
+/* self_ing.html */
+.bx_select.sel_align { margin: 0; width: auto;}
+.sel_align select { font-size: .7rem; color: var(--gray150)}
+
+/* contest_details */
+.section_details > .wrap_img { padding: 5vw 0 .8rem ;}
+.section_details > .flexbox_space { align-items: normal; align-content: center;}
+.section_details .txt_title { margin:0 0 .3rem; font-family: 'scoreM'; line-height: 1.3;}
+.txt_notice { padding: .5rem 0; font-size: 12px; color: var(--gray150); }
+/* .section_details .list_info li:nth-child(2n+1) { width: 60%;} */
+.descript > p { text-indent: 5px; color: var(--gray100); font-size: .7rem; line-height: 1.5;}
+.descript > .wrap_img { padding: 1rem }
+.btn_download { display: flex; align-items: center; height: 3rem; border-bottom: 1px solid #ccc;}
+.btn_download p { font-size: .75rem; font-family: 'scoreM'; color: var(--gray100)}
+.fileName2 { padding: 0 0 0 .3rem; color: var(--gray150); text-decoration: underline;}
+.section_details { padding-bottom:1.5rem}
+.section_details .btn_blue { margin: 1.25rem auto 0;}
+.section_details .list_scrap { padding: 0 0 .7rem ;text-align: right;}
+.section_details .list_scrap li { display: inline-block; float: none; vertical-align: middle;}
+.section_awards .bx_popup .flexbox_space { padding: 0 0 .5rem; border-bottom: 1px solid #ccc;}
+.section_awards .bx_popup { display: block; padding:3%; border: 2px solid #ccc; box-sizing: border-box; width: 90%; height: 10rem; font-size: .8rem; box-sizing: border-box;}
+.section_awards .bx_popup h2 { font-family: 'scoreM'; font-size: .9rem;}
+.section_awards .bx_popup form { text-align: center;}
+.section_awards .bx_popup select { background: none;}
+
+.section_awards .bx_popup .bx_select { margin:.8rem auto .5rem; }
+.list_scrap li.items_share { margin-left: .3rem}
+.items_share a {  background: url(../images/ico_share.svg) no-repeat center / 60%; }
+
+
+/* section_awards */
+.section_awards { font-size: .8rem;}
+.section_awards > .flexbox_space { align-items: baseline;}
+.section_awards > .flexbox_space p { color: #000; font-size: .7rem;}
+.section_awards .list_bxIn > li > a { position: relative; width: 100%; line-height: 1.2;}
+/* 각 수상작 리스트 페이지 */
+.section_awards.list .list_bxIn > li > a { padding-left:5vw; padding-right:5vw;}
+.section_awards .list_bxIn > li > a > * { max-width: 85%}
+.section_awards .list_bxIn > li > a > p .color_red { padding-right: 5px}
+.section_awards .list_bxIn > li > a:after { content:""; position: absolute; right: 1rem; top:50%; transform: translateY(-50%); background: url(../images/ico_arr_btm_02.svg) no-repeat center / 100% auto; width: 1rem; height:1rem; transition: all .3s; }
+.section_awards .list_bxIn > li > a > div { padding: 0 0 5px; font-size: .65rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; color: var(--gray100)}
+.section_awards .list_bxIn > li > a.open::after { transform: rotate(-180deg);  transform-origin: center;}
+
+
+/* archive_make.html */
+.section_make {  padding-top: 1.5rem; font-size: .8rem;}
+.section_make .flexlist { padding: .5rem 0 1rem}
+.section_make .flexlist li { padding: 0 0 .5rem }
+.flexbox.wrap_file { align-items: flex-end; margin: .5rem 0 1.7rem}
+.section_make .btn_blue { margin:1.5rem auto 0; }
+.bx_fileName { flex:1; border-bottom: 1px solid #ccc; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; color: var(--gray150); font-size: .7rem; font-family: 'scoreR' ; line-height: 2}
+.list_type1 .txt_sign { display: inline-block; margin:.8rem .3rem 0}
+.bx_total .color_blue { margin-right: .5rem; font-size: 1.25rem; font-family: 'scoreB'; color: var(--Blue); }
+.bx_total .color_blue:before { display: inline-block; margin-right: 5px; content: "="}
+.section_make .list_type1 input { height: 1.7rem; line-height: 1.7rem;}
+.section_make input[type="date"] {  position: relative;}
+.section_make input[type="date"]::-webkit-calendar-picker-indicator { color: transparent; background: none; z-index: 1;}
+/* .section_make input[type="date"]:before { content:attr(placeholder); color: red; display: inline-block;} */
+.section_make input[type="date"]:focus:before { content: "";}
+.section_make input[type="date"]::after { position: absolute; right: 0; top: 0; content:""; display: block; width: 35px; height: 100%;  background: url(../images/ico_calendar.svg) no-repeat center;}
+input { background-color: transparent;}
+
+.section_make .wrap_select_02 { position: relative; margin: .5rem 0 1.5rem; padding-right:1.5rem ;width: 47%; box-sizing: border-box;}
+.section_make .wrap_select_02:after { position: absolute; right: 0; top: 50%; transform: translateY(-50%); content:""; width: 1.5rem; height: 100%; background: url(../images/ico_arr_btm_04.svg) no-repeat center / 50% auto;}
+
+.section_make .wrap_select_02 select { width: 100%; }
+.section_make .wrap_select_02 select option::after { content:"bubble"; display: inline-block;}
+
+
+
+
+/* my_info.html */
+.body_myInfo > main { min-height: calc(100vh - 125px)}
+.section_myInfo { padding-top: 1.5rem; font-size: .7rem;}
+.section_myInfo .list_type1 > li { display: flex; align-items: flex-end; padding: 0 0 1.4rem;}
+.section_myInfo .list_type1 > li > p span i { position: relative; z-index: 1; font-family: 'scoreM'}
+.section_myInfo .list_type1 > li > p { width: 32%;}
+.section_myInfo .list_type1 > li > span { flex:1; color: var(--gray150)}
+.section_myInfo .list_type1 .btn_list { width: 3.5rem;}
+.section_myInfo .bx_secession { display: block; border-top: 1px solid #ccc; padding: 1rem 0; height: 1rem; font-size: .7rem; color: var(--gray100)}
+.items_name > p span b { font-weight: normal; font-size: 1rem}
+.body_myInfo .bx_popup > div > p { padding: 2rem 0; text-align: center;}
+.bx_popup.noDeco > div > p::before { display: none;}
+.body_myInfo .bx_popup > div { text-align: left;}
+.bx_privacy { height: 200px; border: 1px solid red}
+
+
+/* search.html */
+.bx_result { line-height: 2.25rem; font-size: .7rem}
+.section_result > .flexbox_space { padding: .8rem 0 1rem; font-size: .7rem;}
+.section_result h3 {  font-size: .7rem; font-weight: normal; color: var(--gray100)}
+.section_result h3 strong { color: #000;}
+.section_result .items_num { font-size: .7rem; font-family: 'scoreM'}
+.section_result .list_common .bx_title > p { width: 100%;}
+.section_result .list_simple > li > a { width: 100%; max-width: none;}
+.section_result .list_simple > li > a > p { padding-top: 0}
+
+
+/* contents/my/archive */
+/* archive_main.html */
+.my_archive .list_simple > li > a { width: 80%}
+
+
+/* archive_mycontest.html */
+.section_mycontest.section_direct .list_simple > li:first-child { border-top: 1px solid #ccc;}
+.section_mycontest.section_direct .list_simple > li > a { padding: .85rem 0; max-width: none; width: 100%;}
+
+/* mycontest_details.html */
+/* popup */
+.popup_awards.bx_popup > div { background: none; font-size: .7rem; border: none;}
+.popup_awards .bx h3 { height: 3rem; line-height: 3rem; background: #fff; color: #000; font-size: .7rem; font-family: 'scoreB'}
+.popup_awards .bx button { height: 3rem; background: #fff; color: #000; font-size: .75rem; font-family: 'scoreM'}
+.popup_awards .bx > div { border-radius: 10px; overflow: hidden;}
+.popup_awards .bx > div  button { border-top: 1px solid #ccc; width: 100%}
+.popup_awards .bx > ul li { width: 48%}
+.popup_awards .bx > ul button { padding: 0;  border-radius: 10px; width: 100%}
+
+
+
+
+/* my_alarm.html */
+.section_alarm .list_simple span { color: var(--gray150); font-size: .7rem; }
+.section_alarm .list_simple li:first-child { border:none}
+.section_alarm .list_simple > li > a > p { padding: 0;}
+.section_alarm .list_bxIn > li > div { margin-top: 0; }
+
+/* ask_direct.html */
+.section_direct { font-size: .75rem; }
+.tab_type1 { padding: 1rem 0; text-align: center; line-height: 1; font-size: 0}
+.tab_type1 li { display: inline-block; width: 45%;}
+.tab_type1 li:nth-child(1) { margin-right: .5rem;}
+.tab_type1 li .btn_blue { display: inline-block; width: 100%; box-sizing: border-box;}
+.list_bxIn > li > div { margin-top: .5rem;}
+.section_direct .list_simple span,
+.section_alarm .list_simple span
+ { display: block; padding: .4rem 0 0; color: var(--gray150); font-size: .65rem; }
+
+/* .section_direct .list_simple > li:first-child { border: none;} */
+.section_direct .list_simple > li > a { display: flex; align-items: center; justify-content: space-between;}
+.section_direct .list_simple > li > a > div:first-child { width: 80%; }
+.section_direct .list_simple > li > a > div:first-child p { padding: 0 0 .3rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; line-height: 1.4;}
+.status { width: 20%; text-align: right; font-size: .7rem; color:var(--Red);}
+.items_answered .status,
+.items_allowed .status { color: var(--gray150)}
+
+/* ask_direct_write.html */
+.section_ask { padding-top: 1.5rem;}
+
+
+
+/* ask_project.html */
+.section_project { padding-top: 1.5rem;}
+
+/* faq.html */
+.section_faq .list_simple > li:first-child { border-top: none;}
+.section_faq .list_simple > li { padding: 0;}
+.section_faq .list_simple > li > a > p { padding: 0;}
+.section_faq .list_bxIn > li > div { margin-top: 0;}
+
+/* app_set.html */
+.section_settings { font-size: .8rem; }
+.section_settings ul { background: #fff}
+.section_settings ul li { padding: .8rem 0;}
+/* bx_switch */
+.btn_switch { position: relative; width: 6rem; height: 2rem; background: #e8e8e8; border-radius: 2rem;}
+.btn_switch:before { position: absolute; left: 0; top: 0; content:"OFF"; display: inline-block; height: 100%; line-height: 2rem; width: 50%; text-align: center; border-radius: 2rem; background: gray; color: #fff; font-size: .8rem; transition: all .3s;}
+.btn_switch.on::before { left: 50%; right: 0; content:"ON"; background:var(--Red);}

@@ -1,0 +1,147 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="noFixedMenu">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main id="main" class="main_sub yScroll">
+		<section class="section_exchange section_rigist wrap margin0">
+			<h3 class="hide">현금전환 신청 작성 양식</h3>
+			<form>
+				<fieldset>
+					<legend class="txt_status title_type2">신청자 정보</legend>
+				</fieldset>
+				<ul class="list_rigist list_type1">
+					<li>
+						<p>
+							<label for="exchg_name" class="deco_blue">
+								<span>이름</span>
+							</label>
+						</p>
+						<input type="text" id="exchg_name" placeholder="홍길동">
+					</li>
+					<li>
+						<p>
+							<label for="exchg_tel" class="deco_blue">
+								<span>신청 계좌번호</span>
+							</label>
+						</p>
+						<div class="flexbox">
+							<input type="text" placeholder="1234-56-789123" id="exchg_tel">
+							<button type="button" class="btn_list">은행 선택</button>
+						</div>
+					</li>
+				</ul>
+				</form>
+				<form>
+					<fieldset>
+						<legend class="txt_status title_type1"  style="">전환 신청 포인트</legend>
+					</fieldset>
+					<div class="flexbox_space" style="padding:1rem 0 1.5rem">
+						<div>마이 버블 포인트</div>
+						<p class=""><strong class="items_bubble">200,000</strong></p>
+					</div>
+				<ul class="list_rigist list_type1">
+					<li>
+						<p>
+							<label for="exchg_point" class="deco_blue">
+								<span>신청 포인트</span>
+							</label>
+						</p>
+						<div class="flexbox">
+							<input type="number" placeholder="숫자를 입력해주세요." id="exchg_point">
+							<button type="button" class="btn_list">전체 사용</button>
+						</div>
+						<p id="txt_ps">* 30,000포인트 이상부터 전환 가능합니다.</p>
+						<p style="padding:1.5rem 0 0; text-align:center; font-size:.8rem; ">전환 신청하시는 포인트는 <span class="color_red">100</span>원 입니다.</p>
+					</li>
+				</ul>
+				<a href="#" class="btn_exchg btn_blue">현금전환 신청하기</a>
+			</form>
+		</section>
+	</main>
+
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+	<!-- 은행 선택 -->
+	<div id="bx_bank" class="bx_bank">
+		<div class="wrap">
+			<button class="btn_cancel">취소</button>
+			<p class="search_bank"><input type="search" class="search" placeholder="은행검색" ></p>
+			<div>
+			<ul class="clear">
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_ibk.svg" alt=""><span>기업은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_nh.svg" alt=""><span>농협은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_shinhan.svg" alt=""><span>신한은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_kdb.svg" alt=""><span>산업은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_woori.svg" alt=""><span>우리은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_city.svg" alt=""><span>한국씨티은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_hana.svg" alt=""><span>하나은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_sc.svg" alt=""><span>SC제일은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_bnk.svg" alt=""><span>경남은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_kjbank.svg" alt=""><span>광주은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_dgb.svg" alt=""><span>대구은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_sb.svg" alt=""><span>저축은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_mg.svg" alt=""><span>새마을금고</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_busan.svg" alt=""><span>부산은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_sh.svg" alt=""><span>수협은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_shinhyup.svg" alt=""><span>신협은행</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_kakao.svg" alt=""><span>카카오뱅크</span>
+				</a></li>
+				<li><a href="">
+					<img src="/common/images/ico_bank/ico_post.svg" alt=""><span>우체국</span>
+				</a></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="bx_exchg bx_popup">
+	  <div>
+	    <p>신청이 완료되었습니다.</p>
+	    <span>'버블' > '버블내역' 에서<br> 전환내역을 확인하실 수 있습니다.</span>
+	    <a href="" class="btn_popupClose btn_blue">확인</a>
+	  </div>
+	</div>
+
+
+</body>
+
+</html>

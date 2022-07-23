@@ -1,0 +1,323 @@
+header { position: fixed; z-index: 10; left: 0; right: 0; top: 30px; height: 60px;}
+header > h1 { float: left;}
+header > nav { float: right;}
+header > nav ul li { float: left;}
+header .sns {float:right; position:relative; top:10px; right:0; display:flex; margin-right:48px;}
+header .sns li a {display:inline-block; width:32px; height:32px; margin:0 12px;}
+header .sns li a:hover {filter:opacity(0.5)}
+header .sns li a:nth-child(1) {background:url(../images/icon_facebook.svg) no-repeat 50% 50%; background-size:contain; width:20px; height:32px;}
+header .sns li a:nth-child(2) {background:url(../images/icon_instagram.svg) no-repeat 50% 50%; background-size:contain;}
+header .sns li a:nth-child(3) {background:url(../images/icon_blog.svg) no-repeat 50% 50%; background-size:contain;}
+header .sns li a:nth-child(4) {background:url(../images/icon_youtube.svg) no-repeat 50% 50%; background-size:contain;}
+/*  */
+main > section { padding: 0px;}
+
+
+
+
+
+/*
+@font-face {
+     font-family: 'SCoreDream_Thin';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+@font-face {
+     font-family: 'SCoreDream_ExtraLight';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+@font-face {
+     font-family: 'SCoreDream_Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+@font-face {
+     font-family: 'SCoreDream_Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+@font-face {
+     font-family: 'SCoreDream_Medium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+@font-face {
+     font-family: 'SCoreDream_Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+@font-face {
+     font-family: 'SCoreDream_ExtraBold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+@font-face {
+     font-family: 'SCoreDream_Heavy';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+  */
+
+  #page01 {
+    padding: 0;
+    margin: 0;
+    background: url(common/images/microsite_bg.png);
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #9dbed8;
+  }
+
+  #page01 .leftside {
+    width: 55vw;
+    display: flex;
+  }
+
+  #page01 .leftside div:first-child {
+    width: 55%;
+    height: 100vh;
+    background: url(common/images/phone_loading.png) no-repeat;
+    background-position: 0px 50px
+  }
+
+  #page01 .leftside div:last-child {
+    width: 45%;
+    height: 100vh;
+    background: url(common/images/phone_base.png) no-repeat;
+    background-position: -100px 50%;
+  }
+
+  #page01 .rightside {
+    width: 45vw;
+    text-align: center;
+    padding-right: 100px;
+  }
+
+  #page01 .rightside div:first-child {
+    padding-top: 200px;
+    height: 65vh;
+    box-sizing: border-box;
+  }
+
+  #page01 .rightside div:last-child {
+    padding: 0;
+    height: 35vh;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #page01 .txt {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #page01 .txt div {
+    margin-top: 50px;
+  }
+
+  #appstore {
+    display: inline-block;
+    width: 234px;
+    height: 68px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 100px;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  #appstore:hover {
+    display: inline-block;
+    width: 234px;
+    height: 68px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 100px;
+    text-align: center;
+    background: rgba(0, 0, 0, 1)
+  }
+
+  #appstore img {
+    position: relative;
+    top: 0px;
+    height: 44px;
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+
+  #appstore img:hover {
+    filter: invert(100%)
+  }
+
+  #googleplay {
+    display: inline-block;
+    width: 234px;
+    height: 68px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 100px;
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  #googleplay:hover {
+    display: inline-block;
+    width: 234px;
+    height: 68px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 100px;
+    text-align: center;
+    background: rgba(0, 0, 0, 1)
+  }
+
+  #googleplay img {
+    position: relative;
+    top: 0px;
+    height: 44px;
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+
+  #googleplay img:hover {
+    filter: invert(100%)
+  }
+
+  #page02 {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(common/images/microsite_bg.png);
+    box-sizing: border-box;
+    border-bottom: 1px solid #9dbed8;
+  }
+
+  #page02 .txt {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+  }
+
+  #page02 .page2_phone {
+    background: url(common/images/phone_base2.png) no-repeat;
+    background-position: 100% 5%;
+    height: 100vh;
+  }
+
+  #page03 {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(common/images/microsite_bg.png);
+    box-sizing: border-box;
+    border-bottom: 1px solid #9dbed8;
+  }
+
+  #page03 .txt {
+    position: absolute;
+    top: 200px;
+    left: 60%;
+  }
+
+  #page03 .page2_phone {
+    background: url(common/images/phone_base2.png) no-repeat;
+    background-position: 0% 5%;
+    height: 100vh;
+  }
+
+  #page04 {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(common/images/microsite_bg.png);
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #9dbed8;
+  }
+
+  #page04 .txt {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #page04 ul {
+    display: flex;
+    margin: 270px auto 0;
+    width: 75vw;
+  }
+
+  #page04 ul li:first-child {
+    width: 50%;
+    text-align: left;
+    border-right: 2px dashed rgba(0, 0, 0, 0.8)
+  }
+
+  #page04 ul li:first-child img {
+    width: 80%;
+  }
+
+  #page04 ul li:last-child {
+    width: 50%;
+    text-align: right;
+  }
+
+  #page04 ul li:last-child img {
+    width: 80%;
+  }
+
+  #page05 {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(common/images/microsite_bg.png);
+    text-align: center;
+  }
+
+  #page05 ul {
+    display: flex;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #page05 ul li {
+    width: 450px;
+    margin: 0 40px;
+  }
+
+  #page05 ul li img.poster {
+    width: 420px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  #page05 ul li img.txt {
+    width: auto;
+    height: 50px;
+  }

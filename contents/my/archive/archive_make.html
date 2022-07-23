@@ -1,0 +1,128 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="">
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+
+	<main>
+		<section class="section_make yScroll margin0 wrap">
+			<form>
+				<fieldset>
+					<legend class="hide">공모전 개설하기 입력 양식</legend>
+				</fieldset>
+				<p class="txt_required">* 필수 입력 항목입니다.</p>
+				<ul class="list_type1">
+					<li>
+						<p>
+							<label for="make_title" class="deco_blue">
+								<span class="deco_required">아이디어 제목</span>
+							</label>
+						</p>
+						<input type="text" id="make_title" placeholder="새롭게 요청하는 아이디어의 이름을 지어주세요">
+					</li>
+					<li>
+						<p>
+							<label for="make_descript" class="deco_blue">
+								<span class="deco_required">아이디어 설명</span>
+							</label>
+						</p>
+						<textarea id="make_descript" placeholder="아이디어 설명을 입력해주세요"></textarea>
+					</li>
+					<li>
+						<p>
+							<label for="" class="deco_blue">
+								<span>파일 첨부</span>
+							</label>
+						</p>
+						<div class="flexbox wrap_file">
+							<span class="bx_fileName">파일을 첨부해주세요</span>
+							<label for="make_file" class="btn_file btn_list">첨부파일</label>
+							<input type="file" id="make_file" class="input_ori">
+						</div>
+					</li>
+					<li class="bx_setDate">
+						<p>
+							<label for="" class="deco_blue">
+								<span>공모기간</span>
+							</label>
+						</p>
+						<div class="flexbox_space" style="align-items:flex-start">
+							<input type="date" placeholder="시작일" class="bx_border">
+							<span class="txt_sign">~</span>
+							<input type="date" placeholder="종료일" class="bx_border">
+						</div>
+					</li>
+					<li>
+						<p>
+							<label for="make_number" class="deco_blue">
+								<span>선정 인원</span>
+							</label>
+						</p>
+						<div class="bx_border wrap_select_02 num">
+							<select class="" name="" >
+								<option value="1">1 명</option>
+								<option value="2">2 명</option>
+								<option value="3">3 명</option>
+								<option value="4">4 명</option>
+								<option value="5">5 명</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<p>
+							<label for="make_point" class="deco_blue">
+								<span>상금 포인트</span>
+							</label>
+						</p>
+						<div class="bx_border wrap_select_02 point">
+							<select class="" name="">
+								<option value="10000">10,000 Bubble</option>
+								<option value="30000">30,000 Bubble</option>
+								<option value="50000">50,000 Bubble</option>
+								<option value="100000">100,000 Bubble</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<p>
+							<label for="" class="deco_blue">
+								<span>상금 결제 금액</span>
+							</label>
+						</p>
+						<div class="flexbox_space" style="align-items:flex-start">
+							<input type="text" class="bx_total_num bx_border">
+							<span class="txt_sign">
+								<img src="/common/images/ico_multiply.svg" alt="곱하기" style="">
+							</span>
+							<input type="text" value="" class="bx_total_point bx_border">
+						</div>
+					</li>
+				</ul>
+				<p class="bx_total"><span class="color_blue">0</span>원</p>
+				<button type="button" class="btn_make btn_blue">
+					요청하기
+				</button>
+			</form>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+	<div class="popup_make bx_popup">
+		<div>
+			<p>아이디어 요청 완료!</p>
+			<span>요청된 아이디어 승인 여부는 심사 승인 후<br>
+				'알림'을 통해 확인 가능 합니다.</span>
+			<a href="/index.html" class="btn_popupClose btn_blue">확인</a>
+		</div>
+	</div>
+
+	<div class="bx_viewAll bx_popup">
+		<button class="btn_type1 btn_popupClose">확인</button>
+		안내사항 전문
+	</div>
+
+
+
+</body>
+
+</html>

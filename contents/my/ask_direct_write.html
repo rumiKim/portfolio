@@ -1,0 +1,57 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+
+	<main id="main" class="noScroll">
+		<ul class="tab_type1 wrap" style="border-bottom:1px solid #ccc">
+			<li><a href="ask_direct_write.html" class="btn_blue">문의하기</a></li>
+			<li><a href="ask_direct.html" class="btn_blue inactive">문의내역확인</a></li>
+		</ul>
+		<section class="section_ask yScroll margin0 wrap">
+
+			<form>
+				<fieldset>
+					<legend class="hide">1:1문의하기 작성 양식</legend>
+				</fieldset>
+				<p class="txt_required">* 모든 항목은 필수 입력 항목입니다.</p>
+				<ul class="list_type1">
+					<li>
+						<p>
+							<label for="ask_title" class="deco_blue">
+								<span class="deco_required">문의 제목</span>
+							</label>
+						</p>
+						<input type="text" id="ask_title" placeholder="문의 제목을 입력해주세요">
+					</li>
+					<li>
+						<p>
+							<label for="ask_descript" class="deco_blue">
+								<span class="deco_required">문의 내용</span>
+							</label>
+						</p>
+						<textarea id="ask_descript" placeholder="문의 내용을 입력해주세요"></textarea>
+					</li>
+				</ul>
+				<button type="button" class="btn_ask btn_blue">
+					문의하기
+				</button>
+			</form>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+	<div class="bx_ask bx_popup">
+		<div>
+			<p>문의 완료!</p>
+			<span class="">문의하신 질문에 대한 답변은<br>
+				'문의내역확인' 에서<br>확인하실 수 있습니다.<br>
+				</span>
+			<a href="" class="btn_popupClose btn_blue">확인</a>
+		</div>
+	</div>
+
+</body>
+
+</html>

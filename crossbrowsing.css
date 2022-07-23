@@ -1,0 +1,48 @@
+/* colorSetting */
+
+:root {
+--Red:#da4352;
+--Blue:#3baed9;
+--Blue_02:#3BADD8;
+--gray50:rgb(50,50,50);
+--gray100:rgb(100,100,100);
+--gray150:rgb(150,150,150);
+--gray200:rgb(200,200,200);
+--gray204:rgb(204,204,204);
+--gray225:rgb(225,225,225);
+--gray230:rgb(230,230,230);
+--gray235:rgb(235,235,235);
+--gray242: rgb(242,242,242);
+--gray245:rgb(245,245,245);
+}
+
+/* focus color none*/
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder { color:transparent}
+
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+color: transparent}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder { color: transparent}
+
+/* select design 없애기 */
+select::-ms-expand { display: none; }
+select {
+  -webkit-appearance: none;
+ -moz-appearance: none;
+ outline: 0;
+}
+
+/* textarea */
+textarea { -webkit-appearance:none; outline: none;}
+
+
+/* input type */
+input:focus { outline: none;}
+input[type="file"] { position: absolute; left: -3000%;}
+input[type="checkbox"] { position: absolute; left: -3000%;}
+
+/* button */
+button:focus { outline: none;}

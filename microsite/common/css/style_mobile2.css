@@ -1,0 +1,2 @@
+header { border: 1px solid red; position: fixed; left: 0; right: 0; top: 0; height: 100px; z-index: 100;}
+header > h1 { float: left; width: 40%;}

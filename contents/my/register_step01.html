@@ -1,0 +1,100 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="noFixedMenu">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main id="main" class="yScroll">
+		<section class="section_rigist wrap margin0">
+			<div class="bx_step">
+				<h3 class="txt_status title_type2">개인정보</h3>
+				<ul>
+					<li class="on"><span>step01</span></li>
+					<li><span>step02</span></li>
+					<li><span>step03</span></li>
+				</ul>
+			</div>
+			<form>
+				<fieldset>
+					<legend class="hide">회원가입 입력 양식</legend>
+				</fieldset>
+				<p class="txt_required" style="text-align:left">* 모든 항목은 필수 입력 항목입니다.</p>
+				<ul class="list_rigist list_type1">
+					<li>
+						<p>
+							<label for="regist_em" class="deco_blue">
+								<span>아이디(이메일)</span>
+							</label>
+						</p>
+						<div class="flexbox">
+							<input type="email" id="regist_em" placeholder="이메일">
+							<button type="button" class="btn_chkEmail btn_list">중복확인</button>
+						</div>
+					</li>
+					<li>
+						<p>
+							<label for="regist_pw" class="deco_blue">
+								<span>
+									비밀번호
+								</span>
+							</label>
+						</p>
+						<input type="password" id="regist_pw" placeholder="비밀번호 입력(6 ~ 12자리)">
+					</li>
+					<li>
+						<p>
+							<label for="regist_pw_chk" class="deco_blue">
+								<span>비밀번호 확인</span>
+							</label>
+						</p>
+						<input type="password" id="regist_pw_chk" placeholder="비밀번호 확인(6 ~ 12자리)">
+					</li>
+					<li>
+						<p>
+							<label for="regist_tel" class="deco_blue">
+								<span>휴대폰 번호</span>
+							</label>
+						</p>
+						<div class="flexbox">
+							<input type="tel" placeholder="'-'없이 입력해 주세요'" id="regist_tel">
+							<button type="button" class="btn_sendNum btn_list">인증 번호 전송</button>
+						</div>
+					</li>
+					<li>
+						<p>
+							<label for="regist_num" class="deco_blue">
+								<span>인증 번호</span>
+							</label>
+						</p>
+						<input type="text" id="regist_num" placeholder="인증 번호 입력(4자리)">
+					</li>
+					<li>
+						<p>
+							<label for="regist_name" class="deco_blue">
+								<span>이름(실명)</span>
+							</label>
+						</p>
+						<input type="text" id="regist_name" placeholder="실명이 아니면 포인트 지급이 안됩니다.">
+					</li>
+					<li>
+						<p>
+							<label for="regist_nick" class="deco_blue">
+								<span>닉네임</span>
+							</label>
+						</p>
+						<div class="flexbox">
+							<input type="text" placeholder="한글만 가능(3 ~ 7자)" id="regist_nick">
+							<button type="button" class="btn_chkNick btn_list">중복 확인</button>
+						</div>
+					</li>
+				</ul>
+				<a href="register_step02.html" class="btn_red btn_next">다음</a>
+			</form>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/popup.html";?>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+<body class="noFixedMenu">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main id="main" class="yScroll">
+		<section class="section_regist wrap margin0">
+			<div class="bx_step clear">
+				<h3 class="txt_status title_type2">약관동의</h3>
+				<ul>
+					<li class="on"><span>step01</span></li>
+					<li class="on"><span>step02</span></li>
+					<li><span>step03</span></li>
+				</ul>
+			</div>
+			<form>
+				<fieldset class="hide">약관동의 체크 폼</fieldset>
+				<ul class="list_agree">
+					<li>
+						<h4>개인정보 취급방침</h4>
+						<div class="bx_policy">
+							<? include $_SERVER['DOCUMENT_ROOT']."/include/policy_privacy.html";?>
+						</div>
+						<div>
+							<input type="checkbox" id="regist_agree_01" name="chk" class="chk_type1 gray">
+							<label for="regist_agree_01">동의하기</label>
+						</div>
+					</li>
+					<li>
+						<h4>고유식별정보 처리동의</h4>
+						<div class="bx_policy">
+							<? include $_SERVER['DOCUMENT_ROOT']."/include/policy_unique.html";?>
+						</div>
+						<div>
+							<input type="checkbox" id="regist_agree_02" name="chk" class="chk_type1 gray">
+							<label for="regist_agree_02">동의하기</label>
+						</div>
+					</li>
+					<li>
+						<h4>본인확인 서비스 약관동의</h4>
+						<div class="bx_policy">
+							<? include $_SERVER['DOCUMENT_ROOT']."/include/policy_service.html";?>
+						</div>
+						<div>
+							<input type="checkbox" id="regist_agree_03" name="chk" class="chk_type1 gray">
+							<label for="regist_agree_03">동의하기</label>
+						</div>
+					</li>
+					<li>
+						<h4>사업자 정보 확인</h4>
+						<div class="bx_policy">
+							<? include $_SERVER['DOCUMENT_ROOT']."/include/policy_business.html";?>
+						</div>
+						<div>
+							<input type="checkbox" id="regist_agree_04" name="chk" class="chk_type1 gray">
+							<label for="regist_agree_04">동의하기</label>
+						</div>
+					</li>
+					<li class="items_chk_all">
+						<div>
+							<input type="checkbox" id="regist_agree_all" class="chk_type1">
+							<label for="regist_agree_all">전체동의</label>
+						</div>
+					</li>
+				</ul>
+				<a href="register_step03.html" class="btn_red btn_next">다음</a>
+			</form>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+	<div class="bx_popup">
+		<button class="btn_popupClose">닫기</button>
+	</div>
+
+
+	<script>
+		$(function() {
+
+
+			var chkAll = $('#regist_agree_all');
+			chkAll.click(function() {
+				if (chkAll.prop('checked')) {
+					$('.list_agree input[type=checkbox]').prop('checked', true);
+				} else {
+					$('.list_agree input[type=checkbox]').prop('checked', false);
+				}
+			});
+
+		});
+	</script>
+
+
+</body>
+
+</html>

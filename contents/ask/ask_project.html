@@ -1,0 +1,65 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main id="main" class="yScroll">
+			<section class="section_project wrap margin0">
+				<form>
+					<fieldset>
+						<legend class="hide">프로젝트 문의 양식</legend>
+					</fieldset>
+					<p class="txt_required">* 모든 항목은 필수 입력 항목입니다.</p>
+					<ul class="list_type1">
+						<li>
+							<p>
+								<label for="project_corp" class="deco_blue">
+									<span>회사명</span>
+								</label>
+							</p>
+							<input type="text" id="project_corp" placeholder="회사명을 입력해주세요">
+						</li>
+						<li>
+							<p>
+								<label for="project_name" class="deco_blue">
+									<span>담당자 이름</span>
+								</label>
+							</p>
+							<input type="text" id="project_name" placeholder="담당자 이름을 입력해주세요">
+						</li>
+						<li>
+							<p>
+								<label for="project_tel" class="deco_blue">
+									<span>담당자 연락처</span>
+								</label>
+							</p>
+							<input type="tel" id="project_tel" placeholder="담당자 연락처를 입력해주세요">
+						</li>
+						<li>
+							<p>
+								<label for="project_em" class="deco_blue">
+									<span>담당자 이메일</span>
+								</label>
+							</p>
+							<input type="email" id="project_em" placeholder="담당자 이메일을 입력해주세요">
+						</li>
+					</ul>
+					<button class="btn_askProject btn_blue" type="button">프로젝트 문의</button>
+
+				</form>
+			</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+	<div class="bx_askProject bx_popup">
+	  <div>
+	    <p>프로젝트 문의가 완료되었습니다.</p>
+	      <button class="btn_popupClose btn_blue">확인</button>
+	  </div>
+	</div>
+	<div class="bx_popup">
+		<button class="btn_popupClose">닫기</button>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'designhouseB';
+    src: url('designhouseOTFBold00.eot');
+    src: url('designhouseOTFBold00.eot?#iefix') format('embedded-opentype'),
+        url('designhouseOTFBold00.woff2') format('woff2'),
+        url('designhouseOTFBold00.woff') format('woff'),
+        url('designhouseOTFBold00.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'designhouseL';
+    src: url('designhouseLight.eot');
+    src: url('designhouseLight.eot?#iefix') format('embedded-opentype'),
+        url('designhouseLight.woff2') format('woff2'),
+        url('designhouseLight.woff') format('woff'),
+        url('designhouseLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'designhouseB';
+    src: url('designhouseBold.eot');
+    src: url('designhouseBold.eot?#iefix') format('embedded-opentype'),
+        url('designhouseBold.woff2') format('woff2'),
+        url('designhouseBold.woff') format('woff'),
+        url('designhouseBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'designhouseL';
+    src: url('designhouseOTFLight00.eot');
+    src: url('designhouseOTFLight00.eot?#iefix') format('embedded-opentype'),
+        url('designhouseOTFLight00.woff2') format('woff2'),
+        url('designhouseOTFLight00.woff') format('woff'),
+        url('designhouseOTFLight00.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* S-Core Dream */
+
+
+
+@font-face {
+    font-family: 'scoreT';
+    src: url('S-CoreDream/S-CoreDream-1Thin.eot');
+    src: url('S-CoreDream/S-CoreDream-1Thin.eot?#iefix') format('embedded-opentype'),
+        url('S-CoreDream/S-CoreDream-1Thin.woff2') format('woff2'),
+        url('S-CoreDream/S-CoreDream-1Thin.woff') format('woff'),
+        url('S-CoreDream/S-CoreDream-1Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'scoreEL';
+    src: url('S-CoreDream/S-CoreDream-2ExtraLight.eot');
+    src: url('S-CoreDream/S-CoreDream-2ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('S-CoreDream/S-CoreDream-2ExtraLight.woff2') format('woff2'),
+        url('S-CoreDream/S-CoreDream-2ExtraLight.woff') format('woff'),
+        url('S-CoreDream/S-CoreDream-2ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'scoreL';
+    src: url('S-CoreDream/S-CoreDream-3Light.eot');
+    src: url('S-CoreDream/S-CoreDream-3Light.eot?#iefix') format('embedded-opentype'),
+        url('S-CoreDream/S-CoreDream-3Light.woff2') format('woff2'),
+        url('S-CoreDream/S-CoreDream-3Light.woff') format('woff'),
+        url('S-CoreDream/S-CoreDream-3Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'scoreR';
+    src: url('S-CoreDream/S-CoreDream-4Regular.eot');
+    src: url('S-CoreDream/S-CoreDream-4Regular.eot?#iefix') format('embedded-opentype'),
+        url('S-CoreDream/S-CoreDream-4Regular.woff2') format('woff2'),
+        url('S-CoreDream/S-CoreDream-4Regular.woff') format('woff'),
+        url('S-CoreDream/S-CoreDream-4Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'scoreM';
+    src: url('S-CoreDream/S-CoreDream-5Medium.eot');
+    src: url('S-CoreDream/S-CoreDream-5Medium.eot?#iefix') format('embedded-opentype'),
+        url('S-CoreDream/S-CoreDream-5Medium.woff2') format('woff2'),
+        url('S-CoreDream/S-CoreDream-5Medium.woff') format('woff'),
+        url('S-CoreDream/S-CoreDream-5Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'scoreB';
+    src: url('S-CoreDream/S-CoreDream-6Bold.eot');
+    src: url('S-CoreDream/S-CoreDream-6Bold.eot?#iefix') format('embedded-opentype'),
+        url('S-CoreDream/S-CoreDream-6Bold.woff2') format('woff2'),
+        url('S-CoreDream/S-CoreDream-6Bold.woff') format('woff'),
+        url('S-CoreDream/S-CoreDream-6Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'scoreEB';
+    src: url('S-CoreDream/S-CoreDream-7ExtraBold.eot');
+    src: url('S-CoreDream/S-CoreDream-7ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('S-CoreDream/S-CoreDream-7ExtraBold.woff2') format('woff2'),
+        url('S-CoreDream/S-CoreDream-7ExtraBold.woff') format('woff'),
+        url('S-CoreDream/S-CoreDream-7ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}

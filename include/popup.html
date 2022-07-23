@@ -1,0 +1,152 @@
+
+
+<div class="bx_chkEmail cantUse bx_popup">
+  <div>
+    <p>gildong@gmail.com</p>
+    <span>이미 사용중인 ID입니다.<br>
+      다른 아이디를 입력해 주세요.</span>
+      <button class="btn_popupClose btn_blue">확인</button>
+  </div>
+</div>
+<div class="bx_chkEmail canUse bx_popup">
+  <div>
+    <p>gildong@gmail.com</p>
+    <span>사용 가능한 ID입니다.<br>
+      나머지 정보를 입력해 주세요.
+    </span>
+    <button class="btn_popupClose btn_blue">사용하기</button>
+  </div>
+</div>
+<div class="bx_sendNum bx_popup">
+  <div>
+    <p>인증번호를 전송하였습니다.</p>
+      <button class="btn_popupClose btn_blue">확인</button>
+  </div>
+</div>
+<div class="bx_chkNick canUse bx_popup">
+  <div>
+    <p>닉네임</p>
+    <span>사용 가능한 닉네임입니다.<br>
+    </span>
+    <button class="btn_popupClose btn_blue">사용하기</button>
+  </div>
+</div>
+<div class="bx_chkNick cantUse bx_popup">
+  <div>
+    <p>닉네임</p>
+    <span>이미 사용중인 닉네임입니다.<br>
+    </span>
+    <button class="btn_popupClose btn_blue">확인</button>
+  </div>
+</div>
+
+
+<!-- bx_change ========================================================-->
+
+<!-- 비밀번호 변경 팝업 -->
+<div class="bx_chgPw bx_chg bx_popup noDeco">
+  <div>
+    <p>비밀번호 변경</p>
+    <form action="">
+      <legend class="hide">비밀번호 변경 입력 양식</legend>
+      <ul class="list_rigist list_type1">
+        <li>
+          <p>
+            <label for="chg_pw" class="deco_blue">
+              <span>현재 비밀번호</span>
+            </label>
+          </p>
+          <input type="password" id="chg_pw" placeholder="비밀번호 입력(6~12자리)">
+        </li>
+        <li>
+          <p>
+            <label for="chg_newPw" class="deco_blue">
+              <span>새비밀번호</span>
+            </label>
+          </p>
+          <input type="password" id="chg_newPw" placeholder="비밀번호 입력(6~12자리)">
+        </li>
+        <li>
+          <p>
+            <label for="chg_newPw_02" class="deco_blue">
+              <span>새비밀번호 확인</span>
+            </label>
+          </p>
+          <input type="password" id="chg_newPw_02" placeholder="비밀번호 입력(6~12자리)">
+        </li>
+      </ul>
+      <button class="btn_chgDone btn_blue" type="button">확인</button>
+    </form>
+  </div>
+</div>
+
+<!-- 휴대폰 번호 변경 -->
+<div class="bx_chgTel bx_chg bx_popup noDeco">
+  <div>
+    <p>휴대폰 번호 변경</p>
+    <form action="">
+      <legend class="hide">휴대폰 번호 변경 입력 양식</legend>
+      <ul class="list_rigist list_type1">
+        <li>
+          <p>
+            <label for="chg_tel" class="deco_blue">
+              <span>휴대폰 번호</span>
+            </label>
+          </p>
+          <div class="flexbox">
+            <input type="tel" placeholder="'-'없이 입력해 주세요'" id="chg_tel">
+            <button type="button" class="btn_sendNum btn_list">인증 번호 전송</button>
+          </div>
+        </li>
+        <li>
+          <p>
+            <label for="chg_num" class="deco_blue">
+              <span>인증 번호</span>
+            </label>
+          </p>
+          <input type="password" id="chg_num" placeholder="인증 번호 입력(4자리)">
+        </li>
+      </ul>
+      <button type="button" class="btn_chgDone btn_blue" >확인</button>
+    </form>
+  </div>
+</div>
+<!-- 닉네임 변경 -->
+<div class="bx_chgNick bx_chg bx_popup noDeco">
+  <div>
+    <p>닉네임 변경</p>
+    <form action="">
+      <legend class="hide">닉네임 변경 입력 양식</legend>
+      <ul class="list_rigist list_type1">
+        <li>
+          <p>
+            <label for="chg_nick" class="deco_blue">
+              <span>현재 닉네임</span>
+            </label>
+          </p>
+            <input type="text" value="공모전대왕" id="chg_nick">
+        </li>
+        <li>
+          <p>
+            <label for="chg_newNick" class="deco_blue">
+              <span>새닉네임</span>
+            </label>
+          </p>
+          <div class="flexbox">
+            <input type="text" placeholder="한글만 가능(3~7자)" id="chg_newNick">
+            <button type="button" class="btn_chkNick btn_list">중복 확인</button>
+          </div>
+        </li>
+      </ul>
+      <button type="button" class="btn_chgDone btn_blue" >확인</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- 변경완료 -->
+<div class="bx_chgDone bx_popup">
+  <div>
+    <p>변경이 완료되었습니다.</p>
+  </div>
+</div>

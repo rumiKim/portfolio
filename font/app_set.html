@@ -1,0 +1,42 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+
+<body class="">
+	<a href="#main" class="skip">본문 바로가기</a>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main id="main" class="yScroll">
+		<section class="section_settings margin0">
+				<ul class="flexlist wrap">
+					<li>
+						<p>앱 알림 설정</p>
+						<div>
+							<button class="btn_switch">
+							</button>
+						</div>
+					</li>
+					<li>
+						<p>프로그램 정보</p>
+						<div>v 1.0</div>
+					</li>
+				</ul>
+		</section>
+	</main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+
+
+
+	<script>
+		$(function() {
+			// changeswitch
+			var btn_switch = $('.btn_switch');
+
+			btn_switch.on('click', function() {
+				$(this).toggleClass('on');
+			});
+
+		});
+	</script>
+</body>
+
+</html>
