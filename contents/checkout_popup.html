@@ -1,0 +1,154 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+kiosk_login($_SESSION['kioskID']);
+
+$nt			= $_POST['nt'];
+$num		= $_POST['num'];
+$codeLK		= $_POST['codeLK'];
+
+?>
+<script LANGUAGE=javascript src='/common/js/KisPosAgentLib.js?version=<?=$version?>' > </script>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function EventChk()
+{
+	alert("응답코드 : " + outReplyCode + "\n응답메시지1 : " + outReplyMsg1 + "\n응답메시지2 : " + outReplyMsg2);
+
+	var f=document.w_frm;
+
+	f.txtCreditCardNo.value = outCreditCardNo;
+	f.txtAuthNo.value = outAuthNo;
+	f.txtAuthDate.value = outAuthDate;
+	f.txtFICode.value = outFICode;
+	f.txtFIName.value = outFIName;
+	f.txtIssuerCode.value = outIssuerCode;
+	f.txtIssuerName.value = outIssuerName;
+	f.txtMemberNo.value = outMemberNo;
+	f.txtTranNo.value = outTranNo;
+	f.txtTradeNum.value = outTradeNum;
+	f.txtTradeReqDate.value = outTradeReqDate;
+	f.txtTradeReqTime.value = outTradeReqTime;
+}
+function BtnSendEvent_onclick() {
+
+	var f=document.w_frm;
+	// 초기화
+
+	var Amt2 = Math.round((Number(f.txtAmount.value)/10)*0.90909091);
+	var Period="";
+	for(var i=0; i<f.txtPeriod.length; i++){
+		 if(f.txtPeriod[i].checked == true){
+			Period= f.txtPeriod[i].value;
+		 }
+	}
+	var OrgAuthDate = f.txtAuthDate.value;
+	if(OrgAuthDate.length == 8)
+		OrgAuthDate = OrgAuthDate.substring(2, 8);
+
+	SetData(f.txtAmount.value, Amt2, "", Period, OrgAuthDate, f.txtAuthNo.value);
+
+	TransData_Event("127.0.0.1", f.txtAgentPortNo.value, f.tran_code.value);
+}
+
+function BtnSend_onclick() {
+
+	var f=document.w_frm;
+	// 초기화
+
+	var Amt2 = Math.round((Number(f.txtAmount.value)/10)*0.90909091);
+	var Period="";
+	for(var i=0; i<f.txtPeriod.length; i++){
+		 if(f.txtPeriod[i].checked == true){
+			Period= f.txtPeriod[i].value;
+		 }
+	}
+	var OrgAuthDate = f.txtAuthDate.value;
+	if(OrgAuthDate.length == 8)
+		OrgAuthDate = OrgAuthDate.substring(2, 8);
+
+	SetData(f.txtAmount.value, Amt2, "", Period, OrgAuthDate, f.txtAuthNo.value);
+
+	TransData("127.0.0.1", f.txtAgentPortNo.value, f.tran_code.value);
+
+	GetData();
+
+	EventChk();
+}
+
+
+$(function(){
+	$(document).keydown(function (event) {
+	alert(event.keyCode);
+	});
+})
+-->
+
+</SCRIPT>
+<body class="body_number">
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+
+	<form name="w_frm" id="w_frm" method="post" action="/contents/chk_member.html">
+		<input type="hidden" name="codeLK" value="<?=$codeLK?>">
+		<input type="hidden" name="nt" value="<?=$nt?>">
+		<input type="hidden" name="num" value="<?=$num?>">
+		<input type="hidden" name="number1" class="number_in" value="<?=$_POST['number1']?>">
+		<input type="hidden" name="number2" class="number_in" value="<?=$_POST['number2']?>">
+		<input type="hidden" name="number3" class="number_in" value="<?=$_POST['number3']?>">
+		<input type="hidden" name="number4" class="number_in" value="<?=$_POST['number4']?>">
+		<input type="hidden" name="number5" class="number_in" value="<?=$_POST['number5']?>">
+		<input type="hidden" name="authNum" value="<?=$_POST['authNum']?>">
+		<input type="hidden" name="birthDay" value="<?=$_POST['birth']?>">
+		<input type="hidden" name="phoneNo" value="<?=$_POST['tel']?>">
+
+		<input type = 'text' name=txtAgentPortNo size =8 value='60110'><!--연결포트-->
+		<input type = 'text' name=tran_code size =8 value='D1'><!--거래구분-->
+		<input type = 'text' name=txtAmount size =12 value='1004'><!--결제금액-->
+		<input type = 'text' name=txtPeriod size =2 value='00'><!--할부개월-->
+		<input type = 'text' name=txtCreditCardNo size =20 value=''><!--결제카드번호-->
+		<input type = 'text' name=txtAuthNo size =20 value=''><!--승인번호-->
+		<input type = 'text' name=txtAuthDate size =20 value=''><!--승인일자-->
+		<input type = 'text' name=txtFICode size =20 value=''><!--매입사코드-->
+		<input type = 'text' name=txtFIName size =20 value=''><!--매입사명-->
+		<input type = 'text' name=txtIssuerCode size =20 value=''><!--발급사코드-->
+		<input type = 'text' name=txtIssuerName size =20 value=''><!--발급사명-->
+		<input type = 'text' name=txtMemberNo size =20 value=''><!--가맹점번호-->
+		<input type = 'text' name=txtTranNo size =20 value=''><!--서명여부-->
+		<input type = 'text' name=txtTradeNum size =20 value=''><!--거래일련번호-->
+		<input type = 'text' name=txtTradeReqDate size =20 value=''><!--거래요청날짜-->
+		<input type = 'text' name=txtTradeReqTime size =20 value=''><!--거래요청시간-->
+
+		<input type= 'button' value='거래요청(일반함수)' name=BtnSign size=20 LANGUAGE=javascript onclick="BtnSend_onclick()">
+		<input type= 'button' value='모듈확인설치확인' name=BtnCheck size=20 LANGUAGE=javascript onclick="checkPlugin()">
+		<input type= 'button' value='거래요청(EVENT함수)' name=BtnSignEvent size=20 LANGUAGE=javascript onclick="BtnSendEvent_onclick()">
+	</form>
+
+
+  <main>
+    <section class="sec_chkout">
+      <h3 class="title_type1 color_org">카드결제 안내</h3>
+      <p class="txt_type1">결제하실 신용카드를 카드투입구에 넣고<br>
+        <strong class="color_org">결제가 완료될 때까지</strong> 반드시 기다려 주세요</p>
+      <div>
+        <p>결제금액<strong class="color_org">25,000원</strong></p>
+        <div class="wrap_img">
+          <img src="/common/images/img_card.png" alt="">
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/popup.html";?>
+
+</body>
+<script>
+$(function(){
+	$(document).on("click",".btn_back",function(){
+		if(confirm("결제를 취소하시겠습니까?")){
+			PlaySound("/");
+		}
+	});
+});
+</script>
+</html>

@@ -1,0 +1,67 @@
+<? 
+include_once $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+
+$M_login = $_SESSION['M_login'];
+
+?>
+<script>
+$(function(){
+	$(document).on("click",".btn_cancel",function(){
+		location.href="/";
+	});
+
+	$(document).on("click",".btn_ok",function(){
+		var passwd = $('[name="passwd"]').val();
+		if($.trim(passwd) == ''){
+			alert("비밀번호를 입력해 주세요.");
+			return false;
+		}
+
+		$("#l_frm").submit();
+	});
+});
+</script>
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">개인정보</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+      <ul class="tab_type1 mar_btm_10">
+        <li><a href="/contents/mypage/chg_info.html" class="<?=($_GET['callback']=='chg_info')?'on':''?>">개인정보 변경</a></li>
+        <li><a href="/contents/mypage/chg_pw.html" class="<?=($_GET['callback']=='chg_pw')?'on':''?>">비밀번호 변경</a></li>
+        <li><a href="/contents/mypage/del_account.html class="<?=($_GET['callback']=='del_account')?'on':''?>"">탈퇴</a></li>
+      </ul>
+    <section class="sec_mypage wrap">
+      <form class="form_chgInfo form_type1"  name="l_frm" id="l_frm" method="post" action="chk_pwd.php" enctype='multipart/form-data' autocomplete="off">
+		<input type="hidden" name="callback" value="<?=$_GET['callback']?>">
+        <legend class="hide">아이디, 비밀번호 입력 양식</legend>
+        <ul class="list_type1">
+          <li>
+            <p><label for="id_chg">아이디</label></p>
+            <input type="text" placeholder="<?=$M_login['phoneNo']?>" id="id_chg" readonly>
+          </li>
+          <li>
+            <p><label for="pw_chg">비밀번호</label></p>
+            <input type="password" class="passwd_input" name="passwd" value="" id="pw_chg">
+          </li>
+        </ul>
+        <div class="bx_btn flex_space">
+          <button type=button class="btn_cancel btn_type3">취소</button>
+          <button type=button class="btn_ok btn_type3">확인</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

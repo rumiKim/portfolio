@@ -1,0 +1,180 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+//kiosk_login($_COOKIE['kioskID']);
+
+?>
+
+<body class="bg_type2" style="background-image:url(/common/images/img_bg_black.jpg)">
+	<!-- <? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?> -->
+	<main>
+		<section class="sec_intro wrap">
+			<h2>안심 구매 <span class="color_org">이용가이드</span></h2>
+			<!-- <ul class="list_step clear">
+				<li>
+					<div></div>
+					<p>키오스크<br>서비스 선택</p>
+				</li>
+				<li>
+					<div></div>
+					<p>2PM<br>구매대행 신청</p>
+				</li>
+				<li>
+					<div></div>
+					<p>미국 <br>공식판매점</p>
+				</li>
+				<li>
+					<div></div>
+					<p>구매대행<br>완료</p>
+				</li>
+			</ul> -->
+			<ul class="list_step">
+				<li>
+					<div class="bx_fff" style="background-image:url(/common/images/img_step_01.png)">
+					</div>
+					<p>01. 키오스크 서비스 선택</p>
+				</li>
+				<li>
+					<div class="bx_fff" style="background-image:url(/common/images/img_step_02.png)">
+					</div>
+					<p>02. 2PM 구매대행 신청</p>
+				</li>
+				<li>
+					<div class="bx_fff" style="background-image:url(/common/images/img_step_04.png)">
+					</div>
+					<p>03. 미국 공식판매점</p>
+				</li>
+				<li>
+					<div class="bx_fff" style="background-image:url(/common/images/img_step_03.png)">
+					</div>
+					<p>04. 구매대행 완료</p>
+				</li>
+			</ul>
+		</section>
+		<section class="sec_option wrap">
+			<h2 class="hide">상품 종류 선택</h2>
+			<ul class="list_menu">
+				<li class="bx_fff btn_mp1">
+					<p class="heading">
+						<strong>POWERBALL<sup>®</sup></strong>
+						<span>2PM에서 제공하는<br>파워볼 구매대행 서비스</span>
+					</p>
+					<p class="txt_price">&nbsp;</p>
+					<div>
+						<p class="txt_type3">마감시간</p>
+						<ul class="list_time" id="list_time">
+							<li class="items_day">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+							<li class="items_hours">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+							<li class="items_min">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+							<li class="items_sec">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+						</ul>
+					<div class="bx_drawtime">
+						<p class="txt_type3">추첨시간</p>
+						<span>&nbsp;</span>
+					</div>
+				</div>
+				</li>
+				<li class="bx_fff btn_mp2">
+					<p class="heading">
+						<strong>MEGA MILLIONS<sup>®</sup></strong>
+						<span>2PM에서 제공하는<br>메가밀리언즈 구매대행 서비스</span>
+					</p>
+					<p class="txt_price">&nbsp;</p>
+					<div>
+						<p class="txt_type3">마감시간</p>
+						<ul class="list_time" id="list_time2">
+							<li class="items_day">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+							<li class="items_hours">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+							<li class="items_min">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+							<li class="items_sec">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</li>
+						</ul>
+					<div class="bx_drawtime">
+						<p class="txt_type3">추첨시간</p>
+						<span>&nbsp;</span>
+					</div>
+				</div>
+				</li>
+				<li class="btn bx_fff">
+					<a href="" class="heading">
+						<strong>LUXURY HONG</strong>
+						<span>해외 명품 직구 서비스</span>
+					</a>
+				</li>
+				<li class="btn bx_fff">
+					<a href="" class="heading">
+						<strong>DIRECT ORDER</strong>
+						<span>생산자 직거래 최저가 서비스</span>
+					</a>
+				</li>
+			</ul>
+
+		</section>
+	</main>
+</body>
+<script>
+	$(function() {
+
+		$(document).on("click", ".btn_back", function() {
+			PlaySound("/");
+		});
+
+		$(document).on("click", ".btn_mp1", function() {
+			PlaySound("/contents/power/power_choice.html");
+		});
+
+		$(document).on("click", ".btn_mp2", function() {
+			PlaySound("/contents/mega/mega_choice.html");
+		});
+
+		$.post("/info_other.php", {
+			mode: "main"
+		}, function(e) {
+			var mm = e.mm;
+			var pb = e.pb;
+
+			TimeDown("list_time", pb.timediff);
+			TimeDown("list_time2", mm.timediff);
+
+			$(".sec_option").find(".txt_price").eq(0).html(pb.price);
+			$(".sec_option").find(".txt_price").eq(1).html(mm.price);
+			$(".sec_option").find(".bx_drawtime").eq(0).find('span').html(pb.play_date);
+			$(".sec_option").find(".bx_drawtime").eq(1).find('span').html(mm.play_date);
+		}, "json");
+
+		$.post("/info_other.php", {
+			mode: "login"
+		}, function(e) {
+			if (e.errNo > 0) {
+				location.href = e.errUrl;
+			}
+		}, "json");
+
+		back_time();
+	});
+</script>
+
+</html>

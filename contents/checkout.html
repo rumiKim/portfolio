@@ -1,0 +1,216 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+kiosk_login($_COOKIE['kioskID']);
+
+$nt			= $_POST['nt'];
+$num		= $_POST['num'];
+$codeLK		= $_POST['codeLK'];
+
+
+$nt = $_POST['nt'];
+$num = $_POST['num'];
+
+$cash = $db->get_data("SELECT lottoCashNow FROM LottoCntCash WHERE lottoCnt='".$num."'");
+
+?>
+<script LANGUAGE=javascript src='/common/js/KisPosAgentLib.js?version=<?=$version?>'></script>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function EventChk()
+{
+//	alert("응답코드 : " + outReplyCode + "\n응답메시지1 : " + outReplyMsg1 + "\n응답메시지2 : " + outReplyMsg2);
+
+	if(outReplyCode == '0000'){
+		var f=document.w_frm;
+
+		f.txtCreditCardNo.value = outCreditCardNo;
+		f.txtAuthNo.value = outAuthNo;
+		f.txtAuthDate.value = outAuthDate;
+		f.txtFICode.value = outFICode;
+		f.txtFIName.value = outFIName;
+		f.txtIssuerCode.value = outIssuerCode;
+		f.txtIssuerName.value = outIssuerName;
+		f.txtMemberNo.value = outMemberNo;
+		f.txtTranNo.value = outTranNo;
+		f.txtTradeNum.value = outTradeNum;
+		f.txtTradeReqDate.value = outTradeReqDate;
+		f.txtTradeReqTime.value = outTradeReqTime;
+
+		f.submit();
+	}else{
+		//alert("결제실패하였습니다.");
+		//location.href = "/";
+		$(".popup_error2").show();
+		$(".popup_background").show();
+	}
+
+
+}
+function BtnSendEvent_onclick() {
+
+	var f=document.w_frm;
+	// 초기화
+
+	var Amt2 = Math.round((Number(f.txtAmount.value)/10)*0.90909091);
+	var Period="";
+	for(var i=0; i<f.txtPeriod.length; i++){
+		 if(f.txtPeriod[i].checked == true){
+			Period= f.txtPeriod[i].value;
+		 }
+	}
+	var OrgAuthDate = f.txtAuthDate.value;
+	if(OrgAuthDate.length == 8)
+		OrgAuthDate = OrgAuthDate.substring(2, 8);
+
+	SetData(f.txtAmount.value, Amt2, "", Period, OrgAuthDate, f.txtAuthNo.value);
+
+	TransData_Event("127.0.0.1", f.txtAgentPortNo.value, f.tran_code.value);
+}
+
+function BtnSend_onclick() {
+
+	var f=document.w_frm;
+	// 초기화
+
+	var Amt2 = Math.round((Number(f.txtAmount.value)/10)*0.90909091);
+	var Period="";
+	for(var i=0; i<f.txtPeriod.length; i++){
+		 if(f.txtPeriod[i].checked == true){
+			Period= f.txtPeriod[i].value;
+		 }
+	}
+	var OrgAuthDate = f.txtAuthDate.value;
+	if(OrgAuthDate.length == 8)
+		OrgAuthDate = OrgAuthDate.substring(2, 8);
+
+	SetData(f.txtAmount.value, Amt2, "", Period, OrgAuthDate, f.txtAuthNo.value);
+
+	TransData("127.0.0.1", f.txtAgentPortNo.value, f.tran_code.value);
+
+	GetData();
+
+	EventChk();
+}
+
+
+$(function(){
+	BtnSend_onclick();
+})
+-->
+
+</SCRIPT>
+<body class="body_number">
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+
+	<form name="w_frm" id="w_frm" method="post" action="/contents/write_action.php">
+		<input type="hidden" name="codeLK" value="<?=$codeLK?>">
+		<input type="hidden" name="codeOT" value="<?=$nt?>">
+		<input type="hidden" name="num" value="<?=$num?>">
+		<input type="hidden" name="number1" class="number_in" value="<?=$_POST['number1']?>">
+		<input type="hidden" name="number2" class="number_in" value="<?=$_POST['number2']?>">
+		<input type="hidden" name="number3" class="number_in" value="<?=$_POST['number3']?>">
+		<input type="hidden" name="number4" class="number_in" value="<?=$_POST['number4']?>">
+		<input type="hidden" name="number5" class="number_in" value="<?=$_POST['number5']?>">
+		<input type="hidden" name="authNum" value="<?=$_POST['authNum']?>">
+		<input type="hidden" name="birthDay" value="<?=$_POST['birth']?>">
+		<input type="hidden" name="phoneNo" value="<?=$_POST['tel']?>">
+
+		<input type = 'hidden' name=txtAgentPortNo size =8 value='60110'><!--연결포트-->
+		<input type = 'hidden' name=tran_code size =8 value='D1'><!--거래구분-->
+		<input type = 'hidden' name=txtAmount size =12 value='<?=$cash["lottoCashNow"]?>'><!--결제금액-->
+		<input type = 'hidden' name=txtPeriod size =2 value='00'><!--할부개월-->
+		<input type = 'hidden' name=txtCreditCardNo size =20 value=''><!--결제카드번호-->
+		<input type = 'hidden' name=txtAuthNo size =20 value=''><!--승인번호-->
+		<input type = 'hidden' name=txtAuthDate size =20 value=''><!--승인일자-->
+		<input type = 'hidden' name=txtFICode size =20 value=''><!--매입사코드-->
+		<input type = 'hidden' name=txtFIName size =20 value=''><!--매입사명-->
+		<input type = 'hidden' name=txtIssuerCode size =20 value=''><!--발급사코드-->
+		<input type = 'hidden' name=txtIssuerName size =20 value=''><!--발급사명-->
+		<input type = 'hidden' name=txtMemberNo size =20 value=''><!--가맹점번호-->
+		<input type = 'hidden' name=txtTranNo size =20 value=''><!--서명여부-->
+		<input type = 'hidden' name=txtTradeNum size =20 value=''><!--거래일련번호-->
+		<input type = 'hidden' name=txtTradeReqDate size =20 value=''><!--거래요청날짜-->
+		<input type = 'hidden' name=txtTradeReqTime size =20 value=''><!--거래요청시간-->
+
+		<input type = 'hidden' id="txtTestMode" name=txtTestMode size =20 value='N'><!--결제완료테스트모드-->
+
+		<!--<input type= 'button' value='거래요청(일반함수)' name=BtnSign size=20 LANGUAGE=javascript onclick="BtnSend_onclick()">
+		<input type= 'button' value='모듈확인설치확인' name=BtnCheck size=20 LANGUAGE=javascript onclick="checkPlugin()">
+		<input type= 'button' value='거래요청(EVENT함수)' name=BtnSignEvent size=20 LANGUAGE=javascript onclick="BtnSendEvent_onclick()">-->
+	</form>
+
+
+  <main>
+    <section class="sec_chkout popup color">
+			<button class="btn_closePop"><i>x</i><span class="hide">팝업창 닫기</span></button>
+      <h3 class="title_type1">카드결제 안내</h3>
+      <p class="txt_type1">결제하실 신용카드를 카드투입구에 넣고<br>
+        <strong class="color_org">결제가 완료될 때까지</strong> 반드시 기다려 주세요</p>
+      <div>
+        <p class="bx_chktotal"><span>총 결제금액</span><strong class="color_org"><?=number_format($cash["lottoCashNow"])?>원</strong></p>
+        <div class="wrap_img">
+          <img src="/common/images/img_card.jpg" alt="">
+        </div>
+				<div class="bx_pay">
+					<strong>페이 사용법</strong>
+					<p>핸드폰 뒷면을 카드리더기에 대주세요.</p>
+				</div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+<div class="popup center popup_error1" style="display:none">
+  <p class="txt_type2">메인으로 이동시,<br> 선택하신 <span class="color_org">정보가 모두 초기화</span> 됩니다. <br>이동하시겠습니까?</p>
+  <div class="bx_btn">
+  <button class="btn_type2 btn_gray87">취소</button>
+  <button class="btn_type2 btn_org btn_confirm">확인</button>
+  </div>
+</div>
+
+
+<div class="popup center popup_error2" id="popup_error2" style="display:none">
+  <p class="txt_type2">결제가 실패되었습니다.</p>
+  <button class="btn_type2 btn_org btn_can">확인</button>
+  <button class="btn_type2 btn_org btn_ok_test">결제완료 테스트</button>
+</div>
+
+<div class="popup center popup_error3" id="popup_error3" style="display:none">
+  <p class="txt_type2">FIS 결제모듈 오류입니다. <br>관리자에게 문의주세요</p>
+  <button class="btn_type2 btn_org btn_can">확인</button>
+</div>
+
+<div class="popup_background" style="display: none;"></div>
+
+</body>
+<script>
+$(function(){
+	$(document).on("click",".btn_back",function(){
+		//PlaySound_nolink();
+		$(".popup_error1").show();
+		$(".popup_background").show();
+	});
+
+	$(document).on("click",".btn_white",function(){
+		//PlaySound_nolink();
+		$(".popup_error1").hide();
+		$(".popup_background").hide();
+	});
+
+	$(document).on("click",".btn_confirm , .btn_can",function(){
+		PlaySound("/");
+	});
+
+	$(document).on("click",".btn_ok_test",function(){
+		$("#txtTestMode").val("Y");
+		$("#w_frm").submit();
+	});
+
+	back_time2();
+});
+</script>
+</html>

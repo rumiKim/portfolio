@@ -1,0 +1,563 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+//echo "<pre>";
+//print_r ($_GET);
+//echo "</pre>";
+
+$kioskID	=	$_GET['mac'];
+
+
+if($_GET['mac']){
+	$_GET['mac']		=	$_GET['mac'];
+} else if($_GET['mac'] == '' && $_COOKIE['kioskID'] != ''){
+	$_GET['mac'] = $_COOKIE['kioskID'];
+}
+
+if($_GET['mac'] != $_COOKIE['kioskID'] && $_COOKIE['kioskID'] != ''){
+	setcookie("kioskID",null,time() + 3600,"/",$_SERVER['HTTP_HOST']);
+}
+
+kiosk_login($_GET['mac']);
+
+
+
+setcookie("kioskID",$_GET['mac'],time() + 2*365*24*3600,"/",$_SERVER['HTTP_HOST']);
+
+?>
+<script	src="/_common/Win4POS/FDK_Link/FDK_Link_Local_Server.js"></script>
+<script	src="/_common/Win4POS/FDK_Link/install/FDK_Link_Version.js"></script>
+<link rel="stylesheet" href="/_common/Win4POS/FDK_Link/jquery-ui.css">
+<script src="/_common/Win4POS/FDK_Link/jquery-ui.js"></script>
+
+
+<!-- Card Function -->
+<script type = "text/javascript" src="/_common/Win4POS/Win4POS_Web_card.js" charset='utf-8'></script>
+<!-- Cash Function -->
+<script type = "text/javascript" src="/_common/Win4POS/Win4POS_Web_cash.js" charset='utf-8'></script>
+<!-- CashIC Function -->
+<script type = "text/javascript" src="/_common/Win4POS/Win4POS_Web_cashic.js" charset='utf-8'></script>
+<!-- Skp Function -->
+<script type = "text/javascript" src="/_common/Win4POS/Win4POS_Web_skp.js" charset='utf-8'></script>
+<!-- Etc Function -->
+<script type = "text/javascript" src="/_common/Win4POS/Win4POS_Web_etc.js" charset='utf-8'></script>
+<body class="body_main body_number body_banner" scroll="no">
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header_index.html";?>
+	<main>
+		<section class="sec_menu wrap">
+			<h2 class="hide">서비스 선택</h2>
+			<nav>
+				<ul class="clear">
+					<li class="bx_fff">
+						<a href="/main.html">
+							<span class="bx_logo">
+								<img src="/common/images/logo_2pm.svg" alt="">
+							</span>
+							<p>
+								미국로또 안심<br>구매대행 서비스
+							</p>
+							<div>
+								<span class="color_org">서비스 자세히 보기</span>
+							</div>
+						</a>
+					</li>
+					<li class="bx_fff">
+						<a href="">
+							<span>event box</span>
+							<p>실시간 이벤트<br>쿠폰 제공</p>
+							<div>
+								<span class="color_org">서비스 자세히 보기</span>
+							</div>
+						</a>
+					</li>
+					<li class="bx_fff" style="margin-bottom:0">
+						<a href="">
+							<span>luxury hong</span>
+							<p>해외 명품<br>직구 서비스</p>
+							<div>
+								<span class="color_org">직접구매 신청하기</span>
+							</div>
+						</a>
+					</li>
+					<li class="bx_fff" style="margin-bottom:0">
+						<a href="/print_ifr.html">
+							<span>direct order</span>
+							<p>생산자 직거래<br>최저가 서비스</p>
+							<div>
+								<span class="color_org">직접구매 신청하기</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div>
+				<p class="txt_type1 deco_hand">원하시는 서비스를 선택하세요</p>
+			</div>
+		</section>
+		<div class="wrap_banner">
+			<img src="/common/images/img_banner.jpg" alt="">
+		</div>
+
+	</main>
+<form name="w_frm" id="w_frm" method="post">
+	<input type="hidden" id="txtBizNo"     value="1000000000" /><!--사업자 번호-->
+	<input type="hidden" id="txtSerialNo"  value="1000000000" /><!--제품 일련 번호-->
+	<input type="hidden" name="txtAmt" id="txtAmt" value="0" /><!--요청금액-->
+	<input type="hidden" name="txtInst" id="txtInst"  value="00" /><!--할부개월-->
+	<input type="hidden" name="txtAuthDate" id="txtAuthDate" value="" /><!--승인일자-->
+	<input type="hidden" name="txtAuthNo" id="txtAuthNo"   value="" /><!--승인번호-->
+	<input type="hidden" name="txtCashICSimpleYN" id="txtCashICSimpleYN" value="Y" /><!--현금IC 간소화 여부-->
+	<input type="hidden" name="txtCashICSimpleAmt" id="txtCashICSimpleAmt" value="1000000" /><!--현금IC 간소화 대상금액-->
+	<input type="hidden" name="txtTokenNo" id="txtTokenNo"     value="" /><!--토큰(SKP Token:Len 37)-->
+	<input type = 'hidden' id="txtAmount" name=txtAmount size =12 value='<?=$cash["lottoCashNow"]?>'><!--결제금액-->
+	<input type = 'hidden' id="txtCreditCardNo" name=txtCreditCardNo size =20 value=''><!--결제카드번호-->
+	<input type = 'hidden' id="txtFICode" name=txtFICode size =20 value=''><!--매입사코드-->
+	<input type = 'hidden' id="txtFIName" name=txtFIName size =20 value=''><!--매입사명-->
+	<input type = 'hidden' id="txtIssuerCode" name=txtIssuerCode size =20 value=''><!--발급사코드-->
+	<input type = 'hidden' id="txtIssuerName" name=txtIssuerName size =20 value=''><!--발급사명-->
+	<input type = 'hidden' id="txtMemberNo" name=txtMemberNo size =20 value=''><!--가맹점번호-->
+	<input type = 'hidden' id="txtTradeNum" name=txtTradeNum size =20 value=''><!--거래일련번호-->
+	<input type = 'hidden' id="txtTradeReqDate" name=txtTradeReqDate size =20 value=''><!--거래요청날짜-->
+	<input type = 'hidden' id="txtTradeReqTime" name=txtTradeReqTime size =20 value=''><!--거래요청시간-->
+</form>
+<TEXTAREA id="txtResult" ROWS=20 COLS=70 readonly = "readonly" style="display:none;" ></TEXTAREA>
+<input type="button" id="btnCardAuth" onclick="btnCardAuth_click();" value="신용승인" style="display:none;" />
+<input type="button" id="btnWin4POSCreate" onclick="btnWin4POSCreate_click();" value="Win4POS구동" style="display:none;" />
+<input type="button" id="btnSetDevice" onclick="btnSetDevice_click();" value="장치설정" style="display:none;" />
+<input type="button" id="btnPosDown" onclick="btnPosDown_click();" value="POS인증" style="display:none;" />
+<input type="button" id="btnWin4POSDestory" onclick="btnWin4POSDestory_click();" value="Win4POS종료" style="display:none;" />
+<input type="button" id="btnWin4POSInteg" onclick="btnWin4POSInteg_click();" value="리더기무결성조회" style="display:none;" />
+<input type="button" id="btnWin4POSCheck" onclick="btnWin4POSCheck_click();" value="Win4POS구동확인" style="display:none;" />
+<div id = "Progress_Loading">
+
+</div>
+<style type = "text/css">
+#Progress_Loading
+{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   div{background:#fff, opacity:0.6;}
+}
+</style>
+</body>
+
+<script language=javascript>
+var mytxtResult = document.getElementById('txtResult');
+
+window.onload = function()
+{
+	setTimeout(btnWin4POSDestory_click(), 0);
+	setTimeout(btnWin4POSCreate_click(), 1000);
+}
+
+function UpdateCheck()
+{
+	var strVer;
+
+  strVer = FDK_LinkVersion();
+  if (strVer.localeCompare(fdk_link_version) != 0 && String(strVer).substring(0, 1) != '-')
+  {
+    var result = confirm('FDK_Link 업데이트 파일이 발견되었습니다. \n업데이트 하시겠습니까?');
+    if(result){
+      FDK_LinkUpdate();
+      location.href = "./FDK_Link/install/FDK_Link_Setup_Win4POS.exe";
+    }
+  }
+}
+
+/*$(function() {
+    $( "#dialog-confirm" ).dialog({
+      autoOpen: false,
+      resizable: false,
+      height: "auto",
+      width: 370,
+      modal: true,
+      buttons: {
+        "설치": function() {
+          location.href = "./FDK_Link/install/FDK_Link_Setup_Win4POS.exe";
+          $( this ).dialog( "close" );
+        },
+        "실행": function() {
+          location.href = "FdkLink:";
+        },
+        "연결": function() {
+          FDK_LinkConnect();
+          $( this ).dialog( "close" );
+          document.location.reload();
+        },
+        "취소": function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+ });*/
+
+
+//사용자 정의 공용 콜백 함수
+function Win4POS_Common_Callback (ret, data)
+{
+  $('#Progress_Loading').hide();
+
+  if(ret == RET_Success)
+  {
+    switch( data.WorkType )
+    {
+    case "FDK_WIN4POS_Create" :
+    case "FDK_WIN4POS_Check" :
+      mytxtResult.value = "Win4POS 구동 성공";
+      break;
+    }
+  }
+  else
+  {
+    switch( data.WorkType )
+    {
+    case "FDK_WIN4POS_Create" :
+    case "FDK_WIN4POS_Check" :
+      mytxtResult.value = "Win4POS 상태를 확인해 주세요";
+      break;
+    }
+  }
+}
+
+
+//Win4POS 구동
+function btnWin4POSCreate_click() {
+	var iRet = 0;
+
+	iRet = Win4POS.FDK_WIN4POS_Create("127.0.0.1", "2003", Win4POS_Common_Callback);
+	$('#Progress_Loading').show();
+}
+
+
+//Win4POS 종료
+ function btnWin4POSDestory_click() {
+	var iRet = 0;
+	iRet = Win4POS.FDK_WIN4POS_Destroy();
+
+	if(iRet == 0)
+		mytxtResult.value = "Win4POS 종료 성공";
+	else
+		mytxtResult.value = "Win4POS 종료 실패";
+}
+
+
+//Win4POS 구동 확인
+ function btnWin4POSCheck_click()
+ {
+ 	var iRet = 0;
+
+ 	iRet = Win4POS.FDK_WIN4POS_Check("127.0.0.1", "2003", Win4POS_Common_Callback);
+ 	$('#Progress_Loading').show();
+ }
+
+
+ //장치 설정
+function btnSetDevice_click() {
+	var strMsg = "";
+	var varTmpRet = 0;
+	while (1)
+	{
+		varTmpRet = Win4POS.FDK_WIN4POS_Check("127.0.0.1", "2003");
+
+		if ( varTmpRet != 0 )
+		{
+			strMsg = "Win4POS 구동 상태를 확인해주세요";
+			break;
+		}
+		var strTranId = Win4POS.FDK_WIN4POS_MkTranId();
+
+		varTmpRet = Win4POS.FDK_WIN4POS_Init( strTranId, "MAIN", "FDK" );
+
+		if( varTmpRet != 0 )
+		{
+		    strMsg = varTmpRet;
+			break;
+		}
+
+		varTmpRet = Win4POS.FDK_WIN4POS_Input( "화면구분", "ENV" );
+		if( varTmpRet != 0 )
+		{
+			strMsg = varTmpRet;
+			break;
+		}
+
+		varTmpRet = Win4POS.FDK_WIN4POS_Execute();
+
+		if( varTmpRet != 0 )
+		{
+			strMsg = varTmpRet;
+			break;
+		}
+		break;
+	}
+
+	mytxtResult.value = strMsg;
+	Win4POS.FDK_WIN4POS_Term();
+}
+
+
+//POS 인증
+function btnPosDown_click() {
+	var iRet = 0;
+	var strMsg = "";
+	var inTmpRet = 0;
+
+	var strBizNo     = document.getElementById("txtBizNo").value;
+	var strSerialNO = document.getElementById("txtSerialNo").value;
+
+	while (1)
+	{
+		iRet = Win4POS.FDK_WIN4POS_Check("127.0.0.1", "2003");
+
+		if ( iRet != 0 )
+		{
+			strMsg = "Win4POS 구동 상태를 확인해주세요";
+			break;
+		}
+		var strTranId = Win4POS.FDK_WIN4POS_MkTranId();
+
+		inTmpRet = Win4POS.FDK_WIN4POS_Init( strTranId, "MAIN", "FDK" );
+
+		if( inTmpRet != 0 )
+		{
+		    strMsg = "Call Init(csTranId=[" + szTranId + "], csMsgCmd=[MAIN], csMsgCert=[FDK])\n => 결과=[" + inTmpRet + "] ";
+			break;
+		}
+
+		inTmpRet = Win4POS.FDK_WIN4POS_Input( "화면구분", "PDN" );
+		if( inTmpRet != 0 )
+		{
+		    strMsg = "Call Input(csKey=[화면구분], csVal=[ENV])\n => 결과=[" + inTmpRet + "] ";
+			break;
+		}
+
+		inTmpRet = Win4POS.FDK_WIN4POS_Input( "사업자번호", strBizNo );
+		if( inTmpRet != 0 )
+		{
+			strMsg = "Call Input(csKey=[사업자번호], csVal=[" + strBizNo + "])\n => 결과=[" + inTmpRet + "] ";
+			break;
+		}
+		inTmpRet = Win4POS.FDK_WIN4POS_Input( "제품일련번호", strSerialNO );
+		if( inTmpRet != 0 )
+		{
+			strMsg = "Call Input(csKey=[사업자번호], csVal=[" + strBizNo + "])\n => 결과=[" + inTmpRet + "] ";
+			break;
+		}
+
+		inTmpRet = Win4POS.FDK_WIN4POS_Execute();
+		strMsg = "**결과**\n";
+
+		if( inTmpRet != 0)
+		{
+			var strErrMsg = Win4POS.FDK_WIN4POS_Output( "MSG_RET_STR");
+			strMsg = strMsg +  "MSG_RET_STR : [" + strErrMsg + "]";
+			break;
+		}
+		var retTempValue = "";
+		var strValue = "";
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "CATID");
+		strValue = "CATID : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "프린터출력유무");
+		strValue = "프린터출력유무 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "응답코드");
+		strValue = "응답코드 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "응답메시지1");
+		strValue = "응답메시지1 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "응답메시지2");
+		strValue = "응답메시지2 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "제품일련번호");
+		strValue = "제품일련번호 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "대표자명");
+		strValue = "대표자명 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "가맹점명");
+		strValue = "가맹점명 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "가맹점주소");
+		strValue = "가맹점주소 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "가맹점전화번호");
+		strValue = "가맹점전화번호 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "대리점전화번호");
+		strValue = "대리점전화번호 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		retTempValue = Win4POS.FDK_WIN4POS_Output( "무서명한도금액");
+		strValue = "무서명한도금액 : [" + retTempValue + "] \n";
+		strMsg = strMsg + strValue;
+
+		break;
+	}
+
+	mytxtResult.value = strMsg;
+	Win4POS.FDK_WIN4POS_Term();
+}
+
+// 리더기 무결성 조회
+function btnWin4POSInteg_click() {
+	var strMsg = "";
+	var varTmpRet = 0;
+	while (1)
+	{
+		varTmpRet = Win4POS.FDK_WIN4POS_Check("127.0.0.1", "2003");
+
+		if ( varTmpRet != 0 )
+		{
+			strMsg = varTmpRet;
+			break;
+		}
+		var strTranId = Win4POS.FDK_WIN4POS_MkTranId();
+
+		varTmpRet = Win4POS.FDK_WIN4POS_Init( strTranId, "MAIN", "FDK" );
+
+		if( varTmpRet != 0 )
+		{
+		    strMsg = varTmpRet;
+			break;
+		}
+
+		varTmpRet = Win4POS.FDK_WIN4POS_Input( "화면구분", "INT" );
+		if( varTmpRet != 0 )
+		{
+			strMsg = varTmpRet;
+			break;
+		}
+
+		varTmpRet = Win4POS.FDK_WIN4POS_Execute();
+
+		if( varTmpRet != 0 )
+		{
+			strMsg = varTmpRet;
+			break;
+		}
+		break;
+	}
+
+	mytxtResult.value = strMsg;
+	Win4POS.FDK_WIN4POS_Term();
+
+}
+
+// 신용승인
+function btnCardAuth_click() {
+	Cd_Win4POSCardAuth();
+}
+
+//신용취소
+function btnCardCancel_click() {
+	Cd_Win4POSCardCancel();
+}
+
+// 현금승인
+function btnCashAuth_click() {
+	Cs_Win4POSCashAuth();
+}
+
+// 현금취소
+function btnCashCancel_click() {
+	Cs_Win4POSCashCancel();
+}
+
+// 수표조회
+function btnCheckInq_click() {
+	Ec_Win4POSCheckInq();
+}
+
+// 시작카드리딩설정
+function  btnWin4POSStartCardUse_click() {
+	Ec_Win4POSStartCardUse();
+}
+
+// 현금IC간소화설정
+function  btnWin4POSCashICSimpleclick() {
+	Ec_Win4POSCashICSimple();
+}
+
+// 현금IC승인
+function btnCashICAuth_click() {
+	Cs_Win4POSCashICAuth();
+}
+
+// 현금IC취소
+function btnCashICCancel_click() {
+	Cs_Win4POSCashICCancel();
+}
+
+// 토큰(SKP)승인
+function btnSkpAuth_click() {
+	Cd_Win4POSSkpAuth();
+}
+
+// 토큰(SKP)취소
+function btnSkpCancel_click() {
+	Cd_Win4POSSkpCancel();
+}
+
+//토큰(SKP)등록
+function btnSkpRegist_click() {
+	Cd_Win4POSSkpRegist();
+}
+
+// 토큰(SKP)삭제
+function btnSkpDelete_click() {
+	Cd_Win4POSSkpDelete();
+}
+
+// 신용or현금IC
+function btnCardorCashICAuth_click() {
+	Cd_Win4POSCardorCashICAuth();
+}
+
+// 서명받기(거래사용X)
+function btnCustomerSignature_click()
+{
+	var strData;
+
+	strData = Win4POS.FDK_WIN4POS_Get_CustomerSignature("C:/FDK_Link/LIBS/Win4POS/FDK_Sign.Bmp", 2048, "AAA 서비스에", "동의 하시면", "서명 요청", "드립니다.");
+	if(0 < strData.length)
+		mytxtResult.value = "고객서명 전환\n" + strData;
+	else
+		mytxtResult.value = "오류 발생:\n연결 상태, 연결 설정, 사용자 취소, 등을 확인 하십시오.";
+}
+
+// 1. 서명받기 정상 이후, 2. Win4POS 서명승인 정상 후
+function btnFileToString_click()
+{
+	var strData;
+
+	strData = Win4POS.FDK_WIN4POS_Get_FileToString("C:/FDK_Link/LIBS/Win4POS/FDK_Sign.Bmp", 2048);
+	if(0 < strData.length)
+		mytxtResult.value = "고객서명 파일 전환\n" + strData;
+	else
+		mytxtResult.value = "오류 발생:\n연결 상태, 연결 설정, 사용자 취소, 등을 확인 하십시오.";
+}
+
+// 신용승인연속3회
+function btnCardAuthCon_click() {
+	Cd_Win4POSCardAuth();
+	nCardAuth = 3;
+}
+
+
+
+ </script>
+</html>

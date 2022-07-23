@@ -1,0 +1,96 @@
+<? 
+include $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">신청 & 당첨내역</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="" class="on">신청 & 당첨 내역</a></li>
+    </ul>
+    <section class="sec_history wrap mar_btm_10" style="padding-top:6.94vw">
+      <h3 class="hide">신청 & 당첨 내역 조회기준 옵션 선택</h3>
+      <div class="bx_gray bx_list">
+        <ul class="list_type1">
+          <li class="wrap_sel_type1">
+            <select class="codeLK" name="codeLK">
+              <option value="">복권명 선택</option>
+              <option value="MM">메가밀리언</option>
+              <option value="PA">파워볼</option>
+            </select>
+          </li>
+          <li class="wrap_sel_type1">
+            <select class="winYN" name="winYN">
+              <option value="">결과내역 선택</option>
+              <option value="Y">당첨</option>
+              <option value="N">낙첨</option>
+            </select>
+          </li>
+          <li class="wrap_sel_type1">
+            <select class="sortType" name="sortType">
+              <option value="">정렬 선택</option>
+              <option value="1">최신순</option>
+              <option value="2">과거순</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="sec_history">
+      <h3 class="hide">조회 내역</h3>
+      <div class="wrap_result">
+        <ul class="list_result">
+          
+        </ul>
+        <button class="btn_more">더보기</button>
+      </div>
+    </section>
+    <div class="pop_history pop_org pop_type1">
+      <div>
+        <button class="btn_close"><span class="hide">닫기</span></button>
+        <h3>신청번호확인</h3>
+        <div class="wrap">
+          <ol class="info_list">
+            
+          </ol>
+        </div>
+      </div>
+    </div>
+  </main>
+<script LANGUAGE=javascript src='/common/js/history.js' > </script>
+<script>
+$(function(){
+	var page		=	1;
+	var pageLimit	=	20;
+
+	list_html(page, pageLimit);
+
+	$(document).on("click",".btn_more",function(){
+		page++;
+
+		list_html(page, pageLimit);
+	});
+
+	$(document).on("change",".codeLK , .winYN , .sortType",function(){
+		page = 1;
+
+		list_html(page, pageLimit);
+	});
+
+});
+</script>
+</body>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

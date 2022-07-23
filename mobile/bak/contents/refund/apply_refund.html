@@ -1,0 +1,127 @@
+<? 
+include $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+
+$M_login		=	$_SESSION['M_login'];
+$info			=	dbMemberBYphoneNoNbirthDay($M_login['phoneNo'], $M_login['birthDay']);
+
+$sql			=	"SELECT bankCode, bankOriName from Bank WHERE bankFlag > 0";
+$bank_option	=	F_get_option($sql,"");
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">당첨금 환급 신청</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+  <main id="main">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="/contents/refund/apply_refund.html" class="on">당첨금 환급신청 접수</a></li>
+      <li><a href="/contents/refund/view_refund.html">당첨금 환급신청 내역조회</a></li>
+    </ul>
+    <section class="sec_refund sec_win mar_btm_10 wrap">
+      <h3 class="hide">당첨금 현황</h3>
+      <div class="bx_gray">
+        <p><span class="color_org"><?=number_format($info['memberCash'])?></span>원</p>
+      </div>
+      <h3 class="hide">당첨금 환급신청 접수 절차</h3>
+      <ol class="list_step clear">
+        <li>
+          <p class="on">
+            <span class="">01</span>
+            신청중
+          </p>
+          <span>계좌 출금<br>신청 완료</span>
+        </li>
+        <li>
+          <p>
+            <span class="">02</span>
+            처리중
+          </p>
+          <span>관리자<br>접수 완료</span>
+        </li>
+        <li>
+          <p>
+            <span class="">03</span>
+            환급완료
+          </p>
+          <span>이체오류시<br>예치금으로 변환</span>
+        </li>
+      </ol>
+    </section>
+    <section class="sec_refund wrap">
+      <h3 class="h_type1">당첨금 환급 신청 접수하기</h3>
+      <form name="w_frm" id="w_frm" method="post" enctype="multipart/form-data" action="action_refund.php" autocomplete="off">
+        <div class="bx_gray bx_list">
+          <legend class="hide">당첨금 환급 신청 접수 양식</legend>
+          <ul class="list_type1">
+            <li class="wrap_sel_type1 ">
+              <select name="bankCode" class="chk_on" alt="은행명을 선택해 주세요.">
+                <option value="">은행명 선택</option>
+				<?=$bank_option?>
+              </select>
+            </li>
+            <li class="">
+              <input type="text" name="accountName" class="chk_on" alt="예금주 명을 입력해 주세요." placeholder="예금주 명을 입력하세요">
+            </li>
+            <li class="">
+              <input type="number" name="accountNum" class="chk_on" alt="계좌번호를 입력해 주세요." placeholder="계좌번호를 숫자만 입력하세요">
+            </li>
+          </ul>
+        </div>
+        <div class="bx_btn flex_space">
+          <button type="button" class="btn_type3 btn_gray" onclick="location.href='/'">취소</button>
+          <button type="button" class="btn_type3 btn_org btn_ok">접수</button>
+        </div>
+      </form>
+      <div class="bx_txt">
+        <h3>당첨금 환급 안내</h3>
+        <ul class="list_notice">
+          <li><p>환급 신청 시 신청자 본인 계좌만 유효합니다. 타인계좌 등록 시
+            환급이 불가합니다.</p></li>
+          <li><p>은행명, 예금주(본인), 계좌번호, 주민번호(생년월일,성별) 정보를
+            정확히 입력 해 주셔야 하며 입력 오류 시 환 급이 지연될 수
+            있습니다.</p></li>
+          <li><p>환급처리는 월~금요일 업무 시간 내에 처리되며 환급신청 후
+            3일 이내에 환급 처리됩니다.</p></li>
+          <li><p>600불 이하 환급 요청 시 환급액 전액이 환급되며 별도에
+            수수료는 없습니다.</p></li>
+          <li><p>600불 이상 환급 시 25%의 세금이 공제됩니다. (1, 2등 별도)
+          <li><p>이체오류, 정보상이, 시스템 에러 등으로 환급 지연 시 환급금이
+            차감되지 않습니다.</p></li>
+          <li><p>자세한 사항은 환급 절차를 확인하시거나 1:1문의를 통해 요청해
+            주시기 바랍니다.</p></li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+</body>
+<script>
+$(function(){
+	$(document).on("click",".btn_ok",function(){
+		var check = true;
+
+		$(".chk_on").each(function(){
+			if($.trim($(this).val()) == ''){
+				alert($(this).attr("alt"));
+				check	=	false;
+				return false;
+			}
+		});
+
+		if(check){
+			$("#w_frm").submit();
+		}
+	});
+});
+</script>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

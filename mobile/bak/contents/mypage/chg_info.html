@@ -1,0 +1,105 @@
+<? 
+include_once $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+
+$gubun = $_GET['gubun'];
+if($gubun != 'Y'){
+	meta_go("/contents/mypage/chk_pwd.html?callback=chg_info");
+	exit;
+}
+
+$M_login	=	$_SESSION['M_login'];
+$info		=	dbMemberBYphoneNoNbirthDay($M_login['phoneNo'],$M_login['birthDay']);
+
+$year		=	substr($M_login['birthDay'],0,2);
+$month		=	substr($M_login['birthDay'],2,2);
+$day		=	substr($M_login['birthDay'],4,2);
+
+$chk_ok		=	'';
+$chk_no		=	'';
+switch($info['smsYN']){
+	case "Y":
+		$chk_ok = "checked";
+		break;
+	case "N":
+		$chk_no = "checked";
+		break;
+}
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">개인정보</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+      <ul class="tab_type1 mar_btm_10">
+        <li><a href="/contents/mypage/chg_info.html?gubun=Y" class="on">개인정보 변경</a></li>
+        <li><a href="/contents/mypage/chg_pw.html?gubun=Y">비밀번호 변경</a></li>
+        <li><a href="/contents/mypage/del_account.html?gubun=Y">탈퇴</a></li>
+      </ul>
+    <section class="sec_myInfo mar_btm_10 wrap">
+      <h3 class="hide">생년월일 및 아이디 정보</h3>
+        <ul class="list_type2 bx_gray">
+          <li>
+            <p>생년월일</p>
+            <span><?=$year?>년 <?=$month?>월 <?=$day?>일</span>
+          </li>
+          <li>
+            <p>아이디(휴대폰번호)</p>
+            <span><?=$M_login['phoneNo']?></span>
+          </li>
+        </ul>
+    </section>
+    <section class="sec_chgId mar_btm_10 wrap">
+      <h3 class="h_type1">아이디(휴대폰번호) 변경</h3>
+      <p>휴대폰 번호 변경이 필요한 경우 본인인증을 하시면, 자동으로 아이디(휴대폰번호)가 변경됩니다.</p>
+      <div class="bx_btn">
+      <button class="btn_type3 btn_org">본인명의 휴대폰으로 인증</button>
+      </div>
+    </section>
+    <section class="sec_agree wrap">
+      <h3 class="h_type1">마케팅 수신 여부 동의 설정</h3>
+      <p>안내사항 PUSH의 경우 동의여부와 관계없이 발송됩니다.</p>
+      <ul class="list_chk clear">
+        <li><input type="radio" name="ra_agree" class="chk_type1" value="Y" id="chk_ok" <?=$chk_ok?>><label for="chk_ok">동의함</label></li>
+        <li><input type="radio" name="ra_agree" class="chk_type1" value="N" id="chk_no" <?=$chk_no?>><label for="chk_no">동의안함</label></li>
+      </ul>
+      <div class="bx_btn flex_space">
+        <button class="btn_type3 btn_gray">취소</button>
+        <button class="btn_type3 btn_org">변경</button>
+      </div>
+    </section>
+  </main>
+</body>
+<script>
+$(function(){
+	$(document).on("click",".btn_gray",function(){
+		location.href="/";
+	});
+
+	$(document).on("click",".btn_org",function(){
+		var len = $('[name="ra_agree"]:checked');
+		if(len.length <= 0){
+			alert("마케팅 수신 여부를 선택해 주세요.");
+			return false;
+		}
+
+		$.post("./chg_info.php",{
+			smsYN	:	len.val()
+		},function(e){
+			window.location.reload();
+		},"json");
+	});
+});
+</script>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

@@ -1,0 +1,129 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+//kiosk_login($_COOKIE['kioskID']);
+
+//$time_set_MM	=	timesss('MM');
+
+($_GET['nt'])?$nt=$_GET['nt']:$nt='MM';
+($_GET['num'])?$num=$_GET['num']:$num=0;
+($nt=='AT')?$tnm="자동":$tnm="수동";
+
+?>
+<body class="bg_type1">
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+  <main >
+    <section class="sec_visual count">
+      <h2>
+        <span class="hide">MEGA MILLIONS<sup>®</sup></span>
+      <img src="/common/images/logo_Mega_ca.png" alt="megamillions">
+    </h2>
+      <p class="txt_price">0</p>
+      <div class="bx_time">
+        <p>마감시간</p>
+        <ul class="list_time" id="list_time">
+          <li class="items_day">
+            <span>0</span>
+            <span>0</span>
+          </li>
+          <li class="items_hours">
+            <span>0</span>
+            <span>0</span>
+          </li>
+          <li class="items_min">
+            <span>0</span>
+            <span>0</span>
+          </li>
+          <li class="items_sec">
+            <span>0</span>
+            <span>0</span>
+          </li>
+        </ul>
+      </div>
+      <div class="bx_drawtime">
+        <p class="color_org">추첨시간</p>
+        <span>2021.04.01 (화) PM 14:00</span>
+      </div>
+    </section>
+    <section class="sec_choice count wrap">
+      <h3 class="h_type1"><?=$tnm?> 게임 수량 선택</h3>
+      <ul class="">
+        <li>
+          <button class="bx_fff btn_mp1 <?=($num==1)?'on':''?>" data-num="1">
+            <strong>1게임</strong>
+            <span>0원</span>
+          </button>
+        </li>
+        <li>
+          <button class="bx_fff btn_mp2 <?=($num==2)?'on':''?>" data-num="2">
+            <strong>2게임</strong>
+            <span>0원</span>
+          </button>
+        </li>
+        <li>
+          <button class="bx_fff btn_mp3 <?=($num==3)?'on':''?>" data-num="3">
+            <strong>3게임</strong>
+            <span>0원</span>
+          </button>
+        </li>
+        <li>
+          <button class="bx_fff btn_mp5 <?=($num==5)?'on':''?>" data-num="5">
+            <strong>5게임</strong>
+            <span>0원</span>
+          </button>
+        </li>
+      </ul>
+      <p class="txt_type1 deco_hand">원하시는 서비스를 선택하세요</p>
+    </section>
+
+  </main>
+
+</body>
+<script>
+$(function(){
+	//TimeDown("list_time","<?=$time_set_MM['timediff']?>");
+
+	$(document).on("click",".btn_back",function(){
+		PlaySound("/contents/mega/mega_choice.html?nt=<?=$nt?>");
+	});
+
+	$(document).on("click",".bx_fff",function(){
+		var num = $(this).data("num");
+
+		$(".bx_fff").removeClass("on");
+		$(this).addClass("on");
+		PlaySound("/contents/mega/mega_number.html?nt=<?=$nt?>&num="+num);
+	});
+
+	$.post("/info_other.php",{
+		mode	:	"login"
+	},function(e){
+		if(e.errNo > 0){
+			location.href = e.errUrl;
+		}
+	},"json");
+
+	$.post("/info_other.php",{
+		mode	:	"main"
+	},function(e){
+		var mm = e.mm;
+		var pb = e.pb;
+		TimeDown("list_time", mm.timediff);
+
+		$(".sec_choice").find(".txt_price").eq(0).html(mm.price);
+	},"json");
+
+	$.post("/info_other.php",{
+		mode	:	"type_count"
+	},function(e){
+		$(".sec_choice").find(".btn_mp1").find("span").text(e.cash1+"원");
+		$(".sec_choice").find(".btn_mp2").find("span").html(e.cash2+"원");
+		$(".sec_choice").find(".btn_mp3").find("span").html(e.cash3+"원");
+		$(".sec_choice").find(".btn_mp5").find("span").html(e.cash5+"원");
+	},"json");
+
+	back_time();
+
+});
+</script>
+</html>

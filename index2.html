@@ -1,0 +1,80 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+$_GET['mac'] = "F02F742E14E2";
+if($_GET['mac'] == '' && $_SESSION['kioskID'] != ''){
+	$_GET['mac'] = $_SESSION['kioskID'];
+}
+
+$kioskID	=	$_GET['mac'];
+setcookie("kioskID",$_GET['mac'],time() + 99*365*24*3600,"/",$_SERVER['HTTP_HOST']);
+alert_print("키오스키 Address를 도봉점으로 지정하였습니다.");
+meta_go("index.html");
+exit;
+exit;
+exit;
+exit;
+exit;
+exit;
+?>
+<body class="body_main body_number body_banner" scroll="no">
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header_index.html";?>
+	<main>
+		<section class="sec_menu wrap">
+			<h2 class="hide">서비스 선택</h2>
+			<nav>
+				<ul class="clear">
+					<li class="bx_fff">
+						<a href="/main.html">
+							<span class="bx_logo">
+								<img src="/common/images/logo_2pm.svg" alt="">
+							</span>
+							<p>
+								미국로또 안심<br>구매대행 서비스
+							</p>
+							<div>
+								<span class="color_org">서비스 자세히 보기</span>
+							</div>
+						</a>
+					</li>
+					<li class="bx_fff">
+						<a href="">
+							<span>event box</span>
+							<p>실시간 이벤트<br>쿠폰 제공</p>
+							<div>
+								<span class="color_org">서비스 자세히 보기</span>
+							</div>
+						</a>
+					</li>
+					<li class="bx_fff" style="margin-bottom:0">
+						<a href="">
+							<span>luxury hong</span>
+							<p>해외 명품<br>직구 서비스</p>
+							<div>
+								<span class="color_org">직접구매 신청하기</span>
+							</div>
+						</a>
+					</li>
+					<li class="bx_fff" style="margin-bottom:0">
+						<a href="">
+							<span>direct order</span>
+							<p>생산자 직거래<br>최저가 서비스</p>
+							<div>
+								<span class="color_org">직접구매 신청하기</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div>
+				<p class="txt_type1 deco_hand">원하시는 서비스를 선택하세요</p>
+			</div>
+		</section>
+		<div class="wrap_banner">
+			<img src="/common/images/img_banner.jpg" alt="">
+		</div>
+
+	</main>
+</body>
+
+
+</html>

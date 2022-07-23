@@ -1,0 +1,207 @@
+<? 
+include $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="/contents/drawing/result.html">추첨안내</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="/contents/drawing/result_mega.html" class="on">추첨결과</a></li>
+      <li><a href="/contents/drawing/schedule_draw.html">추첨 일정 안내</a></li>
+      <li><a href="/contents/drawing/schedule_upload.html" class="">업로드 일정 안내</a></li>
+    </ul>
+    <section class="sec_draw sec_intro wrap mar_btm_10">
+      <h3 class="hide">추첨 결과 시간 안내</h3>
+      <nav>
+        <ul class="tab_type2">
+          <li><a href="/contents/drawing/result_mega.html">MEGA MILLIONS</a></li>
+          <li class="on"><a href="/contents/drawing/result_power.html">POWERBALL</a></li>
+        </ul>
+      </nav>
+      <div class="bx_logo wrap_img">
+        <img src="/common/images/logo_power_ca.png" alt="">
+      </div>
+      <ul class="list_time">
+        <li>
+          <span>한국</span>
+          <div></div>
+        </li>
+        <li>
+          <span>미국</span>
+          <div></div>
+        </li>
+      </ul>
+      <ul class="list_ball one_ball">
+        <li>0</li>
+        <li>0</li>
+        <li>0</li>
+        <li>0</li>
+        <li>0</li>
+        <li class="power"><span>0</span></li>
+      </ul>
+    </section>
+    <section class="sec_draw list">
+      <h3 class="hide">추첨 결과 내역</h3>
+      <div class="wrap_result">
+        <ul class="list_result">
+          
+        </ul>
+        <button class="btn_more">더보기</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="pop_video pop_type1">
+    <h3 class="hide">추첨 방송 비디오</h3>
+    <div>
+      <button class="btn_close"><span class="hide">닫기</span></button>
+      <div class="bx_txt">
+        <p class="">파워볼</p>
+        <span></span>
+      </div>
+      <div class="wrap_iframe">
+        <!--<iframe src="https://www.youtube.com/embed/Ah2DE3kRyo0" title="YouTube video player" frameborder="0"></iframe>-->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 상세보기 팝업 -->
+  <div class="pop_draw pop_type1 wrap">
+    <div class="">
+      <button class="btn_close"><span class="hide">닫기</span></button>
+      <div class="bx_txt">
+        <h3 class="h_type1">추첨번호 결과</h3>
+        <span class="info_now_date"></span>
+        <p>1등의 결과는 미국 전체의 결과이고, 그 외의 등수는<br> <span class="color_red">캘리포니아만의 결과</span>입니다.</p>
+      </div>
+      <ul class="list_ball type2 info_ball">
+        <li>0</li>
+        <li>0</li>
+        <li>0</li>
+        <li>0</li>
+        <li class="power">0</li>
+      </ul>
+      <div class="wrap_tb">
+        <table class="tb_type1 tb_info">
+          <caption>
+            <div class="hide">등수에 따른 당첨조건, 당첨금, 당첨 수에 대한 정보를 제공하는 표</div>
+          </caption>
+          <thead>
+            <tr>
+              <th>등수</th>
+              <th>당첨조건</th>
+              <th>당첨금</th>
+              <th>당첨 수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1등</td>
+              <td>5개 화이트볼 + 1개 파워볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>2등</td>
+              <td>5개 화이트볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>3등</td>
+              <td>4개 화이트볼 + 1개 파워볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>4등</td>
+              <td>4개 화이트볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>5등</td>
+              <td>3개 화이트볼 + 1개 파워볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>6등</td>
+              <td>3개 화이트볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>7등</td>
+              <td>2개 화이트볼 + 1개 파워볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>8등</td>
+              <td>1개 화이트볼 + 1개 파워볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>9등</td>
+              <td>1개 파워볼</td>
+              <td>
+                <p>0</p>
+              </td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script LANGUAGE=javascript src='/common/js/goods.js' > </script>
+<script>
+$(function(){
+	var page		=	1;
+	var pageLimit	=	20;
+	var codeLK		=	"PB";
+
+	list_html(page, pageLimit, codeLK);
+
+	$(document).on("click",".btn_more",function(){
+		page++;
+
+		list_html(page, pageLimit, codeLK);
+	});
+});
+</script>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

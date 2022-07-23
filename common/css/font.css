@@ -1,0 +1,30 @@
+/* 지마켓 산스 */
+@font-face {
+    font-family: 'GmarketLight';
+    src: url('/common/font/GmarketSans/GmarketSansTTFLight.woff2') format('woff2'),
+        url('/common/font/GmarketSans/GmarketSansTTFLight.woff') format('woff'),
+        url('/common/font/GmarketSans/GmarketSansTTFLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketMedium';
+    src: url('/common/font/GmarketSans/GmarketSansTTFMedium.woff2') format('woff2'),
+        url('/common/font/GmarketSans/GmarketSansTTFMedium.woff') format('woff'),
+        url('/common/font/GmarketSans/GmarketSansTTFMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketBold';
+    src: url('/common/font/GmarketSans/GmarketSansTTFBold.woff2') format('woff2'),
+        url('/common/font/GmarketSans/GmarketSansTTFBold.woff') format('woff'),
+        url('/common/font/GmarketSans/GmarketSansTTFBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

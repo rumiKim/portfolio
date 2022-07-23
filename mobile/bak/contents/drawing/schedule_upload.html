@@ -1,0 +1,52 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="/contents/drawing/result.html">추첨안내</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+    <ul class="tab_type1">
+      <li><a href="/contents/drawing/result_mega.html">추첨결과</a></li>
+      <li><a href="/contents/drawing/schedule_draw.html">추첨 일정 안내</a></li>
+      <li><a href="/contents/drawing/schedule_upload.html" class="on">업로드 일정 안내</a></li>
+    </ul>
+    <section class="sec_upload sec_intro wrap">
+      <h3 class="h_type1">신청대행 일정 안내</h3>
+        <ul class="bx_gray clear">
+          <li>
+            <img src="/common/images/img_ko.jpg" alt="태극기">
+            <p>한국기준</p>
+            <span>매일 AM 02 ~ AM 11:30</span>
+          </li>
+          <li>
+            <img src="/common/images/img_us.jpg" alt="성조기">
+            <p>미국기준</p>
+            <span>매일 AM 10 ~ PM 19</span>
+          </li>
+        </ul>
+    </section>
+    <section class="wrap_notice wrap">
+      <h3 class="h_type3">당첨금 환급 안내</h3>
+      <ul class="list_notice">
+        <li><p>티켓 신청은 한국시간 매일 새벽 2시까지 가능합니다.</p></li>
+        <li><p>추첨 당일 새벽 2시 이후 신청된 티켓은 다음 회차로 넘어갑니다.</p></li>
+        <li><p>새벽 2시 이전에 신청된 티켓은 당일 새벽 2시 ~ 11시 30분 사이에
+          업로드 됩니다.</p></li>
+        <li><p>새벽 2시 이후에 신청된 티켓은 다은날 새벽 2시 ~ 11시 30분사이에
+          업로드 됩니다.</p></li>
+        <li><p>월,화요일 새벽 2시까지 업로드 일정은 휴무입니다. 이 날 구입분은 화요일 새벽 2시 이후에 일괄 업로드 됩니다.</p></li>
+      </ul>
+    </section>
+
+
+  </main>
+</body>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

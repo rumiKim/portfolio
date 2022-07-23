@@ -1,0 +1,158 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+//kiosk_login($_COOKIE['kioskID']);
+
+$nt = $_POST['nt'];
+$num = $_POST['num'];
+
+//$cash = $db->get_data("SELECT lottoCashNow FROM LottoCntCash WHERE lottoCnt='".$num."'");
+?>
+
+<body class="body_chk body_number">
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/header_mega.html";?>
+  <main class="fullp">
+
+	<form name="w_frm" id="w_frm" method="post" action="/contents/chk_member.html">
+		<input type="hidden" name="codeLK" value="MM">
+		<input type="hidden" name="nt" value="<?=$nt?>">
+		<input type="hidden" name="num" value="<?=$num?>">
+		<input type="hidden" name="number1" class="number_in" value="<?=$_POST['number1']?>">
+		<input type="hidden" name="number2" class="number_in" value="<?=$_POST['number2']?>">
+		<input type="hidden" name="number3" class="number_in" value="<?=$_POST['number3']?>">
+		<input type="hidden" name="number4" class="number_in" value="<?=$_POST['number4']?>">
+		<input type="hidden" name="number5" class="number_in" value="<?=$_POST['number5']?>">
+	</form>
+
+    <div class="popup color">
+      <section class="sec_chk font_gmarket">
+        <button class="btn_closePop"><i>x</i><span class="hide">팝업창 닫기</span></button>
+        <h3 class="title_type1">담은 게임보기</h3>
+        <div class="bx_view">
+          <?
+		  for($i=1;$i<=5;$i++){
+			if($_POST['number'.$i] == ''){
+				continue;
+			}
+
+			$number_arr = explode(",",$_POST['number'.$i]);
+		  ?>
+          <div class="">
+            <span><?=$i?>게임</span>
+            <ol class="list_common">
+              <li><button><?=$number_arr[0]?></button></li>
+              <li><button><?=$number_arr[1]?></button></li>
+              <li><button><?=$number_arr[2]?></button></li>
+              <li><button><?=$number_arr[3]?></button></li>
+              <li><button><?=$number_arr[4]?></button></li>
+              <li><button class="yellow"><?=$number_arr[5]?></button></li>
+            </ol>
+            <button class="btn_del " <?=($nt=='AT')?'style="display:none;"':''?>>수정</button>
+          </div>
+		  <? } ?>
+        </div>
+        <div class="bx_total mega">
+          <ul>
+            <li>
+              <p><span><?=$num?></span>게임</p>
+              <div class="won">0</div>
+            </li>
+            <li>
+              <p>부가세</p>
+              <div class="won">0</div>
+            </li>
+          </ul>
+          <div>
+            <p>총 결제금액
+              <span>(대행 수수료 포함)</span></p>
+            <div class="won color_org"><strong>0</strong></div>
+          </div>
+        </div>
+        <a class="link_chkout btn_type2 btn_org">확인</a>
+      </section>
+
+      <!-- <div class="bx_total bx_fff bg_gray flex_space">
+        <p>총 <span><?=$num?></span>게임</p>
+        <div>\<?=number_format($cash["lottoCashNow"])?></div>
+      </div> -->
+    </div>
+  </main>
+
+ <div class="popup type2 popup_ball_chk" style="display:none">
+  <p class="txt_type2">이전 단계로 이동 시<br>입력한<span class="color_org"> 게임번호는 초기화</span> 됩니다.</p>
+  <div class="wrap_btn">
+  <button class="btn_type3 btn_white btn_org">취소</button>
+  <button class="btn_type3 btn_org btn_confirm">확인</button>
+  </div>
+</div>
+<div class="popup_background" style="display: none;"></div>
+
+</body>
+<script>
+$(function(){
+	$(document).on("click",".btn_back",function(){
+		//PlaySound_nolink();
+		$(".popup_ball_chk").show();
+		$(".popup_background").show();
+	});
+
+	$(document).on("click",".btn_white",function(){
+		//PlaySound_nolink();
+		$(".popup_ball_chk").hide();
+		$(".popup_background").hide();
+	});
+
+	$(document).on("click",".btn_confirm",function(){
+		var url = "/contents/mega/mega_number.html?nt=<?=$nt?>&num=<?=$num?>";
+		if($('[name="nt"]').val() == 'AT'){
+			url = "/contents/mega/mega_count.html?nt=<?=$nt?>";
+		}
+
+		PlaySound(url);
+	});
+
+	//결제하기 버튼
+	$(document).on("click",".btn_type2",function(){
+		//PlaySound_nolink();
+
+		$("#w_frm").submit();
+
+	});
+
+	//수정 버튼
+	$(document).on("click",".btn_del",function(){
+		//PlaySound_nolink();
+
+		$("#w_frm").attr("action","/contents/mega/mega_number.html");
+
+		$("#w_frm").submit();
+
+	});
+
+	$.post("/info_other.php",{
+		mode	:	"login"
+	},function(e){
+		if(e.errNo > 0){
+			location.href = e.errUrl;
+		}
+	},"json");
+
+	$.post("/info_other.php",{
+		mode	:	"type_chk",
+		num		:	"<?=$num?>"
+	},function(e){
+		if(e.errNo > 0){
+			location.href = '/';
+			return false;
+		}
+
+		$(".sec_chk").find(".bx_total").find(".won").eq(0).html(e.one);
+		$(".sec_chk").find(".bx_total").find(".won").eq(1).html(e.etc);
+		$(".sec_chk").find(".bx_total").find(".won").eq(2).html(e.sum);
+	},"json");
+
+	back_time();
+
+});
+</script>
+</html>

@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'GmarketBold';
+    src: url('GmarketSansBold.woff2') format('woff2'),
+        url('GmarketSansBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketLight';
+    src: url('GmarketSansLight.woff2') format('woff2'),
+        url('GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketMedium';
+    src: url('GmarketSansMedium.woff2') format('woff2'),
+        url('GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketLight';
+    src: url('GmarketSansTTFLight.woff2') format('woff2'),
+        url('GmarketSansTTFLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketMedium';
+    src: url('GmarketSansTTFMedium.woff2') format('woff2'),
+        url('GmarketSansTTFMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketBold';
+    src: url('GmarketSansTTFBold.woff2') format('woff2'),
+        url('GmarketSansTTFBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

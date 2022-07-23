@@ -1,0 +1,82 @@
+<? 
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+
+if($_POST['birth'] == '' || $_POST['tel'] == ''){
+	alert("인증실패하였습니다.");
+	meta_go("/contents/find_pw.html");
+	exit;
+}
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">개인정보</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+
+    <section class="sec_chgPw wrap">
+      <h3 class="hide">비밀번호 변경</h3>
+      <form class="form_type1" name="l_frm" id="l_frm" method="post" action="./reset_action.php" enctype='multipart/form-data' autocomplete="off">
+	  <input type="hidden" name="birth" value="<?=$_POST['birth']?>">
+	  <input type="hidden" name="tel" value="<?=$_POST['tel']?>">
+        <legend class="hide">비밀번호 변경 입력 양식</legend>
+        <ul class="list_type1">
+          <li>
+            <p><label for="set_pw">변경할 비밀번호</label><span class="color_red">숫자,알파벳, 특수문자 중 5자리 이상으로 입력해 주세요.</span></p>
+            <input type="password" class="passwd_input" placeholder="내용을 입력해주세요" id="set_pw" name="password" value="">
+          </li>
+          <li>
+            <p><label for="re_pw">변경할 비밀번호 재확인</label></p>
+            <input type="password" class="passwd_input" placeholder="내용을 입력해주세요" id="re_pw" name="passwordConfirm" value="">
+          </li>
+        </ul>
+        <div class="bx_btn flex_space">
+          <button type=button class="btn_gray btn_type3">취소</button>
+          <button type=button class="btn_ok btn_type3">변경</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+<script>
+$(function(){
+	$(document).on("click",".btn_gray",function(){
+		location.href="/";
+	});
+
+	$(document).on("click",".btn_ok",function(){
+		var passwd  = $('#set_pw').val();
+		var passwd2 = $('#re_pw').val();
+
+		var pattern1 = /[0-9]/;
+		var pattern2 = /[a-zA-Z]/;
+		var pattern4 = /[~!@\#$%<>^&*]/;// 원하는 특수문자 추가 제거
+
+		if($.trim(passwd) == '' || $.trim(passwd2) == ''){
+			alert("새로운 비밀번호를 입력하세요.");
+			return false;
+		}
+
+		if(passwd != passwd2){
+			alert("새로운 비밀번호가 서로 일치하지 않습니다.");
+			return false;
+		}
+
+		if(passwd2 < 5 && passwd2 > 30){
+			alert("비밀번호는 5자리 이상 입력해 주세요.");
+			return false;
+		}
+
+		$("#l_frm").submit();
+	});
+});
+</script>
+</html>

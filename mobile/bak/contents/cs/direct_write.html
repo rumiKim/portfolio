@@ -1,0 +1,99 @@
+<? 
+include_once $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+
+$sql			=	"SELECT codeQA, qaName FROM CodeBBSQnA WHERE delYN = 'N' ORDER BY sortNo ASC ";
+$code_option	=	F_get_option($sql,"");
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">고객센터</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="/contents/cs/business.html">영업시간</a></li>
+      <li><a href="/contents/cs/notice.html">공지사항</a></li>
+      <li><a href="/contents/cs/direct.html" class="on">1:1 문의</a></li>
+      <li><a href="/contents/cs/faq.html">FAQ</a></li>
+    </ul>
+    <section class="sec_direct sec_common write wrap mar_btm_10">
+      <h3 class="hide">1:1문의하기</h3>
+      <form name="w_frm" id="w_frm" method="post" enctype="multipart/form-data" action="direct_action.php" autocomplete="off">
+        <fieldset>
+          <legend class="hide">1:1 문의 작성 양식</legend>
+          <div class="bx_gray  bx_list">
+            <ul class="list_type1">
+              <li class="wrap_sel_type1">
+                <select class="chk_on" name="codeQA" alt="분류를 선택해 주세요.">
+                  <option value="">분류 선택</option>
+                  <?=$code_option?>
+                </select>
+              </li>
+              <li>
+                <input type="text" class="chk_on" name="subject" value="" alt="제목을 입력해 주세요." placeholder="제목을 입력해주세요.">
+              </li>
+              <li>
+                <textarea class="chk_on" name="qContent" alt="내용을 입력해주세요." placeholder="내용을 입력해주세요. (2000자 이내)"></textarea>
+              </li>
+            </ul>
+          </div>
+          <div class="bx_btn">
+            <button class="btn_type3 btn_org btn_ok">등록</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    <section class="sec_direct write sec_common wrap">
+      <h3 class="hide">문의시 유의사항</h3>
+      <ul class="list_notice">
+        <li>
+          <p>1:1 문의 게시판 및 이용안내 이용 시 욕설 및 비방, 혐오표현 등이 포함되어 있는 경우 “이용약관 제7조(서비스의 이용제한) 7조3항 6”에 따라 사전통지 없이 탈퇴 또는 일정기간 동안 서비스 이용에 제한을 받을 수 있습니다.</p>
+        </li>
+        <li>
+          <p>또한 “정보통신망 이용촉진 및 정보보호 등에 관한 법률 제44조의7(불법정보의 유통금지 등)” 등에 의해 처벌받을 수 있사오니 이점 양지하시어 이용 부탁드립니다.</p>
+        </li>
+      </ul>
+    </section>
+
+
+
+  </main>
+</body>
+<script>
+$(function(){
+	$(document).on("click",".btn_ok",function(){
+		var check	 = false;
+		var qContent = $('[name="qContent"]').val();
+		$(".chk_on").each(function(){
+			if($.trim($(this).val()) == ''){
+				alert($(this).attr("alt"));
+				check = true;
+				return false;
+			}
+		});
+
+		if(check){
+			return false;
+		}
+
+		if (qContent.length > 2000) {
+			alert('문의 내용은 2000자 까지 입력 가능 합니다.');
+			return false;
+		}
+
+		$("#w_frm").submit();
+	});
+});
+</script>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

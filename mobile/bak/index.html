@@ -1,0 +1,96 @@
+<?
+include_once $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+include_once $_SERVER['DOCUMENT_ROOT']."/_library/Member.php";
+
+$memberIdx = '';
+if($_SESSION['M_login']['memberIdx']){
+	$M_login	=	$_SESSION['M_login'];
+	$info		=	dbMemberBYphoneNoNbirthDay($M_login['phoneNo'], $M_login['birthDay']);
+
+	if($info['smsYN'] == 'Y'){
+		$smsYN	=	"동의함";
+	}else{
+		$smsYN	=	"동의안함";
+	}
+}
+
+if($_COOKIE['c_birth'] != '' && $_SESSION['M_login']['memberIdx'] == ''){
+	$info		=	dbMemberBYphoneNoNbirthDaypwd($_COOKIE['c_tel'], $_COOKIE['c_birth'],$_COOKIE['c_pwd']);
+	$memberIdx	=	$info['memberIdx'];
+}
+
+if(empty($memberIdx) == true && $M_login['phoneNo'] == ''){
+	meta_go("/contents/login.html");
+	exit;
+}
+
+if($info['memberCash'] == ''){
+	$info['memberCash'] = 0;
+}
+
+$addSql		= " AND o.memberIdx = '".$getIdx."' ";
+$totalCnt	= getDBOrderMemberGetCnt($addSql);
+
+if (empty($memberIdx) == false){
+?>
+<form class="form_type1" name="l_frm" method="post" action="/contents/login_chk.php" enctype='multipart/form-data' autocomplete="off">
+<input type="hidden" name="birth" value="<?=$_COOKIE['c_birth']?>">
+<input type="hidden" name="tel" value="<?=$_COOKIE['c_tel']?>">
+<input type="hidden" name="passwd" value="<?=$_COOKIE['c_pwd']?>">
+<input type="hidden" name="chk_login" value="Y">
+<input type="hidden" name="auto_login" value="Y">
+</form>
+<script>
+	document.l_frm.submit();
+</script>
+<? } ?>
+<body class="body_idx">
+
+  <header>
+    <div class="clear">
+      <h1><a href=""><span class="hide">2pm</span></a></h1>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+
+  </header>
+
+  <main id="main">
+    <section class="sec_myInfo wrap mar_btm_10">
+      <h2 class="hide">회원 정보</h2>
+      <div class="bx_info">
+        <p><span class="color_org"><?=$M_login['phoneNo']?></span>님</p>
+        <ul class="list_type2 bx_gray">
+          <li>
+            <p>아이디</p><span><?=$M_login['phoneNo']?></span>
+          </li>
+          <li>
+            <p>마케팅수신여부</p><span><?=$smsYN?></span>
+          </li>
+        </ul>
+      </div>
+      <ul class="bx_ask bx_btn flex_space">
+        <li><a href="/contents/cs/faq.html" class="btn_type1">FAQ</a></li>
+        <li><a href="/contents/cs/direct.html" class="btn_type1">1:1 문의</a></li>
+      </ul>
+    </section>
+    <section class="sec_win wrap">
+      <h2 class="h_type1">당첨금 현황</h2>
+      <div class="bx_gray">
+        <p><span class="color_org"><?=number_format($info['memberCash'])?></span>원</p>
+      </div>
+      <button class="btn_org btn_type3" onclick='location.href="/contents/refund/apply_refund.html"'>당첨금 환급 신청</button>
+      <div class="bx_status flex_space">
+        <span>신청/당첨현황 (최근<?=number_format($totalCnt)?>건)</span>
+        <a href="/contents/history.html" class="link_view btn_type1">자세히 보기 ></a>
+      </div>
+      <!--<button class="btn_scan btn_type1">복권 스캔 확인하기</button>-->
+    </section>
+  </main>
+</body>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+
+</html>

@@ -1,0 +1,40 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+?>
+<!-- 결제 진행 시간 -->
+<div class="popup type2" style="display:none">
+  <span class="count count_num">30</span>
+  <p class="txt_type2">일정 시간 진행이 되지 않아<br> 메인 화면으로 이동합니다.</p>
+  <a href="/index.html" class="btn_type3 btn_org">메인으로 이동</a>
+  <a style="cursor:pointer;" class="btn_type3 btn_org btn_popup_read">계속진행</a>
+</div>
+<script>
+var count_num = 30;
+function back_time(){
+	count_num--;
+	if(count_num == 0){
+		window.location.href= "/";
+	}
+	else{
+		var nm = '';
+
+		if(count_num < 10){
+			nm = "0"+count_num;
+		}else{
+			nm = count_num;
+		}
+		$(".count_num").html(nm);
+		setTimeout("back_time()",1000);
+	}
+}
+
+back_time();
+
+
+$(function(){
+	$(document).on("click",".btn_popup_read",function(){
+		history.back();
+	});
+});
+</script>

@@ -1,0 +1,88 @@
+<div class="popup color chk_member_div" style="display:none;">
+	<section class="chk_member wrap">
+	  <button class="btn_closePop"><i>x</i><span class="hide">팝업창 닫기</span></button>
+		  <h3 class="title_type1">고객인증</h3>
+	  <p class="txt_type1">※ 만 19세 이하는 서비스 이용이 불가합니다.</p>
+	  <form class="" action="" method="post">
+		<ul class="list_type1">
+		  <li>
+			<label for="chk_birth">생년월일</label>
+			<input type="text" id="chk_birth" class="chk_birth" placeholder="" alt="생년월일을 입력해 주세요">
+		  </li>
+		  <li>
+			<label for="chk_tel">휴대번호</label>
+			<input type="text" id="chk_tel" class="chk_tel" placeholder="" alt="휴대번호를 입력해 주세요">
+		  </li>
+		</ul>
+		<button class="btn_verify btn_org btn_type2" type="button">인증번호 받기</button>
+		<div class="bx_verify" style="display:none;">
+		  <button class="btn_re btn_type2" type="button">인증번호 다시 받기</button>
+		  <ul class="list_type1">
+			<li class="item_num">
+			  <label for="chk_num">인증번호</label>
+			  <input type="text" class="chk_num" id="chk_num" placeholder="인증번호를 입력해 주세요" alt="인증번호를 입력해 주세요">
+			  <span class="time color_org count_down">03:00</span>
+			</li>
+		  </ul>
+		  <button class="btn_org btn_type2 btn_code_ok" type="button">인증하기</button>
+		</div>
+	  </form>
+	</section>
+</div>
+<div class="popup color bx_keypad_div bx_keypad wrap" style="display:none;">
+
+	  <p class="keypad_title title_type1">생년월일을 입력해 주세요</p>
+	  <input type="text" placeholder="" id="val_keypad">
+	  <table class="keypad">
+		<caption class="hide">숫자 키패드</caption>
+		<tbody>
+		  <tr>
+			<td><button class="key_num">1</button></td>
+			<td><button class="key_num">2</button></td>
+			<td><button class="key_num">3</button></td>
+		  </tr>
+		  <tr>
+			<td><button class="key_num">4</button></td>
+			<td><button class="key_num">5</button></td>
+			<td><button class="key_num">6</button></td>
+		  </tr>
+		  <tr>
+			<td><button class="key_num">7</button></td>
+			<td><button class="key_num">8</button></td>
+			<td><button class="key_num">9</button></td>
+		  </tr>
+		  <tr>
+			<td><button class="btn_reset btn_side">Clear</button></td>
+			<td><button class="key_num">0</button></td>
+			<td><button class="btn_backspace btn_side"><span class="hide">지우기</span></button></td>
+		  </tr>
+		</tbody>
+	  </table>
+	  <ul>
+		<li><button class="btn_cancel btn_type2 btn_white">취소</button></li>
+		<li><button class="btn_complete btn_type2 btn_org">입력완료</button></li>
+	  </ul>
+
+</div>
+
+<div class="popup type2 popup_error" style="display:none;min-height:auto;">
+  <p class="txt_type2">인증번호가 일치하지 않습니다.<br>다시 확인해 주세요.</p>
+  <button class="btn_type3 btn_org btn_pop">확인</button>
+</div>
+<div class="popup type2 popup_error3" style="display:none;min-height:auto;">
+  <p class="txt_type2">인증번호 다시 받기 불가능합니다.<br>다시 진행해 주세요.</p>
+  <button class="btn_type3 btn_org btn_pop">확인</button>
+</div>
+
+
+<script src="/common/js/time.js?version=<?=$version?>" charset="utf-8"></script>
+<script src="/common/js/chk_member.js?version=<?=$version?>" charset="utf-8"></script>
+<script>
+$(function(){
+	$(document).on("click",".btn_pop",function(){
+		b_time = 1;
+		$(".popup_error").hide();
+		$(".chk_member_div").show();
+	});
+});
+</script>

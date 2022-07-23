@@ -1,0 +1,119 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+//kiosk_login($_COOKIE['kioskID']);
+
+$nt			= $_POST['nt'];
+$num		= $_POST['num'];
+$codeLK		= $_POST['codeLK'];
+
+
+?>
+
+<body class="body_number">
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+
+	<form name="w_frm" id="w_frm" method="post" action="/contents/chk_member.html">
+		<input type="hidden" name="codeLK" value="<?=$codeLK?>">
+		<input type="hidden" name="nt" value="<?=$nt?>">
+		<input type="hidden" name="num" value="<?=$num?>">
+		<input type="hidden" name="number1" class="number_in" value="<?=$_POST['number1']?>">
+		<input type="hidden" name="number2" class="number_in" value="<?=$_POST['number2']?>">
+		<input type="hidden" name="number3" class="number_in" value="<?=$_POST['number3']?>">
+		<input type="hidden" name="number4" class="number_in" value="<?=$_POST['number4']?>">
+		<input type="hidden" name="number5" class="number_in" value="<?=$_POST['number5']?>">
+		<input type="hidden" name="authNum" value="<?=$_POST['authNum']?>">
+		<input type="hidden" name="birth" value="<?=$_POST['birth']?>">
+		<input type="hidden" name="tel" value="<?=$_POST['tel']?>">
+	</form>
+		<input type="hidden" name="chk" id="agree_chk" value="N">
+  <main class="wrap">
+    <section class="popup color sec_agree wrap" >
+      <h3 class="title_type1 ">약관동의</h3>
+      <div class="btn_agree" style="text-align:center;">
+		<span class="btn_ok_chk_box">(필수) 2PM 이용약관 동의</span>
+		<button class="btn_agree_read btn_gray87">약관보기</button>
+	  </div>
+      <!-- <p class="txt_type1">해외티켓 구매대행 서비스는 결제 후</p> -->
+      <a class="btn_org btn_type2 btn_agree_ok">확인</a>
+    </section>
+  </main>
+  <div class="bx_agree popup color">
+    <button class="btn_closePop"><i>x</i><span class="hide">팝업창 닫기</span></button>
+    <p class="title_type1">이용약관 동의</p>
+    <div class="wrap">
+      <ol class="list_depth1">
+        <li>
+          <p>(목적)</p>
+          <span>본 약관은 주식회사 2PM(이하, "회사"라 함)가 운영하는 해외구매대행 서비스를 제공함에 있어 "회사"와 이용자(이하, "이용자"라 함) 간의 권리ㆍ의무 및 책임사항을 규정함을 목적으로 합니다. </span>
+        </li>
+        <li>
+          <p>(정의)</p>
+          <ol class="list_depth2">
+            <li>"해외구매대행"이라 함은 회사가 본 약관에 따라 메가밀리언, 파워볼
+              (이하, “해외티켓”이라 함) 구매대행 또는 용역을 거래할 수 있도록 이용자에게 제공하는
+              서비스(해외티켓 구매대행)로서 "2PM"를 말하며, "2PM 키오스크"와 관련하여
+              "회사"가 수행하는 사업을 지칭하는 의미로도 사용합니다.</li>
+            <li> "이용자"라 함은 "빅오더"에 자발적으로 개인정보를 제공하여 이용자등록을한
+              개인 이용자를 말합니다. 단, 법인이나 회사 명의의 가입은 회사의 별도 동의가없는 한 등록이 불가할 수 있습니다.
+            </li>
+            <li>"캐쉬"라 함은 회사가 "2PM"에서의 상품거래 실적에 부수하여 제공하거나
+              기타 회사가 약정한 바에 따라 제공하는 사이버머니를 말하며, 이용자가 결제수단으로
+              즉시 활용하여 "해외티켓(메가밀리언,파워볼) 구매대행"을 이용할 수 있도록 운영하는
+              제도를 말합니다.</li>
+            <li>"캐쉬"라 함은 회사가 "2PM"에서의 상품거래 실적에 부수하여 제공하거나
+              기타 회사가 약정한 바에 따라 제공하는 사이버머니를 말하며, 이용자가 결제수단으로
+              즉시 활용하여 "해외티켓(메가밀리언,파워볼) 구매대행"을 이용할 수 있도록 운영하는
+              제도를 말합니다.</li>
+          </ol>
+        </li>
+      </ol>
+      <ul class="list_btn">
+        <li><button class="btn_up"><span class="hide">page up</span></button></li>
+        <li><button class="btn_down"><span class="hide">page down</span></button></li>
+      </ul>
+      <button class="btn_type2 btn_org btn_agree_chk">약관동의</button>
+    </div>
+  </div>
+</body>
+<script>
+$(function(){
+	var url = "checkout.html";
+
+	//수정 버튼
+	$(document).on("click",".btn_back",function(){
+		//PlaySound_nolink();
+
+		$("#w_frm").submit();
+
+	});
+
+	$(document).on("click",".btn_agree_ok",function(){
+		PlaySound_nolink();
+
+		if($("#agree_chk").val() != "Y"){
+			return false;
+		}
+
+		$("#w_frm").attr("action",url);
+		$("#w_frm").submit();
+	});
+
+	$(document).on("click",".btn_ok_chk_box",function(){
+		$(".btn_agree_chk").click();
+	});
+
+	$.post("/info_other.php",{
+		mode	:	"agree_login"
+	},function(e){
+		if(e.errNo > 0){
+			location.href = e.errUrl;
+		}else{
+			url = e.okUrl;
+		}
+	},"json");
+
+	back_time2();
+});
+</script>
+</html>

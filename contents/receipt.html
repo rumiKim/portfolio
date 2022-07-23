@@ -1,0 +1,153 @@
+<?
+
+$sum_price		=	urldecode($_GET['txtAmount']);
+$one_price		=	$sum_price/11*10;
+$etc_price		=	$sum_price/11*1;
+$finame			=	urldecode($_GET['txtFIName']);
+$cardno			=	urldecode($_GET['txtCreditCardNo']);
+$authno			=	urldecode($_GET['txtAuthNo']);
+$reqTime		=	urldecode($_GET['reqTime']);
+$dateTime		=	urldecode($_GET['txtTradeReqDate']);
+
+$y				=	substr($dateTime, 0, 2);
+$m				=	substr($dateTime, 2, 2);
+$d				=	substr($dateTime, 4, 2);
+
+$h				=	substr($reqTime, 0, 2);
+$i				=	substr($reqTime, 2, 2);
+$s				=	substr($reqTime, 4, 2);
+
+$dateTimeLa		=	"20".$y."-".$m."-".$d." ".$h.":".$i.":".$s;
+
+$DateTime		= new DateTime($dateTimeLa, new DateTimeZone('Asia/Seoul'));
+$getDateTime	= $DateTime->format('Y-m-d H:i');
+
+?>
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style>
+
+.font_11{
+			   color: #000000;
+			   font-family: "돋음";
+			   font-size: 12px;
+			   letter-spacing:0;
+			   font-weight:bold;
+			   line-height:110%
+}
+.font_14{
+			   color: #000000;
+			   font-family: "돋음";
+			   font-size: 14px;
+			   letter-spacing:0;
+			   font-weight:bold;
+			   line-height:150%
+
+}
+</style>
+
+<script src="/common/js/jquery-3.6.0.min.js?version=1.2" charset="utf-8"></script>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+	function printWindow() { 
+		
+			focus();
+			IEPageSetupX.header = "";
+			IEPageSetupX.footer = "";
+			IEPageSetupX.PrintBackground = false;
+			IEPageSetupX.ShrinkToFit = false;
+			IEPageSetupX.leftMargin      = 0.5;  // 좌측여백 
+			IEPageSetupX.topMargin      = 0.0;  // 상단여백 
+			IEPageSetupX.rightMargin    = 0.0;  // 우측여백 
+			IEPageSetupX.bottomMargin    = 0.0;  // 하단여백 
+	//		IEPageSetupX.Preview();    // 미리보기
+	
+			IEPageSetupX.Print(false);    // 출력하기 false 면 확인창 없이 바로 출력
+
+	/*  옵션 참고 : https://isulnara.com/wp/archives/37  */
+	}
+
+
+$(function(){
+	$(document).on("click","#iBtn",function(){
+		
+		printWindow();
+	});
+})
+</script>
+
+</head>
+<!-- onload="" -->
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red" leftmargin=0 topmargin=0  >
+ <OBJECT id=IEPageSetupX classid="clsid:41C5BC45-1BE8-42C5-AD9F-495D6C8D7586" codebase="/common/IEPageSetupX.cab#version=1,4,0,3" style="width:0;height:0">	
+	 <param name="copyright" value="http://isulnara.com">
+	
+</OBJECT>
+
+<table border="0" width="288" cellpadding="0" cellspacing="0">
+	<tr><td width="288" valign="top" align=center colspan="2"><FONT SIZE="2"><B>신용카드 매출전표</B></FONT></td></tr>
+    <tr>
+        <td width="288" height="100" valign="top" class="font_11" colspan="2">
+				[매장명]  주식회사 2PM Korea<br/>
+				사업자번호  280-87-01168<br/>
+				[주소]  서울 도봉구 노해로 63길 43 도봉구시설관리<br />
+				공단 511호<br/>
+				[대표자]  이병창&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEL]  1688-8802<br>
+				[매출일]  <?=date("Y-m-d H:i")?>
+        </td>
+    </tr>
+	<tr height=3><td colspan="2"></td></tr>
+	<tr><td colspan="2">================================</td></tr>
+	<tr>
+        <td width="240" valign="top" class="font_11">
+				상품명
+        </td>
+		<td width="48" valign="top" class="font_11">
+				금액
+        </td>
+    </tr>
+	<tr><td colspan="2">------------------------------------------------------</td></tr>
+	<tr>
+        <td width="240" valign="top" class="font_11">
+				해외티켓구매대행서비스
+        </td>
+		<td width="48" valign="top" class="font_11">
+				<?=number_format($one_price)?>
+        </td>
+    </tr>
+	<tr><td colspan="2">------------------------------------------------------</td></tr>
+	<tr>
+        <td width="240" valign="top" class="font_11">
+				부가세
+        </td>
+		<td width="48" valign="top" class="font_11">
+				<?=number_format($etc_price)?>
+        </td>
+    </tr>
+	<tr>
+        <td width="240" valign="top" class="font_11">
+				합계
+        </td>
+		<td width="48" valign="top" class="font_11">
+				<?=number_format($sum_price)?>
+        </td>
+    </tr>
+	<tr><td colspan="2">------------------------------------------------------</td></tr>
+	<tr>
+        <td width="288" height="100" valign="top" class="font_11" colspan="2">
+				*** 신용승인정보 ***<br/>
+				[카드종류]  <?=$finame?><br/>
+				[카드번호]  <?=$cardno?>**********<br/>
+				[승인금액]  <?=number_format($sum_price)?><br />
+				[승인번호]  <?=$authno?><br>
+				[승인일시]  <?=$getDateTime?>
+        </td>
+    </tr>
+</table>
+<input type="button" style="display:none;" value="btn" id="iBtn">
+</body>
+
+</html>

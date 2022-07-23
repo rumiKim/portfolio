@@ -1,0 +1,130 @@
+<? 
+$s_type = "BBSNotices";
+include_once $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+include_once $_SERVER['DOCUMENT_ROOT']."/_library/function_".$s_type.".php";
+
+login_chk();
+
+if(count($_GET) > 0){
+	foreach($_GET as $k => $v){
+		${$k} = $v;
+	}
+}
+
+if (!$page) $page		=	1;
+if (!$limit) $limit		=	6;
+$add_query				=	" AND delYN='N'";
+$PARAM			=	"&order=$order&find_text=$find_text&find_object=$find_object&sDate=$sDate&eDate=$eDate&limit=$limit";
+
+if($find_object == 'all'){
+	$add_query .= " AND subject like '%".$find_text."%' OR content like '%".$find_text."%'";
+	$find_object = '';
+}
+
+$find_op = array(
+	"subject" => "제목",
+	"content" => "내용"
+);
+
+$condition = array(
+			"row"			=>	$limit,
+			"page"			=>	$page,
+			"order"			=>	" noticeYN DESC, regDate DESC",
+			"find_text"		=>	$find_text,
+			"find_object"	=>	$find_object,
+			"add_query"		=>	$add_query
+		);
+
+$func_name		= "F_".$s_type."_list";
+$list			=	$func_name($condition);
+
+$find_option	= option_make($find_op,$find_object);
+
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">고객센터</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+	<input type="hidden" class="board_type" value="notice">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="/contents/cs/business.html">영업시간</a></li>
+      <li><a href="/contents/cs/notice.html" class="on">공지사항</a></li>
+      <li><a href="/contents/cs/direct.html">1:1 문의</a></li>
+      <li><a href="/contents/cs/faq.html">FAQ</a></li>
+    </ul>
+    <section class="sec_notice sec_common wrap mar_btm_10">
+      <h3 class="hide">공지사항 검색 조회 옵션 선택</h3>
+      <form role="form" name="topSearch" id="srForm" method="get" action="<?=$_SERVER['PHP_SELF']?>">
+        <div class="bx_gray bx_list">
+          <ul class="list_type1">
+            <li class="wrap_sel_type1">
+              <select class="" name="find_object">
+                <option value="all">전체 검색</option>
+                <?=$find_option?>
+              </select>
+            </li>
+            <li>
+              <input type="search" name="find_text" value="<?=$find_text?>" placeholder="검색어를 입력하세요">
+            </li>
+          </ul>
+        </div>
+        <div class="bx_btn">
+          <button type="button" class="btn_type3 btn_org btn_search">조회</button>
+        </div>
+      </form>
+    </section>
+    <section class="sec_notice sec_toggle">
+      <h3 class="color_org wrap"><span>전체 검색</span> 리스트</h3>
+      <ul class="list_fold">
+<?
+for ($i = 0; $i < count($list['bnSeq']); $i++){
+	$initialValue = stripslashes($list['content'][$i]);
+?>
+        <li>
+          <a data-no="<?=$list['bnSeq'][$i]?>">
+            <p><span><?=$list['subject'][$i]?></span></p>
+          </a>
+          <div>
+			<?=$initialValue?>
+            <p><?=date("Y-m-d",strtotime($list['regDate'][$i]))?></p>
+          </div>
+        </li>
+<? } ?>
+      </ul>
+<? if($list['total'] > 0){ ?>
+		<!-- 페이징 숫자 표시는 3개까지 -->
+		<div class="wrap_paging">
+			<?
+			$page_info['cur']		=	$condition['page'];
+			$page_info['row']		=	$condition['row'];
+			$page_info['total']		=	$list['total'];
+			$list['page_string'] = print_page_num($page_info);
+			echo $list['page_string'];
+			?>
+		</div>
+<? } ?>
+      
+    </section>
+
+
+  </main>
+</body>
+<script language="javascript">
+$(document).ready(function(){
+	$(document).on("click",".btn_search",function(){
+		$("#srForm").submit();
+	});
+});
+</script>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

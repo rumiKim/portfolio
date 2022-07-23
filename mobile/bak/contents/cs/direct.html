@@ -1,0 +1,107 @@
+<? 
+$s_type = "BBSQnA";
+include_once $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+include_once $_SERVER['DOCUMENT_ROOT']."/_library/function_".$s_type.".php";
+
+login_chk();
+
+if(count($_GET) > 0){
+	foreach($_GET as $k => $v){
+		${$k} = $v;
+	}
+}
+
+$memberIdx				=	$_SESSION['M_login']['memberIdx'];
+
+if (!$page) $page		=	1;
+if (!$limit) $limit		=	6;
+$add_query				=	" AND delYN='N' AND memberIdx='".$memberIdx."'";
+$PARAM			=	"&order=$order&find_text=$find_text&find_object=$find_object&sDate=$sDate&eDate=$eDate&limit=$limit";
+
+$condition = array(
+			"row"			=>	$limit,
+			"page"			=>	$page,
+			"order"			=>	" regDate DESC",
+			"find_text"		=>	$find_text,
+			"find_object"	=>	$find_object,
+			"add_query"		=>	$add_query
+		);
+
+$func_name		= "F_".$s_type."_list";
+$list			=	$func_name($condition);
+
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">고객센터</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="/contents/cs/business.html">영업시간</a></li>
+      <li><a href="/contents/cs/notice.html">공지사항</a></li>
+      <li><a href="/contents/cs/direct.html" class="on">1:1 문의</a></li>
+      <li><a href="/contents/cs/faq.html">FAQ</a></li>
+    </ul>
+    <section class="sec_direct sec_common mar_btm_10 wrap">
+      <h3 class="hide">1:1문의</h3>
+      <div class="bx_gray">
+        <p><span>복권 신청이 처음이신가요?</span><br>친절하게 설명 드리겠습니다.</p>
+        <span>미국 복권의 게임 종류, 신청 방법, 추첨 및 당첨금 지급 등 미국 복권에 대해 쉽고 간단하게 설명해 드립니다.</span>
+      </div>
+      <div class="bx_btn">
+        <a href="direct_write.html" class="btn_type1" style="display:inline-block">문의 하기</a>
+      </div>
+    </section>
+<? if($list['total'] > 0){ ?>
+    <section class="sec_direct list sec_toggle">
+      <h3 class="color_org wrap">1:1문의 리스트</h3>
+      <ul class="list_fold">
+	<?
+	for ($i = 0; $i < count($list['bqSeq']); $i++){
+		$initialValue = stripslashes($list['qContent'][$i]);
+		$answer		  = "답변대기";
+
+		if($list['aContent'][$i] != ''){
+			$answer = stripslashes($list['aContent'][$i]);
+		}
+	?>
+        <li>
+          <a>
+            <p><span><?=$list['subject'][$i]?></span></p>
+          </a>
+          <div>
+            <span><?=$initialValue?></span>
+            <?=$answer?>
+            <p><?=date("Y-m-d",strtotime($list['regDate'][$i]))?></p>
+          </div>
+        </li>
+	<? } ?>
+      </ul>
+
+		<!-- 페이징 숫자 표시는 3개까지 -->
+		<div class="wrap_paging">
+			<?
+			$page_info['cur']		=	$condition['page'];
+			$page_info['row']		=	$condition['row'];
+			$page_info['total']		=	$list['total'];
+			$list['page_string'] = print_page_num($page_info);
+			echo $list['page_string'];
+			?>
+		</div>
+<? } ?>
+    </section>
+
+
+  </main>
+</body>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

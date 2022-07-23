@@ -1,0 +1,107 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+//kiosk_login($_COOKIE['kioskID']);
+
+//$time_set_PB = timesss('PB');
+
+($_GET['nt'])?$nt=$_GET['nt']:$nt='';
+?>
+<body class="bg_type1">
+  <? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+  <main>
+    <section class="sec_visual">
+      <h2 class="">
+        <span class="hide">POWER BALL<sup>®</sup></span>
+        <img src="/common/images/logo_Mega_ca.png" alt="megamillions">
+      </h2>
+      <p class="txt_price">0</p>
+      <div class="bx_time">
+        <p>마감시간</p>
+        <ul class="list_time" id="list_time">
+          <li class="items_day">
+            <span>0</span>
+            <span>0</span>
+          </li>
+          <li class="items_hours">
+            <span>0</span>
+            <span>0</span>
+          </li>
+          <li class="items_min">
+            <span>0</span>
+            <span>0</span>
+          </li>
+          <li class="items_sec">
+            <span>0</span>
+            <span>0</span>
+          </li>
+        </ul>
+      </div>
+      <div class="bx_drawtime">
+        <p class="color_org">추첨시간</p>
+        <span>2021.04.01 (화) PM 14:00</span>
+      </div>
+    </section>
+    <section class="power sec_choice sec_kind wrap">
+      <h3 class="hide">수동/자동 게임 옵션 선택</h3>
+      <ul>
+        <li>
+          <button class="bx_fff btn_mp1 <?=($nt=='MM')?'on':''?>">
+            수동선택
+            <span>원하는 번호를<br>직접 선택</span>
+          </button>
+        </li>
+        <li>
+          <button class="bx_fff btn_mp2 <?=($nt=='AT')?'on':''?>">
+            자동선택
+            <span>AI 알고리즘을 통한<br>자동 선택</span>
+          </button>
+        </li>
+      </ul>
+      <p class="txt_type1 deco_hand">원하시는 서비스를 선택하세요</p>
+    </section>
+
+  </main>
+
+</body>
+<script>
+$(function(){
+
+	$(document).on("click",".btn_back",function(){
+		PlaySound("/main.html");
+	});
+
+	$(document).on("click",".btn_mp1",function(){
+		$(".bx_fff").removeClass("on");
+		$(this).addClass("on");
+		PlaySound("/contents/power/power_count.html?nt=MM");
+	});
+
+	$(document).on("click",".btn_mp2",function(){
+		$(".bx_fff").removeClass("on");
+		$(this).addClass("on");
+		PlaySound("/contents/power/power_count.html?nt=AT");
+	});
+
+	$.post("/info_other.php",{
+		mode	:	"main"
+	},function(e){
+		var mm = e.mm;
+		var pb = e.pb;
+		TimeDown("list_time", pb.timediff);
+
+		$(".sec_visual").find(".txt_price").eq(0).html(pb.price);
+	},"json");
+
+	$.post("/info_other.php",{
+		mode	:	"login"
+	},function(e){
+		if(e.errNo > 0){
+			location.href = e.errUrl;
+		}
+	},"json");
+
+	back_time();
+});
+</script>
+</html>

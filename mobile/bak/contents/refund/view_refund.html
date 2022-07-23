@@ -1,0 +1,160 @@
+<? 
+include $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+
+$M_login		=	$_SESSION['M_login'];
+$info			=	dbMemberBYphoneNoNbirthDay($M_login['phoneNo'], $M_login['birthDay']);
+
+?>
+
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">당첨금 환급 신청</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+  <main id="main">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="/contents/refund/apply_refund.html">당첨금 환급신청 접수</a></li>
+      <li><a href="/contents/refund/view_refund.html" class="on">당첨금 환급신청 내역조회</a></li>
+    </ul>
+    <section class="sec_refund sec_win mar_btm_10 wrap">
+      <h3 class="hide">당첨금 현황</h3>
+      <div class="bx_gray">
+        <p><span class="color_org"><?=number_format($info['memberCash'])?></span>원</p>
+      </div>
+      <h3 class="hide">당첨금 환급신청 접수 절차</h3>
+      <ol class="list_step clear">
+        <li>
+          <p class="">
+            <span class="">01</span>
+            신청중
+          </p>
+          <span>계좌 출금<br>신청 완료</span>
+        </li>
+        <li>
+          <p>
+            <span class="">02</span>
+            처리중
+          </p>
+          <span>관리자<br>접수 완료</span>
+        </li>
+        <li>
+          <p>
+            <span class="">03</span>
+            환급완료
+          </p>
+          <span>이체오류시<br>예치금으로 변환</span>
+        </li>
+      </ol>
+    </section>
+    <section class="sec_view sec_refund wrap">
+      <h3 class="h_type1">당첨금 환급 신청 내역조회</h3>
+      <form action="">
+        <div class="bx_gray bx_list">
+          <legend class="hide">당첨금 환급 신청 내역 조회 입력 양식</legend>
+          <ul class="list_type1">
+            <li class="wrap_sel_type1">
+              <select class="day_check" name="day">
+                <option value="">조회일 선택</option>
+                <option value="day">당일</option>
+                <option value="week">일주일</option>
+                <option value="month">1개월</option>
+              </select>
+            </li>
+            <li class="item_date flex_space">
+              <input type="date" name="schDateS" class="schDateS" value="">
+              <span>~</span>
+              <input type="date" name="schDateE" class="schDateE" value="">
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="hide">조회 정렬 선택</h3>
+          <ul class="list_chk flex_space">
+            <li>
+              <input type="radio" name="sortType" class="chk_type1 sortType" id="latest" value="1">
+              <label for="latest">최근 내역순</label>
+            </li>
+            <li>
+              <input type="radio" name="sortType" class="chk_type1 sortType" id="past">
+              <label for="past" value="2">과거 내역순</label>
+            </li>
+          </ul>
+        </div>
+        <div class="bx_btn">
+          <button type="button" class="btn_type3 btn_org btn_search">조회하기</button>
+        </div>
+      </form>
+    </section>
+	<section class="sec_history">
+      <h3 class="hide">조회 내역</h3>
+      <div class="wrap_result">
+        <ul class="list_result">
+          
+        </ul>
+        <button type="button" class="btn_more">더보기</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+<script LANGUAGE=javascript src='/common/js/refund.js' > </script>
+<script>
+$(function(){
+	var page		=	1;
+	var pageLimit	=	10000;
+
+	list_html(page, pageLimit);
+
+	$(document).on("click",".btn_more",function(){
+		page++;
+
+		list_html(page, pageLimit);
+	});
+
+	$(document).on("click",".btn_search",function(){
+		list_html(page, pageLimit);
+	});
+
+	$(document).on("change",".day_check",function(){
+		var schDateS = '';
+		var schDateE = new Date();
+		var termType = $(this).val();
+    	
+    	if(termType == 'day'){
+    		schDateS = new Date();
+    	} else if(termType == 'week'){
+    		schDateS = new Date(Date.parse(schDateE) - 7 * 1000 * 60 * 60 * 24);
+    	} else if(termType == 'month') {
+    		schDateS = new Date(Date.parse(schDateE) - 30 * 1000 * 60 * 60 * 24);
+    	} else {
+    		schDateS = '';
+    		schDateE = '';
+    	}
+
+		var dateS = getDateInfo(schDateS);
+		var dateE = getDateInfo(schDateE);
+
+		if(dateS){
+			schDateS = dateS["str4"];
+		}
+
+		if(dateE){
+			schDateE = dateE["str4"];
+		}
+
+		$(".schDateS").val(schDateS);
+		$(".schDateE").val(schDateE);
+	});
+
+});
+</script>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>

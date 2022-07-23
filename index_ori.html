@@ -1,0 +1,107 @@
+<?
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+$_GET['mac'] = "1C697A4B1F39";
+if($_GET['mac'] == '' && $_SESSION['kioskID'] != ''){
+	$_GET['mac'] = $_SESSION['kioskID'];
+}
+
+       ($_GET['mac']);
+
+$kioskID	=	$_GET['mac'];
+session_register("kioskID");
+
+$time_set_MM = timesss('MM');
+$time_set_PB = timesss('PB');
+
+?>
+<body>
+	<? include $_SERVER['DOCUMENT_ROOT']."/include/header.html";?>
+	<main>
+		<section class="sec_intro">
+			<h2>키오스크 이용 방법</h2>
+		</section>
+		<section class="sec_option wrap">
+			<h2 class="hide">상품 종류 선택</h2>
+			<ul class="clear">
+				<li class="bx_fff">
+					<strong>POWERBALL<sup>®</sup></strong>
+					<p class="txt_price"><?=$time_set_PB['price']?></p>
+					<div>
+						<p>마감시간</p>
+						<ul class="list_time" id="list_time">
+							<li class="items_day">
+								<span>0</span>
+								<span>0</span>
+							</li>
+							<li class="items_hours">
+								<span>0</span>
+								<span>0</span>
+							</li>
+							<li class="items_min">
+								<span>0</span>
+								<span>0</span>
+							</li>
+							<li class="items_sec">
+								<span>0</span>
+								<span>0</span>
+							</li>
+						</ul>
+					</div>
+					<div class="bx_drawtime">
+						<p class="color_org">추첨시간</p>
+						<span><?=$time_set_PB['play_date']?></span>
+					</div>
+					<a class="btn_org btn_mp1">구매대행 신청하기</a>
+				</li>
+				<li class="bx_fff">
+					<strong>MEGA MILLIONS<sup>®</sup></strong>
+					<p class="txt_price"><?=$time_set_MM['price']?></p>
+					<div>
+						<p>마감시간</p>
+						<ul class="list_time" id="list_time2">
+							<li class="items_day">
+								<span>0</span>
+								<span>0</span>
+							</li>
+							<li class="items_hours">
+								<span>0</span>
+								<span>0</span>
+							</li>
+							<li class="items_min">
+								<span>0</span>
+								<span>0</span>
+							</li>
+							<li class="items_sec">
+								<span>0</span>
+								<span>0</span>
+							</li>
+						</ul>
+					</div>
+					<div class="bx_drawtime">
+						<p class="color_org">추첨시간</p>
+						<span><?=$time_set_MM['play_date']?></span>
+					</div>
+					<a class="btn_org btn_mp2">구매대행 신청하기</a>
+				</li>
+			</ul>
+		</section>
+		<div class="wrap_banner">
+			<img src="common/images/img_banner.jpg" alt="Today Is A Great Day To Play!">
+		</div>
+	</main>
+</body>
+<script>
+$(function(){
+	TimeDown("list_time","<?=$time_set_PB['timediff']?>");
+	TimeDown("list_time2","<?=$time_set_MM['timediff']?>");
+
+	$(document).on("click",".btn_mp1",function(){
+		PlaySound("/contents/power/power_choice.html");
+	});
+
+	$(document).on("click",".btn_mp2",function(){
+		PlaySound("/contents/mega/mega_choice.html");
+	});
+});
+</script>
+</html>

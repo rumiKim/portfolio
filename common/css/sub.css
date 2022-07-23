@@ -1,0 +1,215 @@
+
+
+.bg_type1 { background: url(/common/images/img_bg_04.jpg) no-repeat center / cover}
+.bg_type2 { background: url(/common/images/img_bg_05.jpg) no-repeat center / cover}
+
+/* sub ======================================================================*/
+
+/* maga millions */
+.sec_visual.yellow { background: #ffd200;}
+.sec_visual.org { background: #ff6600}
+
+.sec_visual {padding:14.16vw 0 9vw; text-align:center; font-family: 'GmarketMedium'; line-height: 1; font-weight: 800; box-sizing: border-box; overflow: hidden; color: #fff}
+.sec_visual > h2 { margin: 0 auto; width: 65.83vw; font-size: 7vw; font-family: 'Montserrat', sans-serif; }
+.sec_visual > h2 img { width: 100%}
+
+.sec_visual > .txt_price { padding: 8.98vw 0 3.24vw;}
+.sec_visual .bx_time { display: flex; justify-content: center; position: relative; align-items: center;}
+.sec_visual .bx_time > p { padding-right: 1.66vw; font-size: 2.4vw; color: #9e9e9e}
+.sec_visual .list_time { position: relative;}
+.sec_visual .list_time > li:after { color: #fff; bottom: -2vw; }
+.sec_visual .bx_drawtime { padding: 7.4vw 0 0 27.3vw; text-align: left;}
+.sec_visual .bx_drawtime > p { padding: 0 0 1.66vw; font-size: 2.31vw;}
+.sec_visual .bx_drawtime > span { font-size: 2.03vw;}
+.sec_visual > p { padding: 5vw 0 0; }
+/* sec_choice */
+.sec_choice { padding-top: 0; overflow: hidden; color: #fff}
+.sec_choice .h_type1 { padding: 0 0 5vw}
+.sec_choice ul { display: flex; justify-content:space-between; align-items: center; flex-wrap: wrap;}
+.sec_choice ul li { width: 43.24vw; height: 42.31vw; box-sizing: border-box;}
+.sec_choice ul li button { position: relative; background: none;  width: 100%; height: 100%; color: #fff; font-size: 6.01vw; font-family:'GmarketMedium';}
+.sec_choice ul li button.on { background: #ff6600; }
+.sec_choice ul li button span { display: block; padding: 2.03vw 0 0; font-size: 2.77vw; text-align: center; font-family: 'GmarketLight'; line-height: 1.4}
+
+.sec_choice > p { padding:5.55vw 0 0; }
+.sec_choice.count ul li { box-sizing: border-box; margin-bottom: 2.13vw; height: 22.6vw; }
+.sec_choice.count ul li button { position: relative; padding: 0; text-align: center;}
+.sec_choice.count ul li button span { display: block; padding: 1vw 0 0; font-size: 2.77vw; font-family: 'GmarketLight'}
+.sec_choice.count ul li button:after { position: absolute; right: 5%; bottom: 2.77vw; content:"VAT별도"; font-size: 1.85vw; color: rgba(225,225,225,.7); }
+.sec_choice.count ul li button.on:after { color: rgba(225,225,225,1); }
+.sec_choice.count > p { padding: 2.77vw 0 0}
+
+/*  */
+
+/* choice_number.html */
+.body_number { background: url(../images/img_bg_03.jpg) no-repeat center / cover;}
+.body_chk .wrap_banner { position: absolute; left: 0; right: 0; bottom: 0;}
+.sec_view > div { position: relative; padding: 5.55vw 0 6vw; text-align: center; background: #000}
+.sec_view > div > div { display: flex; flex-direction: column; justify-content: center; align-items: center; padding:0 1.85vw 0;  box-sizing: border-box;}
+.sec_view > div > p { position: absolute; left: 50%; top: 0; transform: translate(-50%,-50%); display: inline-block; padding: 0 4.62vw; font-size: 4.16vw; color: #fff; text-align: center; background: #000}
+/* 선택번호 보기*/
+.sec_view { position: relative; margin-top: 6.85vw}
+.sec_view .btn_type1 { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%) translateY(50%); background:#ff6600; display: block; width: 81.48vw; height: 7.4vw; line-height: 8vw; border-radius: 7.4vw; border: 1px solid #000; font-weight: 600; text-align: center; color: #fff; font-size: 4.16vw}
+.sec_view .list_common { display: flex; align-items: center;}
+.sec_view .list_common:before { display: inline-block; width: 14vw; content:"게임"; color: #fff; font-size: 3.24vw; }
+.sec_view .list_common:nth-child(1):before { content:"1게임"; }
+.sec_view .list_common:nth-child(2):before { content:"2게임"; }
+.sec_view .list_common:nth-child(3):before { content:"3게임"; }
+.sec_view .list_common:nth-child(4):before { content:"4게임"; }
+.sec_view .list_common:nth-child(5):before { content:"5게임"; }
+.sec_view .list_common > li { padding-right: 0.7vw;}
+.sec_view .list_common > li:nth-child(6):before,
+.sec_chk .list_common > li:nth-child(6):before
+ { content:"+"; margin-left: 1.29vw; margin-right: 3.05vw; display: inline-block; font-family: 'Montserrat',sans-serif; font-weight: 800; font-size: 3vw; color: #fff; vertical-align: -1vw}
+.sec_view .list_common > li:last-child { padding-right: 0; padding-left: 4.62vw}
+.sec_view .list_common > li button { width: 6vw; height: 6vw;line-height: 6.5vw; font-size: 3vw}
+/* 기본 게임 버튼 디자인 */
+.list_common { font-size: 0;}
+.list_common > li { display: inline-block; padding-right: calc((100% - 70vw)/9.5); padding-bottom: 0.5vw;}
+.list_common > li:nth-of-type(10n) { padding-right: 0;}
+.list_common > li button {  width: 7vw; height: 7vw; line-height: 7.6vw; border-radius: 100%; border: 0.1vw solid #fff; font-size: 3.5vw; color: #fff ; font-weight: bold;}
+.list_common > li button.yellow { background: #ffd200 !important; color: #000 !important}
+.list_common > li button.white { background: #fff !important; color: #000 !important; box-shadow: 15px 15px 12px rgba(0, 0, 0, 0.34) inset; border:none;}
+.list_common > li button.red { background: #ec2423 !important; color: #fff !important; }
+/* 삭제버튼 */
+.btn_del,
+.list_common > li button.btn_del { background: rgba(83,83,83,1); width: 10.37vw; height: 7vw; color: #fff; border-radius: 0.92vw; font-size: 2.59vw; font-family: 'GmarketMedium'; border:none; line-height: 7.5vw;}
+
+
+/* sec_white */
+.sec_white { position: relative; margin-top: 9.25vw; padding: 5.55vw 2.9vw 4.259vw;}
+.sec_white > .txt_type1 { position: absolute; left: 50%; top: 3%; transform: translate(-50%,-50%); font-size: 3.24vw; white-space: nowrap; }
+.sec_white > .txt_type1 span{ font-family: 'GmarketMedium'; color: #ff6600}
+.sec_white.whiteBall { position: relative; border-radius: 3vw; border-bottom-color: transparent}
+.sec_white.whiteBall:before,
+.sec_white.whiteBall:after { position: absolute;bottom: 0.75vw;content:""; display: block; width: 18vw; height: 0.18vw; background: #fff; }
+.sec_white.whiteBall:before { left: 0.5vw; }
+.sec_white.whiteBall:after { right: 0.5vw; }
+.sec_white.whiteBall > .txt_type1 { top: 0; padding: 0 4.62vw;   background: #000}
+
+.sec_white.sec_mega > .txt_type1 span { color: #ffd200}
+.sec_white.sec_power, .sec_white.sec_mega { margin-top: -2vw; border-radius: 3vw; border-top-color: transparent}
+
+
+/* chk.html */
+.popup.color .title_type1 { color: #fff; height: 14.07vw; line-height: 15vw; font-size: 6vw}
+.sec_chk  { padding-bottom: }
+.sec_chk > .bx_view > div { display: flex; align-items: center; justify-content: space-between;}
+.sec_chk > .bx_view > div > span { display: block; height: 8.4vw; line-height: 10vw; font-size: 3.24vw; color: #333; font-family: 'GmarketMedium'}
+.sec_chk > .bx_view {  position: relative; display:block; padding: 7.03vw 6.5vw 8.5vw; }
+/* .sec_chk > .bx_view:after { position: absolute; left: 0; bottom: 0; display: block; content:"........................................"; font-size: 5vw; color: #acacac; letter-spacing: 0.2em; line-height: 1} */
+.sec_chk > .bx_view
+.sec_chk > .bx_view .title_type1 { padding: 0 0 7.4vw; font-weight: 800}
+.sec_chk .btn_del { width: 12.6vw; height: 7.4vw; font-size:2.40vw ; line-height: 8vw}
+.sec_chk .list_common > li { padding-right: 0.46vw}
+.sec_chk .list_common > li ~ li { margin-top: 1vw}
+.sec_chk .list_common > li:nth-child(6):before { margin: 0 2.12vw 0 1.38vw; color: #333}
+.sec_chk .list_common > li button { color: #333; border-color: #a3a3a3}
+.sec_chk .list_common > li:last-child button { border:none; line-height: 8vw}
+.bx_total { position: relative; padding: 5.2vw 0 6vw; font-size: 4vw; font-family: 'GmarketLight'; color: #000; line-height: 1; font-weight: 700}
+.bx_total:before,.bx_total:after { content: ""; display: block; position: absolute; top: -3vw; width: 3.5vw; height: 3.5vw; border-radius: 100%; background: #000}
+.bx_total:before { left: 0; transform: translateX(-50%);}
+.bx_total:after { right: 0; transform: translateX(50%);}
+.bx_total > ul { padding: 0 7.4vw 1vw 0; border-bottom: 0.37vw solid #ccc; box-sizing: border-box; }
+.bx_total > ul > li { padding: 0 0 3.33vw}
+.bx_total > ul > li > p,
+.bx_total > div p
+ { width: 24.53vw; text-align: right;}
+.bx_total > ul > li,
+.bx_total > div
+ { display: flex; align-items: center; justify-content: space-between;}
+ .bx_total > div { padding: 3.33vw 7.4vw 0 0; font-family: 'GmarketMedium'}
+ .bx_total > div p span { display: block; padding: 0.7vw 0 0; font-size: 1.85vw; }
+
+.won:after { content:"원"; display: inline-block; padding-left: 1vw; color: #000}
+.body_chk { text-align: center;}
+
+.link_chkout { font-weight: 600; display: inline-block; }
+
+/* chk_member.html */
+/* .chk_member form > .bx_verify { display: none;}
+.chk_member form > .bx_verify.show { display: block;} */
+.chk_member form > .bx_verify:before { content: "....................................."; display: block; margin:7vw 0 5vw ; font-size: 5vw; color: #acacac; letter-spacing: 0.2em; line-height: 1}
+.list_type1 { padding: 0 0 3.9vw; line-height: 1; font-family: 'GmarketMedium'}
+.list_type1 li { margin-bottom: 2.03vw; height: 9.25vw; border-radius: 1.85vw; overflow: hidden; font-size: 0}
+.list_type1 li > * { display: inline-block; height: 100%; box-sizing:border-box; font-size: 3.24vw; font-family: 'GmarketMedium';}
+.list_type1 li > label {  width:30%; background: #ff6600; color: #fff;  text-align: center; line-height: 10vw; font-weight: bold;}
+.list_type1 li > input { padding-left: 4vw; width:70%; background: #dfdfdf; color: #1b1b1b;font-weight: bold; line-height: 10vw}
+.list_type1 li > input::placeholder,
+.list_type1 li > input::-webkit-input-placeholder,
+.list_type1 li > input:-ms-input-placeholder { color: #1b1b1b; font-family: 'GmarketMedium'; font-weight: bold; font-size: 3.24vw; line-height: 13vw}
+.chk_member .btn_type2.btn_re { margin-bottom: 5vw; background: #000; border: 1px solid #fff; color: #fff; line-height: normal;}
+.chk_member > p { padding: 8.33vw 0; color: #000; font-size: 3.24vw; font-weight: 600}
+.item_num { position: relative;}
+.item_num > .time { position: absolute; right: 6vw; top: 55%; transform: translateY(-50%); height: auto;}
+#chk_num::-webkit-input-placeholder { font-family: "GmarketLight"; font-weight: normal;}
+
+/* bx_keypad */
+.bx_keypad { display: none; color: #fff; text-align: center; line-height: 1.1; box-sizing: border-box;}
+.dim { display: none ;}
+input:focus { outline: 0}
+.bx_keypad > input { display:block; margin: 6.75vw 0 ; width: 100% ; height: 13.7vw; border-radius: 2.77vw; background: #ebebeb; font-size: 4.16vw; color: #000; font-family: 'GmarketMedium'; font-weight: bold; text-align:center; box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.25) inset;}
+.bx_keypad > input:-ms-input-placeholder,
+.bx_keypad > input::placeholder,
+.bx_keypad > input::-webkit-input-placeholder { color: #000; }
+.bx_keypad > ul { padding: 5.18vw 0 0; text-align: center; font-size: 0}
+.bx_keypad > ul li { display: inline-block;}
+.bx_keypad > ul li:first-child { padding-right: 1.11vw}
+.bx_keypad > ul li button { padding: 0; width: 30vw;}
+
+/* 숫자 키패드 */
+.keypad tr td { padding: 0 1.2vw 1.2vw 0; width: 33.33%; height: 11.11vw;  box-sizing: border-box;}
+.keypad tr td:last-of-type { padding-right:0; }
+.keypad button { width: 100%; height: 100%; border: 1px solid #616161; color: #fff; font-size: 5vw; font-family: 'GmarketBold'; background: #555; transition: all .3s;}
+.keypad button:active { background-color: #1e3932;}
+.keypad .btn_side { background: #222; font-size: 3.7vw; font-family: 'GmarketMedium'}
+.keypad .btn_backspace { background: url(../images/ico_numberpad_back.svg) no-repeat center /24% auto #222;}
+
+/* checkout.html */
+.sec_chkout { text-align: center;}
+.sec_chkout .txt_type1 { padding: 9.8vw 0 5.55vw; font-size: 3.24vw; line-height: 4.44vw; color: #000; font-weight: 600}
+.sec_chkout .txt_type1 .color_org { font-family: 'GmarketMedium'}
+.sec_chkout > div { padding: 0 8.33vw; font-size: 3.24vw; box-sizing: border-box;}
+.sec_chkout .bx_chktotal { display: flex; align-items: center; margin: 0 auto; height: 11.66vw; box-shadow: 0.1vw 0.2vw 0.5vw 0.2vw rgb(0 0 0 / 13%); border: 1px solid #d7d7d7; border-radius: 0.9vw; overflow: hidden;}
+.sec_chkout .bx_chktotal > * { display: block; height: 100%; text-align: center; line-height: 12.5vw; }
+.sec_chkout .bx_chktotal > span { background: #f5f3f3; width: 35%}
+.sec_chkout .bx_chktotal > strong { width: 65%}
+.sec_chkout > div .color_org { padding:0 0 0 3.33vw; font-size: 5.55vw}
+.sec_chkout > div .wrap_img { padding: 9vw 0; margin: 0 auto; width: 43.5vw; }
+.sec_chkout .bx_pay { display: flex; justify-content: center;  flex-direction: column; padding: 0 0 0 23.14vw; height: 19.62vw; box-shadow: 0.1vw 0.2vw 0.5vw 0.2vw rgb(0 0 0 / 13%); background:  url(../images/img_pay.png) no-repeat left 7.4vw center / 14vw auto #f5f3f3; background-blend-mode: multiply; text-align: left; box-sizing: border-box; font-size: 2.7vw; border: 1px solid #d7d7d7; border-radius: 0.9vw; overflow: hidden; line-height: 1.3; font-family: 'GmarketLight'; font-weight: 600; }
+.sec_chkout .bx_pay strong { font-family: 'GmarketMedium'}
+
+/* complete.html */
+.sec_complete { padding-bottom: 17.12vw; text-align: center; line-height: 1.1; border-radius:2.77vw; }
+.sec_complete > p { padding:10.64vw 0 0; font-size: 5vw; letter-spacing: -0.075em; font-weight: 600}
+.sec_complete > p:after { content:""; display: block; margin: 7.59vw auto; transform: translateX(1.38vw); width: 17.6vw; height: 16.3vw; background: url(../images/ico_check_big.svg) no-repeat center /100% auto}
+.sec_complete > div > .txt_type1 { font-size: 3.24vw; line-height: 4.44vw; color: #000; font-weight: 600}
+.sec_complete > div > .txt_type1 strong { font-family: 'GmarketMedium'}
+.sec_complete > div > .txt_type1 span { display: block; padding: 0 0 2.03vw;}
+.sec_complete > a { display: block; margin:11.57vw auto 0; height: 7.4vw; line-height: 8.4vw; border-radius: 7.4vw; color: #fff; background: #000}
+
+/* policy_agree.html */
+.sec_agree .btn_agree_ok { display: inline-block; margin-top: 13.14vw}
+.btn_agree:before { content:""; display: block; margin: 12.96vw auto 9.5vw; width: 17.6vw; height: 16.3vw; background: url(../images/ico_check_big.svg) no-repeat center / 100% 100%}
+.btn_agree { margin: 0; width: 100%; font-size: 3.24vw; font-weight: bold; color: #000}
+.btn_agree span::before { content:""; display: inline-block; margin-right: 1.66vw; width: 5.18vw; height: 5.18vw; border-radius: 100%; box-sizing: border-box; border:0.9vw solid #ff6600; vertical-align: middle;}
+.btn_agree.chked span::before { background: url(../images/ico_check_small.svg) no-repeat center / 100% auto}
+.btn_agree button { width: 16.38vw; border-radius: 5.5vw; line-height: 6vw; height: 6vw; padding: 4px; font-size: 2.77vw; vertical-align: bottom;}
+.bx_agree { display: none; box-sizing: border-box;}
+.bx_agree > div { padding-top: 3.5vw}
+.list_depth1 { counter-reset:depth1; color: #000; font-size: 2.03vw; line-height: 2.77vw;}
+.list_depth1 { padding: 3.42vw; max-height: 52vw; overflow: auto; -ms-overflow-style: none; text-align: left; background: #ebebeb; border-radius: 4.62vw;}
+.list_depth1::-webkit-scrollbar { display: none}
+.list_depth1 li { padding:0 0 2.77vw;}
+.list_depth1 > li > p::before { counter-increment: depth1; content: "제"counter(depth1)"조";}
+.list_depth2 { counter-reset: depth2;}
+.list_depth2 > li::before { counter-increment: depth2; content:counter(depth2)". ";}
+
+.list_btn { padding: 3.55vw 0 4.6vw; font-size: 0;}
+.list_btn li { display: inline-block; padding:0 0 0 1.01vw;}
+.list_btn button { width: 5.18vw; height: 5.18vw; background: url(../images/ico_scroll_off.svg) no-repeat center / 100%;}
+.list_btn button:active { background-image: url(../images/ico_scroll_on.svg)}
+.list_btn .btn_down { transform: rotate(180deg)}
+
+.back_main_popup .txt_type2 { padding: 0 0 12.5vw; font-weight: 600}
+.popup_background { background: #000;position: fixed;z-index: 9;top: -5000px;right: -5000px;bottom: -5000px;left: -5000px;opacity:0.7 }

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'designhouseB';
+    src: url('designhouseOTFBold00.eot');
+    src: url('designhouseOTFBold00.eot?#iefix') format('embedded-opentype'),
+        url('designhouseOTFBold00.woff2') format('woff2'),
+        url('designhouseOTFBold00.woff') format('woff'),
+        url('designhouseOTFBold00.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'designhouseL';
+    src: url('designhouseLight.eot');
+    src: url('designhouseLight.eot?#iefix') format('embedded-opentype'),
+        url('designhouseLight.woff2') format('woff2'),
+        url('designhouseLight.woff') format('woff'),
+        url('designhouseLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'designhouseB';
+    src: url('designhouseBold.eot');
+    src: url('designhouseBold.eot?#iefix') format('embedded-opentype'),
+        url('designhouseBold.woff2') format('woff2'),
+        url('designhouseBold.woff') format('woff'),
+        url('designhouseBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'designhouseL';
+    src: url('designhouseOTFLight00.eot');
+    src: url('designhouseOTFLight00.eot?#iefix') format('embedded-opentype'),
+        url('designhouseOTFLight00.woff2') format('woff2'),
+        url('designhouseOTFLight00.woff') format('woff'),
+        url('designhouseOTFLight00.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

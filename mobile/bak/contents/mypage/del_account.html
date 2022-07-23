@@ -1,0 +1,101 @@
+<? 
+include_once $_SERVER['DOCUMENT_ROOT']."/_common/config.php";
+include $_SERVER['DOCUMENT_ROOT']."/include/meta.html";
+
+login_chk();
+
+$gubun = $_GET['gubun'];
+if($gubun != 'Y'){
+	meta_go("/contents/mypage/chk_pwd.html?callback=del_account");
+	exit;
+}
+
+$sql			=	"SELECT codeMO, outName FROM CodeMemberOut WHERE delYN='N'";
+$code_option	=	F_get_option($sql);
+?>
+<body class="">
+  <header>
+    <div class="clear">
+      <h1><a href="/index.html"><span class="hide">2pm</span></a></h1>
+      <h2 class="h_type2"><a href="">개인정보</a></h2>
+      <? include $_SERVER['DOCUMENT_ROOT']."/include/wrap_btn.html";?>
+    </div>
+    <? include $_SERVER['DOCUMENT_ROOT']."/include/gnb.html";?>
+  </header>
+
+  <main id="main">
+    <ul class="tab_type1 mar_btm_10">
+      <li><a href="/contents/mypage/chg_info.html?gubun=Y">개인정보 변경</a></li>
+      <li><a href="/contents/mypage/chg_pw.html?gubun=Y">비밀번호 변경</a></li>
+      <li><a href="/contents/mypage/del_account.html?gubun=Y" class="on">탈퇴</a></li>
+    </ul>
+    <section class="sec_del mar_btm_10 wrap">
+        <h3 class="hide">회원탈퇴</h3>
+        <form class="form_type1" name="w_frm" id="w_frm" method="post" action="./del_account.php" enctype='multipart/form-data' autocomplete="off">
+          <legend class="hide">회원 탈퇴 입력 양식</legend>
+          <ul class="list_type1">
+            <li>
+              <p><label for="reason_del">탈퇴 사유</label></p>
+              <div class="wrap_sel_type1">
+                <select class="" name="codeMO" id="codeMO">
+                  <?=$code_option?>
+                </select>
+              </div>
+            </li>
+            <li>
+              <p><label for="opi">기타의견</label></p>
+              <textarea placeholder="내용을 입력해주세요." name="outContent" id="outContent"></textarea>
+            </li>
+          </ul>
+          <div class="bx_btn flex_space">
+            <button type=button class="btn_gray btn_type3">취소</button>
+            <button type=button class="btn_ok btn_type3">탈퇴하기</button>
+          </div>
+        </form>
+      </section>
+      <section class="sec_del wrap">
+      <div class="">
+        <ul class="list_notice">
+          <li>
+            <p>탈퇴 후 재사용시에는 이전 거래내역 및 캐쉬는 초기화 됩니다.</p>
+          </li>
+          <li>
+            <p>탈퇴하고자 하시는 경우 먼저 다음 조치를 진행하여 주시기 바랍니다.</p>
+          </li>
+          <li>
+            <p><strong>추첨일 미도래 복권(메가밀리언, 파워볼)이 있는 경우 추첨일 이후 진행하여 주십시오.</strong></p>
+          </li>
+          <li>
+            <p><strong>복권(메가밀리언, 파워볼)구매, 또는 환급을 통하여 캐쉬 잔액이 0이 되도록 하여 주십시오.</strong><small>(단 잔액캐쉬가 남아있을 시 탈퇴가 불가능 하며, 1:1문의란에 남겨주세요.)</small></p>
+          </li>
+          <li>
+            <p><strong>기존 이용 휴대전화 번호 변경 시 개인정보 변경 에서 휴대전화번호를 꼭 변경해 주세요.</strong><small>(전화번호 미 변경 시 기존 구매이력은 확인 이 불가 할 수 있습니다.)</small></p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </main>
+</body>
+<script>
+$(function(){
+	$(document).on("click",".btn_gray",function(){
+		location.href="/";
+	});
+
+	$(document).on("click",".btn_ok",function(){
+		var codeMO	   = $('#codeMO').val();
+		var outContent = $('#outContent').val();
+
+		if($.trim(outContent) == '' && codeMO == 8){
+			alert("기타의견을 입력해 주세요.");
+			return false;
+		}
+
+		$("#w_frm").submit();
+	});
+});
+</script>
+<? include $_SERVER['DOCUMENT_ROOT']."/include/footer.html";?>
+
+</html>
