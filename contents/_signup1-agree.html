@@ -1,0 +1,85 @@
+<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <a href="#main" class="skip">본문 바로가기</a>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <main id="main">
+    <section class="sec_reg agree">
+      <div class="wrap_title">
+        <h2 class="h_type3">슈퍼볼코리아 회원가입</h2>
+        <p>간편하게 신규가입하고 다양한 혜택을 누려보세요!</p>
+      </div>
+      <div>
+        <h3 class="hide">회원가입 프로세스</h3>
+        <ol class="list_step flex justify_center f_GmarketSans ls75">
+          <li class="active">
+            <p>약관동의</p>
+          </li>
+          <li>
+            <p>회원정보 입력</p>
+          </li>
+          <li>
+            <p>회원가입 완료</p>
+          </li>
+        </ol>
+      </div>
+      <form class="f_NotoSansKR">
+        <fieldset>
+          <legend class="h_type3">회원가입을 위해 약관동의를 진행해주세요.</legend>
+          <ul class="top">
+            <li>
+              <input type="checkbox" id="chk_all" class="chk_type1">
+              <label for="chk_all"><span>전체 약관에 동의합니다.</span></label>
+            </li>
+            <li>
+              <input type="checkbox" id="chk_19" class="chk_type1">
+              <label for="chk_19">
+                <span>19세 이상입니다.</span> <span style="color:#999c9f">(19세 미만은 회원가입 제한)</span>
+              </label>
+            </li>
+          </ul>
+          <ul class="btm">
+            <li>
+              <div>
+                <input type="checkbox" id="chk1" class="chk_type1">
+                <label for="chk1">
+                  <span class="color_red">[필수]</span>
+                  <span>슈퍼볼코리아 이용약관</span>
+                </label>
+              </div>
+              <a href="" class="view">전문보기</a>
+            </li>
+            <li>
+              <div>
+                <input type="checkbox" id="chk2" class="chk_type1">
+                <label for="chk2">
+                  <span class="color_red">[필수]</span>
+                  <span>개인정보 수집/이용안내</span>
+                </label>
+              </div>
+              <a href="" class="view">전문보기</a>
+            </li>
+            <li>
+              <div>
+                <input type="checkbox" id="chk3" class="chk_type1">
+                <label for="chk3">
+                  <span class="color_blue">[필수]</span>
+                  <span>마케팅 활용을 위한 개인정보 수집/이용 동의</span>
+                </label>
+              </div>
+              <a href="" class="view">전문보기</a>
+            </li>
+          </ul>
+          <div class="wrap_btn flex align_center space">
+            <button class="btn_prev">이전</button>
+            <a href="./signup2-form.html" class="btn_gray">다음</a>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+</body>
+
+
+</html>
