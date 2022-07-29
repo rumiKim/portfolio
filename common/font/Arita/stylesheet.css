@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Arita-dotum4.0(TTF)';
+    src: url('Arita-dotum-Bold_TTF.woff2') format('woff2'),
+        url('Arita-dotum-Bold_TTF.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arita-dotum4.0(TTF)';
+    src: url('Arita-dotum-SemiBold_TTF.woff2') format('woff2'),
+        url('Arita-dotum-SemiBold_TTF.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arita-dotum4.0(TTF)';
+    src: url('Arita-dotum-Medium_TTF.woff2') format('woff2'),
+        url('Arita-dotum-Medium_TTF.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arita-dotum4.0(TTF)';
+    src: url('Arita-dotum-Thin_TTF.woff2') format('woff2'),
+        url('Arita-dotum-Thin_TTF.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arita-dotum4.0(TTF)';
+    src: url('Arita-dotum-Light_TTF.woff2') format('woff2'),
+        url('Arita-dotum-Light_TTF.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

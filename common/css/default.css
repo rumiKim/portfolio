@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* Reset */
 html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,
-dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0;}
+dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0; box-sizing: border-box;}
 body,input,select,textarea,button {border:none;}
 ul,ol,li{list-style:none; }
 table{width:100%;border-spacing:0;border-collapse:collapse;}
@@ -55,6 +55,7 @@ layout
 
 /* before, after */
 .add_after:after, .add_before:before { content: ""; display: inline-block; vertical-align: middle;}
+.add_after+*,.add_before+*{vertical-align: middle;}
 .underline { position: relative;}
 .underline:after { position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: #000}
 
