@@ -96,7 +96,7 @@ section{line-height: 1;}
 .sec_signup.step3 .desc{margin:2.3rem 0 0.5rem;}
 .sec_signup.step3 strong{font-size: 2.25rem;}
 
-/* spoint */
+/* spoint page*/
 .spoint .sec_visual{margin-bottom: 4.5rem;}
 .sec_guide .bx_section{padding:7rem 6.75rem; font-family: 'GmarketSans'; letter-spacing: -0.05em;}
 .sec_guide .bx_section.gray{background:url("../images/img_bestofbest.png") no-repeat right 8rem bottom; background-color: #f4f4f4;}
@@ -108,7 +108,6 @@ section{line-height: 1;}
 .tit_point{font-size: 1.9rem; font-weight: 500;}
 .tit_point span{vertical-align: sub;}
 .tit_point:before{content: "S"; display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 100%; background: var(--color_red); color: #fff; font-family: 'GmarketSans'; font-size: 1.15rem;}
-
 
 .sec_benefit .wrap_search{padding: 0 0 2.8rem;}
 .list_benefit > li{padding:1.2rem 1.75rem; margin-right:1.25%; margin-bottom: 2rem; width: 32.5%; border: 1px solid #e8e8e8; box-shadow: 0px 10px 15.9808px 0.0192px rgba(0, 0, 0, 0.08); border-radius: 1rem; font-size: 1rem;}
@@ -130,6 +129,56 @@ section{line-height: 1;}
 
 .sec_mileage .wrap_img{margin:0.85rem auto 2.6rem; width: 30.07rem;}
 .sec_mileage .bx_gray{margin: 1.7rem auto 0; padding:1rem 0; width:44.25rem; font-size: 0.95rem; line-height: 1.26; border-radius: 0.5rem;}
+
+
+/* event page */
+.sec_award h2{margin: 5.5rem 0 1.4rem;}
+.sec_award .contents{text-align: center;}
+.sec_award .contents .tit_type1 .tit{margin-bottom: 0.7rem;}
+
+.sec_business{padding-top: 5rem;}
+.sec_business .contents .tit_type1{border-top: 2px solid #000 ; line-height: 5rem}
+.sec_business .contents h3{padding: 2.5rem 0 1.25rem; font-size: ;}
+.sec_business .contents .list_bul{margin-bottom: 2rem; line-height: 1.57;}
+
+.sec_check .tit_type1{padding: 5.4rem 0 3.3rem;}
+.sec_check .bx_calendar{padding: 2.5rem 2rem 2.25rem 3rem; font-family: 'GmarketSans'; border: 1px solid #dcdee5; border-radius: 0.5rem;}
+.sec_check .bx_calendar .month{font-size: 2rem;}
+.sec_check .bx_calendar .month + .txt{margin-top: 0.6rem; padding:0.5rem 1.65rem; border: 1px solid #dcdee5; color: #333; border-radius: 1.7rem; background: #fff; font-size: 0.75rem; }
+.sec_check .bx_calendar .date{padding:0 2.5rem ; height:2.5rem; line-height: 1; background: #fff; border-radius: 0.25rem; font-size: 1.25rem; color: #666;}
+.sec_check .bx_calendar .date .num ~ .num{margin-left: 2rem;}
+.date .today{position: relative; color: var(--color_blue);}
+.date .today .label{position: absolute; left: 50%; top:2.3rem; transform: translateX(-50%); display: block; background: var(--color_blue); color: #fff; font-size:0.5rem; width: 3.75rem; line-height: 1rem; border-radius: 1rem; text-align: center;}
+.sec_check .bx_check .list_cur{padding: 2rem 0 1.3rem;}
+.sec_check .bx_check .list_cur li ~ li{margin-right: 1.7rem;}
+.sec_check .bx_check .list_cur li:before{margin-right: 0.5rem; width:2.5rem; height:2.5rem; background-position: center; background-repeat: no-repeat; background-size: 55% auto; border-radius: 100%; background-color: #4a4a4a;background-image: url("../images/ico_date_01.png");}
+.sec_check .wrap_input{padding:2rem 3rem 2rem 2rem; border: 1px solid #dcdee5;}
+.sec_check .wrap_input >p{font-size: 1.5rem;}
+.sec_check .wrap_input .list_form{padding:1.3rem 0 0.85rem; width: 100%;}
+.sec_check .wrap_form form{flex: 1;}
+.sec_check .wrap_form:before{content: ""; display: block; height: 10.85rem; width:19.5rem; background: url("../images/img_deco_check.jpg") no-repeat center / auto 100%;}
+.sec_check .list_form > li{display: block;}
+
+
+.board_type1{text-align: center;}
+.board_type1 .hd_board{ background: #f9f9f9; font-size: 1rem; color: #333333; border: 1px solid #d2d2d2; border-radius:0.5rem; line-height: 3rem;}
+.board_type1 > ul > li ~ li{margin-top: 0.35rem;}
+.board_type1 > ul > li{display: flex; align-items: center; justify-content: space-between;height:3.75rem; border: 1px solid #d2d2d2; border-radius:0.5rem; font-size: 0.9rem; font-weight: 600; }
+.board_type1 > ul > li .time{color: #8e8e8e; font-size: 0.85rem; font-weight: 600;}
+.board_type1 > ul > li .id{display: flex; align-items: center; justify-content: center;color: #333;}
+.board_type1 > ul > li .id .profile{display: inline-flex; align-items: center; justify-content: center; margin-right: 0.5rem; width: 2.4rem; height: 2.4rem;border-radius: 100%; background: #8e8e8e;}
+.board_type1 > ul > li .txt{font-weight: 500;}
+
+.board_chk .hd_board{margin: 4.5rem 0 1.15rem; font-weight: 600;}
+.board_chk .ranking,.board_chk .count{width: 8.57%;}
+.board_chk .time{width: 9.28%;}
+.board_chk .txt{flex: 1;}
+.board_chk .id{width: 16.07%;}
+.board_chk .point{width: 5.35%;}
+
+
+
+
 /* .sec_benefit ul li */
 /* 
 .sec_login > .login_super form .btn_login { margin:1.5rem 0 1.65rem; width:100%; background:#444 }

@@ -96,6 +96,9 @@ body { word-break: keep-all;}
 .f_Montserrat { font-family: 'Montserrat', sans-serif !important; }
 .f_Arita { font-family: 'Arita-dotum', sans-serif !important; }
 
+.br20{border-radius: 1rem;}
+.br10{border-radius: 0.5rem;}
+.br5{border-radius: 0.25rem;}
 .bt { border-top: 1px solid #dcdee5}
 .bb { border-bottom: 1px solid #dcdee5}
 .border_dcdcdc { border-color: #dcdcdc !important}
@@ -184,6 +187,7 @@ body { word-break: keep-all;}
 
 /* table */
 .tb_type1 thead th{background: #f49ba3; color: #fff; font-size: 1rem;}
+.tb_type1.type_blue thead th{background: var(--color_blue);}
 .tb_type1{border: 1px solid #d2d2d2;}
 .tb_type1 th,.tb_type1 td{padding: 0.8rem 0; border-bottom: 1px solid #d2d2d2;}
 .tb_type1 tbody th,.tb_type1 tbody td{color: #333; font-size: 0.85rem; text-align: center;}
