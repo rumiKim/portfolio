@@ -1,0 +1,57 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+<body>
+  <div class="nav_skip">
+    <nav>
+      <ul>
+        <li><a href="">본문 바로가기</a></li>
+        <li><a href="">메뉴 바로가기</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+    <main class="main page_type1">
+      <div class="inner">
+        <section class="sec_login">
+          <h2 class="page_tit">로그인</h2>
+          <div class="bx_white">
+            <div class="wrap_form">
+              <form action="">
+                <fieldset>
+                  <legend class="tit_form">로그인</legend>
+                  <ul class="list_form">
+                    <li class="inp_type1"><input type="text" placeholder="아이디"></li>
+                    <li class="inp_type1"><input type="password" placeholder="비밀번호 (영문, 숫자, 특수문자 포함 8~30자)"></li>
+                  </ul>
+                  <div class="wrap_chk flex space">
+                    <div class="">
+                      <input type="checkbox" name="" id="chk_id" class="chk_type1">
+                      <label for="chk_id"><span class="va_mid">아이디 저장</span></label>
+                    </div>
+                    <div>
+                      <ul class="list_find flex align_center">
+                        <li><a href="find-id.html">아이디 찾기</a></li>
+                        <li><a href="find-pw.html">비밀번호 찾기</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="wrap_btn">
+                  <a href="" class="btn btn_type2">로그인</a>
+                </div>
+                </fieldset>
+              </form>
+              <div class="txt_btm txt_center">
+                <span>회원가입 하고 포인트 플레이를 즐기세요!</span>
+                <a href="signup1.html" class="color_red link">회원가입</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+  </div>
+
+</body>
+
+</html>

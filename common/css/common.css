@@ -25,6 +25,12 @@ body { word-break: keep-all;}
 .dp_inb { display: inline-block !important;}
 .dp_none {display: none !important; }
 .dp_in {display: inline !important; }
+.only_pc{display: block !important}
+.only_pc.flex{display: flex !important}
+.only_tablet{display: none !important}
+.only_mob{display: none !important}
+
+
 
 /* center align */
 .txt_center { text-align: center;}

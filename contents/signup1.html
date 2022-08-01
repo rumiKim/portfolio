@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="common/css/default.css">
-  <link rel="stylesheet" href="common/css/common.css">
-  <link rel="stylesheet" href="common/css/style.css">
-  <link rel="stylesheet" href="common/css/font.css">
-
-  <title>회원가입 - SPEED ON</title>
-</head>
-
+<? include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
 <body>
   <div class="nav_skip">
     <nav>
@@ -23,7 +9,7 @@
     </nav>
   </div>
   <div class="container">
-
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
     <main class="main page_type1">
       <div class="inner">
         <section class="sec_signup step1">
@@ -77,6 +63,7 @@
         </section>
       </div>
     </main>
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
     <div class="wrap_popup" style="display: none">
       <div class="popup bx_center">
         <button class="btn_close"><span class="hide">팝업창 닫기</span></button>
@@ -86,7 +73,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
 </body>

@@ -1,27 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 html { font-size: 20px;}
 body { font-size: 1rem; word-break: keep-all;}
+a,button{transition: all .3s;}
 
 .inner { margin:0 auto; width: 70rem;}
-a,button{transition: all .3s;}
 
 
 /* header */
 .header{border-bottom: 1px solid #ddd;}
-.header h1 > a {display: block;width: 9.5rem; height:4rem; line-height: 4rem; }
+.header h1 > a {display: block;width: 9.5rem; line-height: 4rem; }
 .header h1 > a img{width: 100%; vertical-align: unset;}
 .header .gnb{margin-left:4rem; }
-.header .gnb ul li a {display: block; line-height: 4rem; font-size: 0.85rem; color: #000; letter-spacing: -0.075em;}
-.header .gnb ul li ~ li {margin-left:2.5rem}
+.header .list_gnb > li{position: relative;}
+.header .list_gnb > li > a {display: block; position: relative; line-height: 4rem; font-size: 0.85rem; color: #000; letter-spacing: -0.075em; font-weight: 500}
+.header .list_gnb > li > a:after{opacity: 0; content: ""; position: absolute; left: -0.5rem; right: -0.5rem; bottom: -1px; height: 2px; background: var(--color_red); transition: all .3s;}
+.header .list_gnb > li ~ li {margin-left:2.5rem}
+/* 2depth */
+.header .list_gnb ul{display: none; position: absolute; left: 0; top: 100%; width: max-content}
+.header .list_gnb ul li{float: left; margin-right: 1.5rem}
+.header .list_gnb ul a{display: block; line-height: 2.9rem; color: #333; font-size: 0.85rem}
+.active{display: block !important;}
+.active.flex{display: flex !important;}
+
+
+
 .header .util{font-size: 0.8rem;}
 .header .util ul li ~ li{margin-left:0.35rem;}
 .header .util ul li a{display: block; padding:0 1.5rem; line-height:2rem; border-radius: 2rem; color: #333; }
 .header .util .btn_type1:before{ margin-right:0.6rem; background-repeat: no-repeat; background-size: 100% 100%; background-position: center; vertical-align: -2px;}
 .header .util .btn_login::before{height: 1rem; width: 1rem; background-image: url("../images/ico_login.png");}
 .header .util .btn_mypage::before{height: 1rem; width: 1.4rem; background-image: url("../images/ico_my.png");}
-.nav_quick{position: fixed; right: 50%; transform: translateX(50%); margin-right:-37rem; z-index: 10;}
+.nav_quick{position: fixed; right: 50%; transform: translateX(50%); margin-right:-37rem; z-index: 10; text-align: center;}
 .nav_quick ul li{margin-bottom: 0.5rem;}
-.nav_quick ul li a{display: block; width: 3rem; height: 3rem; background-color: #5e5e5e; border-radius: 0.5rem;}
+.nav_quick ul li a{display: block; width: 3rem; height: 3rem; border-radius: 0.5rem; overflow: hidden; background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
+.nav_quick .insta a{background-image: url("../images/ico_insta.png")}
+.nav_quick .insta a:hover{background-image: url("../images/ico_insta_hover.png")}
+.nav_quick .facebook a{background-image: url("../images/ico_facebook.png")}
+.nav_quick .facebook a:hover{background-image: url("../images/ico_facebook_hover.png")}
+.nav_quick .youtube a{background-image: url("../images/ico_youtube.png")}
+.nav_quick .youtube a:hover{background-image: url("../images/ico_youtube_hover.png")}
+.nav_quick .naver a{background-image: url("../images/ico_naver.png")}
+.nav_quick .naver a:hover{background-image: url("../images/ico_naver_hover.png")}
+.nav_quick .btn_top{font-size: 0.85rem; font-weight: bold}
 
 
 /* main */
@@ -59,7 +79,8 @@ section{line-height: 1;}
 .footer .list_policy li span{display: inline-block;}
 .footer .list_policy li ~ li:before{content: ""; display: inline-block; margin:0 0.7rem ; width: 1px; height:0.7rem; background: #fff; vertical-align: middle;}
 .footer .list_info{padding-top:1.75rem; color: #8e8e8e; font-size: 0.8rem; line-height: 1.56; }
-.footer .partners{padding: 2.75rem 0;}
+.footer .partners{margin: 2.75rem 0; height: 1.75rem}
+.footer .partners img{height: 100%}
 
 
 /* login */
@@ -70,7 +91,7 @@ section{line-height: 1;}
 .sec_login .txt_btm .link{margin-left:1.3rem; text-decoration: underline;}
 
 .wrap_btn{padding-top: 4.5rem;}
-.wrap_btn .btn{display: block; padding:; min-width: 9rem; height:3.4rem; line-height: 3.4rem; font-size: 1.1rem; letter-spacing: -0.075em; text-align: center; border-radius: 0.5em;}
+.wrap_btn .btn{display: block; min-width: 9rem; height:3.4rem; line-height: 3.4rem; font-size: 1.1rem; letter-spacing: -0.075em; text-align: center; border-radius: 0.5em;}
 .wrap_btn .btn+.btn{margin-left: 0.75rem;}
 
 /* sec_signup */
@@ -176,7 +197,7 @@ section{line-height: 1;}
 .board_chk .id{width: 16.07%;}
 .board_chk .point{width: 5.35%;}
 
-.sec_share .wrap_tit{padding: 5rem 0 2.5rem;} 
+.sec_share .wrap_tit{padding: 5rem 0 2.5rem;}
 .board_share .ranking{width: 6%;}
 .board_share .label{width:10%;}
 .board_share .label span{display: inline-block; padding:0.35rem 1.25rem;  background: var(--color_red); color: #fff; border-radius: 0.25rem;}
@@ -209,8 +230,8 @@ section{line-height: 1;}
 .list_comment > li .info{text-align: right;}
 .list_comment > li .tit{margin:0 0 0.5rem; font-size: 0.95rem; font-weight: 600;}
 .list_comment > li .tit+.comment{ max-width: 600px; font-size: 0.85rem; color: #333; line-height: 1.4; }
-.list_comment > li .name{font-weight: 600; color: #333;} 
-.list_comment > li .date{margin:0.5rem 0 0.75rem; font-size: 0.9rem; color: #666;} 
+.list_comment > li .name{font-weight: 600; color: #333;}
+.list_comment > li .date{margin:0.5rem 0 0.75rem; font-size: 0.9rem; color: #666;}
 .list_comment > li .btns .btn{width: 1rem; height: 1rem; background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
 .list_comment > li .btns .btn+.btn{margin-left: 0.75rem;}
 .btn.btn_modify{background-image: url("../images/ico_rewrite.png");}
@@ -219,12 +240,3 @@ section{line-height: 1;}
 .sec_share .tit_type1 .desc{margin: 1rem 0 0 0; line-height: 1.4;}
 .sec_share .wrap_form{padding:2rem 0 3.2rem; border-top: 1px solid #000;}
 .sec_share .wrap_form .bx_select{flex: none; width: 27.5rem;}
-
-
-
-
-
-
-
-
-
