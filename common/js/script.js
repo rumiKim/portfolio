@@ -24,11 +24,48 @@ $(function() {
     mobWrap.removeClass('open')
   });
 
-});
+
+  // show popup
+  //
+  $('.btn_view').on('click',function(e){
+    e.preventDefault();
+  });
+
+  $('.btn_view.policy1').on('click',function(e){
+    $('#policy1').addClass('active')
+  });
+  $('.btn_view.policy2').on('click',function(e){
+    $('#policy2').addClass('active')
+  });
+  $('.btn_view.policy3').on('click',function(e){
+    $('#policy2').addClass('active')
+  });
+
+  $('.wrap_popup .btn_close').on('click',function(){
+    $(this).parents('.wrap_popup').removeClass('active')
+  });
+
+  if($(window).width() < 1025){
+    gnb.on('click', function(e) {
+      $(this).addClass('active');
+      $(this).parent('li').siblings().find('a').removeClass('active')
+      if($(this).next('ul')){
+        e.preventDefault();
+      }
+      // $(this).next('ul').addClass('active');
+      // $(this).parent('li').siblings().find('ul').removeClass('active')
+    });
+  }
+
+
+}); //jquery function end
 
 function showPopup(param) {
-  const popup = document.querySelector('.popup.' + param);
-  popup.classList.add('active');
+  // const popup = document.querySelector('.popup.' + param);
+  const popup = $('.wrap_popup.'+param)
+  popup.addClass('active');
+
+  // popup.classList.add('active');
 }
 
 // popup common

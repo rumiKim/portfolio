@@ -1,0 +1,144 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <div class="nav_skip">
+    <nav>
+      <ul>
+        <li><a href="" class="btn_type1">본문 바로가기</a></li>
+        <li><a href="" class="btn_type1">메뉴 바로가기</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container mypage">
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+    <main class="main page_type1 ">
+      <div class="inner">
+        <section class="sec_visual">
+          <h2 class="page_tit">마이페이지</h2>
+          <div class="bx_banner bx_img wrap_img">
+            <img src="/common/images/img_banner_sub_mypage.jpg" alt="">
+          </div>
+        </section>
+        <div class="bx_white">
+          <section class="sec_edit sec_signup step2">
+            <div class="wrap_form">
+              <p class="tit_type1"><strong class="page_tit">회원정보 변경</strong></p>
+              <form class="">
+                <fieldset>
+                  <legend class="hide">회원정보 변경 입력 양식</legend>
+                  <ul class="list_form type1 bt bb">
+                    <li>
+                      <label for="reg_id" class="required"><span>아이디</span></label>
+                      <div class="">
+                        <div class="inp_type1 inp_readonly">
+                          <input type="" id="reg_id" placeholder="" readonly value="hong4785">
+                        </div>
+                        <div>
+                          <ul class="desc">
+                            <li>・ 4~20자의 영문 또는 영문 + 숫자만 입력해주세요.
+                            </li>
+                            <li>・ 아이디는 대소문자 구분합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <label for="reg_pw" class="required"><span>비밀번호</span></label>
+                      <div>
+                        <div class="inp_type1">
+                          <input type="password" id="reg_pw" placeholder="비밀번호">
+                        </div>
+                        <p class="desc">・ 영문, 숫자, 특수문자를 포함 8~30 자리로 입력해주세요.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <label for="reg_pw_re" class="required"><span>비밀번호 확인</span></label>
+                      <div class="inp_type1">
+                        <input type="password" id="reg_pw_re" placeholder="비밀번호 확인">
+                      </div>
+                    </li>
+                    <li>
+                      <label for="reg_name" class="required"><span>이름</span></label>
+                      <div class="inp_type1 inp_readonly">
+                        <input type="text" id="reg_name" readonly value="홍길동">
+                      </div>
+                    </li>
+                    <li class="">
+                      <label for="" class="required"><span>연락처</span></label>
+                      <div class="flex align_center">
+                        <div class="bx_inp inp_type1 ">
+                          <select name="" id="" class="">
+                            <option value="">010</option>
+                          </select>
+                        </div>
+                        <div class="bx_inp inp_type1">
+                          <input type="text" id="" placeholder="">
+                        </div>
+                        <div class="bx_inp inp_type1">
+                          <input type="text" id="" placeholder="">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <label for="" class="required"><span>이메일</span></label>
+                      <div>
+                        <div class="flex align_center">
+                          <div class="bx_inp inp_type1">
+                            <input type="email" placeholder="이메일">
+                          </div>
+                          <div class="bx_inp inp_type1 gray">
+                            <select name="" id="" class="">
+                              <option value="">선택</option>
+                            </select>
+                          </div>
+                        </div>
+                        <p class="desc"><input type="checkbox" class="chk_type1"><label for="">이메일 수신 동의</label></p>
+                      </div>
+                    </li>
+                    <li class="item_birth">
+                      <label for="" class="required"><span>나이/성별</span></label>
+                      <div class="flex align_center">
+                        <div class="inp_type1">
+                          <select name="" id="" class="">
+                            <option value="">출생년도</option>
+                          </select>
+                        </div>
+                        <div>
+                          <ul class="flex align_center">
+                            <li><input type="radio" name="ra_gender" id="" class="chk_type1"><label for="">남성</label></li>
+                            <li><input type="radio" name="ra_gender" id="" class="chk_type1"><label for="">여성</label></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item_addr">
+                      <label for="" class="required"><span>거주지역</span></label>
+                      <div>
+                        <div class="flex space align_center">
+                          <div class="inp_type1 bx_inp"><input type="text"></div>
+                          <div class="inp_type1 bx_inp"><input type="text"></div>
+                          <button class="btn bx_inp">우편번호 검색</button>
+                        </div>
+                        <div class="inp_type1"><input type="text" placeholder="주소"></div>
+                        <div class="inp_type1"><input type="text" placeholder="상세주소입력"></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="wrap_btn flex align_center justify_center">
+                    <button class="btn btn_type1"><span>취소</span></button>
+                    <a href="signup3.html" class="btn btn_type2"><span>수정</span></a>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+  </div>
+
+</body>
+
+</html>

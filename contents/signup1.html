@@ -31,21 +31,21 @@
                           <input type="checkbox" name="" id="chk1" class="chk_type1">
                           <label for="chk1"><span class="color_red">[필수]</span>이용약관</label>
                         </div>
-                        <a href="" class="btn_view btn_type1">내용보기</a>
+                        <button class="btn_view policy1 btn_type1">내용보기</button>
                       </li>
                       <li>
                         <div class="chk">
                           <input type="checkbox" name="" id="chk2" class="chk_type1">
                           <label for="chk2"><span class="color_red">[필수]</span>개인정보 수집, 이용동의</label>
                         </div>
-                        <a href="" class="btn_view btn_type1">내용보기</a>
+                        <button class="btn_view policy2 btn_type1">내용보기</button>
                       </li>
                       <li>
                         <div class="chk">
                           <input type="checkbox" name="" id="chk3" class="chk_type1">
                           <label for="chk3"><span class="color_red">[필수]</span>개인정보 제3자 제공 동의</label>
                         </div>
-                        <a href="" class="btn_view btn_type1">내용보기</a>
+                        <button class="btn_view policy3 btn_type1">내용보기</button>
                       </li>
                     </ul>
                   </div>
@@ -64,13 +64,36 @@
       </div>
     </main>
     <? include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
-    <div class="wrap_popup" style="display: none">
+    <div class="wrap_popup" id="policy1">
       <div class="popup bx_center">
         <button class="btn_close"><span class="hide">팝업창 닫기</span></button>
         <h2 class="tit">이용 약관</h2>
         <div class="bx_txt">
+          <div>
+
+          </div>
+        </div>
+        <button class="btn btn_type2"><span>확인</span></button>
+      </div>
+    </div>
+    <div class="wrap_popup" id="policy2">
+      <div class="popup bx_center">
+        <button class="btn_close"><span class="hide">팝업창 닫기</span></button>
+        <h2 class="tit">개인정보 수집, 이용동의</h2>
+        <div class="bx_txt">
           <div></div>
         </div>
+        <button class="btn btn_type2"><span>확인</span></button>
+      </div>
+    </div>
+    <div class="wrap_popup" id="policy3">
+      <div class="popup bx_center">
+        <button class="btn_close"><span class="hide">팝업창 닫기</span></button>
+        <h2 class="tit">개인정보 제3자 제공 동의</h2>
+        <div class="bx_txt">
+          <div></div>
+        </div>
+        <button class="btn btn_type2"><span>확인</span></button>
       </div>
     </div>
   </div>
