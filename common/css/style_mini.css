@@ -31,6 +31,7 @@
   /* common */
   html{font-size: 16px}
   input,textarea,select{font-size: 3vw}
+
   .inner{padding-left: 4vw; padding-right: 4vw;}
 
   .only_pc{display: none !important}
@@ -45,11 +46,20 @@
   .tit_type1 .tit+.desc{margin-left: 0; margin-top: 1.8vw; font-size: 3vw}
 
   .page_type1 .page_tit{margin-bottom: 5vw; }
+  .page_type1 .tit_form{font-size: 5vw}
+  .result_id .color_333{padding: 8vw 0 5vw; font-size: 3.5vw}
+  .result_id .bx_gray{padding: 8vw 3vw; width: 90vw}
+  .result_id .bx_gray .tit{font-size: 6vw}
+  .result_id .bx_gray .tit + .desc{font-size: 3.5vw}
+  .result_id .wrap_btn.flex .btn{min-width: auto; font-size: 3.5vw}
+
   .page_type1 .bx_white {padding: 6vw 0;}
   .page_type1 form .tit_form{display: none}
   .page_type1 .txt_btm{margin-top: 9vw;font-size: 2.8vw;}
   .page_type1 .list_form.bb{padding-bottom: 5vw}
   .page_type1 .list_form.bt{padding-top: 5vw;}
+
+  .wrap_btn{padding-top: 5vw}
 
   .inp_type1{height: 9vw}
   .inp_type1 .txt_float{font-size: 2.5vw}
@@ -82,24 +92,25 @@
 
   /* common end  */
 
-
   .header h1 > a{width: 25vw; line-height: 10vw}
   .header h1 > a img{vertical-align:middle;}
-  .header .wrapper_mob{ position: fixed; left: 100%; top: 0; bottom: 0; z-index: 999; width:100%; background: #fff; transition: all .3s}
+  .header .wrapper_mob{ position: fixed; left: 100%; top: 0; bottom: 0; z-index: 999; padding-top: 25vw; width:100%; background: #fff; transition: all .3s; align-items: flex-start;}
   .header .wrapper_mob.open{left: 0;}
   .header .gnb{margin-left: 0}
   .header .list_gnb {flex-direction: column; align-items: flex-start; }
-  .header .list_gnb > li ~ li{margin-left: 0}
-  .header .list_gnb > li > a{line-height: 13vw; font-size: 4vw; text-align: left;}
-  .header .list_gnb ul{position:relative;}
-  .header .list_gnb ul a{font-size: 3vw}
+  .header .list_gnb > li ~ li{margin-left: 0; margin-top: 30px}
+  .header .list_gnb > li > a{padding: 10px 0; font-size: 30px; text-align: left; line-height: 1; font-weight: 600}
+  .header .list_gnb ul{position:relative; padding:15px 0 }
+  .header .list_gnb ul li ~ li { margin-left: 0}
+  .header .list_gnb ul a{font-size: 20px}
   .header .util{position: absolute; left: 5vw; top: 5vw; font-size: 3.5vw}
   .header .util ul li ~ li{margin-left: 2vw}
   .header .util ul li a{padding: 0 4vw; line-height: 8vw; border-radius: 8vw;}
   .header .util .btn_type1:before{margin-right: 2vw}
   .header .util .btn_login:before{width: 2.8vw; height: 2.8vw}
   .header .util .btn_mypage::before{width: 3.8vw; height: 2.8vw}
-  .btn_menu {width: 10vw; height: 10vw; background: url("../images/btn_menu.png") no-repeat center right / auto 40%}
+  .wrap_header .wrap_menuBtn{height: 14vw}
+  .btn_menu {width: 14vw; height: 14vw; background: url("../images/btn_menu.png") no-repeat center right / auto 40%}
   .wrapper_mob .btn_close{position: absolute; right: 5vw;  top: 5vw; width: 5vw; height: 5vw; background: url("../images/ico_close.png") no-repeat center / 100% 100% }
 
   .footer{padding: 15vw 0 20vw}
@@ -112,7 +123,7 @@
 
 
 
-  main{padding-top: 5vw}
+  main{padding-top: 10vw; padding-bottom: 8vw}
   .sec_visual .btn_slide.prev{left: 3vw}
   .sec_visual .btn_slide.next{right: 3vw}
   .sec_visual .swiper-slide .bx_txt{padding: 0 10vw}
@@ -209,10 +220,14 @@
 /* hover event */
 @media screen and (min-width:1024px){
   .header .list_gnb > li a:hover{color: var(--color_red)}
-  .header .list_gnb > li > a:hover:after{ opacity: 1}
+  .header .list_gnb > li > a:hover:after{ opacity: 1; z-index: 10}
 }
 
 @media screen and (max-width:690px){
+  .header .list_gnb ul li{float: none}
+  .header .list_gnb > li > a{padding: 10px 0; font-size: 25px; text-align: left;}
+  .header .list_gnb ul a{font-size: 18px}
+
   .inp_type1 {height: 12vw}
   .list_form .btn{height: 12vw}
 

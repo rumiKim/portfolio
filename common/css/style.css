@@ -16,9 +16,10 @@ a,button{transition: all .3s;}
 .header .list_gnb > li > a:after{opacity: 0; content: ""; position: absolute; left: -0.5rem; right: -0.5rem; bottom: -1px; height: 2px; background: var(--color_red); transition: all .3s;}
 .header .list_gnb > li ~ li {margin-left:2.5rem}
 /* 2depth */
-.header .list_gnb ul{display: none; position: absolute; left: 0; top: 100%; width: max-content}
+.header .list_gnb ul{display: none; position: absolute; left: 0; top: 101%; width: max-content; background: #fff; padding: 0 1rem; border-radius: 0.5rem}
 .header .list_gnb ul.active{display: block;}
-.header .list_gnb ul li{float: left; margin-right: 1.5rem}
+.header .list_gnb ul li{float: left;}
+.header .list_gnb ul li ~ li { margin-left: 1.5rem}
 .header .list_gnb ul a{display: block; line-height: 2.9rem; color: #333; font-size: 0.85rem}
 /* .active{display: block !important;}
 .active.flex{display: flex !important;} */
@@ -91,6 +92,13 @@ section{line-height: 1;}
 .sec_login .wrap_chk .list_find > li{margin-left: 1.65rem;}
 .sec_login .wrap_chk .list_find > li a{color: #333;}
 .sec_login .txt_btm .link{margin-left:1.3rem; text-decoration: underline;}
+
+/* find-id */
+.result_id .bx_gray{padding: 3.85rem 4.5rem}
+.result_id .bx_gray .tit{font-size: 1.5rem}
+.result_id .bx_gray .tit + .desc{margin-top: 0.8rem}
+.result_id .color_333{padding: 3.5rem 0 1.8rem; font-size: 1.25rem}
+.result_id .wrap_btn.flex .btn{font-size: 1rem}
 
 .wrap_btn{padding-top: 4.5rem;}
 .wrap_btn .btn{display: block; min-width: 9rem; height:3.4rem; line-height: 3.4rem; font-size: 1.1rem; letter-spacing: -0.075em; text-align: center; border-radius: 0.5em;}
@@ -222,6 +230,9 @@ section{line-height: 1;}
 .board_my .time{width: 15%;}
 .board_my .txt{margin-left:1rem; flex: 1; text-align: left; font-weight: 400}
 .board_my .history{width: 15%;}
+
+.content_tab{display: none;}
+.content_tab.active{display: block;}
 
 .board_chk .hd_board{margin: 4.5rem 0 1.15rem; font-weight: 600;}
 .board_chk .ranking,.board_chk .count{width: 8.57%;}

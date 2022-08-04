@@ -11,7 +11,7 @@
   </div>
   <div class="container mypage">
     <? include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
-    <main class="main page_type1 ">
+    <main class="main page_type1">
       <div class="inner">
         <section class="sec_visual">
           <h2 class="page_tit">마이페이지</h2>
@@ -20,7 +20,7 @@
           </div>
         </section>
         <div class="bx_white">
-          <section class="sec_myinfo">
+          <section class="sec_myinfo ">
             <p class="tit_type1"><strong class="tit">마이페이지</strong></p>
             <div class="bx_profile bx_border flex align_center">
               <div class="img_profile wrap_img"><img src="/common/images/img_profile_mypage.png" alt=""></div>
@@ -31,20 +31,20 @@
             </div>
             <div class="wrap_list">
               <ul class="list_info flex align_center space">
-                <li>
+                <li class="btn_tab">
                   <a href="" class="bx_border">
                     <p class="title">나의 적립 S.POINT</p>
                     <div class="contents"><span class="color_red">258,000</span> P</div>
                   </a>
                 </li>
-                <li>
+                <li class="btn_tab">
                   <a href="" class="bx_border">
                     <p class="title">나의 게시물 관리</p>
                     <div class="contents">등록한 게시물 <span class="color_red">15</span> 개</div>
                   </a>
                 </li>
                 <li>
-                  <a href="" class="bx_border">
+                  <a href="mypage-edit.html" class="bx_border">
                     <p class="title">회원정보 변경</p>
                     <div class="contents">정보수정</div>
                   </a>
@@ -52,7 +52,7 @@
               </ul>
             </div>
           </section>
-          <section class="sec_history">
+          <section class="sec_history content_tab active">
             <h3>적립 S.POINT 내역</h3>
             <div class="wrap_board board_type2 board_mypage">
               <div class="wrap_search flex align_center space">
@@ -125,8 +125,8 @@
               </div>
             </div>
           </section>
-          <section class="sec_my">
-            <h3>적립 S.POINT 내역</h3>
+          <section class="sec_my content_tab">
+            <h3>나의 게시물</h3>
             <div class="wrap_board board_type2 board_my">
               <div class="wrap_search flex align_center space">
                 <div class="wrap_select flex align_center">

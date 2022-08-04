@@ -81,7 +81,7 @@ body { word-break: keep-all;}
 .btn_type1 {border: 1px solid #d2d2d2; background: #fff; color: #333;}
 .btn_type1:hover{border-color: var(--color_red);}
 /* red btn */
-.btn_type2{color: #fff; background: var(--color_red) !important;  }
+.btn_type2{color: #fff; background: var(--color_red) !important; border: 1px solid var(--color_red)}
 /* blue btn */
 .btn_type3 { color: #fff; background: var(--color_blue) !important;  }
 
@@ -183,7 +183,7 @@ body { word-break: keep-all;}
 .wrap_popup .popup{padding: 3.5rem 1.85rem 3rem; width: 30rem; height: 38.25rem; border-radius: 1rem; background: #fff; letter-spacing: -0.075em;}
 .wrap_popup .popup .btn_close{position: absolute; right: 0; top: 0; width: 4.25rem; height: 4.25rem; background: url("../images/ico_close.png") no-repeat center;}
 .wrap_popup .popup .tit{margin-bottom: 1.5rem; font-family: 'Arita-dotum',sans-serif;}
-.wrap_popup .bx_txt{height: 24rem; overflow:scroll;}
+.wrap_popup .bx_txt{height: 24rem; overflow:scroll; margin-bottom: 20px}
 .wrap_popup .btn.btn_type2{display: block; margin: 0 auto; line-height: 2.8rem; width: 9rem; font-size: 1.3rem; border-radius: 0.5rem}
 
 /* text, title */

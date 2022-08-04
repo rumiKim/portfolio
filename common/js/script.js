@@ -58,6 +58,21 @@ $(function() {
   }
 
 
+  // mypage page tab function
+  $('.btn_tab *').on('click',function(e){
+    e.preventDefault();
+    const idx = $(this).parent().index();
+
+    const tabBox = $(this).parents('.container').find('.content_tab').eq(idx);
+    tabBox.addClass('active');
+    tabBox.siblings('.content_tab').removeClass('active')
+
+
+
+  });
+
+
+
 }); //jquery function end
 
 function showPopup(param) {
