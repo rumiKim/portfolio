@@ -11,7 +11,7 @@
             <div class="wrap_form">
               <form class="">
                 <fieldset>
-                  <legend class="tit_form">개인정보입력 <span class="color_red">[*필수입력]</span></legend>
+                  <legend class="tit_form">개인정보입력 <span class="color_red fw400">[*필수입력]</span></legend>
                   <ul class="list_form type1 bt bb">
                     <li>
                       <label for="reg_id" class="required"><span>아이디</span></label>
@@ -20,7 +20,6 @@
                           <input type="" id="reg_id" placeholder="아이디" >
                           <span class="txt_float">사용가능한 아이디 입니다.</span>
                         </div>
-
                         <div>
                           <ul class="desc">
                             <li>・ 4~20자의 영문 또는 영문 + 숫자만 입력해주세요.
@@ -69,11 +68,11 @@
                       </div>
                     </li>
                     <li>
-                      <label for="" class="required"><span>이메일</span></label>
+                      <label for="red_email" class="required"><span>이메일</span></label>
                       <div>
                         <div class="flex align_center">
                           <div class="bx_inp inp_type1">
-                            <input type="email" placeholder="이메일">
+                            <input type="email" placeholder="이메일" id="red_email">
                           </div>
                           <div class="bx_inp inp_type1 gray">
                             <select name="" id="" class="">
@@ -81,7 +80,7 @@
                             </select>
                           </div>
                         </div>
-                        <p class="desc"><input type="checkbox" class="chk_type1"><label for="">이메일 수신 동의</label></p>
+                        <p class="desc"><input type="checkbox" class="chk_type1" id="chk_email"><label for="chk_email">이메일 수신 동의</label></p>
                       </div>
                     </li>
                     <li class="item_birth">
@@ -94,8 +93,8 @@
                         </div>
                         <div>
                           <ul class="flex align_center">
-                            <li><input type="radio" name="ra_gender" id="" class="chk_type1"><label for="">남성</label></li>
-                            <li><input type="radio" name="ra_gender" id="" class="chk_type1"><label for="">여성</label></li>
+                            <li><input type="radio" name="ra_gender" id="ra_m" class="chk_type1"><label for="ra_m">남성</label></li>
+                            <li><input type="radio" name="ra_gender" id="ra_w" class="chk_type1"><label for="ra_w">여성</label></li>
                           </ul>
                         </div>
                       </div>
@@ -103,24 +102,24 @@
                     <li class="item_char">
                       <label for="" class="required"><span>나의 캐릭터</span></label>
                       <div class="">
-                        <ul class="flex" style="display:none">
+                        <ul class="flex">
                           <li>
                             <div class="bx_img"><img src="/common/images/ico_m_01.png" alt=""></div>
-                            <input type="checkbox" class="chk_type1"><label for=""></label>
+                            <input type="radio" class="chk_type1" name="char_m" id="char_m1"><label for="char_m1"><span class="hide">남자 캐릭터1</span></label>
                           </li>
                           <li>
                             <div class="bx_img"><img src="/common/images/ico_m_02.png" alt=""></div>
-                            <input type="checkbox" class="chk_type1"><label for=""></label>
+                            <input type="radio" class="chk_type1" name="char_m" id="char_m2"><label for="char_m2"><span class="hide">남자 캐릭터2</span></label>
                           </li>
                         </ul>
                         <ul class="flex">
                           <li>
                             <div class="bx_img"><img src="/common/images/ico_w_01.png" alt=""></div>
-                            <input type="checkbox" class="chk_type1"><label for=""></label>
+                            <input type="radio" class="chk_type1" name="char_w" id="char_w1"><label for="char_w1"><span class="hide">여자 캐릭터1</span></label>
                           </li>
                           <li>
                             <div class="bx_img"><img src="/common/images/ico_w_02.png" alt=""></div>
-                            <input type="checkbox" class="chk_type1"><label for=""></label>
+                            <input type="radio" class="chk_type1" name="char_w" id="char_w2"><label for="char_w2"><span class="hide">여자 캐릭터2</span></label>
                           </li>
                         </ul>
                       </div>
