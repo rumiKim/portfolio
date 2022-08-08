@@ -234,7 +234,7 @@ section{line-height: 1;}
 .board_mypage .time{width: 15%;}
 .board_mypage .txt{margin-left:1rem; flex: 1; text-align: left;}
 .board_mypage .history{width: 7%;}
-.board_mypage .point{width: 7%;}
+.board_mypage .point{width: 7%; letter-spacing:-0.9px;}
 
 .board_my .ranking{width: 8.57%;}
 .board_my .time{width: 15%;}
