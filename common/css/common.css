@@ -142,8 +142,8 @@ body { word-break: keep-all;}
 .page_type1 .tit_form{font-size: 1.4rem; letter-spacing: -0.075em;}
 .page_type1 .txt_btm{margin-top:2.15rem; font-size: 0.9rem; letter-spacing: -0.075em; font-weight: 600;}
 .page_type1 form .tit_form{margin-bottom: 1.6rem; font-size: 1.1rem; font-weight: bold;}
-.page_type1 .list_form.bt{padding-top: 1.5rem;}
-.page_type1 .list_form.bb{padding-bottom: 4.5rem;}
+.page_type1 .list_form.bt{padding-top: 2.5rem;}
+.page_type1 .list_form.bb{padding-bottom: 2.5rem;}
 
 
 /* form */
@@ -166,7 +166,7 @@ body { word-break: keep-all;}
 .list_form > li > div{flex: 1;}
 .list_form > li .bx_inp{flex: 1;}
 .list_form > li .bx_inp + .bx_inp{flex: none; margin-left: 0.3rem; width: 9rem;}
-.list_form > li .desc{margin-top:1rem; font-size: 0.8rem; color:#666666 ; letter-spacing: -0.075em; font-weight: 400; line-height: 1.5;}
+.list_form > li .desc{margin-top:0.5rem; margin-bottom:1rem; font-size: 0.8rem; color:#666666 ; letter-spacing: -0.075em; font-weight: 400; line-height: 1.5;}
 .list_form > li ~ li{margin-top: 0.5rem;}
 .list_form * { font-family: 'Noto Sans KR',sans-serif;}
 .list_form .required:after{content: "*"; color: var(--color_red); display: inline-block; vertical-align: middle;}
@@ -177,6 +177,11 @@ body { word-break: keep-all;}
 .list_type1 > li:nth-child(3n){margin-right: 0;}
 .list_type1 > li > a{ display: block;}
 
+/* list_type1 4개짜리 */
+.list_type2 > li{float: left;}
+.list_type2 > li:nth-child(4n){margin-right: 0;}
+.list_type1 > li > a{ display: block;}
+
 
 .wrap_popup{display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 9999;}
 .wrap_popup.active{display: block;}
@@ -184,6 +189,7 @@ body { word-break: keep-all;}
 .wrap_popup .popup .btn_close{position: absolute; right: 0; top: 0; width: 4.25rem; height: 4.25rem; background: url("../images/ico_close.png") no-repeat center;}
 .wrap_popup .popup .tit{margin-bottom: 1.5rem; font-family: 'Arita-dotum',sans-serif;}
 .wrap_popup .bx_txt{height: 24rem; overflow:scroll; margin-bottom: 20px}
+.wrap_popup .txt_con{height: 24rem; line-height:1.2rem; font-size:0.7rem; color:#666666;}
 .wrap_popup .btn.btn_type2{display: block; margin: 0 auto; line-height: 2.8rem; width: 9rem; font-size: 1.3rem; border-radius: 0.5rem}
 
 /* text, title */

@@ -38,7 +38,7 @@ $(function() {
     $('#policy2').addClass('active')
   });
   $('.btn_view.policy3').on('click',function(e){
-    $('#policy2').addClass('active')
+    $('#policy3').addClass('active')
   });
 
   $('.wrap_popup .btn_close').on('click',function(){
