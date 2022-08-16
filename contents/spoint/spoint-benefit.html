@@ -15,7 +15,8 @@
         <section class="sec_visual">
           <h2 class="hide">메인 비주얼</h2>
           <div class="bx_banner bx_img wrap_img">
-            <img src="/common/images/img_banner_sub_spoint.jpg" alt="">
+            <img src="/common/images/img_banner_sub_spoint.jpg" alt="" class="only_pc">
+            <img src="/common/images/img_banner_sub_spoint_m.png" alt="" class="only_mob">
           </div>
         </section>
         <section class="sec_benefit f_Arita">
@@ -25,15 +26,8 @@
               <p class="desc color_333">특별한 이벤트, 매일매일 즐거운 혜택</p>
             </div>
             <div class="search_type1 flex align_center">
-              <div class="bx_select">
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select>
-              </div>
-              <button class="btn_search btn btn_type3 f_Arita">당첨자 보기</button>
+              <a href="../mypage/mypage.html" class="btn_search btn btn_type3 f_Arita">S.POINT 내역</a>
+              <a href="spoint-benefit-detail.html" class="btn_search btn btn_type3 f_Arita">당첨자 보기</a>
             </div>
           </div>
           <div class="wrap_list">
@@ -55,6 +49,7 @@
                   </div>
                 </a>
                 <div class="flex align_center">
+                  <div><input type="checkbox" id="chk1" class="chk_type2"><label for="chk1"></label></div>
                   <div>10,000P</div>
                   <div class="btn_count">
                     <button class="btn minus"><span class="hide">-</span></button>
@@ -80,6 +75,7 @@
                   </div>
                 </a>
                 <div class="flex align_center">
+                  <div><input type="checkbox" id="chk2" class="chk_type2"><label for="chk2"></label></div>
                   <div>70,000P</div>
                   <div class="btn_count">
                     <button class="btn minus"><span class="hide">-</span></button>
@@ -105,6 +101,7 @@
                   </div>
                 </a>
                 <div class="flex align_center">
+                  <div><input type="checkbox" id="chk3" class="chk_type2"><label for="chk3"></label></div>
                   <div>40,000P</div>
                   <div class="btn_count">
                     <button class="btn minus"><span class="hide">-</span></button>
@@ -130,6 +127,7 @@
                   </div>
                 </a>
                 <div class="flex align_center">
+                  <div><input type="checkbox" id="chk4" class="chk_type2"><label for="chk4"></label></div>
                   <div>15,000P</div>
                   <div class="btn_count">
                     <button class="btn minus"><span class="hide">-</span></button>
@@ -138,7 +136,7 @@
                   </div>
                 </div>
               </li>
-              
+
             </ul>
           </div>
 

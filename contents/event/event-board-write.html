@@ -6,7 +6,7 @@
     <? include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
     <main class="main">
       <div class="inner">
-        <section class="sec_share bb">
+        <section class="sec_share write">
           <div class="wrap_tit flex align_center space">
             <div class="tit_type1 flex column align_start">
               <h2 class="tit">적중공유</h2>
@@ -21,7 +21,7 @@
             <form class="">
               <fieldset>
                 <legend class="hide">적중공유 게시판 내용 입력 양식</legend>
-                <ul class="list_form ">
+                <ul class="list_form bb">
                   <li class="">
                     <label for="" class="required"><span>게임유형</span></label>
                     <div>
@@ -34,19 +34,18 @@
                   </li>
                   <li>
                     <label for="title" class="required"><span>제목</span></label>
-                    <div class="inp_type1 ">
+                    <div class="inp_type1">
                       <input type="text" id="title" placeholder="제목을 입력합니다.">
                     </div>
                   </li>
                   <li>
                     <label for="content" class="required"><span>내용</span></label>
                     <div class="inp_type1 textarea">
-                      <textarea name="" id="content"></textarea>
+                      <textarea name="" id="content" placeholder="내용입력"></textarea>
                     </div>
                   </li>
-
                 </ul>
-                <div class="wrap_btn flex align_center justify_center">
+                <div class="wrap_btn flex align_center justify_center ">
                   <button class="btn btn_type1"><span>취소</span></button>
                   <a href="sigunup3.html" class="btn btn_type2"><span>다음</span></a>
                 </div>

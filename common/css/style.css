@@ -159,28 +159,34 @@ section{line-height: 1;}
 .list_benefit .bx_img{margin:2.5rem 0; height: 6.5rem; text-align: center;}
 .list_benefit .bx_img img{height: 100%}
 .list_benefit .btn_count{position: relative; margin-left: 1.35rem; width: 5.75rem; height: 1.8rem; border: 1px solid #e9ebed; line-height: 1.8rem;}
-.list_benefit .btn_count .btn{position: absolute; top:0; bottom: 0; width: 1.75rem; height:100%; background: #f1f2f4;}
-.list_benefit .btn_count .btn.minus{left: 0;}
-.list_benefit .btn_count .btn.plus{right: 0;}
+.list_benefit .btn_count .btn{position: absolute; top:0; bottom: 0; width: 1.75rem; height:100%; background-color: #f1f2f4; background-repeat: no-repeat; background-position: center; background-size: 30% auto}
+.list_benefit .btn_count .btn.minus{left: 0; background-image: url("/common/images/minus-icon.svg")}
+.list_benefit .btn_count .btn.plus{right: 0; background-image: url("/common/images/plus-icon.svg")}
 .list_benefit .btn_count .num{text-align: center; }
 .label.gray{background: #464646;}
 .label.red{background: var(--color_red);}
 
 .sec_mileage .wrap_img{margin:0.85rem auto 2.6rem; width: 42.85%;}
 .sec_mileage .tit_type1 .logo{margin-left: 0.5rem; vertical-align: 0.2rem}
-.sec_mileage .bx_gray{margin: 1.7rem auto 0; padding:1rem 0; width:63%; font-size: 0.95rem; line-height: 1.26; border-radius: 0.5rem;}
+.sec_mileage .bx_gray{margin: 1.7rem auto 3.6rem; padding:1rem 0; width:63%; font-size: 0.95rem; line-height: 1.26; border-radius: 0.5rem;}
+.sec_mileage .btn_type3{display: inline-block; padding:0 1.7rem; line-height: 3.5rem; height: 3.5rem; border-radius: 3.5rem}
+.sec_mileage .btn_type3:after{width: 2.6rem; height: 1.9rem; background: url("/common/images/ico_change.png") no-repeat center / 100% 100%; margin-left: 0.8rem;}
+.sec_mileage .wrap_form{margin:3.75rem auto 3.5rem; width: 44rem}
+.sec_mileage .wrap_form .list_form{padding-right: 9rem}
+.sec_mileage .wrap_form .list_form .bx_inp+.bx_inp{width: 15%}
 
 
 /* event page */
-.sec_award h2{margin: 5.5rem 0 1.4rem; width: 40%}
-.sec_award .bx_trophy{position: relative; margin-bottom: 4rem; width: 624px; background: url("../images/bg_trophy.png") no-repeat center / 120% auto}
-.sec_award .bx_trophy > .bx_absolute{padding: 0 30px}
+.sec_award h2.only_pc{margin: 5.5rem 0 1.4rem; width: 40%}
+.sec_award .bx_trophy{margin-bottom: 4rem; padding: 2.5rem 0; width: 100%; background: url("../images/bg_trophy.png") no-repeat center / auto 160%}
+.sec_award .bx_trophy .inner_trophy{position: relative; width: 31.2rem; margin: 0 auto}
+.sec_award .bx_trophy .wrap_txt{padding: 0 1.8rem}
 .sec_award .contents{text-align: center;}
 .sec_award .contents .tit_type1 .tit{margin-bottom: 0.7rem;}
 .list_award{width: 100%}
 .list_award > li{flex:1; padding: 0 15px; font-size: 0.75rem; font-family: 'Noto Sans KR',sans-serif;}
-.list_award > li .name {font-size: 1.3rem; font-family: 'GmarketSans'}
-.list_award > li .name+.point {margin: 20px 0 18px}
+.list_award > li .name {font-size: 1.25rem; font-family: 'GmarketSans'}
+.list_award > li .name+.point {margin: 0.9rem 0 0.5rem}
 .list_award > li.no1{padding-bottom: 68px}
 .list_award > li.no2{padding-bottom: 110px}
 .list_award > li.no3{padding-bottom: 17px}
@@ -188,22 +194,26 @@ section{line-height: 1;}
 
 .sec_business{padding-top: 5rem;}
 .sec_business .contents .tit_type1{border-top: 2px solid #000 ; line-height: 5rem}
-.sec_business .contents .tit_type1 .tit_type1 .tit{font-size: 1.5rem}
+.sec_business .contents .tit_type1 .tit{font-size: 1.5rem}
 .sec_business .contents h3{padding: 2.5rem 0 1.25rem; }
 .sec_business .contents .list_bul{margin-bottom: 2rem; line-height: 1.57;}
 
 .sec_check .tit_type1{padding: 5.4rem 0 3.3rem;}
 .sec_check .bx_calendar{padding: 2.5rem 2rem 2.25rem 3rem; font-family: 'GmarketSans'; border: 1px solid #dcdee5; border-radius: 0.5rem;}
+.sec_check .bx_calendar .thismonth{border-right: 1px solid #dcdee5; padding-right: 3rem;}
 .sec_check .bx_calendar .month{font-size: 2rem;}
 .sec_check .bx_calendar .month + .txt{margin-top: 0.6rem; padding:0.5rem 1.65rem; border: 1px solid #dcdee5; color: #333; border-radius: 1.7rem; background: #fff; font-size: 0.75rem; }
-.sec_check .bx_calendar .date{padding:0 2.5rem ; height:3.5rem; line-height: 1.3; background: #fff; border-radius: 2rem; font-size: 1.25rem; color: #666;}
+.sec_check .bx_calendar .wrap_date{overflow-x: scroll; padding-bottom: 1rem; position: relative;}
+.sec_check .bx_calendar .date{padding:0 2.5rem ; height:3.5rem; background: #fff; border-radius: 2rem; font-size: 1.25rem; color: #666;}
 .sec_check .bx_calendar .date .wrap_num{height: 100%; }
+.sec_check .bx_calendar .date .wrapper{height: 100%; width: 100%}
 .sec_check .bx_calendar .date .num ~ .num{margin-left: 2rem;}
 .date .today{position: relative; color: var(--color_blue); font-weight:800;}
 .date .today .label{position: absolute; left: 50%; top:2rem; transform: translateX(-50%); display: block; background: var(--color_blue); color: #fff; font-size:0.5rem; width: 4.75rem; line-height: 1.5rem; border-radius: 1rem; text-align: center;}
 .sec_check .bx_check .list_cur{padding: 2rem 0 1.3rem;}
 .sec_check .bx_check .list_cur li ~ li{margin-right: 1.7rem;}
-.sec_check .bx_check .list_cur li:before{margin-right: 0.5rem; width:2.5rem; height:2.5rem; background-position: center; background-repeat: no-repeat; background-size: 55% auto; border-radius: 100%; background-color: #4a4a4a;background-image: url("../images/ico_date_01.png");}
+.sec_check .bx_check .list_cur li:before{margin-right: 0.5rem; width:2.5rem; height:2.5rem; background-position: center; background-repeat: no-repeat; background-size: 55% auto; border-radius: 100%; background-color: #4a4a4a;background-image: url("../images/ico_date_02.png");}
+.sec_check .bx_check .list_cur li:nth-child(2):before{background-image: url("../images/ico_date_01.png");}
 .sec_check .wrap_input{padding:2rem 3rem 1rem 2rem; border: 1px solid #dcdee5;}
 .sec_check .wrap_input >p{font-size: 1.5rem;}
 .sec_check .wrap_input .list_form{margin-top:1.3rem; width: 100%;}
@@ -221,6 +231,7 @@ section{line-height: 1;}
 .board_type1 > ul > li .time{color: #8e8e8e; font-size: 0.85rem; font-weight: 600;}
 .board_type1 > ul > li .id{display: flex; align-items: center; justify-content: center;color: #333;}
 .profile{display: inline-flex; align-items: center; justify-content: center; margin-right: 0.5rem; width: 2.4rem; height: 2.4rem;border-radius: 100%; background: #8e8e8e;}
+.profile img{width: 70%}
 .board_type1 > ul > li .txt{font-weight: 500;}
 
 .board_type2 > ul {border-top: 2px solid #000; border-bottom: 1px solid #000; font-size: 0.9rem}
@@ -229,12 +240,19 @@ section{line-height: 1;}
 .board_type2 .wrap_search{margin: 1.75rem 0 0.75rem}
 .board_type2 .wrap_search .btn_search{padding: 0 1rem}
 .board_type2 ul .time{font-weight: 400}
+.board_type2 .board_tit{padding: 1.8rem 2rem; box-shadow: 0px 10px 15.9808px 0.0192px rgb(0 0 0 / 8%); border-radius: 0.5rem}
+.board_type2 .board_tit .tit{font-size: 1.25rem}
+.board_type2 .board_tit .tit+.label{ display: inline-block; margin-left: 1rem; padding: 0 0.75rem; font-size: 0.65rem; line-height: 1.5rem; border-radius: 1.5rem}
+.board_type2 .board_tit .date{margin-top: 0.6rem; color: #8e8e8e; font-size: 0.85rem}
+.board_type2 .board_tit .btn_type3{padding: 0 2.4rem; line-height: 2.4rem; border-radius: 2.4rem; font-size: 0.9rem; }
+
 .board_mypage .hd_board{margin: 4.5rem 0 1.15rem; font-weight: 600;}
 .board_mypage .ranking{width: 8.57%;}
 .board_mypage .time{width: 15%;}
 .board_mypage .txt{margin-left:1rem; flex: 1; text-align: left;}
 .board_mypage .history{width: 7%;}
 .board_mypage .point{width: 7%; letter-spacing:-0.9px;}
+
 
 .board_my .ranking{width: 8.57%;}
 .board_my .time{width: 15%;}
@@ -252,6 +270,7 @@ section{line-height: 1;}
 .board_chk .point{width: 5.35%;}
 
 .sec_share .wrap_tit{padding: 5rem 0 2.5rem;}
+.sec_share .wrap_tit .btn_type3{padding: 0 2.5rem; line-height: 2.4rem; border-radius: 2.4rem}
 .board_share .ranking{width: 6%;}
 .board_share .label{width:10%;}
 .board_share .label span{display: inline-block; padding:0.35rem 1.25rem;  background: var(--color_red); color: #fff; border-radius: 0.25rem;}
@@ -272,14 +291,20 @@ section{line-height: 1;}
 .sec_event_sub .list_event>li .label{display: inline-block; padding:0 0.8rem; line-height: 1.8rem; border-radius: 1.8rem; background: var(--color_blue); color: #fff; font-weight: 500; font-size: 0.75rem; font-family: 'Noto Sans KR',sans-serif;}
 .sec_event_sub .list_event>li .label.ing{background-color: var(--color_red);}
 
-.board_type2 .contents{padding: 0 0 5rem; border-bottom: 1px solid #dcdee5;text-align: center;}
+.board_type2 .contents{padding: 5rem 0; border-bottom: 1px solid #dcdee5;text-align: center;}
 .board_type2 .contents .wrap_img{margin:0 auto; max-width: 40.5rem;}
 .board_type2 .contents + .btn{margin:2.3rem auto 0; width: 9.75rem; line-height: 3.5rem; border-radius:3.5rem; text-align: center; }
 .board_type3 .btn{margin:2.3rem auto 0; width: 12rem; line-height: 3.5rem; border-radius:3.5rem; text-align: center; }
 
 .sec_write{margin:0 auto; width: 78.6%;}
 .sec_write .wrap_form{padding: 3.5rem 0 1.6rem;}
+.sec_write .list_form > li > label {padding: 0; width: 5rem; font-size: 0.85rem; }
+.sec_write .list_form .inp_type1.inp_txt{ padding: 1rem; height: 4.8rem}
+.sec_write .list_form .inp_type1.inp_pw{ margin-right: 0.7rem; height: 2.3rem}
+.sec_write .list_form .desc{margin: 0}
 .sec_write .wrap_list .wrap_search{padding: 2.7rem 0 0.65rem;}
+.sec_write .wrap_list .wrap_search .total {font-size: 0.85rem}
+.sec_write .list_form > li .bx_inp + .bx_inp.btn{height: 4.8rem; font-size: 1.1rem}
 
 .list_comment > li{display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; border-bottom: 1px solid #dcdee5;}
 .list_comment > li .info{text-align: right;}
@@ -292,9 +317,11 @@ section{line-height: 1;}
 .btn.btn_modify{background-image: url("../images/ico_rewrite.png");}
 .btn.btn_delete{background-image: url("../images/ico_del.png");}
 
-.sec_share .tit_type1 .desc{margin-left: 1rem; line-height: 1.4;}
-.sec_share .wrap_form{padding:2rem 0 3.2rem; border-top: 1px solid #000;}
-.sec_share .wrap_form .bx_select{flex: none; width: 27.5rem;}
+.sec_share.write .tit_type1 .desc{margin-top: 1rem; margin-left: 0; line-height: 1.4;}
+.sec_share.write .wrap_form{padding:2rem 0 3.2rem; border-top: 2px solid #000;}
+.sec_share.write .wrap_form .bx_select{flex: none; width: 27.5rem;}
+.sec_share.write .list_form{padding-bottom: 3.5rem}
+.sec_share.write .list_form > li > label{font-weight: 600}
 
 /* mypage  */
 .mypage .page_type1 .bx_white{padding: 2.85rem 4.3rem 4.75rem; margin-top: 2.7rem}
@@ -303,10 +330,14 @@ section{line-height: 1;}
 .sec_myinfo .bx_profile{margin:1.5rem 0 1.4rem; padding: 1.25rem 1.9rem 1.5rem; font-size: 1.2rem}
 .sec_myinfo .bx_profile .img_profile{margin-right: 2.15rem; width: 4.65rem; height: 4.65rem; border-radius: 100%; overflow: hidden;}
 .sec_myinfo .bx_profile .img_profile img{height: 100%; object-fit:cover;}
-.sec_myinfo .bx_profile .img_profile+.txt > span{display: block; font-size: 0.9rem; line-height: 1.5}
+.sec_myinfo .bx_profile .img_profile+.txt > span{display: block; margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.5}
 .sec_myinfo .list_info > li{width: 32%;}
 .sec_myinfo .list_info > li > a{display: block; padding: 1.5rem 1.2rem 1.3rem}
+.sec_myinfo .list_info > li > a:hover{border-color: #f00}
 .sec_myinfo .list_info .contents{margin-top: 1.8rem; text-align: right;}
+.sec_myinfo .list_info .contents > p{display: inline-block; padding:0 0.8rem; border: 1px solid #ccc; line-height: 1.8rem; border-radius: 1.8rem; font-size: 1.25rem}
+.sec_myinfo .list_info .contents > p small{font-size: 0.9rem}
+.txt_underline{text-decoration: underline;}
 
 .sel_period ul li{margin-right: 0.5rem}
 .sel_period ul li *{padding:0 1rem; line-height: 2.4rem; border: 1px solid transparent; border-radius: 0.3rem; font-family: 'Noto Sans KR',sans-serif; font-weight: 300}

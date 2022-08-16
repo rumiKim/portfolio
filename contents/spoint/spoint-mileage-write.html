@@ -1,0 +1,67 @@
+<? include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+
+<body>
+  <div class="nav_skip">
+    <nav>
+      <ul>
+        <li><a href="" class="btn_type1">본문 바로가기</a></li>
+        <li><a href="" class="btn_type1">메뉴 바로가기</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container spoint">
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+    <main class="main">
+      <div class="inner">
+        <section class="sec_visual">
+          <h2 class="hide">메인 비주얼</h2>
+          <div class="bx_banner bx_img wrap_img">
+            <img src="/common/images/img_banner_sub_spoint.jpg" alt="" class="only_pc">
+            <img src="/common/images/img_banner_sub_spoint_m.png" alt="" class="only_mob">
+          </div>
+        </section>
+        <section class="sec_mileage f_Arita">
+          <div class="tit_type1 flex justify_center">
+            <div class="tit"> S.POINT를<span class="logo"><img src="/common/images/img_logo.png" alt="SPEED ON"></span>마일리지로 전환 합니다.</div>
+          </div>
+          <div class="wrap_form page_type1" style="background-color:#fff">
+            <form class="">
+              <fieldset>
+                <legend class="tit_form">마일리지 전환</legend>
+                <ul class="list_form type1 bt bb">
+                  <li>
+                    <label for="point1"><span>보유한 포인트</span></label>
+                    <div class="flex align_center">
+                      <div class="inp_type1 bx_inp">
+                        <input type="text" id="point1" readonly value="300,000" class="color_red">
+                      </div>
+                      <p class="bx_inp">S.POINT</p>
+                    </div>
+                  </li>
+                  <li>
+                    <label for="point2"><span>전환할 포인트</span></label>
+                    <div>
+                      <div class="inp_type1">
+                        <input type="text" id="point2" placeholder="전환할 포인트 금액을 입력해 주세요">
+                      </div>
+                      <p class="desc color_red">※ 100,000 S.POINT 이상 전환 가능</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="wrap_btn flex align_center justify_center">
+                  <a href="" class="btn btn_type1"><span>취소</span></a>
+                  <a href="" class="btn btn_type2"><span>전환하기</span></a>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="bx_gray color_333 txt_center">마일리지 전환은 매월 1회에 한하여 전환이 가능하며 7일이내 반영됩니다. <br>10,000 포인트 단위로 전환되며, 월 최대 30만 포인트 까지 전환 가능합니다. <br>전환된 포인트는 스피드온 포인트의 이용정책 및 만료 기준을 따릅니다.</div>
+        </section>
+      </div>
+    </main>
+    <? include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+  </div>
+
+</body>
+
+</html>
