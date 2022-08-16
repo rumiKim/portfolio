@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'nanum_r';
+  src: url('/common/font/NanumSquare/NanumSquareR.eot');
+  src: local('Nanum Square Regular'),
+       local('NanumSquareR'),
+       url('/common/font/NanumSquare/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+       url('/common/font/NanumSquare/NanumSquareR.woff2') format('woff2'),
+       url('/common/font/NanumSquare/NanumSquareR.woff') format('woff'),
+       url('/common/font/NanumSquare/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'nanum_b';
+  src: url('/common/font/NanumSquare/NanumSquareB.eot');
+  src: local('Nanum Square Bold'),
+       local('NanumSquareB'),
+       url('/common/font/NanumSquare/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+       url('/common/font/NanumSquare/NanumSquareB.woff2') format('woff2'),
+       url('/common/font/NanumSquare/NanumSquareB.woff') format('woff'),
+       url('/common/font/NanumSquare/NanumSquareB.ttf') format('truetype');
+}

@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 200;
+    src:	local('Noto Sans Light'), local('NotoSans-Light');
+    src:	url(/common/fonts/NotoSansKR/notokr-light.eot);
+    src:	url(/common/fonts/NotoSansKR/notokr-light.eot?#iefix) format('embedded-opentype'),
+			url(/common/fonts/NotoSansKR/notokr-light.woff2) format('woff2'),
+			url(/common/fonts/NotoSansKR/notokr-light.woff) format('woff'),
+			url(/common/fonts/NotoSansKR/notokr-light.ttf) format('truetype')
+}
+@font-face {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	src:	local('Noto Sans Regular'), local('NotoSans-Regular');
+	src:	url(/common/fonts/NotoSansKR/notokr-regular.eot);
+	src:	url(/common/fonts/NotoSansKR/notokr-regular.eot?#iefix) format('embedded-opentype'),
+			url(/common/fonts/NotoSansKR/notokr-regular.woff2) format('woff2'),
+			url(/common/fonts/NotoSansKR/notokr-regular.woff) format('woff'),
+			url(/common/fonts/NotoSansKR/notokr-regular.ttf) format('truetype')
+}
+@font-face {
+    font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 600;
+    src:	local('Noto Sans Medium'), local('NotoSans-Medium');
+	src:	url(/common/fonts/NotoSansKR/notokr-medium.eot);
+    src:	url(/common/fonts/NotoSansKR/notokr-medium.eot?#iefix) format('embedded-opentype'),
+			url(/common/fonts/NotoSansKR/notokr-medium.woff2) format('woff2'),
+			url(/common/fonts/NotoSansKR/notokr-medium.woff) format('woff'),
+			url(/common/fonts/NotoSansKR/notokr-medium.ttf) format('truetype')
+}
+@font-face {
+    font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 800;
+    src:	local('Noto Sans Bold'), local('NotoSans-Bold');
+	src:	url(/common/fonts/NotoSansKR/notokr-bold.eot);
+    src:	url(/common/fonts/NotoSansKR/notokr-bold.eot?#iefix) format('embedded-opentype'),
+			url(/common/fonts/NotoSansKR/notokr-bold.woff2) format('woff2'),
+			url(/common/fonts/NotoSansKR/notokr-bold.woff) format('woff'),
+			url(/common/fonts/NotoSansKR/notokr-bold.ttf) format('truetype')
+}
+
+
+
+

@@ -142,7 +142,7 @@ select::-ms-expand { display: none; }
 .page_type1 .bx_white{padding:5.5rem 0 6rem; background: #fff;}
 .page_type1 .tit_form{font-size: 1.4rem; letter-spacing: -0.075em;}
 .page_type1 .txt_btm{margin-top:2.15rem; font-size: 0.9rem; letter-spacing: -0.075em; font-weight: 600;}
-.page_type1 form .tit_form{margin-bottom: 1.6rem; font-size: 1.1rem; font-weight: bold;}
+.page_type1 form .tit_form{margin-bottom: 1.6rem; font-size: 1.4rem; font-weight: bold;}
 .page_type1 .list_form.bt{padding-top: 2.5rem;}
 .page_type1 .list_form.bb{padding-bottom: 2.5rem;}
 
@@ -210,8 +210,8 @@ select::-ms-expand { display: none; }
 .tb_type1 thead th{background: #f49ba3; color: #fff; font-size: 1rem;}
 .tb_type1.type_blue thead th{background: var(--color_blue);}
 .tb_type1{border: 1px solid #d2d2d2;}
-.tb_type1 th,.tb_type1 td{padding: 0.8rem 0; border-bottom: 1px solid #d2d2d2;}
-.tb_type1 tbody th,.tb_type1 tbody td{color: #333; font-size: 0.85rem; text-align: center;}
+.tb_type1 th,.tb_type1 td{padding: 0.8rem 0; border-bottom: 1px solid #d2d2d2; font-family: 'Noto Sans KR', sans-serif !important;}
+.tb_type1 tbody th,.tb_type1 tbody td{color: #333; font-size: 0.85rem; text-align: center; font-family: 'Noto Sans KR', sans-serif !important;}
 .tb_type1 col ~ col{border-left: 1px solid #d2d2d2;}
 
 .search_type1 .bx_select{position: relative; padding: 0 1.1rem; border: 1px solid #ccc; }
@@ -220,7 +220,7 @@ select::-ms-expand { display: none; }
 .search_type1 .bx_select select,.search_type1 .bx_select input{display: block; width: 100%; height: 100%; font-size: 0.8rem}
 .search_type1 .bx_select.date + .auto{padding: 0 0.5rem}
 .search_type1 .bx_select + .btn{margin-left: 0.25rem;}
-.search_type1 > *{min-width:10rem; height: 2.5rem; line-height: 2.5rem; border-radius: 0.5rem; font-weight: 300;}
+.search_type1 > *{min-width:10rem; height: 2.5rem; line-height: 2.5rem; border-radius: 5rem; font-weight: 300;}
 .search_type1 > .btn{font-size: 0.95rem; text-align: center;}
 .search_type1 > .btn + .btn{margin-left: 0.5rem}
 .search_type1 > *.auto{min-width:auto;}

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Binggrae';
+  src: url('/common/font/Binggrae/Binggrae.eot');
+  src: url('/common/font/Binggrae/Binggrae.woff') format('woff'),
+       url('/common/font/Binggrae/Binggrae.eot?#iefix') format('embedded-opentype');
+	   url('/common/font/Binggrae/Binggrae.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

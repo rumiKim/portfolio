@@ -142,7 +142,7 @@ section{line-height: 1;}
 .sec_guide .bx_section .txt{margin:2.5rem 0; font-size: 2rem; font-weight: 300; line-height: 1.37;}
 .sec_guide .bx_section .txt strong{font-weight: 400;}
 .sec_guide .bx_section .desc{font-size: 0.85rem; font-weight: 300; font-family: 'Noto Sans KR',sans-serif; line-height: 1.9;}
-.sec_guide .wrap_tb > .desc{padding:2.8rem 0 1.8rem;}
+.sec_guide .wrap_tb > .desc{padding:0.8rem 0 1.8rem;}
 .tit_point{font-size: 1.9rem; font-weight: 500;}
 .tit_point span{vertical-align: sub;}
 .tit_point:before{content: "S"; display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 100%; background: var(--color_red); color: #fff; font-family: 'GmarketSans'; font-size: 1.15rem;}
@@ -154,7 +154,7 @@ section{line-height: 1;}
 .list_benefit .wrap_label .label{display: inline-block; padding:0 0.75rem; line-height: 2rem; border-radius: 2rem; vertical-align: middle; color: #fff; font-size: 0.7rem; }
 .list_benefit .txt_info{font-weight: 500;}
 .list_benefit .txt_info .product{margin:0.2rem 0 0.8rem; font-size: 1rem; font-weight:700 }
-.list_benefit .txt_info .current{color: #8e8e8e; font-weight: 500;}
+.list_benefit .txt_info .current{color: #8e8e8e; font-weight: 500; font-size:0.8vw;}
 .list_benefit .txt_info .gift{display:inline-block; margin-top: 0.6rem; width: 5.8rem; line-height: 1.85rem; border-radius: 1.85rem; background:var(--color_blue); text-align: center; color: #fff; font-size: 0.75rem; }
 .list_benefit .bx_img{margin:2.5rem 0; height: 6.5rem; text-align: center;}
 .list_benefit .bx_img img{height: 100%}
@@ -168,7 +168,7 @@ section{line-height: 1;}
 
 .sec_mileage .wrap_img{margin:0.85rem auto 2.6rem; width: 42.85%;}
 .sec_mileage .tit_type1 .logo{margin-left: 0.5rem; vertical-align: 0.2rem}
-.sec_mileage .bx_gray{margin: 1.7rem auto 3.6rem; padding:1rem 0; width:63%; font-size: 0.95rem; line-height: 1.26; border-radius: 0.5rem;}
+.sec_mileage .bx_gray{margin: 1.7rem auto 3.6rem; padding:1rem 0; width:63%; font-size: 0.85rem; line-height: 1.26; border-radius: 0.5rem;}
 .sec_mileage .btn_type3{display: inline-block; padding:0 1.7rem; line-height: 3.5rem; height: 3.5rem; border-radius: 3.5rem}
 .sec_mileage .btn_type3:after{width: 2.6rem; height: 1.9rem; background: url("/common/images/ico_change.png") no-repeat center / 100% 100%; margin-left: 0.8rem;}
 .sec_mileage .wrap_form{margin:3.75rem auto 3.5rem; width: 44rem}
@@ -182,7 +182,7 @@ section{line-height: 1;}
 .sec_award .bx_trophy .inner_trophy{position: relative; width: 31.2rem; margin: 0 auto}
 .sec_award .bx_trophy .wrap_txt{padding: 0 1.8rem}
 .sec_award .contents{text-align: center;}
-.sec_award .contents .tit_type1 .tit{margin-bottom: 0.7rem;}
+.sec_award .contents .tit_type1 .tit{margin-bottom: 0.2rem;}
 .list_award{width: 100%}
 .list_award > li{flex:1; padding: 0 15px; font-size: 0.75rem; font-family: 'Noto Sans KR',sans-serif;}
 .list_award > li .name {font-size: 1.25rem; font-family: 'GmarketSans'}
@@ -204,7 +204,7 @@ section{line-height: 1;}
 .sec_check .bx_calendar .month{font-size: 2rem;}
 .sec_check .bx_calendar .month + .txt{margin-top: 0.6rem; padding:0.5rem 1.65rem; border: 1px solid #dcdee5; color: #333; border-radius: 1.7rem; background: #fff; font-size: 0.75rem; }
 .sec_check .bx_calendar .wrap_date{overflow-x: scroll; padding-bottom: 1rem; position: relative;}
-.sec_check .bx_calendar .date{padding:0 2.5rem ; height:3.5rem; background: #fff; border-radius: 2rem; font-size: 1.25rem; color: #666;}
+.sec_check .bx_calendar .date{padding:0 2.5rem ; height:3rem; background: #fff; border-radius: 2rem; font-size: 1.25rem; color: #666;}
 .sec_check .bx_calendar .date .wrap_num{height: 100%; }
 .sec_check .bx_calendar .date .wrapper{height: 100%; width: 100%}
 .sec_check .bx_calendar .date .num ~ .num{margin-left: 2rem;}
@@ -225,11 +225,11 @@ section{line-height: 1;}
 
 
 .board_type1{text-align: center;}
-.board_type1 .hd_board{ background: #f9f9f9; font-size: 1rem; color: #333333; border: 1px solid #d2d2d2; border-radius:0.5rem; line-height: 3rem;}
+.board_type1 .hd_board{ background: #f9f9f9; font-size: 1rem; color: #333333; border: 1px solid #d2d2d2; border-radius:0.5rem; line-height: 3rem; }
 .board_type1 > ul > li ~ li{margin-top: 0.35rem;}
-.board_type1 > ul > li{display: flex; align-items: center; justify-content: space-between;height:3.75rem; border: 1px solid #d2d2d2; border-radius:0.5rem; font-size: 0.9rem; font-weight: 600; }
-.board_type1 > ul > li .time{color: #8e8e8e; font-size: 0.85rem; font-weight: 600;}
-.board_type1 > ul > li .id{display: flex; align-items: center; justify-content: center;color: #333;}
+.board_type1 > ul > li{display: flex; align-items: center; justify-content: space-between;height:3.75rem; border: 1px solid #d2d2d2; border-radius:0.5rem; font-size: 0.9rem; font-weight: 500; }
+.board_type1 > ul > li .time{color: #333; font-size: 0.85rem; font-weight: 600;}
+.board_type1 > ul > li .id{display: flex; align-items: center; justify-content: center;color: #333;font-family: 'Noto Sans KR', sans-serif !important;}
 .profile{display: inline-flex; align-items: center; justify-content: center; margin-right: 0.5rem; width: 2.4rem; height: 2.4rem;border-radius: 100%; background: #8e8e8e;}
 .profile img{width: 70%}
 .board_type1 > ul > li .txt{font-weight: 500;}
@@ -249,7 +249,7 @@ section{line-height: 1;}
 .board_mypage .hd_board{margin: 4.5rem 0 1.15rem; font-weight: 600;}
 .board_mypage .ranking{width: 8.57%;}
 .board_mypage .time{width: 15%;}
-.board_mypage .txt{margin-left:1rem; flex: 1; text-align: left;}
+.board_mypage .txt{margin-left:1rem; flex: 1; text-align: left; font-weight:500}
 .board_mypage .history{width: 7%;}
 .board_mypage .point{width: 7%; letter-spacing:-0.9px;}
 
@@ -262,12 +262,12 @@ section{line-height: 1;}
 .content_tab{display: none;}
 .content_tab.active{display: block;}
 
-.board_chk .hd_board{margin: 4.5rem 0 1.15rem; font-weight: 600;}
+.board_chk .hd_board{margin: 4.5rem 0 1.15rem; }
 .board_chk .ranking,.board_chk .count{width: 8.57%;}
 .board_chk .time{width: 9.28%;}
 .board_chk .txt{margin-left:1rem; flex: 1; text-align: left; }
 .board_chk .id{width: 16.07%;}
-.board_chk .point{width: 5.35%;}
+.board_chk .point{width: 5.35%; }
 
 .sec_share .wrap_tit{padding: 5rem 0 2.5rem;}
 .sec_share .wrap_tit .btn_type3{padding: 0 2.5rem; line-height: 2.4rem; border-radius: 2.4rem}
@@ -275,8 +275,8 @@ section{line-height: 1;}
 .board_share .label{width:10%;}
 .board_share .label span{display: inline-block; padding:0.35rem 1.25rem;  background: var(--color_red); color: #fff; border-radius: 0.25rem;}
 .board_share .time{width: 10%;}
-.board_share .txt{margin-left:1rem; flex: 1; text-align: left;}
-.board_share .name{width: 8%;}
+.board_share .txt{margin-left:1rem; flex: 1; text-align: left;font-family: 'Noto Sans KR', sans-serif !important;}
+.board_share .name{width: 8%;font-family: 'Noto Sans KR', sans-serif !important;}
 
 /* sec_event_sub */
 .sec_event_sub .wrap_tit{padding: 5rem 0 3rem;}
@@ -303,16 +303,16 @@ section{line-height: 1;}
 .sec_write .list_form .inp_type1.inp_pw{ margin-right: 0.7rem; height: 2.3rem}
 .sec_write .list_form .desc{margin: 0}
 .sec_write .wrap_list .wrap_search{padding: 2.7rem 0 0.65rem;}
-.sec_write .wrap_list .wrap_search .total {font-size: 0.85rem}
+.sec_write .wrap_list .wrap_search .total {font-size: 0.85rem; color:#666}
 .sec_write .list_form > li .bx_inp + .bx_inp.btn{height: 4.8rem; font-size: 1.1rem}
 
 .list_comment > li{display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; border-bottom: 1px solid #dcdee5;}
-.list_comment > li .info{text-align: right;}
-.list_comment > li .tit{margin:0 0 0.5rem; font-size: 0.95rem; font-weight: 600;}
-.list_comment > li .tit+.comment{ max-width: 600px; font-size: 0.85rem; color: #333; line-height: 1.4; }
-.list_comment > li .name{font-weight: 600; color: #333;}
+.list_comment > li .info{text-align: right; }
+.list_comment > li .tit{margin:0 0 0.5rem; font-size: 0.95rem; font-weight: 600;  font-family: 'Noto Sans KR', sans-serif !important;}
+.list_comment > li .comment{ max-width: 600px; font-size: 0.85rem; color: #666; line-height: 1.4;  font-family: 'Noto Sans KR', sans-serif !important; }
+.list_comment > li .name{font-weight: 600; color: #333; font-family: 'Noto Sans KR', sans-serif !important;}
 .list_comment > li .date{margin:0.5rem 0 0.75rem; font-size: 0.9rem; color: #666;}
-.list_comment > li .btns .btn{width: 1rem; height: 1rem; background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
+.list_comment > li .btns .btn{width: 0.8rem; height: 0.8rem; background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
 .list_comment > li .btns .btn+.btn{margin-left: 0.75rem;}
 .btn.btn_modify{background-image: url("../images/ico_rewrite.png");}
 .btn.btn_delete{background-image: url("../images/ico_del.png");}
@@ -333,14 +333,14 @@ section{line-height: 1;}
 .sec_myinfo .bx_profile .img_profile+.txt > span{display: block; margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.5}
 .sec_myinfo .list_info > li{width: 32%;}
 .sec_myinfo .list_info > li > a{display: block; padding: 1.5rem 1.2rem 1.3rem}
-.sec_myinfo .list_info > li > a:hover{border-color: #f00}
+.sec_myinfo .list_info > li > a:hover{border: 1px solid #f00}
 .sec_myinfo .list_info .contents{margin-top: 1.8rem; text-align: right;}
-.sec_myinfo .list_info .contents > p{display: inline-block; padding:0 0.8rem; border: 1px solid #ccc; line-height: 1.8rem; border-radius: 1.8rem; font-size: 1.25rem}
+.sec_myinfo .list_info .contents > p{display: inline-block; padding:0 1.5rem; border: 1px solid #ccc; line-height: 1.8rem; border-radius: 1.8rem; font-size: 1rem}
 .sec_myinfo .list_info .contents > p small{font-size: 0.9rem}
 .txt_underline{text-decoration: underline;}
 
 .sel_period ul li{margin-right: 0.5rem}
-.sel_period ul li *{padding:0 1rem; line-height: 2.4rem; border: 1px solid transparent; border-radius: 0.3rem; font-family: 'Noto Sans KR',sans-serif; font-weight: 300}
-.sel_period ul li *:hover,.sel_period ul li.active *{color: var(--color_red); border-color:#eee}
+.sel_period ul li *{padding:0 1rem; line-height: 2.4rem; border: 1px solid #eee; border-radius: 0.3rem; font-family: 'Noto Sans KR',sans-serif; font-weight: 300}
+.sel_period ul li *:hover,.sel_period ul li.active *{color: var(--color_red); border-color:#ccc; background:#f7f7f7; font-weight:600}
 
 .sec_edit .wrap_form{ margin:0 auto; width: 36.5rem}
