@@ -62,8 +62,10 @@
               </div>
               <div class="wrap_form flex align_center">
                 <form action="" class="">
+                  <div class="wrap_img only_mob"><img src="/common/images/img_banner_sub_check_02.jpg" alt=""></div>
                   <div class="wrap_input br10 ls25">
-                    <p>매일 매일! 출석체크하면<strong class="color_red"> 700포인트</strong> 지급!</p>
+                    <p class="only_pc">매일 매일! 출석체크하면<strong class="color_red"> 700포인트</strong> 지급!</p>
+                    <p class="only_mob"><strong>출석체크</strong></p>
                     <div class="">
                       <ul class="list_form">
                         <li>
@@ -71,9 +73,12 @@
                             <div class="inp_type1 bx_inp"><input type="text"
                                 placeholder="30글자 이내로 출석 인사말을 입력 후 출석체크 버튼을 클릭해 주세요">
                             </div>
-                            <button class="btn_type2 bx_inp btn">출석체크</button>
+                            <button class="btn_type2 bx_inp btn">
+                              <span class="only_pc">출석체크</span>
+                              <span class="only_mob">확인</span>
+                            </button>
                           </div>
-                          <p class="desc">※ 출석체크 인사말 입력시 욕설이나, 비방 또는 홍보성 인사글 입력시 제재를 받을 수 있습니다.</p>
+                          <p class="desc">※ 출석체크 인사말 입력시 욕설이나, 비방 또는 홍보성 인사글 입력시 <br class="only_mob">제재를 받을 수 있습니다.</p>
                         </li>
                       </ul>
                     </div>
@@ -142,13 +147,16 @@
                 <div class="count">7</div>
               </li>
             </ul>
-            <div class="paging">
+            <div class="paging only_pc">
               <ol>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
                 <li><a href="">3</a></li>
                 <li><a href="">4</a></li>
               </ol>
+            </div>
+            <div class="wrap_btn flex justify_center only_mob">
+              <button class="btn_more btn btn_type3 f_Arita fw800">더보기 +</button>
             </div>
           </div>
         </section>

@@ -74,19 +74,19 @@
                           <div class="bx_inp inp_type1">
                             <input type="email" placeholder="이메일" id="red_email">
                           </div>
-                          <div class="bx_inp inp_type1 gray">
+                          <div class="bx_inp bx_select inp_type1 gray">
                             <select name="" id="" class="">
                               <option value="">선택</option>
                             </select>
                           </div>
                         </div>
-                        <p class="desc"><input type="checkbox" class="chk_type1" id="chk_email"><label for="chk_email">이메일 수신 동의</label></p>
+                        <p class="desc"><input type="checkbox" class="chk_type1" id="chk_email" checked="true"><label for="chk_email">이메일 수신 동의</label></p>
                       </div>
                     </li>
                     <li class="item_birth">
                       <label for="" class="required"><span>나이/성별</span></label>
                       <div class="flex align_center">
-                        <div class="inp_type1">
+                        <div class="inp_type1 bx_select">
                           <select name="" id="" class="">
                             <option value="">출생년도</option>
                           </select>
@@ -102,7 +102,8 @@
                     <li class="item_char">
                       <label for="" class="required"><span>나의 캐릭터</span></label>
                       <div class="">
-                        <ul class="flex">
+                        <!-- 남자 캐릭터  display:none 상태 -->
+                        <ul class="flex" style="display:none">
                           <li>
                             <div class="bx_img"><img src="/common/images/ico_m_01.png" alt=""></div>
                             <input type="radio" class="chk_type1" name="char_m" id="char_m1"><label for="char_m1"><span class="hide">남자 캐릭터1</span></label>
