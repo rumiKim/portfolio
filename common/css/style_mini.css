@@ -202,7 +202,7 @@
   .sec_check .wrap_input .list_form > li > div{flex-direction: column;}
   .sec_check .list_form > li{margin-bottom: 0}
   .sec_check .list_form .inp_type1, .sec_check .list_form > li .bx_inp + .bx_inp{margin-left: 0; height: 10.74vw; line-height: 10.74vw; width: 100%; font-size: 4.16vw}
-  .sec_check .list_form .btn_type2{background: var(--color_blue) !important}
+  .sec_check .list_form .btn_type2{background: var(--color_blue) !important; border-color:var(--color_blue) !important }
   .sec_check .list_form .inp_type1{margin-bottom: 1.38vw; border: 1px solid #c7c7c7; background: #fff}
   .sec_check .bx_calendar .thismonth{align-items: flex-start; font-size: 2vw}
   .sec_check .bx_calendar .month{margin-right: 2.4vw; font-size: 5.1vw}
@@ -325,7 +325,7 @@
   .sec_myinfo .bx_profile{margin: 4vw 0;padding: 3vw;font-size: 3.5vw;}
   .sec_myinfo .bx_profile .img_profile{width: 15vw;height: 15vw;}
   .sec_myinfo .bx_profile .img_profile+.txt > span{margin-top: 2vw; font-size: 3vw}
-  .sec_myinfo .list_info .contents > p{padding: 1.5vw 2vw; font-size: 5vw}
+  .sec_myinfo .list_info .contents > p{padding: 1.5vw 3vw; font-size: 5vw; line-height: 1.2}
   .sec_myinfo .list_info .contents > p small{font-size: 4vw}
   .sec_history h3,.sec_my h3{font-size: 3.5vw}
   .sec_guide .bx_section:first-of-type .left{margin-right: 5vw}
@@ -431,9 +431,9 @@
   .sec_mileage .bx_gray{font-size: 3.8vw}
 
   .sec_check .bx_calendar .month + .txt{font-size: 3.5vw}
-  .sec_check .bx_calendar .date{font-size: 2.8vw}
+  .sec_check .bx_calendar .date{font-size: 3.7vw}
   .sec_check .bx_calendar .wrap_date{padding-bottom: 8vw}
-  .date .today .label{top: 5vw; font-size: 1.8vw; width: 17vw; line-height: 7vw;}
+  .date .today .label{top: 5vw; font-size: 1.8vw; width: 17vw; line-height: 7.5vw; height: 7vw}
 
 
 

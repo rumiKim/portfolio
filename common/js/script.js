@@ -59,17 +59,26 @@ $(function() {
 
 
   // mypage page tab function
-  $('.btn_tab *').on('click',function(e){
+  $('.btn_tab > *').on('click',function(e){
     e.preventDefault();
-    const idx = $(this).parent().index();
-
+    const idx = $(this).parents('li').index();
     const tabBox = $(this).parents('.container').find('.content_tab').eq(idx);
+    // const tabBoxOffset = tabBox.scrollTop();
+
     tabBox.addClass('active');
     tabBox.siblings('.content_tab').removeClass('active')
 
+    const tabOffset = tabBox.offset().top;
+    $(window).scrollTop(tabOffset - 100)
+
+    const windowWidth = $(window).width();
+    if(windowWidth < 1025){
 
 
+    }
   });
+
+
 
 
 
