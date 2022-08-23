@@ -218,8 +218,8 @@ select::-ms-expand { display: none; }
 .inp_type1.bx_select:after{content: ""; position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%); width: 15px; height: 10px; background: url("/common/images/ico_arr_down.svg") no-repeat center / auto 100%; }
 .search_type1 .bx_select{position: relative; padding: 0 1.1rem; border: 1px solid #ccc; }
 .search_type1 .bx_select.date:after{display: none}
-.search_type1 .bx_select:after{content: ""; position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%); width: 15px; height: 10px; background: url("/common/images/ico_arr_down.svg") no-repeat center / auto 100%; z-index: -1}
-.search_type1 .bx_select select,.search_type1 .bx_select input{display: block; width: 100%; height: 100%; font-size: 0.8rem}
+.search_type1 .bx_select:after{content: ""; position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%); width: 15px; height: 10px; background: url("/common/images/ico_arr_down.svg") no-repeat center / auto 100%}
+.search_type1 .bx_select select,.search_type1 .bx_select input{position: relative; z-index: 1; display: block; width: 100%; height: 100%; font-size: 0.8rem}
 .search_type1 .bx_select.date + .auto{padding: 0 0.5rem}
 .search_type1 .bx_select + .btn{margin-left: 0.25rem;}
 .search_type1 > *{min-width:10rem; height: 2.5rem; line-height: 2.5rem; border-radius: 5rem; font-weight: 300;}

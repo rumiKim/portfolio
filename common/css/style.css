@@ -203,11 +203,11 @@ section{line-height: 1;}
 .sec_check .bx_calendar .thismonth{border-right: 1px solid #dcdee5; padding-right: 3rem;}
 .sec_check .bx_calendar .month{font-size: 2rem; color: #333}
 .sec_check .bx_calendar .month + .txt{margin-top: 0.6rem; padding:0.5rem 1.65rem; border: 1px solid #dcdee5; color: #333; border-radius: 1.7rem; background: #fff; font-size: 0.75rem; }
-.sec_check .bx_calendar .wrap_date{padding-bottom: 1.3rem; position: relative; overflow: hidden;}
+.sec_check .bx_calendar .wrap_date{flex: 1; padding-bottom: 1.3rem; margin-left: 1.9rem; position: relative; overflow: hidden;}
 .sec_check .bx_calendar .date{padding:0 2.5rem ; height:3rem; background: #fff; border-radius: 2rem; font-size: 1.25rem; color: #666;}
 .sec_check .bx_calendar .date .wrap_num{height: 100%; }
 .sec_check .bx_calendar .date .wrapper{height: 100%; width: 100%}
-.sec_check .bx_calendar .date .num ~ .num{margin-left: 2rem;}
+/* .sec_check .bx_calendar .date .num ~ .num{margin-left: 2rem;} */
 .date .today{position: relative; color: var(--color_blue); font-weight:800;}
 .date .today .label{ padding:0 0.75rem; position: absolute; left: 50%; top:2.5rem; transform: translateX(-50%); display: block; background: var(--color_blue); color: #fff; font-size:0.55rem; line-height: 1.15rem; height: 1rem; border-radius: 1rem; text-align: center;}
 .sec_check .bx_check .list_cur{padding: 2rem 0 1.3rem;}

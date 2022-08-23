@@ -46,7 +46,7 @@
   .only_mob{display: block !important}
   .only_mob.flex{display: flex !important}
 
-  .chk_type1 + label:before{width: 3vw; height: 3vw}
+  .chk_type1 + label:before{width: 3.5vw; height: 3.5vw}
 
   .tit_type1{flex-direction: column; align-items: flex-start;}
   .tit_type1 .tit{font-size: 5vw}
@@ -62,42 +62,42 @@
 
   .page_type1 .bx_white {padding: 6vw 0;}
   .page_type1 form .tit_form{display: none}
-  .page_type1 .txt_btm{margin-top: 9vw;font-size: 3.2vw;}
+  .page_type1 .txt_btm{margin-top: 9vw;font-size: 3.5vw;}
   .page_type1 .list_form.bb{padding-bottom: 5vw}
   .page_type1 .list_form.bt{padding-top: 5vw;}
 
   .wrap_btn{padding-top: 5vw}
   .sec_share .wrap_tit .btn_type3{padding: 0 3vw; line-height: 8vw; font-size: 4vw; border-radius: 5vw;}
-  .board_type1 > ul > li{flex-wrap: wrap; justify-content: flex-start; position: relative; font-size: 2.6vw; height: auto; padding: 4.62vw 16.66vw 4.16vw 21.29vw; color: #666}
+  .board_type1 > ul > li{flex-wrap: wrap; justify-content: flex-start; position: relative; font-size: 3.2vw; height: auto; padding: 4.62vw 0 4.16vw 21.29vw; color: #666}
   .board_type1 > ul > li ~ li{margin-top: 2.03vw}
-  .board_type1 > ul > li .time{font-size: 2.6vw;color: #666}
+  .board_type1 > ul > li .time{font-size: 3.2vw;color: #666}
+  .board_type1 > ul > li .txt{padding-right: 16vw; line-height: 1.2}
   .board_type1 > ul > li .id{justify-content: flex-start; width: 100%}
-  .sec_share .wrap_tit .btn_type3{}
   .board_share .label{order: 2; margin-right: 2vw; width: auto;}
   .board_share .time{display: none; order: 4; width: auto;}
   .board_share .id{order: 6; }
   .board_share .name{order: 5}
-  .board_share .ranking{order: 1; position: absolute; left: 6.94vw; top: 50%; transform: translateY(-50%); font-size: 3.24vw; color: #333;}
+  .board_share .ranking{order: 1; position: absolute; left: 6.94vw; top: 50%; transform: translateY(-50%); font-size: 4.2vw; color: #333;}
   .board_share .label span{padding: 1vw}
-  .board_share .txt{order: 3; margin:2vw 0; width: 100%; margin-left: 0; flex: none; font-size: 3.24vw}
+  .board_share .txt{order: 3; margin:2vw 0; width: 100%; margin-left: 0; flex: none; font-size: 3.5vw}
 
   .inp_type1{height: 10.18vw}
-  .inp_type1 .txt_float{font-size: 2.5vw}
-  .list_form input, .list_form textarea, .list_form select, .list_form button{font-size: 3vw}
+  .inp_type1 .txt_float{font-size: 3vw}
+  .list_form input, .list_form textarea, .list_form select, .list_form button{font-size: 3.5vw}
   .list_form > li{flex-direction: column;}
   .list_form > li ~ li{margin-top: 4vw}
   .list_form > li > label{display: block; padding-top: 0; margin-bottom: 2vw; width: 100%; font-size: 4vw}
-  .list_form > li .desc{font-size: 2.96vw; line-height: 1.8}
+  .list_form > li .desc{margin-top: 2.77vw; font-size: 2.96vw; line-height: 1.5}
   .list_form > li > div{flex: none}
   .list_form > li .bx_inp + .bx_inp{margin-left: 2vw; width: 33%}
-  .list_form .btn{height: 9vw}
+  .list_form .btn{height: 10.18vw}
 
-  .wrap_btn .btn{padding: 0 2vw; height:10.18vw; line-height:10.18vw; font-size: 3.5vw; box-sizing: border-box;}
+  .wrap_btn .btn{padding: 0 2vw; height:10.18vw; line-height:10.18vw; font-size: 4vw; box-sizing: border-box;}
   .wrap_btn .btn.btn_more{padding: 0 11.85vw; height: 10.18vw; line-height: 10.18vw; border-radius: 10.18vw; font-size: 3.88vw}
 
   .tb_type1 thead th{font-size: 3.2vw}
   .tb_type1 tbody th, .tb_type1 tbody td{font-size: 2.8vw; line-height: 1.3}
-  .tb_type1 th, .tb_type1 td{padding: 2vw 0}
+  .tb_type1 th, .tb_type1 td{padding: 2vw 1.2vw}
 
   .paging ol li a{width: 9vw;line-height: 9vw;font-size: 5vw;}
 
@@ -162,7 +162,7 @@
   .sec_event ul li a .desc{font-size: 2.8vw; }
   .sec_event ul li a .bx_img{border-radius: 2vw}
 
-  .sec_login .wrap_form{width: 90%; font-size: 3.5vw}
+  .sec_login .wrap_form{width: 90%; font-size: 3.7vw}
   .sec_login .wrap_chk{margin: 5vw 0 0}
 
   .sec_signup.step1 .wrap_form{width: 100%}
@@ -181,7 +181,7 @@
   .sec_signup.step2 .item_char ul li {margin-right: 5vw}
   .sec_signup.step3 .desc{margin: 9vw 0 2.5vw; font-size: 3.8vw;}
   .sec_signup.step3 strong{font-size: 6vw}
-  .sec_signup.find .wrap_btn .btn{font-size: 3vw}
+  .sec_signup.find .wrap_btn .btn{font-size: 3.5vw}
 
   /* event page */
   /* event-best.html */
@@ -193,7 +193,7 @@
   /* event-check.html */
   .sec_check .tit_type1{padding: 10vw 0 5vw}
   .sec_check .wrap_form:before{display: none}
-  .sec_check .bx_check .list_cur{padding: 3.33vw 0 6.5vw; font-size: 2.87vw;}
+  .sec_check .bx_check .list_cur{padding: 3.33vw 0 6.5vw; font-size: 3.5vw;}
   .sec_check .bx_check .list_cur > li{float: left; margin-right: 5.55vw}
   .sec_check .bx_check .list_cur li:before{width: 7vw; height: 7vw}
   .sec_check .wrap_input{padding: 7vw 0; border: none}
@@ -201,7 +201,7 @@
   .sec_check .wrap_input .list_form{margin-top: 2.4vw}
   .sec_check .wrap_input .list_form > li > div{flex-direction: column;}
   .sec_check .list_form > li{margin-bottom: 0}
-  .sec_check .list_form .inp_type1, .sec_check .list_form > li .bx_inp + .bx_inp{margin-left: 0; height: 10.74vw; line-height: 10.74vw; width: 100%; font-size: 4.16vw}
+  .sec_check .list_form .inp_type1, .sec_check .list_form > li .bx_inp + .bx_inp{margin-left: 0; height: 10.74vw; line-height: 10.5vw; width: 100%; font-size: 4.16vw; border-radius: 5px}
   .sec_check .list_form .btn_type2{background: var(--color_blue) !important; border-color:var(--color_blue) !important }
   .sec_check .list_form .inp_type1{margin-bottom: 1.38vw; border: 1px solid #c7c7c7; background: #fff}
   .sec_check .bx_calendar .thismonth{align-items: flex-start; font-size: 2vw}
@@ -209,17 +209,17 @@
   .sec_check .bx_calendar .month + .txt{margin-top: 0; padding:1.3vw 4.2vw; font-size: 2.5vw}
   .sec_check .bx_calendar{padding: 6.66vw 2.77vw 4.6vw}
   .sec_check .bx_calendar .date{padding: 4.07vw 10vw 3.5vw; width: 100%; height: auto; font-size: 3.7vw; border-radius: 6vw}
-  .sec_check .bx_calendar .date .num ~ .num{margin-left: 6.1vw}
-  .sec_check .bx_calendar .wrap_date{padding-bottom: 4.62vw}
-  .date .today .label{ line-height: 4vw; border-radius: 4vw; font-size: 1.85vw}
+  /* .sec_check .bx_calendar .date .num ~ .num{margin-left: 6.1vw} */
+  .sec_check .bx_calendar .wrap_date{padding-bottom: 4.62vw; margin-left: 0}
+  .date .today .label{top: 6vw; padding: 0; font-size: 2.2vw; width: 15vw; line-height: 5.5vw; height: 5vw; border-radius: 5vw; }
   .board_chk .hd_board{display: none}
   .board_chk .ranking{order: 1; position: absolute; left: 6.94vw; top: 50%; transform: translateY(-50%); font-size: 3.24vw; color: #333}
-  .board_chk .txt{order: 2; width: 100%; flex:none; margin-left: 0; margin-bottom: 3.24vw; font-size: 3.24vw; color: #333}
+  .board_chk .txt{order: 2; width: 100%; flex:none; margin-left: 0; margin-bottom: 3.24vw; font-size: 3.6vw; color: #333}
   .board_chk .point{order: 3; width: auto;}
   .board_chk .count{order: 4; margin: 0 3.7vw; width: auto;}
   .board_chk .time{order: 5; width: auto;}
   .board_chk .id{order: 6; margin-top: 2.5vw; width: 100%; color: #333}
-  .id .profile{width: 6.95vw; height: 6.95vw}
+  .id .profile{margin-right: 1.5vw; width: 6.95vw; height: 6.95vw}
   .board_chk .point:before,
   .board_chk .count:before,
   .board_chk .time:before{display: inline-block; }
@@ -253,8 +253,8 @@
   .search_type1 > *{padding: 0 2vw; min-width: auto; height: 9vw; line-height: 9vw}
   .search_type1.flex{width: 100%; justify-content:space-between;}
   .search_type1 > .btn{font-size: 3vw}
-  .search_type1 .bx_select{min-width: 30%; padding: 0 2.5vw}
-  .search_type1 .bx_search{flex:1; padding-left: 2.5vw}
+  .search_type1 .bx_select{min-width: 30%; padding-left: 2.5vw; padding-right:4vw}
+  .search_type1 .bx_search{flex:1; padding-left: 2.5vw; margin-left: 1vw; box-sizing: border-box;}
   .search_type1 .bx_search input{font-size: 3vw}
   .search_type1 .bx_select select, .search_type1 .bx_select input{font-size: 3vw}
   .search_type1 .bx_search .btn{width:9vw; height: 9vw; line-height: 9vw}
@@ -310,10 +310,10 @@
   .list_comment > li{position: relative; flex-direction: column; align-items: flex-start;}
   .list_comment > li .profile{ margin-right: 3vw; width: 10vw; height: 10vw;}
   .list_comment > li .tit{font-size: 3vw}
-  .list_comment > li .tit+.comment{width: 70%; font-size: 2.7vw}
-  .list_comment > li .comment{max-width: 80%; font-size: 2.7vw; }
-  .list_comment > li .info{ display: flex; align-items: flex-end; margin-left: 13vw; margin-top: 3vw; font-size: 2.8vw;}
-  .list_comment > li .date{margin: 0; margin-left: 2vw; font-size: 2.5vw}
+  .list_comment > li .tit+.comment{width: 70%; font-size: 3.3vw}
+  .list_comment > li .comment{max-width: 60vw; font-size: 3.6vw; }
+  .list_comment > li .info{ display: flex; align-items: center; margin-left: 13vw; margin-top: 3vw; font-size: 3.5vw;}
+  .list_comment > li .date{margin: 0; margin-left: 2vw; font-size: 3vw}
   .list_comment > li .btns .btn{width: 4vw; height: 4vw;position: absolute; right: 0; bottom: 3vw; }
 
   .board_mypage .point{width: 15%}
@@ -334,7 +334,7 @@
   .sec_guide .bx_section.tb{padding: 8vw 0}
   .tit_point{font-size: 5vw;}
   .sec_guide .bx_section .txt{font-size: 4vw; margin: 5vw 0 3vw;}
-  .sec_guide .bx_section .desc{font-size: 2.5vw}
+  .sec_guide .bx_section .desc{font-size: 3.2vw}
 
 
 }
@@ -359,12 +359,11 @@
   .sec_award .contents .tit_type1 .tit{margin-bottom: 0.2rem;}
   .sec_award .bx_trophy {margin-bottom: 3rem; }
   .sec_check .wrap_input >p {font-size: 5vw;}
-  .list_form > li .desc {font-size: 3.5vw; line-height: 1.6; padding-top:5px;}
+  .list_form > li .desc {font-size: 3.5vw; line-height: 1.6; margin-top: 1.5vw}
   .board_type2 .board_tit .date {margin-top: 2vw; font-size: 4vw; font-weight:500;}
   .board_type2 .board_tit .tit {font-size: 5vw;}
   .sec_write .list_form > li .bx_inp + .bx_inp.btn {height: 13vw; width: 100%; font-size: 4vw;}
   .list_form > li .bx_inp + .bx_inp {width: 33%;}
-  .list_form > li .bx_inp + .bx_inp {flex: none; margin-left: 0rem; }
 
   .paging ol li {
     width: 9vw;
@@ -432,7 +431,7 @@
 
   .sec_check .bx_calendar .month + .txt{font-size: 3.5vw}
   .sec_check .bx_calendar .date{font-size: 3.7vw}
-  .sec_check .bx_calendar .wrap_date{padding-bottom: 8vw}
+  .sec_check .bx_calendar .wrap_date{padding-bottom: 8vw; margin-left: 0}
   .date .today .label{top: 5vw; font-size: 1.8vw; width: 17vw; line-height: 7.5vw; height: 7vw}
 
 
