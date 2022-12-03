@@ -34,20 +34,26 @@
     <header></header>
     <main id="main">
       <div class="wrap_com">
-        <section class="sec_reg sec_type1">
+        <section class="sec_reg find_pw sec_type1">
           <div class="sec_tit">
             <span class="txt">Becton, Dickinson</span>
-            <h2 class="heading">아이디 찾기</h2>
+            <h2 class="heading">비밀번호 찾기</h2>
           </div>
           <div class="wrap_form">
-            <form class="f_NotoSansKR">
+            <form>
               <fieldset>
-                <legend class="hide">아이디 찾기 입력 폼</legend>
+                <legend class="hide">비밀번호 찾기 입력 폼</legend>
                 <ul class="list_reg">
+                  <li>
+                    <label for="reg_id"><span>아이디(이메일)</span></label>
+                    <div class="bx_input">
+                      <input type="text" id="reg_id" placeholder="ID@email_account.com">
+                    </div>
+                  </li>
                   <li>
                     <label for="reg_name"><span>이름</span></label>
                     <div class="bx_input">
-                      <input type="text" id="reg_name" placeholder="이름">
+                      <input type="text" id="reg_name" placeholder="이름을 입력해주세요.">
                     </div>
                   </li>
                   <li class="item_tel">
@@ -61,22 +67,18 @@
                       </div>
                       <div class="wrap_type1 flex align_center">
                         <div class="bx_num bx_input">
-                          <input type="text" placeholder="인증번호 6자리">
-                          <p ><span class="hide">남은시간</span><span class="time">03:00</span></p>
+                          <input type="text" placeholder="인증번호(6자리)를 입력해주세요.">
+                          <p><span class="hide">남은시간</span><span class="time">03:00</span></p>
                         </div>
-                        <button class="btn_gray">확인</button>
+                        <button class="btn_gray">인증확인</button>
                       </div>
                       <p class="txt_type1 color_red">입력하신 휴대폰 번호로 인증번호가 발송되었습니다.</p>
                     </div>
                   </li>
                 </ul>
-                <div class="wrap_btn flex align_center space">
-                  <button class="btn_prev">이전</button>
-                  <button class="btn_type1">확인</button>
-                </div>
               </fieldset>
             </form>
-          </div>
+         </div>
         </section>
       </div>
     </main>

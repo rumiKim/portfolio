@@ -5,7 +5,7 @@ input::-webkit-input-placeholder,
 input::placeholder,
 input::-ms-input-placeholder,
 input:-ms-input-placeholder { color: #000}
-input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0; }
+input[type="file"] { position: absolute; width: 0  !important; height: 0 !important; padding: 0 !important; overflow: hidden; border: 0; }
 input[type="checkbox"] { position: absolute; left: -3000px}
 input,select,textarea,button { font-family: 'Noto Sans KR',sans-serif; outline: 0; background-color: transparent;}
 input,textarea { color: #000 !important}
