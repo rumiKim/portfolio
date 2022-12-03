@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슈퍼로또코리아</title>
+    <link rel="stylesheet" href="/common/css/default.css" />
+    <link rel="stylesheet" href="/common/css/common.css" />
+    <link rel="stylesheet" href="/common/css/style.css" />
+    <link rel="stylesheet" href="/common/css/sub.css" />
+    <link rel="stylesheet" href="/common/css/font.css" />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Montserrat', sans-serif; -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="/common/js/script.js" charset="utf-8" defer></script>
+
+    <!-- plugin -->
+    <script src="/common/plugin/swiper.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/common/plugin/swiper.min.css" />
+    <script src="/common/js/slide.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">본문 바로가기</a>
+    <header></header>
+    <main id="main">
+      <div class="wrap_com">
+        <section class="sec_reg sec_type1 agree">
+          <div class="sec_tit">
+            <span class="txt">Becton, Dickinson</span>
+            <h2 class="heading">회원가입 [정보입력]</h2>
+          </div>
+          <div>
+            <h3 class="hide">회원가입 프로세스</h3>
+            <ol class="list_step flex justify_center ls75">
+              <li>
+                <p>약관동의</p>
+              </li>
+              <li class="active">
+                <p>회원정보 입력</p>
+              </li>
+              <li>
+                <p>회원가입 완료</p>
+              </li>
+            </ol>
+          </div>
+          <div class="wrap_form">
+            <div class="form_tit">
+              <p class="h_type1">회원 정보 입력</p>
+            </div>
+            <form class="">
+              <fieldset>
+                <legend class="hide">본인인증 및 회원 기본정보 입력</legend>
+                <ul class="list_reg">
+                  <li>
+                    <label for="reg_id"><span>아이디(이메일)</span></label>
+                    <div class="bx_input">
+                      <input type="email" id="reg_id" placeholder="아이디 (이메일 주소를 입력해 주세요)">
+                    </div>
+                  </li>
+                  <li>
+                    <label for="reg_name"><span>이름</span></label>
+                    <div class="bx_input gray">
+                      <input type="text" id="reg_name" placeholder="이름">
+                    </div>
+                  </li>
+                  <li>
+                    <label for="reg_corp"><span>소속(병원명)</span></label>
+                    <div class="bx_input gray">
+                      <input type="text" id="reg_corp" placeholder="예) 한국병원">
+                    </div>
+                  </li>
+                  <li class="">
+                    <label for="reg_tel"><span>휴대폰 번호</span></label>
+                    <div class="">
+                      <div class="wrap_type1 flex align_center">
+                        <div class="bx_tel type1 bx_input gray">
+                          <select name="" id="" class="">
+                            <option value="">SKT</option>
+                            <option value="">KT</option>
+                            <option value="">LG U+</option>
+                          </select>
+                          <input type="text" id="reg_tel" placeholder="-  없이 숫자만 입력해 주세요">
+                        </div>
+                        <button class="btn_gray">인증번호요청</button>
+                      </div>
+                      <p class="txt_type1">서비스이용, 아이디 또는 비밀번호 찾기에서 사용되므로 인증이 필요합니다.</p>
+                      <div class="wrap_type1 flex align_center">
+                        <div class="bx_num bx_input gray">
+                          <input type="text" placeholder="인증번호 6자리">
+                          <p><span class="hide">남은시간</span><span class="time">03:00</span></p>
+                        </div>
+                        <button class="btn_gray">인증확인</button>
+                      </div>
+                      <p class="color_red">입력하신 휴대폰 번호로 인증번호가 발송되었습니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <label for="reg_pw"><span>비밀번호</span></label>
+                    <div>
+                      <div class="bx_input">
+                        <input type="password" id="reg_pw" placeholder="8자리 이상 입력해주세요.">
+                      </div>
+                      <p class="txt_type1">영문,숫자,특수문자 3가지를 조합한 8자리 이상으로 입력해주세요.<br>휴대폰번호, 생년월일, 아이디, 연속된 숫자/문자 등은 사용할 수 없습니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <label for="reg_pw_re"><span>비밀번호 확인</span></label>
+                    <div class="bx_input">
+                      <input type="password" id="reg_pw_re" placeholder="비밀번호 확인">
+                      <p>비밀번호가 동일하지 않습니다. 다시 입력해주세요.</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="wrap_btn flex align_center space">
+                  <button class="btn_prev">이전</button>
+                  <a href="signup3-complete.html" class="btn_type1">다음단계</a>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

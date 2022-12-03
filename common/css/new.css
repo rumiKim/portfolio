@@ -1,0 +1,12 @@
+
+html { font-size: 20px;}
+body { font-size: 1rem; word-break: keep-all; font-family: 'Noto Sans KR', sans-serif !important;}
+input::-webkit-input-placeholder,
+input::placeholder,
+input::-ms-input-placeholder,
+input:-ms-input-placeholder { color: #000}
+input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0; }
+i { font-style: normal;}
+
+.wrap_com { margin:0 auto; width: 35rem;}
+.sec_type1 .sec_tit{}

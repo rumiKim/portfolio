@@ -6,36 +6,18 @@
 
 
 
-.popup .sec_login { padding:3.5rem 2.8rem ; width:28rem; }
-.sec_login { text-align: center; box-sizing: border-box;}
-.sec_login form * { font-family: 'Noto Sans KR',sans-serif;}
-.sec_login h2 { padding:0 0 2.35rem; font-size: 2rem; }
-.sec_login h2 span { display: block; font-weight: 400}
-.sec_login > .login_super .logo_main { margin:0 0 2.6rem; padding: 1.2rem 0 0.25rem; border:2px solid #444; border-bottom: none; color:#444 ; font-size: 1.1rem}
-.sec_login > .login_super form ul li { position: relative; margin:0 0 0.5rem; border: 1px solid #ddd}
-.sec_login > .login_super form ul li:after { position: absolute; left: 1rem; top: 0; width: 1rem; height: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
-.sec_login > .login_super form ul li.id:after { background-image: url(/common/images/ico_id.png)}
-.sec_login > .login_super form ul li.pw:after { background-image: url(/common/images/ico_pw.png)}
-.sec_login > .login_super form ul li input { padding:0 0 0 2.5rem; width: 100%; line-height: 2.4rem; box-sizing: border-box; color: #000}
+.logo_main { margin:0 0 2.6rem; padding: 1.2rem 0 0.25rem; border:2px solid #444; border-bottom: none; color:#444 ; font-size: 1.1rem}
 
-.sec_login > .login_super form .btn_login { margin:1.5rem 0 1.65rem; width:100%; background:#444 }
-.sec_login .wrap_chk { text-align: left;}
-.sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: 0.75rem}
-.sec_login .btn_login { display: block; line-height: 3rem; border-radius: 3px; color: #fff; font-size: 0.75rem}
-.sec_login .list_find { font-size: 0}
-.sec_login .list_find li {  position: relative; display: inline-block; padding: 0 0.95rem }
-.sec_login .list_find li:after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
-.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: 0.75rem; color: #444; font-weight: 500; }
-.sec_login .login_sns ul li { margin: 0 0 0.5rem}
 
-.list_reg { padding-left:5%; padding-right: 5%; text-align: left}
+.list_reg {text-align: left;}
 .list_reg .bx_input { display: block; padding-left: 1rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2.4rem; line-height: 1; overflow: hidden; box-sizing: border-box;}
 .list_reg .bx_input.type1 input { width: auto}
 .list_reg .bx_input.type1 > div { position: relative; flex:1}
 .list_reg .bx_input.gray { background: #f5f5f5}
 .list_reg .bx_input > * { height: 100%; width: 100%; background: none; box-sizing: border-box;}
-.list_reg > li { display: flex;}
-.list_reg > li ~ li { margin-top: 1rem}
+.list_reg .bx_input input { font-size: 0.95rem;}
+.list_reg > li { display: flex; position: relative;}
+.list_reg > li ~ li { margin-top: 0.4rem}
 .list_reg > li > div { flex: 1; }
 .list_reg > li > label { display: block; width: 21.7%; line-height:2.4rem; font-size: 0.75rem; cursor: pointer;}
 .list_reg > li > label.nocursor { cursor: default;}
@@ -44,29 +26,35 @@
 .list_reg .bx_num { position: relative;}
 .list_reg .bx_num .time { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: #f00; font-size: 0.7rem}
 
+/* login page */
+.sec_login { text-align: center; box-sizing: border-box;}
+.sec_login .list_reg > li:after { position: absolute; left: 1rem; top: 0; width: 1rem; height: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
+.sec_login .list_reg > li.id:after { background-image: url(/common/images/ico_id.png)}
+.sec_login .list_reg > li.pw:after { background-image: url(/common/images/ico_pw.png)}
+.sec_login .list_reg .bx_input { padding:0 0 0 2.5rem; width: 100%; box-sizing: border-box; color: #000}
+.sec_login .btn_login { margin:1.5rem 0 1.65rem; font-size: 1.25rem; }
 
-/* 회원가입 - common */
+
+.sec_login .wrap_chk { text-align: left;}
+.sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: 0.75rem}
+.sec_login .list_find { font-size: 0}
+.sec_login .list_find li { position: relative; display: inline-block; padding: 0 0.95rem }
+.sec_login .list_find li:after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
+.sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: 0.75rem; color: #444; font-weight: 500; }
+
+
+
+/* signup - common */
 .sec_reg { width: 35rem; margin: 0 auto; }
-.sec_reg button { font-family: 'Noto Sans KR',sans-serif;}
-.sec_reg .wrap_title { margin-bottom: 1.5rem; border-bottom: 2px solid #000; padding: 4.2rem 0 1.5rem; letter-spacing: -0.075em; text-align: center;}
-.sec_reg .wrap_title > p { padding-top:1rem; font-size: 1.1rem; color: #757575; font-family: 'Noto Sans KR',sans-serif; }
-.sec_reg form legend { font-size: 1.1rem; text-align: center;}
-.list_reg .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
+.sec_reg .form_tit{margin-bottom:1.85rem; padding: 4rem 0 1.1rem; border-bottom: 1px solid var(--color-gray2);}
+.sec_reg .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
 .list_reg .txt_type1 { display:block; padding: 0.5rem 0 0 ;font-size: 0.65rem; color: #999; line-height: 1.3}
 .btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
 .list_reg .btn_gray { margin-left: 0.3rem; width: 6rem; height:2.4rem;  font-family: 'Noto Sans KR',sans-serif}
 
 
-.btn_navy { color: #fff; background: #373b46}
-.wrap_btn.type2 { margin: 2rem auto 0; width:54.6%;}
-.wrap_btn.type2 > * { width: 13rem;}
-.wrap_btn > * { display: block; line-height: 3rem; height: 3rem; min-width: 13rem; border-radius: 0.2rem; font-size: 0.85rem; font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
-.wrap_btn .btn_prev,
-.btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
-
-
 /* 약관동의 - signup1-agree.html */
-.sec_reg.agree form { padding: 3.5rem 0 0; font-size: 0.75rem;}
+.sec_reg.agree form {font-size: 0.75rem;}
 .sec_reg.agree form legend { padding: 0 0 3.35rem}
 .sec_reg.agree form ul li { color: #666}
 .sec_reg.agree form ul li ~ li { padding: 0.85rem 0 0; }
@@ -79,9 +67,9 @@
 .sec_reg.write { text-align: center;}
 .sec_reg.write form { padding: 3.5rem 0 0; font-size: 0.75rem;}
 .sec_reg .list_step li { width: 6.7rem}
-.sec_reg .list_step li:before { content: ""; display: inline-block; width: 3.2rem; height: 3.2rem; background-image: url(/common/images/ico_agree.png); background-repeat: no-repeat; background-position: center; background-size: auto 50%; background-color: #c7c7c7; border-radius: 100%; }
-.sec_reg .list_step li.active:before { background-color: #535353}
-.sec_reg .list_step li p { padding:0.9rem 0 0; font-size: 0.8rem; }
+.sec_reg .list_step li:before { content: ""; display: inline-block; width: 3.2rem; height: 3.2rem; background-image: url(/common/images/ico_agree.png); background-repeat: no-repeat; background-position: center; background-size: auto 50%; background-color: var(--color-gray2); border-radius: 100%; }
+.sec_reg .list_step li.active:before { background-color: var(--color-blue)}
+.sec_reg .list_step li p { padding:0.9rem 0 0; font-size: 0.9rem; color: #3d3f41;}
 .sec_reg .list_step li:nth-child(2):before { background-image: url(/common/images/ico_reg.png);}
 .sec_reg .list_step li:nth-child(3):before { background-image: url(/common/images/ico_fin.png); }
 .sec_reg.write .list_reg { padding-top: 2.5rem}
@@ -99,13 +87,13 @@
 .sec_reg.find_id .wrap_btn,
 .sec_find.pw .wrap_btn
  { margin:3.85rem 0 0; padding:2.5rem 0 0 ; border-top: 1px solid #e8e8e8; }
-.sec_find { padding: 4.3rem}
-.sec_find { width: 35rem; margin: 0 auto; text-align: center;}
+.sec_find { padding:2rem 0; text-align: center;}
 .sec_find .bx_result { background:#f4f4f4; padding:2rem }
-.sec_find .bx_result > p { font-size: 1rem}
-.sec_find .bx_result > span { display: block; padding: 1.1rem 0 1.5rem; font-size: 0.8rem; color: #666}
+.sec_find .bx_result > p { font-size: 1.1rem}
+.sec_find .bx_result > span { display: block; padding: 1.1rem 0 1.5rem; color: #666}
 .sec_find .wrap_title .h_type3 { padding-bottom: 3.5rem}
-.sec_find .wrap_title > p { padding: 0 0 1.5rem; font-size: 1.1rem}
+.sec_find .wrap_title > p { padding: 0 0 2rem; font-size: 1.25rem}
+.sec_find .btn_w {border: none;}
 
 /* 개인정보 수집 팝업 */
 .popup.policy .txt { padding: 1.6rem 0 ; font-size: 0.8rem; color: #666; line-height: 1.7}

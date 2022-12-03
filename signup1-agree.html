@@ -1,8 +1,137 @@
-<?php include $_SERVER['DOCUMENT_ROOT']."/inc/meta.html";?>
+<!DOCTYPE html>
+<html lang="ko">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>슈퍼로또코리아</title>
+  <link rel="stylesheet" href="/common/css/default.css">
+  <link rel="stylesheet" href="/common/css/common.css">
+  <link rel="stylesheet" href="/common/css/style.css">
+  <link rel="stylesheet" href="/common/css/sub.css">
+  <link rel="stylesheet" href="/common/css/font.css">
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- font-family: 'Montserrat', sans-serif; -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="/common/js/script.js" charset="utf-8" defer></script>
+
+  <!-- plugin -->
+  <script src="/common/plugin/swiper.min.js" charset="utf-8" ></script>
+  <link rel="stylesheet" href="/common/plugin/swiper.min.css">
+  <script src="/common/js/slide.js" charset="utf-8" ></script>
+</head>
 <body>
   <a href="#main" class="skip">본문 바로가기</a>
-  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/header.html";?>
+  <header>
+    <div class="top wrap_com clear">
+      <h1 class="left mainlogo"><a href="/index.html" class="flex column justify_center ls25">superlottokorea</a></h1>
+    </div>
+    <div class="gnb">
+      <div class="wrap_com clear zindex100">
+        <div class="flex align_center left ">
+          <button class="btn_menu" aria-label="전체메뉴"></button>
+          <h2 class="hide">대메뉴</h2>
+          <nav class="">
+            <ul class="nav_gnb clear">
+              <li><a href="/contents/service/service.html">서비스안내</a></li>
+              <li><a href="/contents/mega.html">메가밀리언 구매</a></li>
+              <li><a href="/contents/power.html">파워볼 구매</a></li>
+              <li><a href="/contents/draw/draw-guide.html">당첨번호 확인</a></li>
+              <li><a href="/contents/cs/news.html">고객센터</a></li>
+              <li><a href="/contents/mypage/cash-charge.html">캐쉬 충전</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="right">
+          <ul class="nav_guide clear">
+            <li class="rate color_blue"><span class="add_before">오늘의 환율</span> $1=<span>1=1,198.3</span>원</li>
+            <li><a href="/contents/service/purchase.html">구매대행 이용안내</a></li>
+            <li class="app"><a href="" class="btn_popup add_after" id="btn_app">앱다운</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sitemap">
+      <div class="">
+        <nav>
+          <ul class="wrap_com flex ">
+            <li>
+              <a href="">서비스안내</a>
+              <ul>
+                <li><a href="/contents/service/service.html">이용안내</a></li>
+                <li><a href="/contents/service/mega.html">메가밀리언 소개</a></li>
+                <li><a href="/contents/service/power.html">파워볼 소개</a></li>
+                <li><a href="/contents/service/purchase.html">구매대행 이용가이드</a></li>
+                <li><a href="/contents/service/receive.html">당첨금수령</a></li>
+                <li><a href="/contents/service/policy.html">회원정책</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/contents/mega.html">메가밀리언구매</a>
+              <ul>
+                <li><a href="/contents/mega.html">메가밀리언 구매</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/contents/power.html">파워볼 구매</a>
+              <ul>
+                <li><a href="/contents/power.html">파워볼 구매</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/contents/draw/draw-guide.html">당첨번호 확인</a>
+              <ul>
+                <li><a href="/contents/draw/draw-guide.html">추첨안내</a></li>
+                <li><a href="/contents/draw/draw-mega.html">메가밀리언 당첨결과</a></li>
+                <li><a href="/contents/draw/draw-power.html">파워볼 당첨결과</a></li>
+                <li><a href="/contents/draw/draw-winners.html">당첨자 회원 리스트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/contents/cs/news.html">고객센터</a>
+              <ul>
+                <li><a href="/contents/cs/news.html">최신뉴스</a></li>
+                <li><a href="/contents/cs/notice.html">공지사항</a></li>
+                <li><a href="/contents/cs/faq.html">자주묻는질문</a></li>
+                <li><a href="/contents/cs/atoz.html">구매대행 A to Z</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/contents/mypage/cash-charge.html">캐쉬충전소</a>
+              <ul>
+                <li><a href="/contents/mypage/cash-charge.html">충전하기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="bg_sitemap"></div>
+    <div class="util">
+      <h2 class="hide">유틸리티 메뉴</h2>
+      <div class="wrap_com clear">
+        <div class="wrap_list right">
+          <ul class="login">
+            <li class="add_after"><a href="" class="btn_popup" id="btn_login">로그인</a></li>
+            <li class="add_after"><a href="/signup1-agree.html">회원가입</a></li>
+            <li class="add_after"><a href="/contents/mypage/mypage.html">마이페이지</a></li>
+            <li class="add_after"><a href="/contents/mypage/history.html">구매/당첨내역</a></li>
+            <li><a href="/contents/mypage/direct.html">1:1 문의</a></li>
+          </ul>
+          <!-- <ul class="my">
+            <li><a href="/contents/mypage/history.html"><img src="/common/images/ico_bag.png" alt=""><span class="hide">구매/당첨내역</span></a></li>
+            <li><a href="/contents/mypage/mypage.html"><img src="/common/images/ico_my.png" alt=""><span class="hide">마이페이지</span></a></li>
+            <li><a href="/contents/mypage/mypage.html"><img src="/common/images/ico_center.png" alt=""><span class="hide">1:1문의</span></a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  
+  </header>
   <main id="main">
     <section class="sec_reg agree">
       <div class="wrap_title">
@@ -78,7 +207,61 @@
       </form>
     </section>
   </main>
-  <?php include $_SERVER['DOCUMENT_ROOT']."/inc/footer.html";?>
+  <footer>
+    <div class="">
+      <div class="top ls25">
+        <h2 class="hide">회사 정보</h2>
+        <ul>
+          <li><a href="/contents/policy-privacy.html">개인정보취급방침</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">서비스안내</a></li>
+          <li><a href="/contents/mega.html">메가밀리언 구입</a></li>
+          <li><a href="/contents/power.html">파워볼 구입</a></li>
+          <li><a href="/contents/cs/news.html">고객센터</a></li>
+          <li><a href="/contents/mypage/direct.html">1:1상담</a></li>
+        </ul>
+      </div>
+      <div class="mid">
+        <h2 class="hide">사업 정보</h2>
+        <ul>
+          <li><a href="">사업자등록번호 : 224-56-7890</a></li>
+          <li><a href="">통신판매업신고번호 : 2022-서울서초-1004</a></li>
+          <li><a href="">대표이사 : 김길동</a></li>
+          <li><a href="">법인명 : (주)슈퍼로또코리아니</a></li>
+          <li><a href="">개인정보관리책임자 : 마동탁</a></li>
+          <li style="display:block" aria-hidden="true"><a href=""></a></li>
+          <li><a href="">주소 : 서울특별시 강남구 논현로 100길 10, 1층</a></li>
+          <li><a href="">대표번호 : 1588-0001</a></li>
+          <li><a href="">서비스 문의 : help@superlottokorea.com</a></li>
+          <li><a href="">제휴 문의 : business@superlottokora.com</a></li>
+        </ul>
+        <p>본 홈페이지는 게시된 이메일 주소가 자동 수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하여 주시길 바랍니다. <br>청소년은 복권을 구매하거나 당첨금을 수령할 수 없습니다.</p>
+      </div>
+      <div class="btm">
+        <div class="wrap_com flex space align_end">
+          <div class="flex align_end">
+            <span class="left mainlogo"><a href="/index.html" class="flex column justify_center ls25 ">superlottokorea</a></span>
+            <span class="copyright f_Montserrat">&copy;Copyright superlottokorea 2022 Ltd.</span>
+          </div>
+          <div>
+            <h2 class="hide">관련 사이트</h2>
+            <ul class="sns flex justify_center align_center">
+              <li class="facebook"><a href="" title=""><span class="hide">페이스북</span></a></li>
+              <li class="insta"><a href="" title=""><span class="hide">인스타그램</span></a></li>
+              <li class="youtube"><a href="" title=""><span class="hide">유튜브</span></a></li>
+            </ul>
+          </div>
+          <div class="app clear">
+            <h2 class="left f_NotoSansKR fw500 ls50" style="color:#ccc">서비스 APP</h2>
+            <ul class="left">
+              <li class="googleplay"><a href=""><span class="hide">구글플레이</span></a></li>
+              <li class="appstore"><a href=""><span class="hide">애플 앱스토어</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 
