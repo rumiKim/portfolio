@@ -8,8 +8,8 @@
   <title>BD</title>
   <link rel="stylesheet" href="/common/css/default.css" />
   <link rel="stylesheet" href="/common/css/common.css" />
+  <!-- <link rel="stylesheet" href="/common/css/style.css" /> -->
   <link rel="stylesheet" href="/common/css/sub.css" />
-  <link rel="stylesheet" href="/common/css/responsive.css" />
   <link rel="stylesheet" href="/common/css/font.css" />
   <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
@@ -30,26 +30,33 @@
 
 <body>
   <a href="#main" class="skip">본문 바로가기</a>
-  <header></header>
+  <header>
+    <div class="flex align_center space wrap_com">
+      <h1><a href="" class="dp_b"><img src="common/images/logo_3x.png" alt=""></a></h1>
+      <div class="left"><a href="" class="btn add_after"><span>비뇨의학과 학회 주요 일정</span></a></div>
+      <div class="right">
+        <a href="" class="btn">마이페이지</a>
+        <a href="" class="btn">로그아웃</a>
+      </div>
+    </div>
+  </header>
   <main id="main">
-    <section class="sec_login complete sec_type1">
-      <div class="wrap_com">
+    <div class="wrap_com">
+      <section class="sec_login sec_type1 f_NotoSansKR">
         <div class="sec_tit">
           <span class="txt">Becton, Dickinson</span>
-          <div class="heading eng"><span>Congratulation</span></div>
-          <p class="dp_b color_000 fw400 f_NotoSansKR">회원가입이 완료
-            되었습니다.</p>
+          <h2 class="heading eng">MEMBER’S LOGIloN</h2>
         </div>
         <div class="wrap_form">
           <ul class="list_reg">
             <li class="id add_after">
               <div class="bx_input">
-                <input type="email" placeholder="아이디(이메일 입력)" />
+                <input type="email" placeholder="아이디(이메일)를 입력해주세요." />
               </div>
             </li>
             <li class="pw add_after">
               <div class="bx_input">
-                <input type="password" placeholder="비밀번호 입력" />
+                <input type="password" placeholder="비밀번호를 입력해주세요." />
               </div>
             </li>
           </ul>
@@ -61,9 +68,15 @@
             <button class="btn_login btn_type1">로그인</button>
           </div>
           </form>
+          <h3 class="hide">회원가입 및 회원정보 찾기</h3>
+          <ul class="list_find">
+            <li><a href="/signup1-agree.html">회원가입</a></li>
+            <li><a href="/find-id.html">아이디 찾기</a></li>
+            <li><a href="/find-pw.html">비밀번호 찾기</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 </body>
 

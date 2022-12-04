@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>슈퍼로또코리아</title>
+  <title>BD</title>
   <link rel="stylesheet" href="/common/css/default.css" />
   <link rel="stylesheet" href="/common/css/common.css" />
-  <link rel="stylesheet" href="/common/css/style.css" />
   <link rel="stylesheet" href="/common/css/sub.css" />
+  <link rel="stylesheet" href="/common/css/responsive.css" />
   <link rel="stylesheet" href="/common/css/font.css" />
   <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
@@ -56,18 +56,18 @@
                   </div>
                 </li>
                 <li class="item_info">
-                  <label for="reg_name"><span>환자정보<span class="color_red">*</span></span></label>
+                  <label for=""><span>환자정보<span class="color_red">*</span></span></label>
                   <ul class="list_reg">
                     <li>
-                      <label for=""><span>나이</span></label>
+                      <label for="age"><span>나이</span></label>
                       <div class="bx_input">
-                        <input type="text" id="" />
+                        <input type="text" id="age" />
                       </div>
                     </li>
                     <li>
-                      <label for=""><span>성별</span></label>
+                      <label for="gender"><span>성별</span></label>
                       <div class="bx_input">
-                        <select name="" id="">
+                        <select name="" id="gender">
                           <option value="">선택해주세요</option>
                           <option value="">남</option>
                           <option value="">여</option>
@@ -75,32 +75,32 @@
                       </div>
                     </li>
                     <li>
-                      <label for=""><span>상태</span></label>
+                      <label for="condition"><span>상태</span></label>
                       <div class="bx_input">
-                        <input type="text" id="" />
+                        <input type="text" id="condition" />
                       </div>
                     </li>
                     <li>
-                      <label for=""><span>기타</span></label>
+                      <label for="etc"><span>기타</span></label>
                       <div class="bx_input">
-                        <input type="text" id="" placeholder="특이사항 입력" />
+                        <input type="text" id="etc" placeholder="특이사항 입력" />
                       </div>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <label for="reg_name">
+                  <label for="result">
                     <span>상병진단
                       <span class="color_red">*<small>(ex.결석 크기 및 기타 환자 상태)</small>
                       </span>
                     </span>
                   </label>
                   <div class="bx_input textarea">
-                    <textarea name="" id="" placeholder="진단상태를 입력해 주세요"></textarea>
+                    <textarea name="" id="result" placeholder="진단상태를 입력해 주세요"></textarea>
                   </div>
                 </li>
                 <li class="item_method">
-                  <label for="reg_name"><span>수술방법<span class="color_red">*<small>(ex.결석 크기 및 기타 환자
+                  <label for=""><span>수술방법<span class="color_red">*<small>(ex.결석 크기 및 기타 환자
                           상태)</small></span></span></label>
                   <ul>
                     <li>
@@ -136,12 +136,12 @@
                   </ul>
                 </li>
                 <li class="required">
-                  <label for="reg_name">
+                  <label for="process">
                     <span>수술 프로세스</span>
                     <small class="color_red">(ex.결석 크기 및 기타 환자 상태)</small>
                   </label>
                   <div class="bx_input textarea">
-                    <textarea name="" id="" placeholder="수술의 구체적인 방법을 서술해 주세요"></textarea>
+                    <textarea name="" id="process" placeholder="수술의 구체적인 방법을 서술해 주세요"></textarea>
                   </div>
                 </li>
                 <li class="item_image required">
@@ -187,8 +187,8 @@
                     </ul>
                   </div>
                 </li>
-                <li class="required">
-                  <label for="reg_name"><span>결석 치료 방법</span><small class="color_red">(5가지 방법 중 택 1)</small></label>
+                <li class="item_radio required">
+                  <label for=""><span>결석 치료 방법</span><small class="color_red">(5가지 방법 중 택 1)</small></label>
                   <ul class="flex align_center space">
                     <li>
                       <input type="radio" id="chk1" class="chk_type2" name="method" />
@@ -222,26 +222,26 @@
                     </li>
                   </ul>
                 </li>
-                <li class="required">
+                <li class="item_video required">
                   <label for="reg_name">
                     <span>수술 영상</span>
                     <small class="color_red">(하기 링크를 통해 영상 업로드)</small>
                   </label>
                   <input type="file" id="file_video" class="" />
-                  <label for="file_video" class="btn_w">영상 링크 URL</label>
+                  <label for="file_video" class="btn btn_w txt_center">영상 링크 URL</label>
                 </li>
-                <li class="required">
-                  <label for="reg_corp">
+                <li class="item_total required">
+                  <label for="total">
                     <span>수술 관련 의료진 총평</span>
                   </label>
                   <div class="bx_input textarea gray">
-                    <textarea name="" id=""></textarea>
+                    <textarea name="" id="total"></textarea>
                   </div>
                 </li>
               </ul>
               <div class="wrap_btn flex align_center space">
                 <button class="btn_prev">다시 작성</button>
-                <a href="signup3-complete.html" class="btn_type1">제출하기</a>
+                <a href="regist-detail.html" class="btn_type1">제출하기</a>
               </div>
             </fieldset>
           </form>

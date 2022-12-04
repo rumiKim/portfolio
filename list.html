@@ -1,164 +1,450 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<title>list</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+		integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<style>
-		body{ font:10px tahoma; color:#666666;}
-		h1 { color:#333; text-align:center; font-size:18px;font-weight:normal;}
-		a{ color:#333; text-decoration:none; }
-		a:hover	{ text-decoration:underline;}
-		i span {position:absolute; left:-3000%; font-size:0;}
-		table { min-width:950px; width:100%;border-top:1px solid #CCCCCC;border-bottom:1px solid #333;  border-collapse:collapse;}
-		table th {padding:5px 0 ; height:40px; background:#555; color:#fff; font-size:14px; font-weight:normal;}
-		table td{padding-top:10px; padding-bottom:10px; border-bottom:1px solid #ccc; color:#333; font-size:12px; text-align: center;}
-		table tr.line td{border-top:2px solid #81cfe0;}
-		tr:hover td {background:#f1f1f1; color:#333;}
-		table td.one{padding-left:10px; color:#f70700;}
-		table td.two{}
-		table td.three{}
-		table td.w3c{text-align:center;}
-		table td.kwcag{text-align:center;}
-		table td.wc { color:#096;}
-		table td.filename{text-align:center;}
-		table td.pageid{ color:#63F; text-align:center;}
-		table td.date1 {font-family:verdana; text-align:center; color:#4975cf;}
-		table td.date2{font-family:verdana; color:#f70700; text-align:center;}
-		table td del { display:block; color:#999;}
-		.title {color:#333;font-weight:bold; font-size:16px; font-family:tahoma;}
-		.title a:hover {color:#333;}
-		p { text-align:right; margin-bottom:-0px; font-family:dotum; font-size:11px; color:#CCC;}
-		.ov { overflow:auto; padding:10px; margin:20px 0;  height:50px; border:1px solid #333; border-radius:5px; font-size:14px;}
-		.del { background:#CCC; text-decoration:line-through; color:#fff;}
-		.del a { color:#FFF;}
-		.mark {padding-bottom:10px; font-size:0; text-align:center;}
-		.mark > div {display:inline-block; vertical-align:top;}
-		.mark > div img {margin:0 5px;width:auto; height:50px; }
-		.mark .first {width:20%;}
-		.mark .second {width:60%;}
-		.mark .third {width:20%;}
-		h2 { color:#333; font-weight:normal; font-size:15px; }
-		.mark i {padding:0 5px; font-size:50px; color:#333; transition-duration:0.5s;}
-		.mark i:hover {color:#81cfe0;}
+		body {
+			font: 10px tahoma;
+			color: #666666;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			font-size: 18px;
+			font-weight: normal;
+		}
+
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		i span {
+			position: absolute;
+			left: -3000%;
+			font-size: 0;
+		}
+
+		table {
+			min-width: 950px;
+			width: 100%;
+			border-top: 1px solid #CCCCCC;
+			border-bottom: 1px solid #333;
+			border-collapse: collapse;
+		}
+
+		table th {
+			padding: 5px 0;
+			height: 40px;
+			background: #555;
+			color: #fff;
+			font-size: 14px;
+			font-weight: normal;
+		}
+
+		table td {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #ccc;
+			color: #333;
+			font-size: 12px;
+			text-align: center;
+		}
+
+		table tr.line td {
+			border-top: 2px solid #81cfe0;
+		}
+
+		tr:hover td {
+			background: #f1f1f1;
+			color: #333;
+		}
+
+		table td.one {
+			padding-left: 10px;
+			color: #f70700;
+		}
+
+		table td.two {}
+
+		table td.three {}
+
+		table td.w3c {
+			text-align: center;
+		}
+
+		table td.kwcag {
+			text-align: center;
+		}
+
+		table td.wc {
+			color: #096;
+		}
+
+		table td.filename {
+			text-align: center;
+		}
+
+		table td.pageid {
+			color: #63F;
+			text-align: center;
+		}
+
+		table td.date1 {
+			font-family: verdana;
+			text-align: center;
+			color: #4975cf;
+		}
+
+		table td.date2 {
+			font-family: verdana;
+			color: #f70700;
+			text-align: center;
+		}
+
+		table td del {
+			display: block;
+			color: #999;
+		}
+
+		.title {
+			color: #333;
+			font-weight: bold;
+			font-size: 16px;
+			font-family: tahoma;
+		}
+
+		.title a:hover {
+			color: #333;
+		}
+
+		p {
+			text-align: right;
+			margin-bottom: -0px;
+			font-family: dotum;
+			font-size: 11px;
+			color: #CCC;
+		}
+
+		.ov {
+			overflow: auto;
+			padding: 10px;
+			margin: 20px 0;
+			height: 50px;
+			border: 1px solid #333;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+
+		.del {
+			background: #CCC;
+			text-decoration: line-through;
+			color: #fff;
+		}
+
+		.del a {
+			color: #FFF;
+		}
+
+		.mark {
+			padding-bottom: 10px;
+			font-size: 0;
+			text-align: center;
+		}
+
+		.mark>div {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.mark>div img {
+			margin: 0 5px;
+			width: auto;
+			height: 50px;
+		}
+
+		.mark .first {
+			width: 20%;
+		}
+
+		.mark .second {
+			width: 60%;
+		}
+
+		.mark .third {
+			width: 20%;
+		}
+
+		h2 {
+			color: #333;
+			font-weight: normal;
+			font-size: 15px;
+		}
+
+		.mark i {
+			padding: 0 5px;
+			font-size: 50px;
+			color: #333;
+			transition-duration: 0.5s;
+		}
+
+		.mark i:hover {
+			color: #81cfe0;
+		}
 	</style>
 </head>
+
 <body>
-	<h1>superlottokorea</h1>
+	<h1>BD</h1>
 	<table>
-	<colgroup>
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-		<col width="10%">
-	</colgroup>
-	<thead>
-	<tr>
-		<th>1Depth</th>
-		<th>2Depth</th>
-		<th>3Depth</th>
-		<th>4Depth</th>
-		<th>File Name</th>
-		<th>W3C</th>
-		<th>접근성</th>
-		<th>호환성</th>
-		<th>시작일</th>
-		<th>완료일</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td class="one">메인페이지</td>
-		<td class="two"></td>
-		<td class="three"></td>
-		<td class="four"></td>
-		<td class="filename"><a href="/mobile/">index.html</a></td>
-		<td>
-			<p> <a href="http://validator.kldp.org/check?uri=referer"onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a> </p>
-			<p>
-    		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="http://jigsaw.w3.org/css-validator/images/vcss"alt="올바른 CSS입니다!" /></a>
-			</p>
-		</td>
-		<td><img src="images/web_accessibility.jpg" alt=""></td>
-		<td><img src="images/browser.png" alt=""></td>
-		<td class="date1"></td>
-		<td class="date2"></td>
-	</tr>
-	<tr>
-		<td class="one"></td>
-		<td class="two"></td>
-		<td class="three"></td>
-		<td class="four"></td>
-		<td class="filename"><a href=""></a></td>
-		<td>
-			<p> <a href="http://validator.kldp.org/check?uri=referer"onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a> </p>
-			<p>
-    		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="http://jigsaw.w3.org/css-validator/images/vcss"alt="올바른 CSS입니다!" /></a>
-			</p>
-		</td>
-		<td><img src="images/web_accessibility.jpg" alt=""></td>
-		<td><img src="images/browser.png" alt=""></td>
-		<td class="date1"></td>
-		<td class="date2"></td>
-	</tr>
-	<tr>
-		<td class="one"></td>
-		<td class="two"></td>
-		<td class="three"></td>
-		<td class="four"></td>
-		<td class="filename"><a href=""></a></td>
-		<td>
-			<p> <a href="http://validator.kldp.org/check?uri=referer"onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a> </p>
-			<p>
-    		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="http://jigsaw.w3.org/css-validator/images/vcss"alt="올바른 CSS입니다!" /></a>
-			</p>
-		</td>
-		<td><img src="images/web_accessibility.jpg" alt=""></td>
-		<td><img src="images/browser.png" alt=""></td>
-		<td class="date1"></td>
-		<td class="date2"></td>
-	</tr>
-	<tr>
-		<td class="one"></td>
-		<td class="two"></td>
-		<td class="three"></td>
-		<td class="four"></td>
-		<td class="filename"><a href=""></a></td>
-		<td>
-			<p> <a href="http://validator.kldp.org/check?uri=referer"onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a> </p>
-			<p>
-    		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="http://jigsaw.w3.org/css-validator/images/vcss"alt="올바른 CSS입니다!" /></a>
-			</p>
-		</td>
-		<td><img src="images/web_accessibility.jpg" alt=""></td>
-		<td><img src="images/browser.png" alt=""></td>
-		<td class="date1"></td>
-		<td class="date2"></td>
-	</tr>
-	<tr>
-		<td class="one"></td>
-		<td class="two"></td>
-		<td class="three"></td>
-		<td class="four"></td>
-		<td class="filename"><a href=""></a></td>
-		<td>
-			<p> <a href="http://validator.kldp.org/check?uri=referer"onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a> </p>
-			<p>
-    		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="http://jigsaw.w3.org/css-validator/images/vcss"alt="올바른 CSS입니다!" /></a>
-			</p>
-		</td>
-		<td></td>
-		<td></td>
-		<td class="date1"></td>
-		<td class="date2"></td>
-	</tr>
-	</tbody>
+		<colgroup>
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>1Depth</th>
+				<th>2Depth</th>
+				<th>3Depth</th>
+				<th>4Depth</th>
+				<th>File Name</th>
+				<th>W3C</th>
+				<th>접근성</th>
+				<th>호환성</th>
+				<th>시작일</th>
+				<th>완료일</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="one">메인페이지 - 로그인</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="index.html">index.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td><img src="images/web_accessibility.jpg" alt=""></td>
+				<td><img src="images/browser.png" alt=""></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">회원가입 - 약관동의</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="signup1-agree.html">signup1-agree.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td><img src="images/web_accessibility.jpg" alt=""></td>
+				<td><img src="images/browser.png" alt=""></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">회원가입 - 입력 폼</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="signup2-form.html">signup2-form.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td><img src="images/web_accessibility.jpg" alt=""></td>
+				<td><img src="images/browser.png" alt=""></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">아이디 찾기</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="find-id.html">find-id.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td><img src="images/web_accessibility.jpg" alt=""></td>
+				<td><img src="images/browser.png" alt=""></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">아이디 찾기 - 결과페이지</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="find-id-result.html">find-id-result.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td><img src="images/web_accessibility.jpg" alt=""></td>
+				<td><img src="images/browser.png" alt=""></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">비밀번호 찾기</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="find-pw.html">find-pw.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td></td>
+				<td></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">비밀번호 찾기 - 결과페이지</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="find-pw-result.html">find-pw-result.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td></td>
+				<td></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">마이페이지</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="mypage.html">mypage.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td></td>
+				<td></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">케이스 등록</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="regist-form.html">regist-form.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td></td>
+				<td></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+			<tr>
+				<td class="one">케이스 등록 - 상세페이지</td>
+				<td class="two"></td>
+				<td class="three"></td>
+				<td class="four"></td>
+				<td class="filename"><a href="regist-detail.html">regist-detail.html</a></td>
+				<td>
+					<p> <a href="http://validator.kldp.org/check?uri=referer"
+							onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+								src="https://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15"
+								width="80"></a> </p>
+					<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+								src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" /></a>
+					</p>
+				</td>
+				<td></td>
+				<td></td>
+				<td class="date1"></td>
+				<td class="date2"></td>
+			</tr>
+		</tbody>
 	</table>
 </body>
+
 </html>

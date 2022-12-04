@@ -1,84 +1,60 @@
-.location { margin-bottom: 1.8rem; background: #f8f8fa; font-size: 0.7rem; font-family: 'Noto Sans KR',sans-serif;}
-.location a { display: inline-block;line-height: 2rem; color: #666666;  vertical-align: middle;}
-.location ol li { float: left}
-.location ol li ~ li:before { content: ""; display: inline-block; margin-right: 5px; margin-left: 10px;  width: 5px; height: 9px; background: url(../images/ico_arr_right_loca.png) no-repeat center /100% 100%; vertical-align: middle;}
-.location ol li:first-child a:before { width: 0.8rem; height: 2rem; background: url(/common/images/ico_home_loca.png) no-repeat left 0 center }
-
-
-
 .logo_main { margin:0 0 2.6rem; padding: 1.2rem 0 0.25rem; border:2px solid #444; border-bottom: none; color:#444 ; font-size: 1.1rem}
-
-
 .list_reg {text-align: left;}
-.list_reg .bx_input { display: block; padding-left: 1rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2.4rem; line-height: 1; overflow: hidden; box-sizing: border-box;}
+.list_reg .bx_input { display: block; padding-left: 1rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; height: 2.9rem; line-height: 1; overflow: hidden; box-sizing: border-box;}
 .list_reg .bx_input.type1 input { width: auto}
 .list_reg .bx_input.type1 > div { position: relative; flex:1}
 .list_reg .bx_input.gray { background: #f5f5f5}
-.list_reg .bx_input > * { height: 100%; width: 100%; background: none; box-sizing: border-box; font-size: 0.95rem;}
-.list_reg .bx_input * {font-size: 0.95rem; }
+.list_reg .bx_input > * { height: 100%; width: 100%; background: none; box-sizing: border-box; font-size: 0.95rem; }
+.list_reg .bx_input * {font-size: 0.95rem; letter-spacing: -0.075em;}
 .list_reg > li { display: flex; position: relative;}
-.list_reg > li ~ li { margin-top: 1.5rem}
-.list_reg .list_reg > li ~ li {margin-top: 0.5rem;}
+.list_reg > li ~ li { margin-top: 0.7rem}
+.list_reg .list_reg > li ~ li,.list_reg > li .wrap_type1 ~ .wrap_type1 {margin-top: 0.5rem;}
 .list_reg > li > div { flex: 1; }
-.list_reg > li > label { display: block; width: 21.7%; line-height:2.4rem; font-size: 1rem; cursor: pointer;}
+.list_reg > li > label { display: block; width: 21.7%; font-size: 1rem; cursor: pointer; color: var(--color-gray1); line-height: 2.9rem;}
 .list_reg > li > label.nocursor { cursor: default;}
 .list_reg > li .wrap_type1 > div { flex: 1}
-.list_reg > li .wrap_type1 ~ .wrap_type1  { margin: 0.5rem 0 0}
 .list_reg .bx_num { position: relative;}
-.list_reg .bx_num .time { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: #f00; font-size: 0.7rem}
-
-
-/* .list_reg.type2 { padding:0.85rem 1.1rem ; border-top: 1px solid #000; border-bottom: 1px solid #000; box-sizing: border-box ; font-size: 0.75rem} */
+.list_reg .bx_num .time { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--color-red); font-size: 0.85rem}
+.list_reg .txt_type1 { display:block; padding: 0.5rem 0 0 ; color: #999; line-height: 1.3; font-size: 0.85rem;}
+.btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
+.list_reg .btn_gray { display: inline-block; margin-left: 0.3rem; width: 6rem; height:2.9rem; line-height:2.9rem; font-family: 'Noto Sans KR',sans-serif; font-size: 0.8rem; text-align: center; cursor: pointer;}
+.list_reg .btn_gray:hover{background-color: var(--color-blue);}
 .list_reg.type2 > li {flex-direction: column;}
+.list_reg.type2 > li ~ li.list_reg.type2 > li .wrap_type1 ~ .wrap_type1 {margin-top: 1.5rem;}
 .list_reg.type2 > li > label { width: auto; color: #000; font-size: 1.15rem; font-weight: 700;}
 .list_reg.type2 > li > label small {font-size: 0.75em;}
 .list_reg.type2 .bx_input { height:2.9rem; font-size: 0}
 .list_reg.type2 .bx_input.textarea{padding:0.5rem 1rem; height:5.65rem}
 .list_reg.type2 .bx_input * { background: none}
 .list_reg.type2 > li > div { flex:none; }
-/* .sec_apply .item_addr > div > div ~ div { margin-top: 0.65rem} */
-.
+
+
 /* login page */
 .sec_login { text-align: center; box-sizing: border-box;}
+.sec_login .wrap_com{width: 22rem;}
+.sec_login .list_reg > li ~ li{margin-top: 0.4rem;}
 .sec_login .list_reg > li:after { position: absolute; left: 1rem; top: 0; width: 1rem; height: 100%; background-repeat: no-repeat; background-position: center; background-size: 100% auto; }
 .sec_login .list_reg > li.id:after { background-image: url(/common/images/ico_id.png)}
 .sec_login .list_reg > li.pw:after { background-image: url(/common/images/ico_pw.png)}
 .sec_login .list_reg .bx_input { padding:0 0 0 2.5rem; width: 100%; box-sizing: border-box; color: #000}
-.sec_login .btn_login { margin:1.5rem 0 1.65rem; font-size: 1.25rem; }
-
-
+.sec_login .btn_login { margin:2.75rem 0 1.65rem; font-size: 1.25rem; }
 .sec_login .wrap_chk { text-align: left;}
 .sec_login .wrap_chk label { cursor: pointer; color: #444; font-weight: 400; font-size: 0.75rem}
 .sec_login .list_find { font-size: 0}
 .sec_login .list_find li { position: relative; display: inline-block; padding: 0 0.95rem }
-.sec_login .list_find li:after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
+.sec_login .list_find li ~ li:before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; background: #e9e9e9; height: 13px}
 .sec_login .list_find li a { display: block; padding: 0.25rem 0; font-size: 0.75rem; color: #444; font-weight: 500; }
+.sec_login.complete .heading + p {margin-top:1.15rem; font-size: 1.75rem;}
 
 
 
 /* signup - common */
-.sec_signup { width: 35rem; margin: 0 auto; }
 .sec_signup .form_tit{margin-bottom:1.85rem; padding: 4rem 0 1.1rem; border-bottom: 1px solid var(--color-gray2);}
+.sec_signup .wrap_btn{margin-top: 1.9rem; padding-top: 2rem; border-top: 1px solid var(--color-gray2);}
 .sec_signup .view { padding-left: 0.8rem; color: #666; text-decoration: underline; font-weight: 500}
-.list_reg .txt_type1 { display:block; padding: 0.5rem 0 0 ;font-size: 0.65rem; color: #999; line-height: 1.3}
-.btn_gray { background: #444; color: #fff; border-radius: 0.2rem; box-sizing: border-box;}
-.list_reg .btn_gray { margin-left: 0.3rem; width: 6rem; height:2.4rem;  font-family: 'Noto Sans KR',sans-serif}
-
-
-/* 약관동의 - signup1-agree.html */
-.sec_signup.agree form {font-size: 0.75rem;}
-.sec_signup.agree form legend { padding: 0 0 3.35rem}
-.sec_signup.agree form ul li { color: #666}
-.sec_signup.agree form ul li ~ li { padding: 0.85rem 0 0; }
-.sec_signup.agree form .btm { margin-top: 1rem; padding: 1.6rem 4.5%; border: 1px solid #cfcfcf}
-.sec_signup.agree form .btm > li { display: flex; justify-content: space-between; align-items: center;}
-.sec_signup.agree form .wrap_btn { padding:1.5rem 0 0}
-
-
-/* 회원가입입력 - signup.html */
 .sec_signup.write { text-align: center;}
 .sec_signup.write form { padding: 3.5rem 0 0; font-size: 0.75rem;}
-.sec_signup .list_step li { width: 6.7rem}
+.sec_signup .list_step li { width: 6.7rem; text-align: center;}
 .sec_signup .list_step li:before { content: ""; display: inline-block; width: 3.2rem; height: 3.2rem; background-image: url(/common/images/ico_agree.png); background-repeat: no-repeat; background-position: center; background-size: auto 50%; background-color: var(--color-gray2); border-radius: 100%; }
 .sec_signup .list_step li.active:before { background-color: var(--color-blue)}
 .sec_signup .list_step li p { padding:0.9rem 0 0; font-size: 0.9rem; color: #3d3f41;}
@@ -90,12 +66,22 @@
 .sec_signup.write .list_reg .bx_tel select { height: 100%; width: 30%; }
 .sec_signup.write .list_reg .bx_tel input { width: 60%}
 .sec_signup.write .wrap_btn { padding: 3.75rem 0 14.5rem}
+
+
+/* 약관동의 - signup1-agree.html */
+.sec_signup.agree form {font-size: 0.75rem;}
+.sec_signup.agree form legend { padding: 0 0 3.35rem}
+.sec_signup.agree form ul li { color: #666}
+.sec_signup.agree form ul li ~ li { padding: 0.85rem 0 0; }
+.sec_signup.agree form .btm { margin-top: 1rem; padding: 1.6rem 4.5%; border: 1px solid #cfcfcf}
+.sec_signup.agree form .btm > li { display: flex; justify-content: space-between; align-items: center;}
 .bx_agree .bx_input { height: auto; padding-bottom: 1.5rem; font-size: 0.75rem; color: #666}
+
 
 /* 아이디 찾기 */
 .sec_signup.find_id .wrap_btn,
 .sec_find.pw .wrap_btn
- { margin:3.85rem 0 0; padding:2.5rem 0 0 ; border-top: 1px solid #e8e8e8; }
+ {padding-top: 3.2rem; border-top: 1px solid var(--color-gray2);}
 .sec_find { padding:2rem 0; text-align: center;}
 .sec_find .bx_result { background:#f4f4f4; padding:2rem }
 .sec_find .bx_result > p { font-size: 1.1rem}
@@ -103,6 +89,7 @@
 .sec_find .wrap_title .h_type3 { padding-bottom: 3.5rem}
 .sec_find .wrap_title > p { padding: 0 0 2rem; font-size: 1.25rem}
 .sec_find .btn_w {border: none;}
+.sec_find .list_reg:first-of-type {padding-bottom: 2.4rem;}
 
 /* regist page */
 .sec_reg .item_info .list_reg{font-size: 0;}
@@ -116,8 +103,10 @@
 .sec_reg .item_method ul li > p{flex: 1; line-height: 1.47;}
 .sec_reg .item_image ul li ~ li {margin-top: 0.8rem;}
 .sec_reg .item_image ul li > label{margin-bottom:0.55rem; font-size: 0.95rem; color: #3d3f41; line-height: 1;}
-
-
+.sec_reg .item_video .btn {font-size: 0.85rem; color: #828384;}
+.sec_reg .list_reg.type2 .bx_input.textarea {height: 16rem;}
+.sec_reg .item_radio ul{display: block; font-size: 1.2rem;}
+.sec_reg .item_radio ul li label {line-height: 2;}
 
 
 
@@ -129,7 +118,7 @@
 /* mypage - common */
 .wrap_mypage.wrap_com { width: 50.25rem;}
 .wrap_mypage .wrap_title { padding: 0 0 1.2rem}
-.wrap_mypage .wrap_title .heading { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.075em}
+.wrap_mypage .wrap_title .heading { font-size: 1.25rem; font-weight: 500;}
 .wrap_mypage > .left { width: 24.57%;}
 .wrap_mypage > .right { width: 70%;  }
 .wrap_mypage > .right section { padding-top: 0.75rem}
@@ -146,37 +135,12 @@
 .sec_mypage .list > li .hospital {margin: 0 1.1rem 0 1.4rem;}
 .sec_mypage .list > li .btn_blue{padding: 0.4rem 1.6rem; margin-left: 1.2rem; border-radius: 1.5rem;}
 
-
 .wrap_input { height: 2.5rem; font-size: 0}
 .wrap_input > * { height: 100%; box-sizing: border-box; border-radius: 0.2rem; font-size: 0.75rem; font-family: 'Noto Sans KR',sans-serif;}
 .wrap_input > input { padding-left: 1rem; width:20.5rem;  border: 1px solid #e8e8e8; background: #fff}
 .wrap_input > button, .wrap_input > a { display:inline-block; margin-left: 0.4rem; width: 6rem; vertical-align: middle; text-align: center; line-height: 2.5rem}
 
 
-
-
-.sec_charge .wrap_notice { padding: 2.6rem 0 4rem}
-.sec_charge .wrap_notice .add_before:before { margin-right: 0.5rem; background: url(../images/ico_i.png) no-repeat center / 100% 100%; width: 1.25rem; height: 1.25rem;}
-
-.popup.charge > .inner { width:29.25rem; box-sizing: border-box; font-family: 'Noto Sans KR',sans-serif; }
-.popup.charge > .inner > div { padding-left: 2.3rem; padding-right: 2.3rem}
-.popup.charge > .inner .bx_white {  padding-bottom: 2rem;}
-.popup.charge .title { display: block; padding:2rem 0 1.25rem; font-family: 'GmarketSans'; font-size: 1.25rem; }
-.popup.charge.pay .bx_gray.top { padding:1.15rem 0 1.15rem 1.25rem; font-size: 1rem; color:#545454 ; line-height: 1.4; font-weight: bold;}
-.popup.charge.pay .list_sel > li { width: 25%; margin-left: -1px; margin-top: -1px;}
-.popup.charge.pay .list_sel > li a { display: block; height: 3.35rem; line-height: 3.35rem; box-sizing: border-box; border-color: #d5d5d5;  text-align: center; color: #000}
-.popup.charge.pay .list_sel > li a:hover { border-color: #000;}
-.popup.charge .btn_pay { margin: 1.35rem auto 0}
-.popup.charge .list_bul.notice { border-top: 1px solid #dcdcdc; padding-top: 0.8rem; padding-bottom: 1rem; font-size: 0.65rem; color: #252525; }
-.popup.charge .list_bul > li { padding: 0}
-.popup.charge .list_bul > li * { vertical-align: middle;}
-.popup.charge .list_bul > li:before { background: none; content: "*"; width: inherit; height: inherit;}
-.popup.charge .list_bul > li span { vertical-align: sub;}
-.mileage .list_reg { padding: 2rem 0.85rem 1.2rem ;  }
-.mileage .list_reg:nth-of-type(1) { border-bottom: 1px solid #e5e5e5; border-top:1px solid #000;}
-.mileage .list_reg:nth-of-type(1) > li label { padding: 0.8rem 0 0}
-.mileage .list_reg > li > label { width: 8rem; line-height: inherit;}
-.mileage .list_reg > li > .bx_input { width: 11.5rem; flex: none;}
 
 /* CASE SHARING page */
 .sec_detail .doctor {padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-gray2);}
@@ -194,8 +158,8 @@
 .sec_detail .box.image ul li {position: relative; overflow: hidden; padding:0 0 35%; margin-bottom: 0.3rem; height:0; width: 17.3rem; border-radius: 0.25rem;}
 .sec_detail .box.image ul li img{position: absolute; left: 0; right: 0; top: 0; bottom: 0; object-fit: cover; width: 100%; height: 100%;}
 
-header,footer div {background-color: var(--color-blue); height: 4.5rem; }
-header .wrap_com{position: relative; height: 4.5rem; font-size: 0;}
+header,footer div {background-color: var(--color-blue); height: 4.5rem; box-sizing: border-box;}
+header .wrap_com{position: relative; height: 4.5rem; width: 60rem; font-size: 0; box-sizing: border-box;}
 header h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 100%; line-height: 4.5rem;}
 header h1 a {height: 100%; }
 header h1 a img{height: 1.5rem; }
@@ -204,16 +168,6 @@ header .btn:hover{background-color: #fff; color: var(--color-blue);}
 header .right .btn{margin-left: 0.5rem;}
 header .left .btn:after{margin-left: 0.65rem; width: 1.1rem; height: 1.1rem; background: url(../images/ico_date_w.png) no-repeat center / 100% 100% ;}
 header .left .btn:hover:after{background-image: url(../images/ico_date_blue.png);}
-
-
-
-/* 게시판 상세보기 공통 */
-.board_type1 > .title { padding: 1.5rem; font-size: 0.75rem; color: #676767}
-.board_type1 > .title > .left p { padding: 0 0 0.5rem; font-size: 0.85rem; color: #000}
-.board_type1 > .title > .right { font-size: 0.7rem}
-.board_type1 > .contents { padding: 2rem 1.5rem; border-top: 1px solid #d2d2d2; font-size: 0.75rem; color: #676767; line-height: 1.5}
-.board_type1 .list_type4 > li.prev a:after { background-image: url(../images/ico_arr_top_prev.png); }
-.board_type1 .list_type4 > li.next a { color: #666666}
 
 
 .sec_policy > div { padding: 40px 35px}
