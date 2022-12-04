@@ -33,7 +33,7 @@
   <header></header>
   <main id="main">
     <div class="wrap_com">
-      <section class="sec_reg sec_type1 agree">
+      <section class="sec_reg sec_type1">
         <div class="sec_tit">
           <span class="txt">Becton, Dickinson</span>
           <h2 class="heading">환자 수술 케이스 등록</h2>
@@ -42,7 +42,7 @@
           <form class="">
             <fieldset>
               <legend class="hide">환자 수술 케이스 등록 입력 양식</legend>
-              <ul class="list_reg type2">
+              <ul class="list_reg type2 ls75">
                 <li>
                   <label for="reg_corp"><span>소속(병원명)</span></label>
                   <div class="bx_input gray">
@@ -55,8 +55,8 @@
                     <input type="text" id="reg_name" placeholder="홍길동" />
                   </div>
                 </li>
-                <li>
-                  <label for="reg_name"><span>환자정보*</span></label>
+                <li class="item_info">
+                  <label for="reg_name"><span>환자정보<span class="color_red">*</span></span></label>
                   <ul class="list_reg">
                     <li>
                       <label for=""><span>나이</span></label>
@@ -89,88 +89,97 @@
                   </ul>
                 </li>
                 <li>
-                  <label for="reg_name"><span>상병진단<span class="color_red">(ex.결석 크기 및 기타 환자 상태)</span></span></label>
-                  <div class="bx_input">
+                  <label for="reg_name">
+                    <span>상병진단
+                      <span class="color_red">*<small>(ex.결석 크기 및 기타 환자 상태)</small>
+                      </span>
+                    </span>
+                  </label>
+                  <div class="bx_input textarea">
                     <textarea name="" id="" placeholder="진단상태를 입력해 주세요"></textarea>
                   </div>
                 </li>
-                <li>
-                  <label for="reg_name"><span>수술방법<span class="color_red">(ex.결석 크기 및 기타 환자 상태)</span></span></label>
+                <li class="item_method">
+                  <label for="reg_name"><span>수술방법<span class="color_red">*<small>(ex.결석 크기 및 기타 환자
+                          상태)</small></span></span></label>
                   <ul>
                     <li>
-                      <div class="bx_input">
-                        <input type="checkbox" id="chk1" class="chk_type1" />
-                        <label for="chk1">
-                          <span>RIRS</span>
-                        </label>
-                        <p>
-                          요도를 통해 스텐트 삽입 및 신장까지 도달시켜 신장에
-                          있는 결석 제거
-                        </p>
-                      </div>
+                      <input type="checkbox" id="method1" class="chk_type2" />
+                      <label for="method1">
+                        <span>RIRS</span>
+                      </label>
+                      <p>
+                        요도를 통해 스텐트 삽입 및 신장까지 도달시켜 신장에
+                        있는 결석 제거
+                      </p>
                     </li>
                     <li>
-                      <div class="bx_input">
-                        <input type="checkbox" id="chk1" class="chk_type1" />
-                        <label for="chk1">
-                          <span>ESWL</span>
-                        </label>
-                        <p>
-                          체외충격파를 통해 외부에서의 충격을 주어 신장내부에
-                          있는 결석을 잘게 부수어 소변으로 나오게끔 함
-                        </p>
-                      </div>
+                      <input type="checkbox" id="method2" class="chk_type2" />
+                      <label for="method2">
+                        <span>ESWL</span>
+                      </label>
+                      <p>
+                        체외충격파를 통해 외부에서의 충격을 주어 신장내부에
+                        있는 결석을 잘게 부수어 소변으로 나오게끔 함
+                      </p>
                     </li>
                     <li>
-                      <div class="bx_input">
-                        <input type="checkbox" id="chk1" class="chk_type1" />
-                        <label for="chk1">
-                          <span>PCNL</span>
-                        </label>
-                        <p>
-                          신장 표면 피부를 절개하여 신장으로 곧바로 장치
-                          삽입하여 결석 제거
-                        </p>
-                      </div>
+                      <input type="checkbox" id="method3" class="chk_type2" />
+                      <label for="method3">
+                        <span>PCNL</span>
+                      </label>
+                      <p>
+                        신장 표면 피부를 절개하여 신장으로 곧바로 장치
+                        삽입하여 결석 제거
+                      </p>
                     </li>
                   </ul>
                 </li>
-                <li class="">
-                  <label><span>수술 이미지<span>(필수 첨부 사항 입니다.)</span></span></label>
+                <li class="required">
+                  <label for="reg_name">
+                    <span>수술 프로세스</span>
+                    <small class="color_red">(ex.결석 크기 및 기타 환자 상태)</small>
+                  </label>
+                  <div class="bx_input textarea">
+                    <textarea name="" id="" placeholder="수술의 구체적인 방법을 서술해 주세요"></textarea>
+                  </div>
+                </li>
+                <li class="item_image required">
+                  <label><span>수술 이미지</span><small class="color_red">(필수 첨부 사항 입니다.)</small></label>
                   <div>
-                    <ul class="">
-                      <li>
-                        <p>1) 수술 이미지*</p>
+                    <ul class="list_reg type2">
+                      <li class="required">
+                        <label><span>1) 수술 이미지</span></label>
                         <div class="wrap_type1 flex align_center">
                           <div class="bx_input">
-                            <input type="file" id="file1" class="">
+                            <input type="file" id="file1" class="" />
                           </div>
                           <label for="file1" class="btn_gray">찾아보기</label>
                         </div>
                       </li>
-                      <li>
-                        <p>2) CT 이미지*</p>
+                      <li class="required">
+                        <label><span>2) CT 이미지</span></label>
                         <div class="wrap_type1 flex align_center">
                           <div class="bx_input">
-                            <input type="file" id="file2">
+                            <input type="file" id="file2" />
                           </div>
                           <label for="file2" class="btn_gray">찾아보기</label>
                         </div>
                       </li>
-                      <li>
-                        <p>3) Endo 이미지*</p>
+                      <li class="required">
+                        <label><span>3) Endo 이미지</span></label>
                         <div class="wrap_type1 flex align_center">
                           <div class="bx_input">
-                            <input type="file" id="file3">
+                            <input type="file" id="file3" />
                           </div>
                           <label for="file3" class="btn_gray">찾아보기</label>
                         </div>
                       </li>
-                      <li>
-                        <p>4) 결석 캡쳐 사진*</p>
+                      <li class="required">
+                        <label><span>4) 결석 캡쳐 사진</span></label>
                         <div class="wrap_type1 flex align_center">
                           <div class="bx_input">
-                            <input type="file" id="file4">
+                            <input type="file" id="file4" />
                           </div>
                           <label for="file4" class="btn_gray">찾아보기</label>
                         </div>
@@ -178,49 +187,54 @@
                     </ul>
                   </div>
                 </li>
-                <li>
-                  <label for="reg_name"><span>결석 치료 방법* <span class="color_red">(5가지 방법 중 택 1)</span></span></label>
-                  <ul>
+                <li class="required">
+                  <label for="reg_name"><span>결석 치료 방법</span><small class="color_red">(5가지 방법 중 택 1)</small></label>
+                  <ul class="flex align_center space">
                     <li>
-                      <input type="radio" id="chk1" class="chk_type1" name="method" />
+                      <input type="radio" id="chk1" class="chk_type2" name="method" />
                       <label for="chk1">
                         <span>내시경 수술</span>
                       </label>
                     </li>
                     <li>
-                      <input type="radio" id="chk2" class="chk_type1" name="method" />
+                      <input type="radio" id="chk2" class="chk_type2" name="method" />
                       <label for="chk2">
                         <span>개복 수술</span>
                       </label>
                     </li>
                     <li>
-                      <input type="radio" id="chk3" class="chk_type1" name="method" />
+                      <input type="radio" id="chk3" class="chk_type2" name="method" />
                       <label for="chk3">
                         <span>충격파쇄석술</span>
                       </label>
                     </li>
                     <li>
-                      <input type="radio" id="chk4" class="chk_type1" name="method" />
+                      <input type="radio" id="chk4" class="chk_type2" name="method" />
                       <label for="chk4">
                         <span>로봇수술</span>
                       </label>
                     </li>
                     <li>
-                      <input type="radio" id="chk5" class="chk_type1" name="method" />
+                      <input type="radio" id="chk5" class="chk_type2" name="method" />
                       <label for="chk5">
                         <span>ECRS</span>
                       </label>
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <label for="reg_name"><span>수술 영상*<span class="color_red">(하기 링크를 통해 영상 업로드)</span></span></label>
-                  <input type="file" id="file1" class="">
-                  <label for="file1" class="btn_w">영상 링크 URL</label>
+                <li class="required">
+                  <label for="reg_name">
+                    <span>수술 영상</span>
+                    <small class="color_red">(하기 링크를 통해 영상 업로드)</small>
+                  </label>
+                  <input type="file" id="file_video" class="" />
+                  <label for="file_video" class="btn_w">영상 링크 URL</label>
                 </li>
-                <li>
-                  <label for="reg_corp"><span>수술 관련 의료진 총평* </span></label>
-                  <div class="bx_input gray">
+                <li class="required">
+                  <label for="reg_corp">
+                    <span>수술 관련 의료진 총평</span>
+                  </label>
+                  <div class="bx_input textarea gray">
                     <textarea name="" id=""></textarea>
                   </div>
                 </li>
