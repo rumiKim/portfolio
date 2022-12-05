@@ -111,6 +111,20 @@
 
 
 
+/* popup */
+.popup { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; line-height: 1}
+.popup.active { display: block !important;}
+.popup > .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); min-width: 700px; background: #fff; overflow: hidden;}
+.popup > .inner > .btn_close:after { content: "X"; display: block; position: absolute; right: 1.8rem; top: 2rem; padding:0.2rem; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; font-weight: 600}
+.popup .btn_close { position: absolute; right: 0; top: 0; }
+.popup > .inner { padding: 2.75rem 3rem 3rem}
+.popup .title { padding: 0 0 2rem; font-size: 1.9rem; font-weight: 400; letter-spacing: -0.05em; border-bottom:3px solid #444 }
+
+/* table */
+.tb_type1 { border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; font-size: 0.75rem; line-height: 1.26rem; word-break: keep-all;}
+.tb_type1 th, .tb_type1 td { padding: 1rem 1.75rem }
+.tb_type1 thead { background: #f4f4f4}
+.tb_type1 tbody { color: #666}
 /* 개인정보 수집 팝업 */
 .popup.policy .txt { padding: 1.6rem 0 ; font-size: 0.8rem; color: #666; line-height: 1.7}
 

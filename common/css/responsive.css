@@ -61,4 +61,16 @@ header .wrap_com{padding:0 10%; width: 100%;}
 main{min-height: 100vh}
 .footer {margin-top: 0;}
 
+.popup.active { display: block !important;}
+.popup > .inner { padding:4vw 3vw; position: absolute; left: 50%; top: 50%; width: 90vw; height: 90vh; min-width: auto; transform: translate(-50%,-50%); background: #fff; overflow: auto; box-sizing: border-box;}
+.popup .bx_padding { padding-left: 1rem; padding-right: 1rem; }
+.popup .bx_gray { padding-top: 0.85rem; padding-bottom: 0.85rem; font-size: var(--px19); line-height: 1.3}
+.popup .btn_close {position:absolute; right: 1rem; top: 0.5rem;  }
+.popup .wrap_title { font-family: 'Noto Sans KR', sans-serif}
+.popup .wrap_title .title { padding: 0 0 var(--px10)}
+.popup .title { padding: 3rem 0 0.8rem; font-size: 1.3em; font-weight: 400; letter-spacing: -0.05em; border-bottom:1px solid #444 ;text-align: center;}
+.popup > .inner > .btn_close:after {content: "X";display: block;position: absolute;right: 0.8rem;top: 0.5rem;padding:0.2rem;font-size: 2rem;font-family: 'Montserrat',sans-serif;font-weight: 600}
+
+.tb_type1 th, .tb_type1 td{padding: 1rem 0.5rem;}
+
 }
