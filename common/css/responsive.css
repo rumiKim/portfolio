@@ -1,6 +1,5 @@
 @media screen and (max-width: 1200px) {
-  header{display: none !important;}
-  header .wrap_com{padding:0 5%; width: 100%;}
+  header .wrap_com{padding:0 3%; width: 100%;}
 
   /* mypage */
   .wrap_mypage.wrap_com {padding:0 3%; width: 100%;}
@@ -8,6 +7,10 @@
   .wrap_mypage .sec_tit{text-align: center;}
 }
 @media screen and (max-width: 768px) {
+header .wrap_com.wrap_gnb { flex-direction: column; justify-content: center; align-items: flex-start; position: fixed; left: 0; top: 0; bottom: 0; width: 100vw; height: 100vh; background: var(--color-blue); z-index: 100;}
+header .btn{display: block; padding: 0; margin: 0; border: none; text-align: left; font-size: 5vw; line-height: 2;}
+header .right .btn{margin: 3vw 0 0;}
+header .left .btn:after{width: 5vw; height: 5vw; vertical-align: -0.7vw;}
   /* responsive */
 .pc{display: none !important;}
 .pc.flex{display: none !important;}
@@ -44,7 +47,7 @@ header .wrap_com{padding:0 10%; width: 100%;}
 
 /* regist page */
 .sec_reg .item_info .list_reg > li:nth-child(1), .sec_reg .item_info .list_reg > li:nth-child(2){width: 100%;}
-
+.sec_reg .item_method ul li > label{margin-bottom: 0.5rem;}
 /* detail page */
 .sec_detail .wrap_box{font-size: 1rem;}
 .sec_detail .wrap_box h3{font-size: 1.2rem;}
@@ -55,5 +58,7 @@ header .wrap_com{padding:0 10%; width: 100%;}
 .sec_detail .wrap_box .box{padding:4.5vw 3vw 6vw;}
 .sec_detail .doctor{flex-direction: column; align-items: flex-start; line-height: 1.5;}
   
+main{min-height: 100vh}
+.footer {margin-top: 0;}
 
 }
