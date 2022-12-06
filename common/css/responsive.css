@@ -7,7 +7,8 @@
   .wrap_mypage .sec_tit{text-align: center;}
 }
 @media screen and (max-width: 768px) {
-header .wrap_com.wrap_gnb { flex-direction: column; justify-content: center; align-items: flex-start; position: fixed; left: 0; top: 0; bottom: 0; width: 100vw; height: 100vh; background: var(--color-blue); z-index: 100;}
+header .wrap_com{padding:0 10%; width: 100%;}
+header .wrap_com.wrap_gnb { display: none !important; flex-direction: column; justify-content: center; align-items: flex-start; position: fixed; left: 0; top: 0; bottom: 0; width: 100vw; height: 100vh; background: var(--color-blue); z-index: 100;}
 header .btn{display: block; padding: 0; margin: 0; border: none; text-align: left; font-size: 5vw; line-height: 2;}
 header .right .btn{margin: 3vw 0 0;}
 header .left .btn:after{width: 5vw; height: 5vw; vertical-align: -0.7vw;}
@@ -20,7 +21,6 @@ header .left .btn:after{width: 5vw; height: 5vw; vertical-align: -0.7vw;}
  html{font-size: 16px;}
 
 .wrap_com{padding-left: 3vw; padding-right: 3vw; width: 100%;}
-header .wrap_com{padding:0 10%; width: 100%;}
 .list_reg .bx_input{height: 3.5rem;}
 .list_reg .bx_input *{font-size: 1.1rem;}
 .list_reg > li{display: block;}
