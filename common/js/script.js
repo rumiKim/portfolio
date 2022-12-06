@@ -7,11 +7,11 @@ for (let i = 0; i < noLink.length; i++) {
   });
 }
 
-const btn_menu = document.querySelector('.btn_menu'),
-  sitemap = document.querySelector('.sitemap');
+const btn_menu = document.querySelector('.btn_menu button'),
+  sitemap = document.querySelector('.wrap_gnb');
 btn_menu.addEventListener('click', function() {
   this.classList.toggle('active')
-  sitemap.classList.toggle('open');
+  sitemap.classList.toggle('active');
 });
 
 

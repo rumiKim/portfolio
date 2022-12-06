@@ -179,7 +179,8 @@ main{display: block; min-height: calc(100vh - 9rem)}
 .box_border {border: 1px solid var(--color-gray2); border-radius: 0.25rem;} 
 
 
-header,footer div {height: 4.5rem; background-color: var(--color-blue); box-sizing: border-box;}
+header,footer div { background-color: var(--color-blue); box-sizing: border-box;}
+footer div{height: 4.5rem;}
 header .wrap_header{position: relative; height: 4.5rem; width: 60rem; font-size: 0; box-sizing: border-box;}
 header .wrap_com.wrap_gnb{display: flex; align-items: center; justify-content: space-between;}
 header h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10; height: 100%; line-height: 4.5rem;}

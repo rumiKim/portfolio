@@ -7,11 +7,19 @@
   .wrap_mypage .sec_tit{text-align: center;}
 }
 @media screen and (max-width: 768px) {
-header .wrap_com{padding:0 10%; width: 100%;}
-header .wrap_com.wrap_gnb { display: none !important; flex-direction: column; justify-content: center; align-items: flex-start; position: fixed; left: 0; top: 0; bottom: 0; width: 100vw; height: 100vh; background: var(--color-blue); z-index: 100;}
+header{position: sticky; left: 0; right: 0; top: 0; z-index: 999;}
+header .wrap_com{padding:0 5vw; width: 100%;}
+header .wrap_header{height: 3.5rem;}
+header .wrap_com.wrap_gnb { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; position: fixed; left: 100%; top: 0; bottom: 0; width: 100vw; height: 100vh; background: var(--color-blue); transition: all .3s;}
+header .wrap_com.wrap_gnb.active{left: 0;}
 header .btn{display: block; padding: 0; margin: 0; border: none; text-align: left; font-size: 5vw; line-height: 2;}
 header .right .btn{margin: 3vw 0 0;}
 header .left .btn:after{width: 5vw; height: 5vw; vertical-align: -0.7vw;}
+header h1{position: static; transform: none; line-height: 3.5rem;}
+.btn_menu button{display: block; height: 3.5rem; width: 3.5rem; background-color: red; background: url(/common/images/btn_menu_w.png) no-repeat right center / 45% auto;}
+.btn_menu button.active{position: relative; background: url(/common/images/btn_close.png) no-repeat right center / 40% auto; z-index: 200;}
+main{min-height: 100vh}
+
   /* responsive */
 .pc{display: none !important;}
 .pc.flex{display: none !important;}
@@ -58,8 +66,7 @@ header .left .btn:after{width: 5vw; height: 5vw; vertical-align: -0.7vw;}
 .sec_detail .wrap_box .box{padding:4.5vw 3vw 6vw;}
 .sec_detail .doctor{flex-direction: column; align-items: flex-start; line-height: 1.5;}
   
-main{min-height: 100vh}
-.footer {margin-top: 0;}
+
 
 .popup.active { display: block !important;}
 .popup > .inner { padding:4vw 3vw; position: absolute; left: 50%; top: 50%; width: 90vw; height: 90vh; min-width: auto; transform: translate(-50%,-50%); background: #fff; overflow: auto; box-sizing: border-box;}
