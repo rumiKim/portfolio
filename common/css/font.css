@@ -66,7 +66,7 @@
         url('../font/FSAlbertPro/FSAlbertPro-ExtraBold.woff2') format('woff2'),
         url('../font/FSAlbertPro/FSAlbertPro-ExtraBold.woff') format('woff'),
         url('../font/FSAlbertPro/FSAlbertPro-ExtraBold.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }

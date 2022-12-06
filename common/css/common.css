@@ -10,7 +10,7 @@ input[type="checkbox"] { position: absolute; left: -3000px}
 input,select,textarea,button { font-family: 'Noto Sans KR',sans-serif; outline: 0; background-color: transparent;}
 input,textarea { color: #000 !important}
 i { font-style: normal;}
-main{display: block; min-height: calc(100vh - 9rem)}
+main{display: block; min-height: 100vh; box-sizing: border-box;}
 
 
 /* font */
@@ -25,7 +25,7 @@ main{display: block; min-height: calc(100vh - 9rem)}
     --color-gray4:#f8f4f1;
     --color-red:#e43b46;
     }
-  
+
 
 .dp_b { display: block !important;}
 .dp_inb { display: inline-block !important;}
@@ -132,7 +132,7 @@ main{display: block; min-height: calc(100vh - 9rem)}
 .sec_type1 .sec_tit{ margin-bottom: 1.5rem; padding: 4.2rem 0 1.5rem; border-bottom:2px solid #000; text-align: center; }
 .sec_type1 .sec_tit .txt + .heading {margin-top: 0.6rem;}
 .sec_type1 .sec_tit .heading{ font-size: 2rem; letter-spacing: -0.075em; font-weight: bold; color: var(--color-blue); }
-.sec_type1 .sec_tit .heading.eng{font-family: 'FS Albert Pro'; }
+.sec_type1 .sec_tit .heading.eng{font-family: 'FS Albert Pro'; font-weight: 800;}
 
 .wrap_img > img { width: 100%}
 
@@ -141,12 +141,12 @@ main{display: block; min-height: calc(100vh - 9rem)}
 .chk_type1 + label,
 .chk_type2 + label { cursor: pointer;}
 .chk_type1 + label span,
-.chk_type2 + label span { vertical-align: middle; font-size: 0.9em;}
+.chk_type2 + label span { vertical-align: middle;}
 .chk_type1 + label:before,
 .chk_type2 + label:before
  { content: ""; display: inline-block; margin-right: 5px; box-sizing: border-box; vertical-align: middle;}
 .chk_type1 + label:before{width: 1rem; height: 1rem; border: 1px solid #666; background-color: #fff; }
-.chk_type1:checked + label:before { background: url(/common/images/ico_checked.png) no-repeat center / 70% auto #fff;}
+.chk_type1:checked + label:before { background: url(/common/images/ico_checked_w.png) no-repeat center / 70% auto var(--color-blue);}
 .chk_type2 + label:before{width: 1.5rem; height: 1.5rem; border: 2px solid #b5b5b5; border-radius: 100%;}
 .chk_type2:checked + label:before { border-color: var(--color-red); background: url(/common/images/ico_checked_03.png) no-repeat center / 70% auto #fff;}
 
@@ -176,20 +176,16 @@ main{display: block; min-height: calc(100vh - 9rem)}
 
 
 /* box */
-.box_border {border: 1px solid var(--color-gray2); border-radius: 0.25rem;} 
+.box_border {border: 1px solid var(--color-gray2); border-radius: 0.25rem;}
 
 
 header,footer div { background-color: var(--color-blue); box-sizing: border-box;}
-footer div{height: 4.5rem;}
+footer div{height: 4.5rem; margin-top: 5rem}
 header .wrap_header{position: relative; height: 4.5rem; width: 60rem; font-size: 0; box-sizing: border-box;}
-header .wrap_com.wrap_gnb{display: flex; align-items: center; justify-content: space-between;}
+header .wrap_gnb{display: flex; align-items: center; justify-content: space-between; width: 100%}
 header h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10; height: 100%; line-height: 4.5rem;}
 header h1 a {height: 100%; }
 header h1 a img{height: 1.5rem; }
 header .btn{display: inline-block; padding: 0 1.35rem; border: 1px solid #fff; border-radius: 2rem; line-height: 2rem; font-size: 0.75rem; color: #fff; box-sizing: border-box; transition:all 0.3s}
-header .btn:hover{background-color: #fff; color: var(--color-blue);}
 header .right .btn{margin-left: 0.5rem;}
 header .left .btn:after{margin-left: 0.65rem; width: 1.1rem; height: 1.1rem; background: url(../images/ico_date_w.png) no-repeat center / 100% 100% ;}
-header .left .btn:hover:after{background-image: url(../images/ico_date_blue.png);}
-.footer{margin-top: 7rem;}
-

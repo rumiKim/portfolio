@@ -11,7 +11,7 @@ label,img,input,select,textarea,button{vertical-align:middle;}
 hr{display:none;}
 a{color:#000;text-decoration:none;}
 section { line-height: 1}
-
+select { -webkit-appearance:none; -moz-appearance:none; appearance:none }
 
 .skip { position: absolute; padding: 0.5rem 0; left: 0; right: 0; top: -100%; background: rgba(0,0,0,0.5); color: #fff; text-align: center; }
 .skip:focus { top:0; z-index: 10000}
@@ -64,4 +64,3 @@ button { background-color:transparent; cursor: pointer;}
 
 
 /*  */
-
