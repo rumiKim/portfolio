@@ -101,10 +101,10 @@
 .sec_reg .item_info .list_reg > li:nth-child(1),
 .sec_reg .item_info .list_reg > li:nth-child(2) {display: inline-flex; width: 50%;}
 /* .sec_reg  {height: 5.65rem;} */
-.sec_reg .item_method ul li{display:flex; align-items: center; height: 4.1rem;     padding-left: 1rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; color: #3d3f41; font-size: 0.95rem; letter-spacing: -0.075em; }
+/* .sec_reg .item_method ul li{display:flex; align-items: center; height: 4.1rem;     padding-left: 1rem; padding-right: 1rem; border: 1px solid #bbb; border-radius: 0.2rem; color: #3d3f41; font-size: 0.95rem; letter-spacing: -0.075em; }
 .sec_reg .item_method ul li ~ li{margin-top: 0.5rem; }
 .sec_reg .item_method ul li > label {display: block; width: 7.2rem; font-size: 1.4rem; color: #000; font-weight: 700;}
-.sec_reg .item_method ul li > p{flex: 1; line-height: 1.47;}
+.sec_reg .item_method ul li > p{flex: 1; line-height: 1.47;} */
 .sec_reg .item_image ul li ~ li {margin-top: 0.8rem;}
 .sec_reg .item_image ul li > label{margin-bottom:0.55rem; font-size: 0.95rem; color: #3d3f41; line-height: 1;}
 .sec_reg .item_video .btn {font-size: 0.85rem; color: #828384;}
@@ -147,13 +147,12 @@
 .nav_mypage nav > ul > li { margin: 0 0 0.5rem}
 .nav_mypage nav > ul > li > a { display: block; line-height:3.5rem; border: 1px solid var(--color-gray2); border-radius: 0.25rem; color: var(--color-blue); font-weight: 700; font-size: 1.15rem; text-align: center; transition: all .3s}
 .nav_mypage nav > ul > li.active > a {border-color: var(--color-blue); background-color: var(--color-blue); color: #fff;}
-.sec_mypage .list {padding: 0.9rem 0 1.9rem;}
+.sec_mypage .list {padding-top: 0.9rem;}
 .sec_mypage .list > li {display: flex; align-items: center; justify-content: space-between; padding:1.1rem 1.1rem 1.1rem 1.5rem; border: 1px solid var(--color-gray2); border-radius: 0.25rem; color: var(--color-gray1);}
 .sec_mypage .list > li ~ li{margin-top: 0.55rem;}
 .sec_mypage .list > li > div{ display: flex; align-items: center;}
 .sec_mypage .list > li .hospital {margin: 0 1.1rem 0 1.4rem;}
 .sec_mypage .list > li .btn_blue{padding: 0.4rem 1.6rem; margin-left: 1.2rem; border-radius: 1.5rem;}
-.sec_mypage .wrap_btn{margin: 2rem auto; width: 7rem}
 
 .wrap_input { height: 2.5rem; font-size: 0}
 .wrap_input > * { height: 100%; box-sizing: border-box; border-radius: 0.2rem; font-size: 0.75rem; font-family: 'Noto Sans KR',sans-serif;}
@@ -179,9 +178,24 @@
 .sec_detail .box.image ul li img{position: absolute; left: 0; right: 0; top: 0; bottom: 0; object-fit: cover; width: 100%; height: 100%;}
 
 
+.sec_policy > div {padding: 40px 35px}
+.sec_policy h2 {padding: 57px 0; font-size: 56px; text-align: center; border-bottom: 3px solid #222; color: #222}
+.sec_policy.txt_type2 {font-size: 15px}
+.sec_policy .list > li > p {padding: 30px 0 15px 0; color: #222; font-size: 24px; font-weight: 500;}
 
-.sec_policy > div { padding: 40px 35px}
-.sec_policy h2 { padding: 57px 0; font-size: 56px; text-align: center; border-bottom: 3px solid #222; color: #222}
-.sec_policy.txt_type2 { font-size: 15px}
-.sec_policy .list > li > p { padding: 30px 0 15px 0;     color: #222; font-size: 24px; font-weight: 500;}
-.sec_policy .list .color_navy { color: }
+
+/* shcedule page */
+.wrap_com.schedule {width: 890px;}
+.sec_schedule.sec_type1 .sec_tit {border-bottom: none;}
+.sec_schedule .list > li{overflow: hidden; float: left; margin-right: 2%; margin-bottom: 2.5rem; width: 32%; border-radius: 0.5rem; }
+.sec_schedule .list > li:nth-child(3n) {margin-right: 0}
+.sec_schedule .list > li > a {display: block; color: var(--color-gray1); font-size: 0.9rem; }
+.sec_schedule .list > li > a .box_img { overflow: hidden; height:20rem; border-radius: 0.5rem; }
+.sec_schedule .list > li > a .box_img img{width: 100%; height: 100%; object-fit: cover;}
+.sec_schedule .list > li > a .title { display: -webkit-box; display: -ms-flexbox; max-height: 2.4rem; overflow:hidden; margin: 25px 0 10px; vertical-align:top; text-overflow: ellipsis; word-break:break-all; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
+.sec_schedule .title {font-weight: 700; line-height: 1.33;}
+.sec_schedule .date {font-weight: 500; font-family: 'FS Albert Pro'}
+.sec_schedule.detail .box_title{color: var(--color-gray1); font-size: 1.2rem}
+.sec_schedule.detail .date {font-size: 0.9rem}
+.sec_schedule.detail .title {margin: 0.5rem 0 1rem}
+.sec_schedule.detail .box_content{padding: 2.1rem 2.5rem 0}

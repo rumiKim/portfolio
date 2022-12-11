@@ -71,39 +71,44 @@
                     <textarea name="" id="result" placeholder="진단상태를 입력해 주세요"></textarea>
                   </div>
                 </li>
-                <li class="item_method">
-                  <label for=""><span>수술방법<span class="color_red">*<small>(ex.결석 크기 및 기타 환자
-                          상태)</small></span></span></label>
-                  <ul>
+                <li class="required">
+                  <label for=""><span>사용제품</span></label>
+                  <ul class="list_reg">
                     <li>
-                      <input type="radio" id="method1" class="chk_type2" name="radio2"/>
-                      <label for="method1">
-                        <span>RIRS</span>
-                      </label>
-                      <p>
-                        요도를 통해 스텐트 삽입 및 신장까지 도달시켜 신장에
-                        있는 결석 제거
-                      </p>
+                      <label for="prd1"><span>Access</span></label>
+                      <div class="bx_input">
+                        <input type="text" id="prd1" placeholder="Clean glide guidewire" />
+                      </div>
                     </li>
                     <li>
-                      <input type="radio" id="method2" class="chk_type2" name="radio2"/>
-                      <label for="method2">
-                        <span>ESWL</span>
-                      </label>
-                      <p>
-                        체외충격파를 통해 외부에서의 충격을 주어 신장내부에
-                        있는 결석을 잘게 부수어 소변으로 나오게끔 함
-                      </p>
+                      <label for="prd2"><span>Dilation</span></label>
+                      <div class="bx_input">
+                        <input type="text" id="prd2" placeholder="Proxis" />
+                      </div>
                     </li>
                     <li>
-                      <input type="radio" id="method3" class="chk_type2" name="radio2"/>
-                      <label for="method3">
-                        <span>PCNL</span>
-                      </label>
-                      <p>
-                        신장 표면 피부를 절개하여 신장으로 곧바로 장치
-                        삽입하여 결석 제거
-                      </p>
+                      <label for="prd3"><span>Visualization</span></label>
+                      <div class="bx_input">
+                        <input type="text" id="prd3" placeholder="OUT" />
+                      </div>
+                    </li>
+                    <li>
+                      <label for="prd4"><span>Fragmentation</span></label>
+                      <div class="bx_input">
+                        <input type="text" id="prd4" placeholder="MOSES PulseTM120H Holmium Laser fiber" />
+                      </div>
+                    </li>
+                    <li>
+                      <label for="prd5"><span>Removal</span></label>
+                      <div class="bx_input">
+                        <input type="text" id="prd5" placeholder="Skylite" />
+                      </div>
+                    </li>
+                    <li>
+                      <label for="prd6"><span>Drainage</span></label>
+                      <div class="bx_input">
+                        <input type="text" id="prd6" placeholder="Inlay optima" />
+                      </div>
                     </li>
                   </ul>
                 </li>
@@ -160,36 +165,36 @@
                   </div>
                 </li>
                 <li class="item_radio required">
-                  <label for=""><span>결석 치료 방법</span><small class="color_red">(5가지 방법 중 택 1)</small></label>
+                  <label for=""><span>결석 치료 방법</span><small class="color_red">(치료방법을 선택해 주세요)</small></label>
                   <ul class="flex align_center space">
                     <li>
                       <input type="radio" id="ra1" class="chk_type2" name="radio1" />
                       <label for="ra1">
-                        <span>내시경 수술</span>
+                        <strong>ESWL</strong>
                       </label>
                     </li>
                     <li>
                       <input type="radio" id="ra2" class="chk_type2" name="radio1" />
                       <label for="ra2">
-                        <span>개복 수술</span>
+                        <strong>URS</strong><span> (Flexible Ureteroscopic Surgery)</span>
                       </label>
                     </li>
                     <li>
                       <input type="radio" id="ra3" class="chk_type2" name="radio1" />
                       <label for="ra3">
-                        <span>충격파쇄석술</span>
+                        <strong>URS</strong><span> (Rigid Ureteroscopic Surgery)</span>
                       </label>
                     </li>
                     <li>
                       <input type="radio" id="ra4" class="chk_type2" name="radio1" />
                       <label for="ra4">
-                        <span>로봇수술</span>
+                        <strong>PNL</strong><span> (Percutaneous Nephrolithotomy)</span>
                       </label>
                     </li>
                     <li>
                       <input type="radio" id="ra5" class="chk_type2" name="radio1" />
                       <label for="ra5">
-                        <span>ECRS</span>
+                        <strong>ECIRS</strong><span> (PNL+RIRS)</span>
                       </label>
                     </li>
                   </ul>
@@ -213,7 +218,7 @@
               </ul>
               <div class="wrap_btn flex align_center space">
                 <button class="btn_prev">다시 작성</button>
-                <a href="regist-detail.html" class="btn_type1">제출하기</a>
+                <a href="regist-detail.html" class="btn_type1 btn_red">제출하기</a>
               </div>
             </fieldset>
           </form>

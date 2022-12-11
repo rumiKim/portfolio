@@ -13,6 +13,20 @@
   .wrap_mypage > .left, .wrap_mypage > .right{width: 100%; float: none;}
   .wrap_mypage .sec_tit{text-align: center;}
 }
+
+@media screen and (max-width: 960px) {
+  /* shcedule page */
+  .wrap_com.schedule { padding:0 3%; width: 100%}
+  .sec_schedule .list > li {margin-right: 2%; width: 49%;}
+  .sec_schedule .list > li > a {font-size: 1rem}
+  .sec_schedule .list > li:nth-child(3n) {margin-right: 2%}
+  .sec_schedule .list > li:nth-child(2n) {margin-right: 0}
+  .sec_schedule .list > li > a .box_img {position: relative; height: 0; padding-bottom: 130%; }
+  .sec_schedule .list > li > a .box_img img { position: absolute; left: 0; right: 0; top: 0; bottom: 0;}
+  .sec_schedule .list > li > a .title { max-height: 2.7rem}
+  .sec_schedule.detail .box_content{padding: 2rem 0 0;}
+}
+
 @media screen and (max-width: 768px) {
   html{font-size: 16px;}
   header{position: sticky; left: 0; right: 0; top: 0; z-index: 999;}

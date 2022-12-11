@@ -150,7 +150,6 @@ main{display: block; min-height: 100vh; box-sizing: border-box;}
 .chk_type2 + label:before{width: 1.5rem; height: 1.5rem; border: 2px solid #b5b5b5; border-radius: 100%;}
 .chk_type2:checked + label:before { border-color: var(--color-red); background: url(/common/images/ico_checked_03.png) no-repeat center / 70% auto #fff;}
 
-/* ico_checked_02.png */
 
 /* button */
 .btn_type1 {background:var(--color-blue); border-radius: 3px; color: #fff; }
@@ -162,18 +161,20 @@ main{display: block; min-height: 100vh; box-sizing: border-box;}
 .wrap_btn > * { display: block; line-height: 3rem; height: 3rem; width:100%; border-radius: 0.2rem; font-size: 1.1rem; font-family: 'Noto Sans KR',sans-serif; letter-spacing: -0.05em; box-sizing: border-box; text-align: center;}
 .wrap_btn .btn_prev,
 .btn_w { border: 1px solid #ddd; color: #666 ; background:#fff; border-radius: 0.2rem}
-
+.wrap_btn.small {margin: 4rem auto 0; width: 7rem}
 
 /* list */
-.list_type1 > li > a { display: block; border: 1px solid #ddd;border-radius: 0.5rem; box-sizing: border-box;}
+.list_type1 > li > a { display: block; border: 1px solid #ddd;box-sizing: border-box;}
+
 .list_bul.gray { color: #676767; font-size: 0.8rem;}
 .list_bul > li { padding-left: 0.6rem; position: relative; }
 .list_bul > li.nonebul:before { display: none}
 .list_bul > li:before { position: absolute; left: 0; top: 0.75em; content: ""; display: inline-block; width: 0.25em; height: 0.25em; background: #666; vertical-align: middle; border-radius: 100%}
 .list_bul2 > li > p:before { content: ""; display: inline-block; margin-right: 6px; width: 2px; height: 2px; background: #bfbfbf; vertical-align: middle;}
 
-.txt_type2 { font-size: 0.85rem; color: #666; letter-spacing: ; line-height: 1.75; letter-spacing: -0.05em}
 
+/* txt */
+.txt_type2 { font-size: 0.85rem; color: #666; letter-spacing: ; line-height: 1.75; letter-spacing: -0.05em}
 
 /* box */
 .box_border {border: 1px solid var(--color-gray2); border-radius: 0.25rem;}
