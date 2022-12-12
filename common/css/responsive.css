@@ -54,7 +54,8 @@
   .list_reg .bx_input{height: 3.5rem;}
   .list_reg .bx_input *{font-size: 1.1rem;}
   .list_reg > li{display: block;}
-  .list_reg > li > label{width: 100%; font-weight: 600}
+  .list_reg > li > label{margin: 1rem 0 0.8rem; width: 100%; font-weight: 600; line-height: 1}
+  .sec_reg .item_info .list_reg > li > label { padding: 0}
   .list_reg > li > div{flex: none;}
   .list_reg .btn_gray{width: 25%; height: 3.5rem; line-height: 3.5rem;}
   .list_reg .bx_input{width: 100%;}
@@ -62,8 +63,9 @@
   .list_reg .bx_num .time{font-size: 1.2rem;}
   .list_reg .list_reg > li ~ li, .list_reg > li .wrap_type1 ~ .wrap_type1{margin-top: 1rem;}
   .list_reg .txt_type1{font-size: 0.9rem;}
-  .list_reg.type2 .bx_input{flex: 1; height: 3.5rem;}
-  .sec_reg .list_reg .list_reg > li{display: flex;}
+  .list_reg.type2 .bx_input{height: 3.5rem;}
+  .list_reg.type2 > li ~ li > label {margin: 2.5rem 0 1rem}
+  .sec_reg .list_reg .list_reg > li{display: flex; flex-direction: column; padding-left: 10px}
   .sec_reg .item_method ul li{display: block; padding: 3vw; height: auto;}
 
   /* login page */
@@ -84,12 +86,15 @@
 
   /* detail page */
   .sec_detail .wrap_box{font-size: 1rem;}
-  .sec_detail .wrap_box h3{font-size: 1.2rem;}
-  .sec_detail .wrap_box .box:nth-child(1), .sec_detail .wrap_box .box:nth-child(2){width: 100%;}
+  .sec_detail .wrap_box h3{margin-top: 2.5rem; font-size: 1.2rem;}
   .sec_detail .box.image ul li{padding: 0; width: 100%; height:auto; }
   .sec_detail .box.image ul li img{position: relative; width: 100%;}
-  .sec_detail .wrap_box .box{padding:4.5vw 3vw 6vw;}
+  /* .sec_detail .wrap_box .box{padding:4.5vw 3vw 6vw;} */
   .sec_detail .doctor{flex-direction: column; align-items: flex-start; line-height: 1.5;}
+  .sec_detail .box.info .inflex{display: flex !important}
+  .sec_detail .box.info ul li {line-height: 1.7}
+  .sec_detail .wrap_box .box_border{padding: 1.8rem 1rem 1.5rem}
+
 
   /* mypage */
   .wrap_mypage.wrap_com{margin-top: 3rem}

@@ -12,6 +12,7 @@
 .list_reg > li ~ li { margin-top: 0.7rem}
 .list_reg .list_reg > li ~ li,.list_reg > li .wrap_type1 ~ .wrap_type1 {margin-top: 0.5rem;}
 .list_reg > li > div { flex: 1; }
+.list_reg .txt_unit { display: flex; align-items: center; margin-left: 5px}
 .list_reg > li > label { display: block; width: 21.7%; font-size: 1rem; cursor: pointer; color: var(--color-gray1); line-height: 2.9rem;}
 .list_reg > li > label.nocursor { cursor: default;}
 .list_reg > li .wrap_type1 > div { flex: 1}
@@ -23,9 +24,9 @@
 .list_reg .btn_gray:hover{background-color: var(--color-blue);}
 .list_reg.type2 > li {flex-direction: column;}
 .list_reg.type2 > li ~ li.list_reg.type2 > li .wrap_type1 ~ .wrap_type1 {margin-top: 1.5rem;}
-.list_reg.type2 > li > label { width: auto; color: #000; font-size: 1.15rem; font-weight: 700;}
+.list_reg.type2 > li > label { margin: 1.75rem 0 1rem; width: auto; color: #000; font-size: 1.15rem; font-weight: 700; line-height: 1;}
 .list_reg.type2 > li > label small {font-size: 0.75em;}
-.list_reg.type2 .bx_input { height:2.9rem; font-size: 0}
+/* .list_reg.type2 .bx_input { height:2.9rem; font-size: 0} */
 .list_reg.type2 .bx_input.textarea{padding:1rem; height:5.65rem}
 .list_reg.type2 .bx_input * { background: none}
 .list_reg.type2 > li > div { flex:none; }
@@ -107,7 +108,7 @@
 .sec_reg .item_method ul li > p{flex: 1; line-height: 1.47;} */
 .sec_reg .item_image ul li ~ li {margin-top: 0.8rem;}
 .sec_reg .item_image ul li > label{margin-bottom:0.55rem; font-size: 0.95rem; color: #3d3f41; line-height: 1;}
-.sec_reg .item_video .btn {font-size: 0.85rem; color: #828384;}
+.sec_reg .item_video .btn {font-size: 0.85rem; color: #828384; line-height: 2.9rem}
 .sec_reg .list_reg.type2 .bx_input.textarea {height: 16rem;}
 .sec_reg .item_radio ul{display: block; font-size: 1rem;}
 .sec_reg .item_radio ul li label {line-height: 2;}
@@ -162,20 +163,25 @@
 
 
 /* CASE SHARING page */
-.sec_detail .doctor {padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-gray2);}
-.sec_detail .doctor h3 {margin-right: 0.7rem;}
-.sec_detail .doctor > div {margin-right: 0.85rem;}
+.sec_detail .wrap_tit{padding-bottom: 1.5rem; font-size: 1rem}
+.sec_detail .tit {margin-bottom: 0.75rem; font-size: 1.4rem}
 .sec_detail .wrap_box { display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 0.9rem; color: var(--color-gray1);}
-.sec_detail .wrap_box .box{ margin-top: 0.6rem; padding: 1.4rem 0 1.6rem 1.3rem; border-radius: 0.25rem; overflow: hidden; box-sizing: border-box; line-height: 1.55;}
-.sec_detail .wrap_box .box:nth-child(1),
-.sec_detail .wrap_box .box:nth-child(2) {width: 49.2%;}
-.sec_detail .wrap_box h3{margin:0 0 1rem; font-size: 1rem; color: #000;}
+.sec_detail .wrap_box .box{ margin-bottom: 1.5rem; width: 100%; border-radius: 0.25rem; overflow: hidden; box-sizing: border-box; line-height: 1.55;}
+.sec_detail .wrap_box .box_border{ padding:1.5rem 1.4rem 2.15rem;}
+.sec_detail .wrap_box h3{margin:2rem 0 1rem; font-size: 1rem; color: #000; line-height: 1}
+.sec_detail .wrap_box h3.lg{ margin-top: 0; font-size: 1.15rem}
 .sec_detail .box.info ul li{display: flex; align-items: center;}
 .sec_detail .box.info .age,
-.sec_detail .box.info .gender{display: inline-flex; margin-right: 0.85rem;}
-.sec_detail .box.image{padding: 0}
+.sec_detail .box.info .gender{margin-right: 0.85rem;}
+.sec_detail .box.image,.sec_detail .box.info {margin-bottom: 0}
 .sec_detail .box.image ul li {position: relative; overflow: hidden; padding:0 0 35%; margin-bottom: 0.3rem; height:0; width: 17.3rem; border-radius: 0.25rem;}
 .sec_detail .box.image ul li img{position: absolute; left: 0; right: 0; top: 0; bottom: 0; object-fit: cover; width: 100%; height: 100%;}
+.sec_detail .box.opinion ul li {display: flex; }
+.sec_detail .box.opinion ul li ~ li {margin-top: 0.75rem}
+.sec_detail .box.opinion ul li .name{width: 4.2rem; font-weight: 700}
+.sec_detail .box.opinion ul li .text{flex: 1}
+.sec_detail .box.opinion span {display: block; background: #fff; padding-right: 0.85rem;}
+.sec_detail .box.opinion h3:after {content: ""; display: block; flex: 1; height: 2px; background-color: var(--color-red);}
 
 
 .sec_policy > div {padding: 40px 35px}

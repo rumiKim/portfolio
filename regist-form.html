@@ -60,18 +60,45 @@
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <label for="result">
-                    <span>상병진단
-                      <span class="color_red">*<small>(ex.결석 크기 및 기타 환자 상태)</small>
-                      </span>
-                    </span>
-                  </label>
-                  <div class="bx_input textarea">
-                    <textarea name="" id="result" placeholder="진단상태를 입력해 주세요"></textarea>
-                  </div>
-                </li>
                 <li class="required">
+                  <label for="result">
+                    <span>상병진단</span>
+                  </label>
+                  <ul class="list_reg">
+                    <li>
+                      <label for=""><span>결석위치</span></label>
+                      <div class="bx_input bx_select">
+                        <select name="" id="">
+                          <option value="">선택해주세요</option>
+                          <option value="">신장결석</option>
+                          <option value="">상부요로결석</option>
+                          <option value="">중부요로결석</option>
+                          <option value="">하부요로결석</option>
+                          <option value="">기타</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <label for="cnt"><span>결석갯수</span></label>
+                      <div class="flex">
+                        <div class="bx_input">
+                          <input type="text" id="cnt" />
+                        </div>
+                        <div class="txt_unit">개</div>
+                      </div>
+                    </li>
+                    <li>
+                      <label for="size"><span>결석크기</span></label>
+                      <div class="flex">
+                        <div class="bx_input">
+                          <input type="text" id="size" />
+                        </div>
+                        <div class="txt_unit">mm</div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="">
                   <label for=""><span>사용제품</span></label>
                   <ul class="list_reg">
                     <li>
@@ -199,7 +226,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="item_video required">
+                <li class="item_video">
                   <label for="reg_name">
                     <span>수술 영상</span>
                     <small class="color_red">(하기 링크를 통해 영상 업로드)</small>
